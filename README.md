@@ -1,16 +1,15 @@
-# Astro Starter Kit: Minimal
+# L'Abeille Viennoise
 
-```
-npm init astro -- --template minimal
-```
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- The application is build using [Astro.build](https://astro.build/).
+- [Husky](https://typicode.github.io/husky/#/) is used for each commit to check if the commit message meet the
+  conventional commit format ([Commitlint](https://github.com/conventional-changelog/commitlint)) and run tests,
+  linters and types checking (see `.husky/` directory for more details).
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Inside of this project, you'll see the following folders and files:
 
 ```
 /
@@ -31,15 +30,11 @@ Any static assets, like images, can be placed in the `public/` directory.
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Command                 | Action                                           |
+| :---------------------- | :----------------------------------------------- |
+| `pnpm install`          | Installs dependencies                            |
+| `pnpm run dev`          | Starts local dev server at `localhost:3000`      |
+| `pnpm run build`        | Build your production site to `./dist/`          |
+| `pnpm run preview`      | Preview your build locally, before deploying     |
+| `pnpm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
+| `pnpm run astro --help` | Get help using the Astro CLI                     |
