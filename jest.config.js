@@ -27,7 +27,6 @@ module.exports = {
   setupFilesAfterEnv: ['./src/tests/setup/jest.setup.after-env.ts'],
   moduleFileExtensions: ['ts', 'js', 'json'],
   modulePathIgnorePatterns: ['<rootDir>/dist/', '<rootDir>/cypress/'],
-  testEnvironment: 'jsdom',
   transform: {
     '^.+\\.ts$': 'ts-jest',
   },
