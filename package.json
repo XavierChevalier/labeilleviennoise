@@ -9,8 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint \"**/*.{vue,ts,js}\"",
-    "lint:fix": "yarn lint --fix",
-    "test": "yarn test:unit",
+    "lint:fix": "pnpm lint --fix",
+    "test": "pnpm test:unit",
     "test:unit": "jest",
     "prepare": "husky install"
   },
