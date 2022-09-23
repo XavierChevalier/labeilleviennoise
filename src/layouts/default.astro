@@ -1,0 +1,20 @@
+---
+import NavigationFooter from '@/modules/navigation/footer/navigation-footer.astro';
+import NavigationBar from '@/modules/navigation/header/navigation-bar.astro';
+---
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>L'abeille Viennoise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body class="text-black-light dark:bg-gray-500 dark:text-white">
+    <NavigationBar/>
+    
+    <article>
+      <slot />
+    </article>
+    <NavigationFooter/>
+  </body>
+  <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"/>
+</html>
