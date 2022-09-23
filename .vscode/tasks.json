@@ -1,15 +1,15 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Run dev",
-            "type": "shell",
-            "command": "pnpm dev --host",
-            "group": "build",
-            "presentation": {
-                "reveal": "always",
-                "panel": "new"
-            }
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run dev",
+      "type": "shell",
+      "command": "pnpm dev --host",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    }
+  ]
 }
