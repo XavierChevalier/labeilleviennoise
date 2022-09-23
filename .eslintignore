@@ -1,3 +1,6 @@
+.idea
+.husky
+.vscode
 dist
 public
 node_modules

@@ -11,6 +11,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
+    'plugin:astro/recommended',
   ],
   parserOptions: {
     ecmaVersion: 2021,
@@ -31,6 +32,17 @@ module.exports = {
     'import/order': ['error', { alphabetize: { order: 'asc' } }],
   },
   overrides: [
+    {
+      files: ['*.astro'],
+      parser: 'astro-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+        extraFileExtensions: ['.astro'],
+      },
+      rules: {
+        'prettier/prettier': ['off'],
+      },
+    },
     {
       files: ['*.js'],
       rules: {
