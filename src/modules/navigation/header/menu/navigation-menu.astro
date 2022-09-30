@@ -2,22 +2,34 @@
 import NavigationMenuHamburgerButton from '@/modules/navigation/header/menu/navigation-menu-hamburger-button.astro'
 import NavigationBarLink from '@/modules/navigation/header/navigation-bar-link.astro'
 ---
-<div class="flex items-center md:order-2">
+<div class="flex items-center">
   <NavigationMenuHamburgerButton />
 </div>
 
 <div
-id="mega-menu"
-class="hidden justify-between items-center w-full text-sm md:flex md:w-auto md:order-1"
+  id="mega-menu"
+  class="hidden justify-between items-center w-full text-sm md:flex md:w-auto md:order-2"
 >
   <ul
     class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0"
   >
-    <li><NavigationBarLink href="/" isActif>Accueil</NavigationBarLink></li>
-    <li><NavigationBarLink href="/shop">Boutique</NavigationBarLink></li>
-    <li><NavigationBarLink href="/sponsorship">Parrainage</NavigationBarLink></li>
-    <li><NavigationBarLink href="#">Recettes</NavigationBarLink></li>
-    <li><NavigationBarLink href="#">Créations artisanales</NavigationBarLink></li>
-    <li><NavigationBarLink href="/contact">Contact</NavigationBarLink></li>
+    <li>
+      <NavigationBarLink href="/" isActif>Accueil</NavigationBarLink>
+    </li>
+    <li>
+      <NavigationBarLink href="/shop">Boutique</NavigationBarLink>
+    </li>
+    <li>
+      <NavigationBarLink href="/sponsorship">Parrainage</NavigationBarLink>
+    </li>
+    <li>
+      <NavigationBarLink href="#">Recettes</NavigationBarLink>
+    </li>
+    <li>
+      <NavigationBarLink href="#">Créations artisanales</NavigationBarLink>
+    </li>
+    <li>
+      <NavigationBarLink href="/contact">Contact</NavigationBarLink>
+    </li>
   </ul>
 </div>

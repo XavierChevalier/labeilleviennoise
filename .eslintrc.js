@@ -21,6 +21,9 @@ module.exports = {
       typescript: {}, // this loads <rootdir>/tsconfig.json to eslint
     },
   },
+  globals: {
+    astroHTML: 'readonly',
+  },
   rules: {
     // @see https://medium.com/swlh/prefer-interfaces-4fb72c25b4c
     '@typescript-eslint/no-empty-interface': ['off'],
