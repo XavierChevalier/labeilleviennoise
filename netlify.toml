@@ -1,2 +1,5 @@
 [build.environment]
-NPM_FLAGS="--prefix=/dev/null"
+NPM_FLAGS = "--version" # see https://github.com/netlify/build/issues/1633#issuecomment-907246600
+[build]
+command = "npx pnpm install --store=node_modules/.pnpm-store && npx pnpm build"
+
