@@ -1,4 +1,5 @@
 ---
+import '@/assets/styles/index.css';
 import NavigationFooter from '@/modules/navigation/footer/navigation-footer.astro';
 import NavigationBar from '@/modules/navigation/header/navigation-bar.astro';
 ---
@@ -8,9 +9,9 @@ import NavigationBar from '@/modules/navigation/header/navigation-bar.astro';
     <title>L'abeille Viennoise</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body class="text-black-light dark:bg-gray-500 dark:text-white">
+  <body class="text-black-light dark:bg-gray-500 dark:text-white min-h-screen">
     <NavigationBar/>
-    
+
     <article>
       <slot />
     </article>

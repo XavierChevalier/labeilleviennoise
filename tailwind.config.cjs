@@ -1,7 +1,6 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
-
-const { default: colors } = require('tailwindcss/colors')
-
 module.exports = {
   darkMode: 'class',
   content: [
@@ -28,6 +27,9 @@ module.exports = {
           DEFAULT: '#71502f',
           light: '#d5c6b1',
         },
+      },
+      fontFamily: {
+        sans: ['Gotham', ...defaultTheme.fontFamily.sans],
       },
     },
     container: {
