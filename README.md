@@ -1,5 +1,6 @@
 # L'Abeille Viennoise
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c6c2a8c9-6270-4c1d-8aef-de809f2c966e/deploy-status)](https://app.netlify.com/sites/labeilleviennoise/deploys)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 - The application is build using [Astro.build](https://astro.build/).
