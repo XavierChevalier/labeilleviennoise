@@ -1,0 +1,103 @@
+---
+import PricingFormulaCardListItem from "./pricing-formula-card-list-item.astro";
+import PricingFormulaCardList from "./pricing-formula-card-list.astro";
+import PricingFormulaCard from "./pricing-formula-card.astro"
+import AppSwitch from "@/modules/shared/form/switch/AppSwitch.astro";
+
+const mailto = (formulaName: string, per: 'mensuellement' | 'annuellement') => 'mailto:' +
+  import.meta.env.PUBLIC_CONTACT_MAIL
+  + '?subject=Prise de contact pour parrainage'
+  + '&body=Bonjour, je souhaite devenir parrain ! Intéressé par la formule ' + formulaName + ', je souhaite régler ' + per + '.'
+---
+<section id="pricing" class="bg-white dark:bg-gray-900">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+        Choissiez le plan qui vous correspond
+      </h2>
+      <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
+        Les récompenses sont annuelles seulement.
+        Au bout d'un an de souscription, ceux-ci vous seront envoyés.
+        En choissisant une formule annuelle, les récompenses vous seront envoyés après paiement.
+      </p>
+    </div>
+
+    <div class="flex justify-center mb-5">
+      <AppSwitch>
+        <span slot="before">Mensuelle</span>
+        Annuelle
+      </AppSwitch>
+    </div>
+
+    <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+      <PricingFormulaCard title="Nectar" description="Description here?" price="9.99€" per="month" buttonHref={mailto('Nectar', 'mensuellement')}>
+        <PricingFormulaCardList>
+          <PricingFormulaCardListItem>
+            5.000 abeilles préservées
+          </PricingFormulaCardListItem>
+
+          <PricingFormulaCardListItem>
+            Une mascotte L'Abeille Viennoise
+          </PricingFormulaCardListItem>
+
+          <PricingFormulaCardListItem>
+            Une newsletter accompagnée de photos pour suivre l'évolution des rûches
+          </PricingFormulaCardListItem>
+
+          <PricingFormulaCardListItem>
+            1 pot de miel toutes fleurs de 250g
+          </PricingFormulaCardListItem>
+        </PricingFormulaCardList>
+      </PricingFormulaCard>
+
+      <PricingFormulaCard title="Propolis" description="Description here?" price="29.99€" per="month" buttonHref={mailto('Propolis', 'mensuellement')}>
+        <PricingFormulaCardList>
+          <PricingFormulaCardListItem>
+            20.000 abeilles préservées
+          </PricingFormulaCardListItem>
+
+          <PricingFormulaCardListItem>
+            Une mascotte L'Abeille Viennoise
+          </PricingFormulaCardListItem>
+
+          <PricingFormulaCardListItem>
+            Une newsletter accompagnée de photos pour suivre l'évolution des rûches
+          </PricingFormulaCardListItem>
+
+          <PricingFormulaCardListItem>
+            3 pot de miel toutes fleurs de 250g
+          </PricingFormulaCardListItem>
+        </PricingFormulaCardList>
+      </PricingFormulaCard>
+
+      <PricingFormulaCard title="Gelée Royale" description="Description here?" price="59.99€" per="month" buttonHref={mailto('Gelée Royale', 'mensuellement')}>
+        <PricingFormulaCardList>
+          <PricingFormulaCardListItem>
+            40.000 abeilles préservées<br/>
+            <small class="text-sm text-gray-500">soit une rûche entière</small>
+          </PricingFormulaCardListItem>
+
+          <PricingFormulaCardListItem>
+            Une mascotte L'Abeille Viennoise
+          </PricingFormulaCardListItem>
+
+          <PricingFormulaCardListItem>
+            Une newsletter accompagnée de photos pour suivre l'évolution des rûches
+          </PricingFormulaCardListItem>
+
+          <PricingFormulaCardListItem>
+            1.000 fleurs plantées
+          </PricingFormulaCardListItem>
+
+          <PricingFormulaCardListItem>
+            4 pot de miel toutes fleurs de 250g
+          </PricingFormulaCardListItem>
+
+          <PricingFormulaCardListItem>
+            1 pot de miel toutes fleurs crémeux de 250g
+          </PricingFormulaCardListItem>
+        </PricingFormulaCardList>
+      </PricingFormulaCard>
+    </div>
+  </div>
+</section>
