@@ -1,7 +1,7 @@
 ---
 import { Image } from '@astrojs/image/components'
-import AppButton from '@/modules/shared/button/app-button.astro';
-import IconArrowRight from '@/modules/shared/icons/icon-arrow-right.astro';
+import AppButton from '@/modules/shared/button/app-button.astro'
+import IconArrowRight from '@/modules/shared/icons/icon-arrow-right.astro'
 ---
 <section class="bg-white dark:bg-gray-900">
   <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
@@ -10,23 +10,23 @@ import IconArrowRight from '@/modules/shared/icons/icon-arrow-right.astro';
         Devenez parrain
       </h1>
       <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-        Aidez au développement de nouvelles colonies d'abeilles et participez à leur sauvegarde.
+        Choisissez une formule et contactez-nous par email.
       </p>
 
       <div class="flex flex-col gap-4 sm:flex-row">
         <AppButton href="#" type="primary">
-          Démarrer
+          Contactez-nous
           <IconArrowRight />
         </AppButton>
 
-        <AppButton href="#">
-          Comment ça marche ?
+        <AppButton href="#pricing">
+          Choisir une formule
         </AppButton>
       </div>
     </div>
 
     <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-      <Image src={import('@/assets/images/bee-large.png')} alt="Illustration d'une abeille" />
+      <Image src={import('@/assets/images/ludovic-apiculteur.jpeg')} alt="Ludovic apiculteur" class="rounded-md" />
     </div>
   </div>
 </section>

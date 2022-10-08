@@ -1,12 +1,15 @@
 ---
+import { useRouter } from '@/modules/shared/routing/use-router'
+
 export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
-  isActif?: boolean
 }
 
-const { isActif, ...attributes } = Astro.props
+const { isCurrentPath } = useRouter(Astro)
+const isActif = isCurrentPath(Astro.props.href || '')
+
 const defaultClasses = 'block py-2 pr-4 pl-3 border-b border-amber-100 hover:bg-amber-50 md:hover:bg-transparent md:border-0 md:hover:text-amber-600 md:p-0 md:dark:hover:text-amber-500 dark:hover:bg-gray-700 dark:hover:text-amber-500 md:dark:hover:bg-transparent dark:border-gray-700'
-const active = 'text-amber-600 dark:text-amber-500'
-const passive = 'text-gray-700 dark:text-gray-400'
-const classes = defaultClasses.concat(' ', isActif ? active : passive)
+const activeClasses = 'text-amber-600 dark:text-amber-500'
+const passiveClasses = 'text-gray-700 dark:text-gray-400'
+const classes = defaultClasses.concat(' ', isActif ? activeClasses : passiveClasses)
 ---
-<a class={classes} aria-current={isActif ? 'page' : undefined} {...attributes}><slot /></a>
+<a {...Astro.props} class={classes} aria-current={isActif ? 'page' : undefined}><slot /></a>
