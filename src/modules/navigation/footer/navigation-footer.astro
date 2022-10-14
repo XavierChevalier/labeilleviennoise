@@ -1,4 +1,5 @@
 ---
+import FooterLink from './footer-link.astro';
 import NavigationFooterSocialNetworkLink from './navigation-footer-social-network-link.astro';
 import IconFacebook from '@/modules/shared/icons/icon-facebook.astro';
 import IconInstagram from '@/modules/shared/icons/icon-instagram.astro';
@@ -17,13 +18,13 @@ import LogoWithTextInline from '@/modules/shared/logo/logo-with-text-inline.astr
           <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Ressources</h2>
           <ul class="text-gray-600 dark:text-gray-400">
             <li class="mb-4">
-              <a href="/" class="hover:underline">Accueil</a>
+              <FooterLink href="/">Accueil</FooterLink>
             </li>
             <li class="mb-4">
-              <a href="/faq" class="hover:underline">Foire aux questions</a>
+              <FooterLink href="/faq">Foire aux questions</FooterLink>
             </li>
             <li>
-              <a href='/contact' class="hover:underline">Contactez-nous</a>
+              <FooterLink href='/contact'>Contactez-nous</FooterLink>
             </li>
           </ul>
         </div>
@@ -31,7 +32,10 @@ import LogoWithTextInline from '@/modules/shared/logo/logo-with-text-inline.astr
           <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Entreprise</h2>
           <ul class="text-gray-600 dark:text-gray-400">
             <li>
-              <a href="/mentions-legales" class="hover:underline">Mentions légales</a>
+              <FooterLink href="/mentions-legales">Mentions légales</FooterLink>
+            </li>
+            <li>
+              <FooterLink href="/conditions-generales-vente">Conditions Générales de Vente</FooterLink>
             </li>
           </ul>
         </div>
@@ -42,7 +46,7 @@ import LogoWithTextInline from '@/modules/shared/logo/logo-with-text-inline.astr
 
     <div class="sm:flex sm:items-center sm:justify-between">
       <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-        © {new Date().getFullYear()} <a href="/" class="hover:underline">L'Abeille Viennoise</a>. Tous droits réservés.
+        © {new Date().getFullYear()} <FooterLink href="/">L'Abeille Viennoise</FooterLink>. Tous droits réservés.
       </span>
       <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
         <NavigationFooterSocialNetworkLink href={import.meta.env.PUBLIC_FACEBOOK_URL}>
