@@ -1,8 +1,8 @@
 ---
 import PricingFormulaCardListItem from "./pricing-formula-card-list-item.astro"
 import PricingFormulaCardList from "./pricing-formula-card-list.astro"
-import PricingFormulaPerSwitch from "./pricing-formula-per-switch.astro"
 import PricingFormulaCard from "./pricing-formula-card.astro"
+import PricingFormulaPerSwitch from "./pricing-formula-per-switch.astro"
 
 const mailto = (formulaName: string) => 'mailto:' +
   import.meta.env.PUBLIC_CONTACT_MAIL
@@ -29,8 +29,8 @@ const mailto = (formulaName: string) => 'mailto:' +
     <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
       <PricingFormulaCard
         title="Nectar"
-        pricePerMonth="9.99"
-        pricePerYear="109.99"
+        pricePerMonth={9.99}
+        pricePerYear={109.99}
         per="month"
         buttonHref={mailto('Nectar')}
         >
@@ -55,8 +55,8 @@ const mailto = (formulaName: string) => 'mailto:' +
 
       <PricingFormulaCard
         title="Propolis"
-        pricePerMonth="29.99"
-        pricePerYear="320.99"
+        pricePerMonth={29.99}
+        pricePerYear={320.99}
         per="month"
         buttonHref={mailto('Propolis')}
         >
@@ -81,8 +81,8 @@ const mailto = (formulaName: string) => 'mailto:' +
 
       <PricingFormulaCard
         title="Gelée Royale"
-        pricePerMonth="59.99"
-        pricePerYear="659.99"
+        pricePerMonth={59.99}
+        pricePerYear={659.99}
         per="month"
         buttonHref={mailto('Gelée Royale')}
         >
@@ -118,9 +118,9 @@ const mailto = (formulaName: string) => 'mailto:' +
         const perElements = document.querySelectorAll('[data-per]')
         const perSwitchElement = document.getElementById('pricing-per-switch').querySelector('input')
         const priceElements = document.querySelectorAll('[data-price-per-month]')
-        const updatePricingPer = (per) =>
+        const updatePricingPer = (per: string) =>
           perElements.forEach((element) => (element.textContent = per === 'month' ? 'mois' : 'an'))
-        const updatePrices = (per) =>
+        const updatePrices = (per: string) =>
           priceElements
             .forEach((element) => (element.textContent = element.dataset['pricePer' + (per === 'month' ? 'Month' : 'Year')]))
 
