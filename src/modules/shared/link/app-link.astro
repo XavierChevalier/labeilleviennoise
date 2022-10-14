@@ -1,0 +1,13 @@
+---
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
+
+const { class: propsClasses, ...attributes } = Astro.props
+
+const baseClasses =
+  'font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline'
+const classes = baseClasses.concat(' ', propsClasses || '')
+---
+
+<a class={classes} {...attributes}>
+  <slot />
+</a>
