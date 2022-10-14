@@ -1,4 +1,8 @@
-<label for="default-toggle" class="inline-flex relative items-center mb-4 cursor-pointer">
+---
+export interface Props extends astroHTML.JSX.LabelHTMLAttributes {
+}
+---
+<label {...Astro.props} for="default-toggle" class="inline-flex relative items-center mb-4 cursor-pointer">
   <span class="mr-3 text-sm font-medium text-gray-900 dark:text-gray-300">
     <slot name="before" />
   </span>
