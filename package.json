@@ -24,6 +24,7 @@
     "@astrojs/image": "^0.9.1",
     "@astrojs/tailwind": "^2.0.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@tailwindcss/typography": "^0.5.7",
     "@types/jest": "^29.0.0",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",

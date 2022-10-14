@@ -24,5 +24,5 @@ module.exports = {
       center: true,
     },
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [require('flowbite/plugin'), require('@tailwindcss/typography')],
 }
