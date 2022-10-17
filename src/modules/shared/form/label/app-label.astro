@@ -1,0 +1,10 @@
+---
+export interface Props extends astroHTML.JSX.LabelHTMLAttributes {}
+
+const { class: propsClasses, ...attributes } = Astro.props
+const baseClasses =
+  'block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
+const classes = baseClasses.concat(' ', propsClasses || '')
+---
+
+<label {...attributes} class={classes}><slot /></label>
