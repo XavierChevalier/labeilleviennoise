@@ -1,5 +1,5 @@
 [build]
-  command = "npx pnpm install --store=node_modules/.pnpm-store && remix build"
+  command = "npx pnpm install --store=node_modules/.pnpm-store && pnpm build"
   publish = "public"
 
 [build.environment]
