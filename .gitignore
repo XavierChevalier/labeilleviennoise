@@ -27,3 +27,4 @@ node_modules
 
 # others
 /.cache
+app/assets/styles/app.generated.css
