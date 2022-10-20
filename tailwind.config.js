@@ -1,0 +1,28 @@
+const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: 'class',
+  content: [
+    './app/**/*.{html,js,jsx,md,mdx,svelte,ts,tsx}',
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          ...colors.amber,
+          DEFAULT: colors.amber['600'],
+        },
+      },
+      fontFamily: {
+        sans: ['Gotham', ...defaultTheme.fontFamily.sans],
+      },
+    },
+    container: {
+      center: true,
+    },
+  },
+  plugins: [require('flowbite/plugin'), require('@tailwindcss/typography')],
+}

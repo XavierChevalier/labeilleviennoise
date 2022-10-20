@@ -1,12 +1,21 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
   "compilerOptions": {
-    "isolatedModules": false,
-    // Replace `astro/client` with `@astrojs/image/client`
-    "types": ["@astrojs/image/client"],
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
-    }
+      "@/*": ["./app/*"]
+    },
+    "noEmit": true,
+    "allowJs": false,
+    "lib": ["DOM", "DOM.Iterable", "ES2019"]
   }
 }

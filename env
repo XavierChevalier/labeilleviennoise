@@ -1,0 +1,11 @@
+SHOP_NAME=labeille-viennoise
+SHOP=${SHOP_NAME}.myshopify.com
+API_KEY=fd7a3a9c15607ff700ab72e225698d36
+API_SECRET_KEY=5731bba76337bc3c88eacfd00188d302
+SHOPIFY_STOREFRONT_ACCESS_TOKEN=d6e52165a3bc8dcc14e756f484dfe943
+SCOPES={scopes} # Your app's required scopes
+HOST=localhost # Your app's host, without the protocol prefix (in this case we used an `ngrok` tunnel to provide a secure connection to our localhost)
+HOST_SCHEME=http # Either http or https. Note http is intended for local development with localhost.
+PUBLIC_CONTACT_MAIL=labeilleviennoise@gmail.com
+PUBLIC_INSTAGRAM_URL=https://www.instagram.com/labeilleviennoise/
+PUBLIC_FACEBOOK_URL=https://www.facebook.com/profile.php?id=100083012750809
