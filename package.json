@@ -4,7 +4,7 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "build:css && remix build",
+    "build": "pnpm build:css && remix build",
     "build:css": "tailwindcss -m -i ./app/assets/styles/app.css -o app/assets/styles/app.generated.css",
     "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
     "dev": "concurrently \"pnpm dev:css\" \"remix dev\"",
