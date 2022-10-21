@@ -1,11 +1,10 @@
-import Image from 'remix-image'
 import illustration from 'app/assets/images/ludovic-et-anne-marie.jpg'
 
 export default function HeroWhoAreWe() {
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <Image
+        <img
           src={illustration}
           alt="Préparation du miel par Ludovic et Anne-Marie"
           width="700"

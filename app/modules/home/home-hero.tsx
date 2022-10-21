@@ -1,4 +1,3 @@
-import Image from 'remix-image'
 import AppButton from '../shared/button/app-button'
 import IconArrowRight from '../shared/icons/icon-arrow-right'
 import illustration from '@/assets/images/bee-large.png'
@@ -25,7 +24,7 @@ export default function HomeHero() {
         </div>
 
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <Image
+          <img
             src={illustration}
             alt="Illustration d'une abeille"
             width="600"

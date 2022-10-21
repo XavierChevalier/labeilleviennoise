@@ -18,9 +18,9 @@ import NavigationFooter from './modules/navigation/footer/navigation-footer'
 import NavigationBar from './modules/navigation/header/navigation-bar'
 import appStylesheetUrl from '@/assets/styles/app.generated.css'
 
-export const links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: appStylesheetUrl }]
-}
+export const links: LinksFunction = () => [
+  { rel: 'stylesheet', href: appStylesheetUrl },
+]
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',

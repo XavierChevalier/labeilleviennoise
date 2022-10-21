@@ -1,4 +1,3 @@
-import Image from 'remix-image'
 import illustration from 'app/assets/images/pot-de-miel.webp'
 
 export default function HomeOurProducts() {
@@ -19,7 +18,7 @@ export default function HomeOurProducts() {
           </ul>
         </div>
 
-        <Image src={illustration} alt="Pot de miel" width="600" />
+        <img src={illustration} alt="Pot de miel" width="600" />
       </div>
     </section>
   )

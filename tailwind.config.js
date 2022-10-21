@@ -5,7 +5,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   darkMode: 'class',
   content: [
-    './app/**/*.{html,js,jsx,md,mdx,svelte,ts,tsx}',
+    './app/**/*.{html,js,jsx,ts,tsx}',
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
@@ -17,7 +17,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Gotham', ...defaultTheme.fontFamily.sans],
+        sans: defaultTheme.fontFamily.sans,
       },
     },
     container: {
