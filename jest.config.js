@@ -14,10 +14,6 @@ const librariesNameMapper = {
 }
 
 module.exports = {
-  globals: {
-    // @see https://stackoverflow.com/a/60905543
-    'ts-jest': { isolatedModules: true },
-  },
   moduleNameMapper: {
     ...styleNameMapper,
     ...imageNameMapper,
@@ -28,6 +24,7 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   modulePathIgnorePatterns: ['<rootDir>/dist/', '<rootDir>/cypress/'],
   transform: {
-    '^.+\\.ts$': 'ts-jest',
+    // @see https://stackoverflow.com/a/60905543
+    '^.+\\.ts$': ['ts-jest', { isolatedModules: true }],
   },
 }
