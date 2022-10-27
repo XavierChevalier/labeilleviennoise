@@ -13,6 +13,7 @@ import {
   ScrollRestoration,
   useLoaderData,
 } from '@remix-run/react'
+import { Flowbite } from 'flowbite-react'
 import React from 'react'
 import NavigationFooter from './modules/navigation/footer/navigation-footer'
 import NavigationBar from './modules/navigation/header/navigation-bar'
@@ -55,12 +56,22 @@ export default function App() {
       <body className="text-neutral-900 dark:bg-gray-500 dark:text-white min-h-screen">
         <React.StrictMode>
           <EnvContext.Provider value={env}>
-            <NavigationBar />
-            <Outlet />
-            <ScrollRestoration />
-            <Scripts />
-            <LiveReload />
-            <NavigationFooter />
+            <Flowbite
+              theme={{
+                theme: {
+                  darkThemeToggle: {
+                    base: 'text-gray-500 hover:text-gray-900 dark:hover:text-white',
+                  },
+                },
+              }}
+            >
+              <NavigationBar />
+              <Outlet />
+              <ScrollRestoration />
+              <Scripts />
+              <LiveReload />
+              <NavigationFooter />
+            </Flowbite>
           </EnvContext.Provider>
         </React.StrictMode>
         <script

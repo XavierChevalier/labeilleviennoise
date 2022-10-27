@@ -1,4 +1,5 @@
 import { Link } from '@remix-run/react'
+import { DarkThemeToggle } from 'flowbite-react'
 import { useContext } from 'react'
 import FooterLink from './footer-link'
 import NavigationFooterSocialNetworkLink from './navigation-footer-social-network-link'
@@ -70,6 +71,7 @@ export default function NavigationFooter() {
             réservés.
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+            <DarkThemeToggle />
             <NavigationFooterSocialNetworkLink href={PUBLIC_FACEBOOK_URL}>
               <IconFacebook />
             </NavigationFooterSocialNetworkLink>
