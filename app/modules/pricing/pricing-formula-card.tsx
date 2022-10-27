@@ -1,5 +1,6 @@
-import { useLoaderData } from '@remix-run/react'
+import { useContext } from 'react'
 import AppButton from '../shared/button/app-button'
+import { EnvContext } from '@/root'
 
 export interface Props extends React.HTMLProps<HTMLElement> {
   title: string
@@ -9,11 +10,11 @@ export interface Props extends React.HTMLProps<HTMLElement> {
 }
 
 export default function PricingFormulaCard(props: Props) {
+  const { PUBLIC_CONTACT_MAIL } = useContext(EnvContext)
   const { title, pricePerMonth, pricePerYear, isToggled } = props
-  const data = useLoaderData()
   const mailto = (per: string) =>
     'mailto:' +
-    data.envContactMail +
+    PUBLIC_CONTACT_MAIL +
     '?subject=Prise de contact pour parrainage' +
     '&body=Bonjour, je souhaite devenir parrain ' +
     per +

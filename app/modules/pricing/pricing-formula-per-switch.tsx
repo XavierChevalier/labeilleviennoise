@@ -1,4 +1,4 @@
-import AppSwitch from '../shared/form/switch/AppSwitch'
+import AppSwitch from '@/modules/shared/form/switch/app-switch'
 
 export interface Props {
   isToggled: boolean
