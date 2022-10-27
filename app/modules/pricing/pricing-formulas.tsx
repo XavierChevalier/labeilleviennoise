@@ -1,45 +1,15 @@
-import { useLoaderData } from '@remix-run/react'
-import { useEffect } from 'react'
+import { useState } from 'react'
 import PricingFormulaCard from './pricing-formula-card'
 import PricingFormulaCardList from './pricing-formula-card-list'
 import PricingFormulaCardListItem from './pricing-formula-card-list-item'
 import PricingFormulaPerSwitch from './pricing-formula-per-switch'
 
 export default function PricingFormulas() {
-  const data = useLoaderData()
-  const mailto = (formulaName: string) =>
-    'mailto:' +
-    data.envContactMail +
-    '?subject=Prise de contact pour parrainage' +
-    '&body=Bonjour, je souhaite devenir parrain grâce à la formule ' +
-    formulaName +
-    '.'
+  const [isToggled, setIsToggled] = useState(false)
 
-  useEffect(() => {
-    const perElements = document.querySelectorAll('[data-per]')
-    const perSwitchElement = document
-      .getElementById('pricing-per-switch')!
-      .querySelector('input')
-    const priceElements = document.querySelectorAll<HTMLElement>(
-      '[data-price-per-month]'
-    )
-    const updatePricingPer = (per: string) =>
-      perElements.forEach(
-        (element) => (element.textContent = per === 'month' ? 'mois' : 'an')
-      )
-    const updatePrices = (per: string) =>
-      priceElements.forEach(
-        (element) =>
-          (element.textContent =
-            element.dataset['pricePer' + (per === 'month' ? 'Month' : 'Year')]!)
-      )
-
-    perSwitchElement!.addEventListener('change', (event) => {
-      const per = (event.target as HTMLInputElement).checked ? 'year' : 'month'
-      updatePricingPer(per)
-      updatePrices(per)
-    })
-  }, [])
+  const handleIsToggled = () => {
+    setIsToggled((prevState) => !prevState)
+  }
 
   return (
     <section id="pricing" className="bg-white dark:bg-gray-900">
@@ -57,7 +27,10 @@ export default function PricingFormulas() {
         </div>
 
         <div className="flex justify-center mb-5">
-          <PricingFormulaPerSwitch />
+          <PricingFormulaPerSwitch
+            isToggled={isToggled}
+            onToggle={handleIsToggled}
+          />
         </div>
 
         <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
@@ -65,8 +38,7 @@ export default function PricingFormulas() {
             title="Nectar"
             pricePerMonth={9.99}
             pricePerYear={109.99}
-            per="month"
-            buttonHref={mailto('Nectar')}
+            isToggled={isToggled}
           >
             <PricingFormulaCardList>
               <PricingFormulaCardListItem>
@@ -92,8 +64,7 @@ export default function PricingFormulas() {
             title="Propolis"
             pricePerMonth={29.99}
             pricePerYear={320.99}
-            per="month"
-            buttonHref={mailto('Propolis')}
+            isToggled={isToggled}
           >
             <PricingFormulaCardList>
               <PricingFormulaCardListItem>
@@ -119,8 +90,7 @@ export default function PricingFormulas() {
             title="Gelée Royale"
             pricePerMonth={59.99}
             pricePerYear={659.99}
-            per="month"
-            buttonHref={mailto('Gelée Royale')}
+            isToggled={isToggled}
           >
             <PricingFormulaCardList>
               <PricingFormulaCardListItem>
