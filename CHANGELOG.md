@@ -1,4 +1,13 @@
-# 0.1.0 (2022-10-28)
+# [0.2.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.1.0...v0.2.0) (2022-10-28)
+
+
+### Features
+
+* rework sponsorship contact ([b44126b](https://github.com/XavierChevalier/labeilleviennoise/commit/b44126b83f2dedf515cc4c371d0532c457c172d5))
+
+
+
+# [0.1.0](https://github.com/XavierChevalier/labeilleviennoise/compare/72480acf9fa9ba5b1a51d92acf9c9f98718ea7f8...v0.1.0) (2022-10-28)
 
 
 ### Bug Fixes
