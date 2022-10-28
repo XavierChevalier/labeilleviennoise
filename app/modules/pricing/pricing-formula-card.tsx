@@ -1,6 +1,5 @@
-import { useContext } from 'react'
-import AppButton from '../shared/button/app-button'
-import { EnvContext } from '@/root'
+import AppLink from '../shared/link/app-link'
+import { useURL } from '@/modules/shared/location/use-url'
 
 export interface Props extends React.HTMLProps<HTMLElement> {
   title: string
@@ -10,17 +9,11 @@ export interface Props extends React.HTMLProps<HTMLElement> {
 }
 
 export default function PricingFormulaCard(props: Props) {
-  const { PUBLIC_CONTACT_MAIL } = useContext(EnvContext)
   const { title, pricePerMonth, pricePerYear, isToggled } = props
-  const mailto = (per: string) =>
-    'mailto:' +
-    PUBLIC_CONTACT_MAIL +
-    '?subject=Prise de contact pour parrainage' +
-    '&body=Bonjour, je souhaite devenir parrain ' +
-    per +
-    ' grâce à la formule ' +
-    title +
-    '.'
+  const { createUrl } = useURL()
+  const to = createUrl('/contact-parrainage')
+  to.searchParams.set('per', !isToggled ? 'mensuel' : 'annuel')
+  to.searchParams.set('title', title)
 
   return (
     <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
@@ -37,13 +30,12 @@ export default function PricingFormulaCard(props: Props) {
 
       {props.children}
 
-      <AppButton
-        type="primary"
-        href={mailto(!isToggled ? 'mensuel' : 'annuel')}
-        className="mt-auto"
+      <AppLink
+        to={to}
+        className="inline-flex items-center justify-center px-5 py-3 mr-3 font-medium text-center rounded-lg focus:ring-4 mt-auto no-underline text-white bg-primary hover:bg-primary-500 focus:ring-primary-300 dark:focus:ring-primary-900"
       >
         Prendre contact
-      </AppButton>
+      </AppLink>
     </div>
   )
 }

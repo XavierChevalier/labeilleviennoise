@@ -36,6 +36,7 @@ interface RootLoaderData {
 export const loader: LoaderFunction = async () => {
   return json<RootLoaderData>({
     env: {
+      BASE_URL: process.env.BASE_URL as string,
       PUBLIC_INSTAGRAM_URL: process.env.PUBLIC_INSTAGRAM_URL as string,
       PUBLIC_FACEBOOK_URL: process.env.PUBLIC_FACEBOOK_URL as string,
       PUBLIC_CONTACT_MAIL: process.env.PUBLIC_CONTACT_MAIL as string,
