@@ -4,10 +4,10 @@ import HomeWhoAreWe from '@/modules/home/home-who-are-we'
 
 export default function Index() {
   return (
-    <>
+    <div className="bg-white dark:bg-gray-900">
       <HomeHero />
       <HomeWhoAreWe />
       <HomeOurProducts />
-    </>
+    </div>
   )
 }
