@@ -1,3 +1,17 @@
+# [0.3.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.2.0...v0.3.0) (2022-10-28)
+
+
+### Bug Fixes
+
+* navigation menu on mobile ([c159d2a](https://github.com/XavierChevalier/labeilleviennoise/commit/c159d2ad5266cf143947f660aae5cfc02d26ff04))
+
+
+### Features
+
+* add 404 page ([9acd92e](https://github.com/XavierChevalier/labeilleviennoise/commit/9acd92ea0c70322b26938bab53bba150f6a9f130))
+
+
+
 # [0.2.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.1.0...v0.2.0) (2022-10-28)
 
 
