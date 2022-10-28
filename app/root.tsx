@@ -11,6 +11,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useCatch,
   useLoaderData,
 } from '@remix-run/react'
 import { Flowbite } from 'flowbite-react'
@@ -18,6 +19,7 @@ import React from 'react'
 import NavigationFooter from './modules/navigation/footer/navigation-footer'
 import NavigationBar from './modules/navigation/header/navigation-bar'
 import appStylesheetUrl from '@/assets/styles/app.generated.css'
+import PageNotFound from '@/modules/boundary/404'
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: appStylesheetUrl },
@@ -74,6 +76,54 @@ export default function App() {
               <NavigationFooter />
             </Flowbite>
           </EnvContext.Provider>
+        </React.StrictMode>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            (function(h,o,t,j,a,r){
+              h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+              h._hjSettings={hjid:3204963,hjsv:6};
+              a=o.getElementsByTagName('head')[0];
+              r=o.createElement('script');r.async=1;
+              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+              a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+            `,
+          }}
+        />
+      </body>
+    </html>
+  )
+}
+
+export function CatchBoundary() {
+  const caught = useCatch()
+
+  return (
+    <html lang="fr">
+      <head>
+        <Meta />
+        <Links />
+      </head>
+      <body className="text-neutral-900 dark:bg-gray-500 dark:text-white min-h-screen">
+        <React.StrictMode>
+          <Flowbite
+            theme={{
+              // usePreferences: false,
+              theme: {
+                darkThemeToggle: {
+                  base: 'text-gray-500 hover:text-gray-900 dark:hover:text-white',
+                },
+              },
+            }}
+          >
+            <NavigationBar />
+            {caught.status == 404 && <PageNotFound />}
+            <ScrollRestoration />
+            <Scripts />
+            <LiveReload />
+            <NavigationFooter />
+          </Flowbite>
         </React.StrictMode>
         <script
           dangerouslySetInnerHTML={{
