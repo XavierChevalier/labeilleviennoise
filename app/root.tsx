@@ -61,6 +61,7 @@ export default function App() {
           <EnvContext.Provider value={env}>
             <Flowbite
               theme={{
+                usePreferences: false,
                 theme: {
                   darkThemeToggle: {
                     base: 'text-gray-500 hover:text-gray-900 dark:hover:text-white',
@@ -109,7 +110,7 @@ export function CatchBoundary() {
         <React.StrictMode>
           <Flowbite
             theme={{
-              // usePreferences: false,
+              usePreferences: false,
               theme: {
                 darkThemeToggle: {
                   base: 'text-gray-500 hover:text-gray-900 dark:hover:text-white',
