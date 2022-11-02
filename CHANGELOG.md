@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.3.0...v0.4.0) (2022-11-02)
+
+
+### Features
+
+* use ImageKit to optimize images ([942b1ce](https://github.com/XavierChevalier/labeilleviennoise/commit/942b1cec1a331df082637226847b9e63806537bb))
+
+
+
 # [0.3.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.2.0...v0.3.0) (2022-10-28)
 
 
