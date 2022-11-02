@@ -15,6 +15,7 @@ import {
   useLoaderData,
 } from '@remix-run/react'
 import { Flowbite } from 'flowbite-react'
+import { IKContext } from 'imagekitio-react'
 import React from 'react'
 import NavigationFooter from './modules/navigation/footer/navigation-footer'
 import NavigationBar from './modules/navigation/header/navigation-bar'
@@ -42,6 +43,10 @@ export const loader: LoaderFunction = async () => {
       PUBLIC_INSTAGRAM_URL: process.env.PUBLIC_INSTAGRAM_URL as string,
       PUBLIC_FACEBOOK_URL: process.env.PUBLIC_FACEBOOK_URL as string,
       PUBLIC_CONTACT_MAIL: process.env.PUBLIC_CONTACT_MAIL as string,
+      PUBLIC_IMAGEKIT_URL_ENDPOINT: process.env
+        .PUBLIC_IMAGEKIT_URL_ENDPOINT as string,
+      PUBLIC_IMAGEKIT_PUBLIC_KEY: process.env
+        .PUBLIC_IMAGEKIT_PUBLIC_KEY as string,
     },
   })
 }
@@ -69,12 +74,17 @@ export default function App() {
                 },
               }}
             >
-              <NavigationBar />
-              <Outlet />
-              <ScrollRestoration />
-              <Scripts />
-              <LiveReload />
-              <NavigationFooter />
+              <IKContext
+                publicKey={env.PUBLIC_IMAGEKIT_PUBLIC_KEY}
+                urlEndpoint={env.PUBLIC_IMAGEKIT_URL_ENDPOINT}
+              >
+                <NavigationBar />
+                <Outlet />
+                <ScrollRestoration />
+                <Scripts />
+                <LiveReload />
+                <NavigationFooter />
+              </IKContext>
             </Flowbite>
           </EnvContext.Provider>
         </React.StrictMode>
