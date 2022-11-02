@@ -5,7 +5,7 @@
   "sideEffects": false,
   "scripts": {
     "prepare": "husky install && pnpm build:css",
-    "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
+    "prebuild": "test \"$CI\" = true && npx pnpm install --prod --store=node_modules/.pnpm-store || echo skipping pnpm install",
     "build": "pnpm build:css && remix build",
     "build:css": "pnpm build:css:prepare -m",
     "build:css:prepare": "tailwindcss -i ./app/assets/styles/app.css -o app/assets/styles/app.generated.css",
