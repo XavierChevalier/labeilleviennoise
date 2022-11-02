@@ -7,11 +7,10 @@ export interface Props {
 
 export default function PricingFormulaPerSwitch(props: Props) {
   const { isToggled, onToggle } = props
-  const before = () => <span>Mensuel</span>
+
   return (
     <AppSwitch
-      id="pricing-per-switch"
-      before={before()}
+      before={<span>Mensuel</span>}
       onChange={onToggle}
       isToggled={isToggled}
     >

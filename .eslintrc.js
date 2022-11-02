@@ -26,7 +26,6 @@ module.exports = {
     '@typescript-eslint/no-empty-interface': ['off'],
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
     '@typescript-eslint/no-unused-vars': ['error'],
-    'import/no-unresolved': ['off'], // turn off errors for missing imports (duplicated rule)
     'import/newline-after-import': ['error'],
     'import/order': ['error', { alphabetize: { order: 'asc' } }],
   },
