@@ -15,6 +15,8 @@ module.exports = {
         'test',
         'revert',
         'deps',
+        'ci',
+        'perf',
       ],
     ],
     'scope-enum': [2, 'always', ['home', 'sponsorship']],
