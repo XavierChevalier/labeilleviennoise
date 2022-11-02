@@ -1,3 +1,12 @@
+## [0.4.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.4.0...v0.4.1) (2022-11-02)
+
+
+### Bug Fixes
+
+* dark theme issue ([12c3d42](https://github.com/XavierChevalier/labeilleviennoise/commit/12c3d42a8ce223124256a841bd32b087c248f100))
+
+
+
 # [0.4.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.3.0...v0.4.0) (2022-11-02)
 
 
