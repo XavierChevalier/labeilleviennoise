@@ -2,7 +2,7 @@ export default function ConditionsGeneralesVente() {
   return (
     <section className="bg-white dark:bg-gray-900">
       <article className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 prose lg:prose-xl">
-        <h2>CONDITIONS D'UTILISATION</h2>
+        <h1 className="text-primary text-center">Conditions d'utilisation</h1>
         <p>
           Ce site web est exploité par L'Abeille Viennoise. Partout sur le site,
           nous employons les termes « nous », « notre » et « nos » en référence
@@ -52,7 +52,7 @@ export default function ConditionsGeneralesVente() {
           vendre nos produits et services.
         </p>
 
-        <h2>SECTION 1 – CONDITIONS D'UTILISATION DE LA BOUTIQUE EN LIGNE</h2>
+        <h2>Section 1 - Conditions d'utilisation de la boutique en ligne</h2>
 
         <p>
           En acceptant les présentes Conditions d'utilisation, vous déclarez
@@ -78,7 +78,7 @@ export default function ConditionsGeneralesVente() {
           entraînera la résiliation immédiate de vos Services.
         </p>
 
-        <h2>SECTION 2 – CONDITIONS GÉNÉRALES</h2>
+        <h2>Section 2 - Conditions générales</h2>
 
         <p>
           Nous nous réservons le droit de refuser de servir quelqu'un à tout
@@ -110,7 +110,7 @@ export default function ConditionsGeneralesVente() {
         </p>
 
         <h2>
-          SECTION 3 – EXACTITUDE, EXHAUSTIVITÉ ET ACTUALITÉ DES INFORMATIONS
+          Section 3 - Exactitude, exhaustivité et actualité des informations
         </h2>
 
         <p>
@@ -133,7 +133,7 @@ export default function ConditionsGeneralesVente() {
           surveiller les changements apportés à notre site.
         </p>
 
-        <h2>SECTION 4 – MODIFICATIONS DU SERVICE ET DES PRIX</h2>
+        <h2>Section 4 - Modifications du service et des prix</h2>
 
         <p>Les prix de nos produits sont modifiables sans préavis.</p>
 
@@ -149,7 +149,7 @@ export default function ConditionsGeneralesVente() {
           ou interruption du Service.
         </p>
 
-        <h2>SECTION 5 – PRODUITS OU SERVICES (le cas échéant)</h2>
+        <h2>Section 5 – Produits ou services (le cas échéant)</h2>
 
         <p>
           Il est possible que certains produits ou services ne soient
@@ -185,7 +185,7 @@ export default function ConditionsGeneralesVente() {
         </p>
 
         <h2>
-          SECTION 6 – EXACTITUDE DE LA FACTURATION ET DES INFORMATIONS DE COMPTE
+          Section 6 - Exactitude de la facturation et des informations de compte
         </h2>
 
         <p>
@@ -216,7 +216,7 @@ export default function ConditionsGeneralesVente() {
           retour.
         </p>
 
-        <h2>SECTION 7 – OUTILS FACULTATIFS</h2>
+        <h2>Section 7 – Outils facultatifs</h2>
 
         <p>
           Nous sommes susceptibles de vous fournir l'accès à des outils tiers
@@ -248,7 +248,7 @@ export default function ConditionsGeneralesVente() {
           Conditions d'utilisation.
         </p>
 
-        <h2>ARTICLE 8 – LIENS DE TIERS</h2>
+        <h2>Article 8 – Liens de tiers</h2>
 
         <p>
           Certains contenus, produits et services accessibles via notre Service
@@ -275,7 +275,7 @@ export default function ConditionsGeneralesVente() {
         </p>
 
         <h2>
-          ARTICLE 9 – COMMENTAIRES, RETOURS D'EXPÉRIENCE ET AUTRES SOUMISSIONS
+          Article 9 – Commentaires, retours d'expérience et autres soumissions
         </h2>
 
         <p>
@@ -315,7 +315,7 @@ export default function ConditionsGeneralesVente() {
           commentaires publiés par vous ou un tiers.
         </p>
 
-        <h2>ARTICLE 10 – INFORMATIONS PERSONNELLES</h2>
+        <h2>Article 10 – Informations personnelles</h2>
 
         <p>
           La transmission de vos informations personnelles sur notre boutique
@@ -323,7 +323,7 @@ export default function ConditionsGeneralesVente() {
           consulter notre Politique de Confidentialité.
         </p>
 
-        <h2>ARTICLE 11 – ERREURS, INEXACTITUDES ET OMISSIONS</h2>
+        <h2>Article 11 – Erreurs, inexactitudes et omissions</h2>
 
         <p>
           Il se peut qu'il y ait parfois, sur notre site ou dans le Service, des
@@ -349,7 +349,7 @@ export default function ConditionsGeneralesVente() {
           jour.
         </p>
 
-        <h2>ARTICLE 12 – UTILISATIONS INTERDITES</h2>
+        <h2>Article 12 – Utilisations interdites</h2>
 
         <p>
           En plus des autres interdictions énoncées dans les Conditions
@@ -381,7 +381,7 @@ export default function ConditionsGeneralesVente() {
         </p>
 
         <h2>
-          ARTICLE 13 – EXCLUSION DE GARANTIES ET LIMITATION DE RESPONSABILITÉ
+          Article 13 – Exclusion de garanties et limitation de responsabilité
         </h2>
 
         <p>
@@ -435,7 +435,7 @@ export default function ConditionsGeneralesVente() {
           limitée dans la mesure maximale permise par la loi.
         </p>
 
-        <h2>ARTICLE 14 – INDEMNISATION</h2>
+        <h2>Article 14 – Indemnisation</h2>
 
         <p>
           Vous acceptez d’indemniser, de défendre et de tenir L'Abeille
@@ -450,7 +450,7 @@ export default function ConditionsGeneralesVente() {
           tiers.
         </p>
 
-        <h2>ARTICLE 15 – DISSOCIABILITÉ</h2>
+        <h2>Article 15 – Dissociabilité</h2>
 
         <p>
           Dans le cas où une quelconque disposition des présentes Conditions
@@ -461,7 +461,7 @@ export default function ConditionsGeneralesVente() {
           n'affecte la validité et l’applicabilité des autres dispositions.
         </p>
 
-        <h2>ARTICLE 16 – RÉSILIATION</h2>
+        <h2>Article 16 – Résiliation</h2>
 
         <p>
           Les obligations et responsabilités engagées par les parties avant la
@@ -485,7 +485,7 @@ export default function ConditionsGeneralesVente() {
           vous refuser l’accès à nos Services (ou à une partie de ceux-ci).
         </p>
 
-        <h2>ARTICLE 17 – INTÉGRALITÉ DE L’ACCORD</h2>
+        <h2>Article 17 – Intégralité de l'accord</h2>
 
         <p>
           Tout manquement de notre part à l’exercice ou à l’application d'un
@@ -508,7 +508,7 @@ export default function ConditionsGeneralesVente() {
           rédactrice.
         </p>
 
-        <h2>ARTICLE 18 – LOI APPLICABLE</h2>
+        <h2>Article 18 – Loi applicable</h2>
 
         <p>
           Les présentes Conditions d’utilisation, ainsi que tout accord distinct
@@ -518,7 +518,7 @@ export default function ConditionsGeneralesVente() {
         </p>
 
         <h2>
-          ARTICLE 19 – MODIFICATIONS APPORTÉES AUX CONDITIONS D’UTILISATION
+          Article 19 – Modifications apportées aux conditions d'utilisation
         </h2>
 
         <p>
@@ -537,7 +537,7 @@ export default function ConditionsGeneralesVente() {
           Conditions d'utilisation, vous acceptez celles-ci.
         </p>
 
-        <h2>ARTICLE 20 – COORDONNÉES</h2>
+        <h2>Article 20 – Coordonnées</h2>
 
         <p>
           Les questions relatives aux Conditions d’utilisation doivent nous être
