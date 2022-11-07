@@ -42,6 +42,11 @@ export default function NavigationMenu() {
             </NavigationBarLink>
           </li>
           <li>
+            <NavigationBarLink to="/le-rucher" onClick={handleShowMenu}>
+              Le rucher
+            </NavigationBarLink>
+          </li>
+          <li>
             <NavigationBarLink to="/contact" onClick={handleShowMenu}>
               Contact
             </NavigationBarLink>

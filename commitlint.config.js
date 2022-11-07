@@ -19,7 +19,7 @@ module.exports = {
         'perf',
       ],
     ],
-    'scope-enum': [2, 'always', ['home', 'sponsorship']],
+    'scope-enum': [2, 'always', ['apiary', 'home', 'sponsorship']],
     'footer-max-line-length': [0, 'always'], // Make sure there is never a max-line-length by disabling the rule
   },
   parserPreset: {
