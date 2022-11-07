@@ -1,3 +1,12 @@
+## [0.5.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.5.0...v0.5.1) (2022-11-07)
+
+
+### Bug Fixes
+
+* general termes and C.G.V styles ([89c6a06](https://github.com/XavierChevalier/labeilleviennoise/commit/89c6a062fa40f63ed278a79c2b19541e0c76c095))
+
+
+
 # [0.5.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.4.1...v0.5.0) (2022-11-07)
 
 
@@ -36,15 +45,6 @@
 ### Features
 
 * add 404 page ([9acd92e](https://github.com/XavierChevalier/labeilleviennoise/commit/9acd92ea0c70322b26938bab53bba150f6a9f130))
-
-
-
-# [0.2.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.1.0...v0.2.0) (2022-10-28)
-
-
-### Features
-
-* rework sponsorship contact ([b44126b](https://github.com/XavierChevalier/labeilleviennoise/commit/b44126b83f2dedf515cc4c371d0532c457c172d5))
 
 
 
