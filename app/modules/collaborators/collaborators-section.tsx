@@ -9,7 +9,7 @@ export default function CollaboratorsSection() {
           Découvrez nos partenaires
         </p>
       </div>
-      <div className="grid gap-8 lg:gap-16 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-96 items-center">
+      <div className="grid gap-8 lg:gap-16 grid-cols-2 h-96 items-center">
         <div className="text-center text-gray-500 dark:text-gray-400">
           <a href="https://vienne.fr/" className="cursor-alias">
             <img

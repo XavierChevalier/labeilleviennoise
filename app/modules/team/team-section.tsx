@@ -11,7 +11,7 @@ export default function TeamSection() {
           L'Abeille Viennoise c'est nous, mais c'est aussi eux...
         </p>
       </div>
-      <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid gap-8 lg:gap-16 grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
         <div className="text-center text-gray-500 dark:text-gray-400">
           <IKImage
             className="mx-auto mb-4 rounded-md"
