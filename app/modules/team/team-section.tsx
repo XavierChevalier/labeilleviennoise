@@ -51,7 +51,7 @@ export default function TeamSection() {
         <div className="text-center text-gray-500 dark:text-gray-400">
           <IKImage
             className="mx-auto mb-4 rounded-md"
-            path="images/team/perrine.jpg"
+            path="images/team/perrine.png"
             alt="Perrine"
             transformation={[{ height: '175', width: '175' }]}
           />
