@@ -4,7 +4,7 @@ import SponsorshipWhy from '@/modules/sponsorship/sponsorship-why'
 
 export default function Parrainage() {
   return (
-    <div className="bg-white dark:bg-gray-900">
+    <div>
       <SponsorshipHero />
       <SponsorshipWhy />
       <PricingFormulas />

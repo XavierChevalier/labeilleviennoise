@@ -19,6 +19,18 @@ module.exports = {
       fontFamily: {
         sans: defaultTheme.fontFamily.sans,
       },
+      animation: {
+        infiniteUp: 'infiniteUp 30s infinite linear',
+        infiniteUpSlow: 'infiniteUp 45s infinite linear',
+        infiniteDown: 'infiniteUp 30s infinite linear reverse',
+        infiniteDownSlow: 'infiniteUp 50s infinite linear reverse',
+      },
+      keyframes: {
+        infiniteUp: {
+          0: { transform: 'translate3d(0, 0, 0)' },
+          to: { transform: 'translate3d(0, -50%, 0)' },
+        },
+      },
     },
     container: {
       center: true,

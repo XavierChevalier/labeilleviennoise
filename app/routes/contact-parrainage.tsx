@@ -22,14 +22,12 @@ export default function ContactParrainage() {
     '.'
 
   return (
-    <section className="bg-white dark:bg-gray-900">
-      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-        <ContactHeader formSuccess={searchParams.has('success')}>
-          Afin de confirmer votre demande de parrainage, merci de nous indiquer
-          votre nom et une adresse email sur laquelle vous joindre.
-        </ContactHeader>
-        <ContactForm defaultValues={{ subject, message }} />
-      </div>
-    </section>
+    <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <ContactHeader formSuccess={searchParams.has('success')}>
+        Afin de confirmer votre demande de parrainage, merci de nous indiquer
+        votre nom et une adresse email sur laquelle vous joindre.
+      </ContactHeader>
+      <ContactForm defaultValues={{ subject, message }} />
+    </div>
   )
 }

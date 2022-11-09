@@ -61,7 +61,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="text-neutral-900 dark:bg-gray-500 dark:text-white min-h-screen">
+      <body className="text-neutral-900 bg-white dark:bg-gray-900 dark:text-white min-h-screen">
         <React.StrictMode>
           <EnvContext.Provider value={env}>
             <Flowbite
