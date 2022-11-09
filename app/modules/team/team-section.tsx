@@ -16,7 +16,7 @@ export default function TeamSection() {
           <IKImage
             className="mx-auto mb-4 rounded-md"
             path="images/team/xavier.jpeg"
-            alt="Bonnie Avatar"
+            alt="Xavier"
             transformation={[{ height: '175', width: '175' }]}
           />
           <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -28,7 +28,7 @@ export default function TeamSection() {
           <IKImage
             className="mx-auto mb-4  rounded-md"
             path="images/team/nicolas.jpg"
-            alt="Bonnie Avatar"
+            alt="Nicolas"
             transformation={[{ height: '175', width: '175' }]}
           />
           <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -40,7 +40,7 @@ export default function TeamSection() {
           <IKImage
             className="mx-auto mb-4 rounded-md"
             path="images/team/steffie.jpg"
-            alt="Bonnie Avatar"
+            alt="Steffie"
             transformation={[{ height: '175', width: '175' }]}
           />
           <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -49,10 +49,11 @@ export default function TeamSection() {
           <p>Petites mains</p>
         </div>
         <div className="text-center text-gray-500 dark:text-gray-400">
-          <img
-            className="mx-auto mb-4 w-[175px] h-[175px] rounded-md"
-            src="https://static.wikia.nocookie.net/bokunoheroacademia/images/b/be/Toru_Hagakure_Portrait.png"
-            alt="Joseph Avatar"
+          <IKImage
+            className="mx-auto mb-4 rounded-md"
+            path="images/team/perrine.jpg"
+            alt="Perrine"
+            transformation={[{ height: '175', width: '175' }]}
           />
           <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Perrine
@@ -63,7 +64,7 @@ export default function TeamSection() {
           <img
             className="mx-auto mb-4 w-[175px] h-[175px] rounded-md"
             src="https://cdn.discordapp.com/avatars/617764907357569045/10b23d14dca9191840bc6c7507a31fc7.webp"
-            alt="Sofia Avatar"
+            alt="Morgane"
           />
           <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Morgane
