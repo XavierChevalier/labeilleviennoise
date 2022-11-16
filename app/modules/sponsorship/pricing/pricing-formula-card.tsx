@@ -1,7 +1,8 @@
-import AppLink from '../shared/link/app-link'
+import type { HTMLProps } from 'react'
+import AppLink from '@/modules/shared/link/app-link'
 import { useURL } from '@/modules/shared/location/use-url'
 
-export interface Props extends React.HTMLProps<HTMLElement> {
+export interface Props extends HTMLProps<HTMLElement> {
   title: string
   pricePerMonth: number
   pricePerYear: number

@@ -19,14 +19,14 @@ export default function SponsorshipWhy() {
           Pourquoi parrainer ?
         </h2>
         <p className="max-w-2xl mb-4 font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
-          En octobre 2021 l’abeille a été élue grande cause 2022.
+          En octobre 2021 l'abeille a été élue grande cause 2022.
         </p>
         <p className="max-w-2xl mb-4 font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
-          En effet, ce précieux insecte est aujourd’hui en danger depuis une
-          quarantaine d’années.
+          En effet, ce précieux insecte est aujourd'hui en danger depuis une
+          quarantaine d'années.
         </p>
         <p className="max-w-2xl mb-6 lg:mb-8 font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
-          La population d’abeille d’Europe à diminué de plus d’un tiers.
+          La population d'abeille d'Europe a diminué de plus d'un tiers.
         </p>
 
         <AppButton type="primary" href="#pricing">
