@@ -11,15 +11,13 @@ export default function Contact() {
   const [searchParams] = useSearchParams()
 
   return (
-    <section className="bg-white dark:bg-gray-900">
-      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-        <ContactHeader formSuccess={searchParams.has('success')}>
-          Des questions sans réponses dans notre{' '}
-          <AppLink to="/faq">foire aux questions</AppLink> ? Une proposition ?
-          N'hésitez pas à nous contacter.
-        </ContactHeader>
-        <ContactForm />
-      </div>
-    </section>
+    <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <ContactHeader formSuccess={searchParams.has('success')}>
+        Des questions sans réponses dans notre{' '}
+        <AppLink to="/faq">foire aux questions</AppLink> ? Une proposition ?
+        N'hésitez pas à nous contacter.
+      </ContactHeader>
+      <ContactForm />
+    </div>
   )
 }

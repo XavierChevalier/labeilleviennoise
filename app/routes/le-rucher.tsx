@@ -2,12 +2,11 @@ import { IKImage, IKVideo } from 'imagekitio-react'
 import ApiarySection from '@/modules/apiary/ApiarySection'
 import ApiarySections from '@/modules/apiary/ApiarySections'
 import ApiaryStory from '@/modules/apiary/ApiaryStory'
-import AppButton from '@/modules/shared/button/app-button'
-import IconArrowRight from '@/modules/shared/icons/icon-arrow-right'
+import SponsorshipCallToAction from '@/modules/sponsorship/sponsorship-call-to-action'
 
 export default function LeRucher() {
   return (
-    <div className="bg-white dark:bg-gray-900 p-4 max-w-screen-xl mx-auto">
+    <div className="p-4 max-w-screen-xl mx-auto">
       <h1 className="max-w-2xl my-8 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl mx-auto text-center text-primary">
         Le rucher et créations artisanales
       </h1>
@@ -319,30 +318,7 @@ export default function LeRucher() {
         </ApiarySection>
       </ApiarySections>
 
-      <section className="my-8 flex">
-        <div className="mr-auto order-2 md:order-1 place-self-center md:col-span-6 lg:col-span-7">
-          <h3 className="mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-5xl">
-            Vous souhaitez soutenir le projet ?<br />
-            Devenez parrain d'une ruche !
-          </h3>
-
-          <div className="flex flex-col gap-4 sm:flex-row">
-            <AppButton href="/parrainage" type="primary">
-              Comment ça marche ?
-              <IconArrowRight />
-            </AppButton>
-          </div>
-        </div>
-
-        <div className="hidden mx-auto mb-6 md:mb-0 order-1 md:order-2 md:mt-0 md:col-span-6 lg:col-span-5 md:flex">
-          <IKImage
-            path="images/bee-large.png"
-            alt="Illustration d'une abeille"
-            className="min-w-[400px] max-h-[293px]"
-            transformation={[{ width: '400' }]}
-          />
-        </div>
-      </section>
+      <SponsorshipCallToAction />
     </div>
   )
 }
