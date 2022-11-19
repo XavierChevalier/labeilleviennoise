@@ -1,4 +1,5 @@
-import PricingFormulas from '@/modules/pricing/pricing-formulas'
+import PricingFormulas from '@/modules/sponsorship/pricing/pricing-formulas'
+import SponsorshipCallToActionCompany from '@/modules/sponsorship/sponsorship-call-to-action-company'
 import SponsorshipHero from '@/modules/sponsorship/sponsorship-hero'
 import SponsorshipWhy from '@/modules/sponsorship/sponsorship-why'
 
@@ -8,6 +9,7 @@ export default function Parrainage() {
       <SponsorshipHero />
       <SponsorshipWhy />
       <PricingFormulas />
+      <SponsorshipCallToActionCompany />
     </div>
   )
 }

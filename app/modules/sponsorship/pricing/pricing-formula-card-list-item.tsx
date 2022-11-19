@@ -1,7 +1,8 @@
-import IconCheck from '../shared/icons/icon-check'
+import type { HTMLProps } from 'react'
+import IconCheck from '../../shared/icons/icon-check'
 
 export default function PricingFormulaCardListItem(
-  props: React.HTMLProps<HTMLElement>
+  props: HTMLProps<HTMLElement>
 ) {
   return (
     <li className="flex items-center space-x-3">
