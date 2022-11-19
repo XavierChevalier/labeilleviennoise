@@ -1,3 +1,15 @@
+# [0.6.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.5.1...v0.6.0) (2022-11-19)
+
+
+### Features
+
+* add horizontal and vertical logos ([fccfa24](https://github.com/XavierChevalier/labeilleviennoise/commit/fccfa246011b2971c80d95201258d6ee3ebecbc6))
+* allow favicon dark mode ([974a097](https://github.com/XavierChevalier/labeilleviennoise/commit/974a0978871dcd6cc09bdb5c13eabe2ff305026e))
+* **honey-house:** create "La Miellerie" page ([c3b2798](https://github.com/XavierChevalier/labeilleviennoise/commit/c3b2798888b678895706b31526aaee346ffc1854))
+* **sponsorship:** update pricing formulas ([f282e6e](https://github.com/XavierChevalier/labeilleviennoise/commit/f282e6ebc54a285e8c67e92162314ee683e0b075))
+
+
+
 ## [0.5.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.5.0...v0.5.1) (2022-11-07)
 
 
@@ -31,20 +43,6 @@
 ### Features
 
 * use ImageKit to optimize images ([942b1ce](https://github.com/XavierChevalier/labeilleviennoise/commit/942b1cec1a331df082637226847b9e63806537bb))
-
-
-
-# [0.3.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.2.0...v0.3.0) (2022-10-28)
-
-
-### Bug Fixes
-
-* navigation menu on mobile ([c159d2a](https://github.com/XavierChevalier/labeilleviennoise/commit/c159d2ad5266cf143947f660aae5cfc02d26ff04))
-
-
-### Features
-
-* add 404 page ([9acd92e](https://github.com/XavierChevalier/labeilleviennoise/commit/9acd92ea0c70322b26938bab53bba150f6a9f130))
 
 
 
