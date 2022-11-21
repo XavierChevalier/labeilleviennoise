@@ -1,12 +1,55 @@
-import { useState } from 'react'
 import PricingFormulaCard from './pricing-formula-card'
 import PricingFormulaCardList from './pricing-formula-card-list'
 import PricingFormulaCardListItem from './pricing-formula-card-list-item'
 import PricingFormulaPerSwitch from './pricing-formula-per-switch'
+import AppLink from '@/modules/shared/link/app-link'
+import { useURL } from '@/modules/shared/location/use-url'
+import { useToggle } from '@/modules/shared/states/use-toggle'
+
+type Formula = 'nectar' | 'propolis' | 'geleeRoyale'
+type FormulaLabel = 'Nectar' | 'Propolis' | 'Gelée Royale'
+interface FormulaPrices {
+  perMonth: number
+  perYear: number
+}
 
 export default function PricingFormulas() {
-  const [isToggled, setIsToggled] = useState(false)
-  const handleIsToggled = () => setIsToggled((prevState) => !prevState)
+  const [isPerYear, togglePaymentInterval] = useToggle(false)
+  const priceSelector: keyof FormulaPrices = isPerYear ? 'perYear' : 'perMonth'
+  const formulasPrices: Record<Formula, FormulaPrices> = {
+    nectar: {
+      perMonth: 9.99,
+      perYear: 109.99,
+    },
+    propolis: {
+      perMonth: 29.99,
+      perYear: 320.99,
+    },
+    geleeRoyale: {
+      perMonth: 59.99,
+      perYear: 659.99,
+    },
+  }
+  const { createUrl } = useURL()
+  const createContactUrl = (appendSearchParameters: Record<string, string>) => {
+    const url = createUrl('/contact-parrainage')
+    url.searchParams.set('per', isPerYear ? 'annuel' : 'mensuel')
+    Object.entries(appendSearchParameters).forEach(([key, value]) =>
+      url.searchParams.set(key, value)
+    )
+
+    return url
+  }
+  const createFormulaContactUrl = (formula: FormulaLabel) =>
+    createContactUrl({ title: formula })
+  const createFormulaButton = (formula: FormulaLabel) => (
+    <AppLink
+      to={createFormulaContactUrl(formula)}
+      className="inline-flex items-center justify-center px-5 py-3 mr-3 font-medium text-center rounded-lg focus:ring-4 mt-auto no-underline text-white bg-primary hover:bg-primary-500 focus:ring-primary-300 dark:focus:ring-primary-900"
+    >
+      Prendre contact
+    </AppLink>
+  )
 
   return (
     <section
@@ -21,64 +64,56 @@ export default function PricingFormulas() {
           Les avantages sont répartis sur l'année. C'est grâce à votre
           parrainage que nous ferons un pas de géant pour le respect de la
           biodiversité.
+          <br />
+          <AppLink to="/parrainage-entreprise" className="text-sm">
+            Vous avez un projet de parrainage pour votre entreprise ?
+          </AppLink>
         </p>
       </div>
 
       <div className="flex justify-center mb-5">
         <PricingFormulaPerSwitch
-          isToggled={isToggled}
-          onToggle={handleIsToggled}
+          isToggled={isPerYear}
+          onToggle={togglePaymentInterval}
         />
       </div>
 
       <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
         <PricingFormulaCard
           title="Nectar"
-          pricePerMonth={9.99}
-          pricePerYear={109.99}
-          isToggled={isToggled}
+          price={formulasPrices.nectar[priceSelector]}
+          isPerYear={isPerYear}
+          appendChildren={createFormulaButton('Nectar')}
         >
           <PricingFormulaCardList>
             <PricingFormulaCardListItem>
               5.000 abeilles préservées
             </PricingFormulaCardListItem>
 
-            <PricingFormulaCardListItem>
+            <PricingFormulaCardListItem after="1 fleur = 1 abeille heureuse">
               5.000 fleurs plantées
-              <small className="block text-sm text-gray-500">
-                1 fleur = 1 abeille heureuse
-              </small>
             </PricingFormulaCardListItem>
 
-            <PricingFormulaCardListItem>
+            <PricingFormulaCardListItem after="Valeur approximative 20€">
               1 mascotte L'Abeille Viennoise
-              <small className="block text-sm text-gray-500">
-                valeur approximative 20€
-              </small>
             </PricingFormulaCardListItem>
 
-            <PricingFormulaCardListItem>
+            <PricingFormulaCardListItem after="Étiquette personnalisée">
               1 pot de miel toutes fleurs de 500g
-              <small className="block text-sm text-gray-500">
-                étiquette personnalisée
-              </small>
             </PricingFormulaCardListItem>
 
-            <PricingFormulaCardListItem>
-              Des nouvelles des abeilles accompagnée de photos pour suivre
+            <PricingFormulaCardListItem after="1 par trimestre">
+              Des nouvelles des abeilles accompagnées de photos pour suivre
               l'évolution des ruches
-              <small className="block text-sm text-gray-500">
-                1 par trimestre
-              </small>
             </PricingFormulaCardListItem>
           </PricingFormulaCardList>
         </PricingFormulaCard>
 
         <PricingFormulaCard
           title="Propolis"
-          pricePerMonth={29.99}
-          pricePerYear={320.99}
-          isToggled={isToggled}
+          price={formulasPrices.propolis[priceSelector]}
+          isPerYear={isPerYear}
+          appendChildren={createFormulaButton('Propolis')}
         >
           <PricingFormulaCardList>
             <PricingFormulaCardListItem>
@@ -90,37 +125,29 @@ export default function PricingFormulas() {
               20.000 abeilles préservées
             </PricingFormulaCardListItem>
 
-            <PricingFormulaCardListItem>
+            <PricingFormulaCardListItem after="Valeur approximative 40€">
               1 mascotte L'Abeille Viennoise
-              <small className="block text-sm text-gray-500">
-                valeur approximative 40€
-              </small>
             </PricingFormulaCardListItem>
 
-            <PricingFormulaCardListItem>
+            <PricingFormulaCardListItem after="Par an">
               1 arbre planté
-              <small className="block text-sm text-gray-500">par an</small>
             </PricingFormulaCardListItem>
 
-            <PricingFormulaCardListItem>
+            <PricingFormulaCardListItem after="1 par trimestre">
               4 pots de miel toutes fleurs de 250g
-              <small className="block text-sm text-gray-500">
-                1 par trimestre
-              </small>
             </PricingFormulaCardListItem>
 
-            <PricingFormulaCardListItem>
+            <PricingFormulaCardListItem after="Par an">
               1 coffret gourmand surprise
-              <small className="block text-sm text-gray-500">par an</small>
             </PricingFormulaCardListItem>
           </PricingFormulaCardList>
         </PricingFormulaCard>
 
         <PricingFormulaCard
           title="Gelée Royale"
-          pricePerMonth={59.99}
-          pricePerYear={659.99}
-          isToggled={isToggled}
+          price={formulasPrices.geleeRoyale[priceSelector]}
+          isPerYear={isPerYear}
+          appendChildren={createFormulaButton('Gelée Royale')}
         >
           <PricingFormulaCardList>
             <PricingFormulaCardListItem>
@@ -128,33 +155,24 @@ export default function PricingFormulas() {
               <span className="font-bold">Propolis</span>
             </PricingFormulaCardListItem>
 
-            <PricingFormulaCardListItem>
+            <PricingFormulaCardListItem after="Soit une ruche entière">
               40.000 abeilles préservées
-              <small className="block text-sm text-gray-500">
-                soit une ruche entière
-              </small>
             </PricingFormulaCardListItem>
 
-            <PricingFormulaCardListItem>
+            <PricingFormulaCardListItem after="Celles des formules précédentes">
               2 mascottes L'Abeille Viennoise
-              <small className="block text-sm text-gray-500">
-                celles des formules précédentes
-              </small>
             </PricingFormulaCardListItem>
 
-            <PricingFormulaCardListItem>
+            <PricingFormulaCardListItem after="Par an">
               4 arbres plantés
-              <small className="block text-sm text-gray-500">par an</small>
             </PricingFormulaCardListItem>
 
-            <PricingFormulaCardListItem>
+            <PricingFormulaCardListItem after="Par an">
               4 pots de miel toutes fleurs de 250g
-              <small className="block text-sm text-gray-500">par an</small>
             </PricingFormulaCardListItem>
 
-            <PricingFormulaCardListItem>
+            <PricingFormulaCardListItem after="Par an">
               1 coffret gourmand surprise
-              <small className="block text-sm text-gray-500">par an</small>
             </PricingFormulaCardListItem>
 
             <PricingFormulaCardListItem>

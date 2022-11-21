@@ -1,42 +1,45 @@
-import type { HTMLProps } from 'react'
-import AppLink from '@/modules/shared/link/app-link'
-import { useURL } from '@/modules/shared/location/use-url'
+import type { FC, HTMLProps, ReactNode } from 'react'
+import { mergeClasses } from '@/modules/shared/html/merge-classes'
 
 export interface Props extends HTMLProps<HTMLElement> {
   title: string
-  pricePerMonth: number
-  pricePerYear: number
-  isToggled: boolean
+  price: number
+  isVatIncluded?: boolean
+  isPerYear: boolean
+  appendChildren?: ReactNode
 }
 
-export default function PricingFormulaCard(props: Props) {
-  const { title, pricePerMonth, pricePerYear, isToggled } = props
-  const { createUrl } = useURL()
-  const to = createUrl('/contact-parrainage')
-  to.searchParams.set('per', !isToggled ? 'mensuel' : 'annuel')
-  to.searchParams.set('title', title)
+const PricingFormulaCard: FC<Props> = ({
+  title,
+  price,
+  isVatIncluded = true,
+  isPerYear,
+  children,
+  appendChildren,
+  className,
+}) => (
+  <div
+    className={mergeClasses(
+      'flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white',
+      className
+    )}
+  >
+    <h3 className="mb-4 text-2xl font-semibold">{title}</h3>
 
-  return (
-    <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-      <h3 className="mb-4 text-2xl font-semibold">{title}</h3>
-
-      <div className="flex justify-center items-baseline my-8">
-        <span className="mr-2 text-5xl font-extrabold">
-          <span>{!isToggled ? pricePerMonth : pricePerYear}</span>€
-        </span>
-        <span className="text-gray-500 dark:text-gray-400">
-          /<span data-per="month">{!isToggled ? 'mois' : 'an'}</span>
-        </span>
-      </div>
-
-      {props.children}
-
-      <AppLink
-        to={to}
-        className="inline-flex items-center justify-center px-5 py-3 mr-3 font-medium text-center rounded-lg focus:ring-4 mt-auto no-underline text-white bg-primary hover:bg-primary-500 focus:ring-primary-300 dark:focus:ring-primary-900"
-      >
-        Prendre contact
-      </AppLink>
+    <div className="flex justify-center items-baseline my-8">
+      <span className="mr-2 text-5xl font-extrabold">
+        <span>{price}</span>€
+        {!isVatIncluded && <span className="text-sm">HT</span>}
+      </span>
+      <span className="text-gray-500 dark:text-gray-400">
+        /<span data-per="month">{isPerYear ? 'an' : 'mois'}</span>
+      </span>
     </div>
-  )
-}
+
+    {children}
+
+    {appendChildren}
+  </div>
+)
+
+export default PricingFormulaCard
