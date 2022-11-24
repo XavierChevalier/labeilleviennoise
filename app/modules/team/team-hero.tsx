@@ -19,7 +19,7 @@ export default function TeamHero() {
         </blockquote>
         <ApiaryStory description="Anne-Marie">
           <IKImage
-            // className="mx-auto max-h-[26rem] rounded-md"
+            className="mx-auto max-h-[26rem] rounded-md"
             path="images/anne-marie.jpg"
             alt="Anne-Marie tenant une grappe d'abeilles"
             lqip={{ active: true, quality: 10 }}
