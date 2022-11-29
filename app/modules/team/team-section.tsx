@@ -46,7 +46,7 @@ export default function TeamSection() {
           <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Steffie
           </h3>
-          <p>Petites mains</p>
+          <p>Artisanat</p>
         </div>
         <div className="text-center text-gray-500 dark:text-gray-400">
           <IKImage
@@ -58,7 +58,7 @@ export default function TeamSection() {
           <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Perrine
           </h3>
-          <p>Petites mains</p>
+          <p>Marketing</p>
         </div>
         <div className="text-center text-gray-500 dark:text-gray-400">
           <img
