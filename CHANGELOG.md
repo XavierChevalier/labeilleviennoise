@@ -1,3 +1,12 @@
+# [0.9.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.8.0...v0.9.0) (2022-11-29)
+
+
+### Features
+
+* **team:** update team members status ([b94ae56](https://github.com/XavierChevalier/labeilleviennoise/commit/b94ae568e9d6abf99d20dec8aab395553decd0b7))
+
+
+
 # [0.8.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.7.0...v0.8.0) (2022-11-29)
 
 
@@ -42,15 +51,6 @@
 ### Bug Fixes
 
 * general termes and C.G.V styles ([89c6a06](https://github.com/XavierChevalier/labeilleviennoise/commit/89c6a062fa40f63ed278a79c2b19541e0c76c095))
-
-
-
-# [0.5.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.4.1...v0.5.0) (2022-11-07)
-
-
-### Features
-
-* **apiary:** add page "Le Rucher" ([279a3a8](https://github.com/XavierChevalier/labeilleviennoise/commit/279a3a8fa0f6c4bb27d320d89dcabba899302413))
 
 
 
