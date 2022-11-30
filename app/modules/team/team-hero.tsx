@@ -12,7 +12,7 @@ export default function TeamHero() {
             "L'impression de tenir le monde au creux de la main 🐝"
             <br />
             Une réelle prise de conscience et une véritable passion qui ne
-            cessent de croître Je suis admirative de l'univers des abeilles et
+            cessent de croître. Je suis admirative de l'univers des abeilles et
             j'ai appris à m'en approcher aujourd'hui me voici devenue
             apicultrice.
           </p>
