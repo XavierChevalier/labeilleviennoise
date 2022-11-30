@@ -47,8 +47,13 @@ export default function PricingComparison() {
       <PricingComparisonFormulaCards
         isToggled={isToggled}
         formulas={formulas}
+        className="sm:hidden"
       />
-      <PricingComparisonTable isToggled={isToggled} formulas={formulas} />
+      <PricingComparisonTable
+        isToggled={isToggled}
+        formulas={formulas}
+        className="hidden sm:table"
+      />
     </>
   )
 }

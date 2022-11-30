@@ -1,17 +1,22 @@
+import { mergeClasses } from '@/modules/shared/html/merge-classes'
 import IconCheck from '@/modules/shared/icons/icon-check'
 import ButtonChosePlan from '@/modules/sponsorship/pricing/button-chose-plan'
 import PeriodLabel from '@/modules/sponsorship/pricing/period-label'
 import type { Formulas } from '@/modules/sponsorship/pricing/pricing-comparison'
 
-export interface Props {
+export interface Props extends React.HTMLProps<HTMLElement> {
   isToggled: boolean
   formulas: Formulas
 }
 
-export default function PricingComparisonTable({ isToggled, formulas }: Props) {
+export default function PricingComparisonTable({
+  isToggled,
+  formulas,
+  className,
+}: Props) {
   const { nectar, propolis, geleeRoyale } = formulas
   return (
-    <table className="hidden lg:table table-fixed mx-auto">
+    <table className={mergeClasses('table-fixed mx-auto', className)}>
       <thead className="border-b-[1px]">
         <tr className="text-left text-2xl">
           <th className="pb-3 font-medium">Formule</th>
@@ -69,12 +74,12 @@ export default function PricingComparisonTable({ isToggled, formulas }: Props) {
           </td>
           <td className="px-2 py-3">
             <span className="font-semibold">Formule Nectar +</span>
-            <br />1 arbre planté
+            <br />1 arbre mellifère planté
             <small className="block text-sm text-gray-500">par an</small>
           </td>
           <td className="px-2 py-3">
             <span className="font-semibold">Formule Nectar +</span>
-            <br />4 arbres plantés
+            <br />4 arbres mellifères plantés
             <small className="block text-sm text-gray-500">par an</small>
           </td>
         </tr>

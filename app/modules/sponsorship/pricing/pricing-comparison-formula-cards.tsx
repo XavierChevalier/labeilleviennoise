@@ -1,9 +1,10 @@
+import { mergeClasses } from '@/modules/shared/html/merge-classes'
 import type { Formulas } from '@/modules/sponsorship/pricing/pricing-comparison'
 import PricingFormulaCard from '@/modules/sponsorship/pricing/pricing-formula-card'
 import PricingFormulaCardList from '@/modules/sponsorship/pricing/pricing-formula-card-list'
 import PricingFormulaCardListItem from '@/modules/sponsorship/pricing/pricing-formula-card-list-item'
 
-export interface Props {
+export interface Props extends React.HTMLProps<HTMLElement> {
   isToggled: boolean
   formulas: Formulas
 }
@@ -11,10 +12,16 @@ export interface Props {
 export default function PricingComparisonFormulaCards({
   isToggled,
   formulas,
+  className,
 }: Props) {
   const { nectar, propolis, geleeRoyale } = formulas
   return (
-    <div className="lg:hidden space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0">
+    <div
+      className={mergeClasses(
+        'space-y-8 sm:gap-6 xl:gap-10 lg:space-y-0',
+        className
+      )}
+    >
       <PricingFormulaCard
         title={nectar.title}
         pricePerMonth={nectar.pricePerMonth}
