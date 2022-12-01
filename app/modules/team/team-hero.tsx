@@ -4,7 +4,7 @@ import IconQuotes from '@/modules/shared/icons/icon-quotes'
 
 export default function TeamHero() {
   return (
-    <div className="flex-wrap flex-1 lg:flex lg:flex-nowrap lg:h-[28rem] items-center">
+    <div className="flex-wrap flex-1 lg:flex lg:flex-nowrap lg:h-[28rem] min-h-[448px] items-center">
       <div className="grid gap-5 grid-flow-col mb-8 lg:mb-0 text-right items-center lg:w-1/2">
         <blockquote className="text-xl italic font-semibold text-gray-900 dark:text-white text-right grid justify-items-end">
           <IconQuotes mirror={true} />
