@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import NavigationBarLink from '../navigation-bar-link'
 import NavigationMenuHamburgerButton from './navigation-menu-hamburger-button'
+import AppButton from '@/modules/shared/button/app-button'
 import { mergeClasses } from '@/modules/shared/html/merge-classes'
 
 export default function NavigationMenu() {
@@ -14,6 +15,7 @@ export default function NavigationMenu() {
       <div className="flex items-center">
         <NavigationMenuHamburgerButton onClick={handleShowMenu} />
       </div>
+
       <div
         id="mega-menu"
         className={mergeClasses(
@@ -21,7 +23,7 @@ export default function NavigationMenu() {
           !showMenu && 'hidden'
         )}
       >
-        <ul className="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
+        <ul className="flex flex-col items-center mt-4 font-medium md:flex-row md:space-x-6 lg:space-x-8 md:mt-0">
           <li>
             <NavigationBarLink to="/" onClick={handleShowMenu}>
               Accueil
@@ -55,6 +57,16 @@ export default function NavigationMenu() {
             <NavigationBarLink to="/contact" onClick={handleShowMenu}>
               Contact
             </NavigationBarLink>
+          </li>
+          <li className="hidden md:block">
+            <AppButton
+              type="fancy"
+              href="/parrainage#pricing"
+              className="!py-2"
+              onClick={handleShowMenu}
+            >
+              Devenez parrain
+            </AppButton>
           </li>
         </ul>
       </div>

@@ -1,23 +1,26 @@
 import { sendMailToCompany } from '@/modules/notification/send-mail/send-mail'
 
-interface SendContactEmail {
+interface SendCompanyContactEmail {
   from: string
   fullname: string
+  company: string
   subject: string
   message: string
 }
 
-export const sendContactMail = ({
+export const sendCompanyContactEmail = ({
   from,
   fullname,
+  company,
   subject,
   message,
-}: SendContactEmail) =>
+}: SendCompanyContactEmail) =>
   sendMailToCompany({
-    context: 'Formulaire de contact',
+    context: 'Formulaire de contact entreprise',
     from: `"labeilleviennoise.com - ${fullname}" <${from}>`,
     subject,
     text: `Nom: ${fullname}
+Entreprise: ${company}
 Email: ${from}
 Sujet: ${subject}
 ---

@@ -32,18 +32,24 @@ export default function Faq() {
             <AppLink to="/parrainage">Grâce à nos 3 formules</AppLink>, vous
             pouvez choisir en fonction de votre budget.
             <br />
-            La <strong className="font-bold">formule Nectar</strong> vous permet
-            de préserver 5.000 abeilles, soit l’équivalent d’un essaim. Nous
-            sèmerons 5.000 fleurs dans notre espace dédié.
-            <br />
-            La <strong className="font-bold">formule Propolis</strong> quant à
-            elle propose de préserver une colonie entière d’abeilles. Vous
-            devenez ainsi parrain d’une partie de la ruche ainsi que d’un arbre
-            mellifère planté à cette occasion.
-            <br />
-            La <strong className="font-bold">formule Gelée Royale</strong> vous
-            offre tous les avantages des autres formules et la possibilité de
-            sauvegarder la totalité d’une ruche.
+            <ul className="list-disc list-inside">
+              <li className="mt-4">
+                La <strong className="font-bold">formule Nectar</strong> vous
+                permet de préserver 5.000 abeilles, soit l’équivalent d’un
+                essaim. Nous sèmerons 5.000 fleurs dans notre espace dédié.
+              </li>
+              <li className="mt-4">
+                La <strong className="font-bold">formule Propolis</strong> quant
+                à elle propose de préserver une colonie entière d’abeilles. Vous
+                devenez ainsi parrain d’une partie de la ruche ainsi que d’un
+                arbre mellifère planté à cette occasion.
+              </li>
+              <li className="mt-4">
+                La <strong className="font-bold">formule Gelée Royale</strong>{' '}
+                vous offre tous les avantages des autres formules et la
+                possibilité de sauvegarder la totalité d’une ruche.
+              </li>
+            </ul>
           </QuestionAnswer>
           <QuestionAnswer question="Quand obtiendrais-je mes avantages de parrainage ?">
             Les récompenses sont{' '}

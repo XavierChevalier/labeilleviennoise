@@ -3,9 +3,7 @@ import { useURL } from '@/modules/shared/location/use-url'
 
 export default function SponsorshipCallToActionCompany() {
   const { createUrl } = useURL()
-  const to = createUrl('/contact-parrainage')
-  to.searchParams.set('per', 'annuel')
-  to.searchParams.set('title', 'parrainage entreprise')
+  const to = createUrl('/parrainage-entreprise')
 
   return (
     <section className="px-4 py-8 mb-8 mx-auto md:py-16 text-center">

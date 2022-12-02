@@ -1,5 +1,11 @@
 import { z } from 'zod'
 import Form from '@/modules/shared/form/form'
+import {
+  from,
+  fullname,
+  message,
+  subject,
+} from '@/modules/shared/form/validations/contact-fields'
 
 interface Props extends React.HTMLProps<HTMLElement> {
   defaultValues?: {
@@ -10,20 +16,10 @@ interface Props extends React.HTMLProps<HTMLElement> {
   }
 }
 export const contactSchema = z.object({
-  from: z
-    .string()
-    .min(1, { message: 'Votre email ne doit pas être vide' })
-    .email({ message: "Votre email n'est pas valide" }),
-  fullname: z
-    .string()
-    .min(1, { message: 'Vos nom et prénom ne doivent pas être vide' }),
-  subject: z
-    .string()
-    .min(1, { message: 'Dites-nous sur quel sujet nous pouvons vous aider' }),
-  message: z.string().min(1, {
-    message:
-      'Quelques informations sur votre questionnement nous seraient utiles',
-  }),
+  from,
+  fullname,
+  subject,
+  message,
 })
 export default function ContactForm(props: Props) {
   return (
@@ -38,7 +34,7 @@ export default function ContactForm(props: Props) {
       placeholders={{
         from: 'email@email.com',
         fullname: 'Maya Labeille',
-        subject: 'Sur quel sujet pouvons-nous vous aider ?',
+        subject: 'Comment pouvons-nous vous aider ?',
         message: 'Dites-nous tout...',
       }}
       multiline={['message']}

@@ -1,13 +1,18 @@
-import type { HTMLProps } from 'react'
+import type { FC, HTMLProps, ReactNode } from 'react'
 import IconCheck from '../../shared/icons/icon-check'
 
-export default function PricingFormulaCardListItem(
-  props: HTMLProps<HTMLElement>
-) {
-  return (
-    <li className="flex items-center space-x-3">
-      <IconCheck />
-      <span>{props.children}</span>
-    </li>
-  )
+interface Props extends HTMLProps<HTMLLIElement> {
+  after?: ReactNode
 }
+
+const PricingFormulaCardListItem: FC<Props> = ({ children, after }) => (
+  <li className="flex items-center space-x-3">
+    <IconCheck />
+    <span>
+      {children}
+      {after && <small className="block text-sm text-gray-500">{after}</small>}
+    </span>
+  </li>
+)
+
+export default PricingFormulaCardListItem

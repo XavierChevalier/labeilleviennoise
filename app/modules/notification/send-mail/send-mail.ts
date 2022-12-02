@@ -45,11 +45,22 @@ export const sendMailToCompany = ({
   subject,
   text,
   ...options
-}: SendMailToCompanyOptions) =>
-  sendMail({
+}: SendMailToCompanyOptions) => {
+  if (!process.env.MAIL_USER) {
+    console.error('Environment variable MAIL_USER is not defined.')
+
+    throw new Error(
+      `Un problème est survenu lors de l'envoi du mail.
+      Votre email n'a pas pu être envoyé. Notre équipe travaille à sa résolution.
+      Nous vous prions de nous excuser pour la gêne occasionnée.`
+    )
+  }
+
+  return sendMail({
     ...options,
     to: process.env.MAIL_USER,
     subject: `[${context}] ${subject}`,
     text: `Origine: ${context}
 ${text}`,
   })
+}
