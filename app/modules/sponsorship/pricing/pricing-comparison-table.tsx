@@ -15,19 +15,27 @@ export default function PricingComparisonTable({
   className,
 }: Props) {
   const { nectar, propolis, geleeRoyale } = formulas
+  const stickyColumnClasses = 'text-left sticky -left-0.5 bg-white z-10'
   return (
     <table className={mergeClasses('table-fixed mx-auto', className)}>
       <thead className="border-b-[1px]">
         <tr className="text-left text-2xl">
           <th className="pb-3 font-medium">Formule</th>
-          <th className="pb-3 w-[299px] font-medium">Nectar</th>
-          <th className="pb-3 w-[299px] font-medium">Propolis</th>
-          <th className="pb-3 w-[299px] font-medium">Gelée Royale</th>
+          <th className="pb-3 w-[299px] font-medium">{nectar.title}</th>
+          <th className="pb-3 w-[299px] font-medium">{propolis.title}</th>
+          <th className="pb-3 w-[299px] font-medium">{geleeRoyale.title}</th>
         </tr>
       </thead>
       <tbody>
         <tr className="border-b-[1px]">
-          <td className="px-2 py-3 font-medium">Prix</td>
+          <th
+            className={mergeClasses(
+              stickyColumnClasses,
+              'px-2 py-3 font-medium'
+            )}
+          >
+            Prix
+          </th>
           <td className="px-2 py-3">
             <PeriodLabel
               pricePerMonth={nectar.pricePerMonth}
@@ -54,7 +62,14 @@ export default function PricingComparisonTable({
           </td>
         </tr>
         <tr className="even:bg-gray-100/25">
-          <td className="px-2 py-3 font-medium">Abeilles préservées</td>
+          <th
+            className={mergeClasses(
+              stickyColumnClasses,
+              'px-2 py-3 font-medium'
+            )}
+          >
+            Abeilles préservées
+          </th>
           <td className="px-2 py-3">5.000</td>
           <td className="px-2 py-3">20.000</td>
           <td className="px-2 py-3">
@@ -65,7 +80,14 @@ export default function PricingComparisonTable({
           </td>
         </tr>
         <tr className="even:bg-gray-100/25">
-          <td className="px-2 py-3 font-medium">Fleurs/Arbres planté(e)s</td>
+          <th
+            className={mergeClasses(
+              stickyColumnClasses,
+              'px-2 py-3 font-medium'
+            )}
+          >
+            Fleurs/Arbres planté(e)s
+          </th>
           <td className="px-2 py-3">
             5.000 fleurs plantées
             <small className="block text-sm text-gray-500">
@@ -84,7 +106,14 @@ export default function PricingComparisonTable({
           </td>
         </tr>
         <tr className="even:bg-gray-100/25">
-          <td className="px-2 py-3 font-medium">Pot de miel</td>
+          <th
+            className={mergeClasses(
+              stickyColumnClasses,
+              'px-2 py-3 font-medium'
+            )}
+          >
+            Pot de miel
+          </th>
           <td className="px-2 py-3">
             1 pot de miel de 500g
             <small className="block text-sm text-gray-500">
@@ -105,9 +134,14 @@ export default function PricingComparisonTable({
           </td>
         </tr>
         <tr className="even:bg-gray-100/25">
-          <td className="px-2 py-3 font-medium">
+          <th
+            className={mergeClasses(
+              stickyColumnClasses,
+              'px-2 py-3 font-medium'
+            )}
+          >
             Mascotte L'Abeille Viennoise™
-          </td>
+          </th>
           <td className="px-2 py-3">
             1
             <small className="block text-sm text-gray-500">
@@ -128,11 +162,16 @@ export default function PricingComparisonTable({
           </td>
         </tr>
         <tr className="even:bg-gray-100/25">
-          <td className="px-2 py-3 font-medium">
+          <th
+            className={mergeClasses(
+              stickyColumnClasses,
+              'px-2 py-3 font-medium'
+            )}
+          >
             Des nouvelles des abeilles accompagnées de photos pour suivre
             l'évolution des ruches
             <small className="block text-sm text-gray-500">par trimestre</small>
-          </td>
+          </th>
           <td className="px-2 py-3">
             <IconCheck />
           </td>
@@ -144,10 +183,15 @@ export default function PricingComparisonTable({
           </td>
         </tr>
         <tr className="even:bg-gray-100/25">
-          <td className="px-2 py-3 font-medium">
+          <th
+            className={mergeClasses(
+              stickyColumnClasses,
+              'px-2 py-3 font-medium'
+            )}
+          >
             Coffret gourmand surprise
             <small className="block text-sm text-gray-500">par an</small>
-          </td>
+          </th>
           <td className="px-2 py-3 text-red-500 font-black">─</td>
           <td className="px-2 py-3">
             <IconCheck />
@@ -157,9 +201,14 @@ export default function PricingComparisonTable({
           </td>
         </tr>
         <tr className="even:bg-gray-100/25">
-          <td className="px-2 py-3 font-medium">
+          <th
+            className={mergeClasses(
+              stickyColumnClasses,
+              'px-2 py-3 font-medium'
+            )}
+          >
             Plaque nominative sur votre ruche
-          </td>
+          </th>
           <td className="px-2 py-3 text-red-500 font-black">─</td>
           <td className="px-2 py-3 text-red-500 font-black">─</td>
           <td className="px-2 py-3">

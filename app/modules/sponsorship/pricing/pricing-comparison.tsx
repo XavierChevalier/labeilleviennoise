@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import PricingComparisonFormulaCards from '@/modules/sponsorship/pricing/pricing-comparison-formula-cards'
 import PricingComparisonTable from '@/modules/sponsorship/pricing/pricing-comparison-table'
 import PricingFormulaPerSwitch from '@/modules/sponsorship/pricing/pricing-formula-per-switch'
 
@@ -44,16 +43,13 @@ export default function PricingComparison() {
           onToggle={handleIsToggled}
         />
       </div>
-      <PricingComparisonFormulaCards
-        isToggled={isToggled}
-        formulas={formulas}
-        className="sm:hidden"
-      />
-      <PricingComparisonTable
-        isToggled={isToggled}
-        formulas={formulas}
-        className="hidden sm:table"
-      />
+      <div className="w-screen sm:w-full overflow-x-auto">
+        <PricingComparisonTable
+          isToggled={isToggled}
+          formulas={formulas}
+          className="table"
+        />
+      </div>
     </>
   )
 }
