@@ -20,10 +20,14 @@ export default function PricingComparisonTable({
     <table className={mergeClasses('table-fixed mx-auto', className)}>
       <thead className="border-b-[1px]">
         <tr className="text-left text-2xl">
-          <th className="pb-3 font-medium">Formule</th>
-          <th className="pb-3 w-[299px] font-medium">{nectar.title}</th>
-          <th className="pb-3 w-[299px] font-medium">{propolis.title}</th>
-          <th className="pb-3 w-[299px] font-medium">{geleeRoyale.title}</th>
+          <th className={mergeClasses(stickyColumnClasses, 'pb-3 font-medium')}>
+            Formule
+          </th>
+          <th className="pb-3 min-w-[226px] font-medium">{nectar.title}</th>
+          <th className="pb-3 min-w-[226px] font-medium">{propolis.title}</th>
+          <th className="pb-3 min-w-[226px] font-medium">
+            {geleeRoyale.title}
+          </th>
         </tr>
       </thead>
       <tbody>
