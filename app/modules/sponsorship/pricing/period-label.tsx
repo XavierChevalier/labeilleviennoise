@@ -6,8 +6,7 @@ export interface Props extends HTMLProps<HTMLElement> {
   isToggled: boolean
 }
 
-export default function PeriodLabel(props: Props) {
-  const { pricePerMonth, pricePerYear, isToggled } = props
+export default function PeriodLabel({ pricePerMonth, pricePerYear, isToggled }: Props) {
   return (
     <>
       <span className="mr-2 text-5xl font-bold">
