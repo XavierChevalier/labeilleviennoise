@@ -1,5 +1,5 @@
 import QuestionAnswer from '@/modules/faq/question-answer'
-import AppLink from '@/modules/shared/link/app-link'
+import { AppLink } from '@/modules/shared/link/app-link'
 
 export default function Faq() {
   return (

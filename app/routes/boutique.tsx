@@ -1,4 +1,4 @@
-import AppButton from '@/modules/shared/button/app-button'
+import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 
 export default function Boutique() {
   return (
@@ -13,9 +13,9 @@ export default function Boutique() {
         <p className="mb-8 text-lg font-light text-gray-500 dark:text-gray-400">
           C'est promis :)
         </p>
-        <AppButton type="primary" href="/">
+        <AppLinkButton variant="primary" to="/">
           Retour à l'accueil
-        </AppButton>
+        </AppLinkButton>
       </div>
     </div>
   )

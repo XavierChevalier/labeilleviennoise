@@ -1,5 +1,5 @@
 import { IKImage } from 'imagekitio-react'
-import AppButton from '../shared/button/app-button'
+import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 
 export default function SponsorshipWhy() {
   return (
@@ -29,9 +29,9 @@ export default function SponsorshipWhy() {
           La population d'abeille d'Europe a diminué de plus d'un tiers.
         </p>
 
-        <AppButton type="primary" href="#pricing">
+        <AppLinkButton variant="primary" to="#pricing">
           Je me lance !
-        </AppButton>
+        </AppLinkButton>
       </div>
     </section>
   )

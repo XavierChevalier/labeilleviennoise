@@ -1,6 +1,6 @@
 import { IKImage } from 'imagekitio-react'
-import AppButton from '../shared/button/app-button'
-import IconArrowRight from '../shared/icons/icon-arrow-right'
+import IconArrowRight from '@/modules/shared/icons/icon-arrow-right'
+import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 
 export default function HomeHero() {
   return (
@@ -15,10 +15,10 @@ export default function HomeHero() {
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row">
-          <AppButton href="/parrainage" type="primary">
+          <AppLinkButton to="/parrainage" variant="primary">
             Comment ça marche ?
             <IconArrowRight />
-          </AppButton>
+          </AppLinkButton>
         </div>
       </div>
 

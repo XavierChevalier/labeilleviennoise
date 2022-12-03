@@ -2,8 +2,7 @@ export interface Props extends React.HTMLProps<HTMLElement> {
   question: string
 }
 
-export default function QuestionAnswer(props: Props) {
-  const { question } = props
+export default function QuestionAnswer({ children, question }: Props) {
   return (
     <div className="mb-10">
       <h3 className="flex items-center mb-2 text-lg font-medium text-gray-900 dark:text-white">
@@ -21,7 +20,7 @@ export default function QuestionAnswer(props: Props) {
         </svg>
         {question}
       </h3>
-      <p className="text-gray-500 dark:text-gray-400">{props.children}</p>
+      <p className="text-gray-500 dark:text-gray-400">{children}</p>
     </div>
   )
 }

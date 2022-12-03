@@ -1,5 +1,5 @@
 import type { HTMLProps } from 'react'
-import AppLink from '@/modules/shared/link/app-link'
+import { AppLink } from '@/modules/shared/link/app-link'
 import { useURL } from '@/modules/shared/location/use-url'
 
 export interface Props extends HTMLProps<HTMLElement> {

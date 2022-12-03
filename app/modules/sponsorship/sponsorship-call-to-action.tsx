@@ -1,6 +1,6 @@
 import { IKImage } from 'imagekitio-react'
-import AppButton from '../shared/button/app-button'
 import IconArrowRight from '@/modules/shared/icons/icon-arrow-right'
+import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 
 export default function SponsorshipCallToAction() {
   return (
@@ -12,10 +12,10 @@ export default function SponsorshipCallToAction() {
         </h3>
 
         <div className="flex flex-col gap-4 sm:flex-row">
-          <AppButton href="/parrainage" type="primary">
+          <AppLinkButton variant="primary" to="/parrainage">
             Comment ça marche ?
             <IconArrowRight />
-          </AppButton>
+          </AppLinkButton>
         </div>
       </div>
 

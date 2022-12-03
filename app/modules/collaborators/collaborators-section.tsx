@@ -11,7 +11,12 @@ export default function CollaboratorsSection() {
       </div>
       <div className="grid gap-8 lg:gap-16 grid-cols-2 h-96 items-center">
         <div className="text-center text-gray-500 dark:text-gray-400">
-          <a href="https://vienne.fr/" className="cursor-alias">
+          <a
+            href="https://vienne.fr"
+            target="_blank"
+            className="cursor-alias"
+            rel="noreferrer"
+          >
             <img
               className="mx-auto mb-4 max-w-96 max-h-96 rounded-md"
               src="https://vienne.fr/wp-content/uploads/2020/08/logo_vienne.png"
@@ -20,7 +25,12 @@ export default function CollaboratorsSection() {
           </a>
         </div>
         <div className="text-center text-gray-500 dark:text-gray-400">
-          <a href="https://arbres-and-co.fr/" className="cursor-alias">
+          <a
+            href="https://arbres-and-co.fr"
+            target="_blank"
+            className="cursor-alias"
+            rel="noreferrer"
+          >
             <img
               className="mx-auto mb-4 max-w-96 max-h-96 rounded-md"
               src="https://images-ext-2.discordapp.net/external/ZQWhmpTyQY-BIzt2EvFGamHxh7TOUuNMgcJFFPOvtTM/https/i0.wp.com/arbres-and-co.fr/wp-content/uploads/2022/04/copie-LOGO-Arbres-and-Co-NOIR-vectorise-01-e1649921197265.jpg"

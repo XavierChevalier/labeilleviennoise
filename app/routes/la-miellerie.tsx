@@ -1,7 +1,7 @@
 import HoneyHouseHero from '@/modules/honey-house/honey-house-hero'
 import HoneyHouseSteps from '@/modules/honey-house/honey-house-steps'
-import AppButton from '@/modules/shared/button/app-button'
 import IconArrowRight from '@/modules/shared/icons/icon-arrow-right'
+import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 import SponsorshipCallToAction from '@/modules/sponsorship/sponsorship-call-to-action'
 
 export default function LaMiellerie() {
@@ -24,10 +24,10 @@ export default function LaMiellerie() {
           Voir tous nos produits sur la boutique
         </p>
 
-        <AppButton href="/boutique" type="primary">
+        <AppLinkButton variant="primary" to="/boutique">
           Visiter la boutique
           <IconArrowRight />
-        </AppButton>
+        </AppLinkButton>
       </div>
 
       <div className="px-4">

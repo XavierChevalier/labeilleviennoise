@@ -1,10 +1,6 @@
-import AppButton from '../shared/button/app-button'
-import { useURL } from '@/modules/shared/location/use-url'
+import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 
 export default function SponsorshipCallToActionCompany() {
-  const { createUrl } = useURL()
-  const to = createUrl('/parrainage-entreprise')
-
   return (
     <section className="px-4 py-8 mb-8 mx-auto md:py-16 text-center">
       <div className="mr-auto order-2 md:order-1">
@@ -16,9 +12,13 @@ export default function SponsorshipCallToActionCompany() {
           avec nous.
         </p>
 
-        <AppButton type="primary" href={to.toString()} className="mx-auto">
+        <AppLinkButton
+          variant="primary"
+          to="/parrainage-entreprise"
+          className="mx-auto"
+        >
           Prendre contact
-        </AppButton>
+        </AppLinkButton>
       </div>
     </section>
   )
