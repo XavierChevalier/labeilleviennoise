@@ -1,19 +1,16 @@
-import { useState } from 'react'
-import NavigationBarLink from '../navigation-bar-link'
-import NavigationMenuHamburgerButton from './navigation-menu-hamburger-button'
-import AppButton from '@/modules/shared/button/app-button'
+import NavigationMenuHamburgerButton from '@/modules/navigation/header/menu/navigation-menu-hamburger-button'
+import NavigationBarLink from '@/modules/navigation/header/navigation-bar-link'
 import { mergeClasses } from '@/modules/shared/html/merge-classes'
+import { AppLinkButton } from '@/modules/shared/link/app-link-button'
+import { useToggle } from '@/modules/shared/states/use-toggle'
 
 export default function NavigationMenu() {
-  const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, toggleShowMenu] = useToggle(false)
 
-  const handleShowMenu = () => {
-    setShowMenu((prevState) => !prevState)
-  }
   return (
     <>
       <div className="flex items-center">
-        <NavigationMenuHamburgerButton onClick={handleShowMenu} />
+        <NavigationMenuHamburgerButton onClick={toggleShowMenu} />
       </div>
 
       <div
@@ -25,7 +22,7 @@ export default function NavigationMenu() {
       >
         <ul className="flex flex-col items-center mt-4 font-medium md:flex-row md:space-x-6 lg:space-x-8 md:mt-0">
           <li>
-            <NavigationBarLink to="/" onClick={handleShowMenu}>
+            <NavigationBarLink to="/" onClick={toggleShowMenu}>
               Accueil
             </NavigationBarLink>
           </li>
@@ -33,40 +30,40 @@ export default function NavigationMenu() {
             <NavigationBarLink
               to="/boutique"
               title="Bientôt disponible"
-              onClick={handleShowMenu}
+              onClick={toggleShowMenu}
             >
               Boutique
             </NavigationBarLink>
           </li>
           <li>
-            <NavigationBarLink to="/parrainage" onClick={handleShowMenu}>
+            <NavigationBarLink to="/parrainage" onClick={toggleShowMenu}>
               Parrainage
             </NavigationBarLink>
           </li>
           <li>
-            <NavigationBarLink to="/le-rucher" onClick={handleShowMenu}>
+            <NavigationBarLink to="/le-rucher" onClick={toggleShowMenu}>
               Le rucher
             </NavigationBarLink>
           </li>
           <li>
-            <NavigationBarLink to="/la-miellerie" onClick={handleShowMenu}>
+            <NavigationBarLink to="/la-miellerie" onClick={toggleShowMenu}>
               La miellerie
             </NavigationBarLink>
           </li>
           <li>
-            <NavigationBarLink to="/contact" onClick={handleShowMenu}>
+            <NavigationBarLink to="/contact" onClick={toggleShowMenu}>
               Contact
             </NavigationBarLink>
           </li>
           <li className="hidden md:block">
-            <AppButton
-              type="fancy"
-              href="/parrainage#pricing"
+            <AppLinkButton
+              variant="fancy"
+              to="/parrainage#pricing"
               className="!py-2"
-              onClick={handleShowMenu}
+              onClick={toggleShowMenu}
             >
               Devenez parrain
-            </AppButton>
+            </AppLinkButton>
           </li>
         </ul>
       </div>

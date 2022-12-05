@@ -1,9 +1,9 @@
 import type { ActionFunction } from '@remix-run/node'
 import { makeDomainFunction } from 'domain-functions'
 import { IKImage } from 'imagekitio-react'
-import AppButton from '@/modules/shared/button/app-button'
 import { formActionWithSuccessFlag } from '@/modules/shared/form/form-action-with-success-flag'
 import IconArrowRight from '@/modules/shared/icons/icon-arrow-right'
+import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 import { sendCompanyContactEmail } from '@/modules/sponsorship/send-email/send-company-contact-email'
 import SponsorshipCompanyContact from '@/modules/sponsorship/sponsorship-company-contact'
 import { sponsorshipCompanyContactSchema } from '@/modules/sponsorship/sponsorship-company-contact-form'
@@ -79,10 +79,13 @@ export default function ParrainageEntreprise() {
           </p>
 
           <div className="hidden mt-6 md:flex flex-col gap-4 sm:flex-row">
-            <AppButton href="/parrainage-entreprise#contact" type="primary">
+            <AppLinkButton
+              variant="primary"
+              to="/parrainage-entreprise#contact"
+            >
               Prendre contact
               <IconArrowRight />
-            </AppButton>
+            </AppLinkButton>
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-import AppLink from '@/modules/shared/link/app-link'
+import { AppLink } from '@/modules/shared/link/app-link'
 
 export default function PageNotFound() {
   return (

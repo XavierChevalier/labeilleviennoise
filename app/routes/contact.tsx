@@ -3,7 +3,7 @@ import { useSearchParams } from '@remix-run/react'
 import { contactAction } from '@/modules/contact/contact-action'
 import ContactForm from '@/modules/contact/contact-form'
 import ContactHeader from '@/modules/contact/contact-header'
-import AppLink from '@/modules/shared/link/app-link'
+import { AppLink } from '@/modules/shared/link/app-link'
 
 export const action: ActionFunction = contactAction
 

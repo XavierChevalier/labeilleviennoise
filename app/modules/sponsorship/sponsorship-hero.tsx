@@ -1,6 +1,6 @@
 import { IKImage } from 'imagekitio-react'
-import AppButton from '../shared/button/app-button'
 import IconArrowRight from '../shared/icons/icon-arrow-right'
+import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 
 export default function SponsorshipHero() {
   return (
@@ -14,12 +14,12 @@ export default function SponsorshipHero() {
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row">
-          <AppButton href="#pricing" type="primary">
+          <AppLinkButton variant="primary" to="#pricing">
             Choisir une formule
             <IconArrowRight />
-          </AppButton>
+          </AppLinkButton>
 
-          <AppButton href="/contact">Contactez-nous</AppButton>
+          <AppLinkButton to="/contact">Contactez-nous</AppLinkButton>
         </div>
       </div>
 
