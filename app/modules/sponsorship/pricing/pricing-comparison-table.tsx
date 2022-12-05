@@ -1,10 +1,16 @@
+import type { HTMLProps } from 'react'
 import { mergeClasses } from '@/modules/shared/html/merge-classes'
 import IconCheck from '@/modules/shared/icons/icon-check'
 import ButtonChosePlan from '@/modules/sponsorship/pricing/button-chose-plan'
 import PeriodLabel from '@/modules/sponsorship/pricing/period-label'
 import type { Formulas } from '@/modules/sponsorship/pricing/pricing-comparison'
+import PricingComparisonTableBody from '@/modules/sponsorship/pricing/pricing-comparison-table-body'
+import PricingComparisonTableHead from '@/modules/sponsorship/pricing/pricing-comparison-table-head'
+import PricingComparisonTableRow from '@/modules/sponsorship/pricing/pricing-comparison-table-row'
+import PricingComparisonTableRowCell from '@/modules/sponsorship/pricing/pricing-comparison-table-row-cell'
+import PricingComparisonTableRowCellHead from '@/modules/sponsorship/pricing/pricing-comparison-table-row-cell-head'
 
-export interface Props extends React.HTMLProps<HTMLElement> {
+interface Props extends HTMLProps<HTMLElement> {
   isToggled: boolean
   formulas: Formulas
 }
@@ -16,210 +22,147 @@ export default function PricingComparisonTable({
 }: Props) {
   const { nectar, propolis, geleeRoyale } = formulas
   const stickyColumnClasses = 'text-left sticky -left-0.5 bg-white z-10'
+
   return (
     <table className={mergeClasses('table-fixed mx-auto', className)}>
-      <thead className="border-b-[1px]">
-        <tr className="text-left text-2xl">
-          <th className={mergeClasses(stickyColumnClasses, 'pb-3 font-medium')}>
-            Formule
-          </th>
-          <th className="pb-3 min-w-[226px] font-medium">{nectar.title}</th>
-          <th className="pb-3 min-w-[226px] font-medium">{propolis.title}</th>
-          <th className="pb-3 min-w-[226px] font-medium">
-            {geleeRoyale.title}
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr className="border-b-[1px]">
-          <th
-            className={mergeClasses(
-              stickyColumnClasses,
-              'px-2 py-3 font-medium'
-            )}
-          >
+      <PricingComparisonTableHead
+        formulas={formulas}
+        firstColumnClassName={stickyColumnClasses}
+      />
+
+      <PricingComparisonTableBody>
+        <PricingComparisonTableRow className="border-b-[1px]">
+          <PricingComparisonTableRowCellHead className={stickyColumnClasses}>
             Prix
-          </th>
-          <td className="px-2 py-3">
+          </PricingComparisonTableRowCellHead>
+          <PricingComparisonTableRowCell>
             <PeriodLabel
               pricePerMonth={nectar.pricePerMonth}
               pricePerYear={nectar.pricePerYear}
               isToggled={isToggled}
             />
             <ButtonChosePlan title={nectar.title} isToggled={isToggled} />
-          </td>
-          <td className="px-2 py-3">
+          </PricingComparisonTableRowCell>
+          <PricingComparisonTableRowCell>
             <PeriodLabel
               pricePerMonth={propolis.pricePerMonth}
               pricePerYear={propolis.pricePerYear}
               isToggled={isToggled}
             />
             <ButtonChosePlan title={propolis.title} isToggled={isToggled} />
-          </td>
-          <td className="px-2 py-3">
+          </PricingComparisonTableRowCell>
+          <PricingComparisonTableRowCell>
             <PeriodLabel
               pricePerMonth={geleeRoyale.pricePerMonth}
               pricePerYear={geleeRoyale.pricePerYear}
               isToggled={isToggled}
             />
             <ButtonChosePlan title={geleeRoyale.title} isToggled={isToggled} />
-          </td>
-        </tr>
-        <tr className="even:bg-gray-100/25">
-          <th
-            className={mergeClasses(
-              stickyColumnClasses,
-              'px-2 py-3 font-medium'
-            )}
-          >
+          </PricingComparisonTableRowCell>
+        </PricingComparisonTableRow>
+
+        <PricingComparisonTableRow>
+          <PricingComparisonTableRowCellHead className={stickyColumnClasses}>
             Abeilles préservées
-          </th>
-          <td className="px-2 py-3">5.000</td>
-          <td className="px-2 py-3">20.000</td>
-          <td className="px-2 py-3">
+          </PricingComparisonTableRowCellHead>
+          <PricingComparisonTableRowCell>5.000</PricingComparisonTableRowCell>
+          <PricingComparisonTableRowCell>20.000</PricingComparisonTableRowCell>
+          <PricingComparisonTableRowCell after="soit une ruche entière">
             40.000
-            <small className="block text-sm text-gray-500">
-              soit une ruche entière
-            </small>
-          </td>
-        </tr>
-        <tr className="even:bg-gray-100/25">
-          <th
-            className={mergeClasses(
-              stickyColumnClasses,
-              'px-2 py-3 font-medium'
-            )}
-          >
+          </PricingComparisonTableRowCell>
+        </PricingComparisonTableRow>
+
+        <PricingComparisonTableRow>
+          <PricingComparisonTableRowCellHead className={stickyColumnClasses}>
             Fleurs/Arbres planté(e)s
-          </th>
-          <td className="px-2 py-3">
+          </PricingComparisonTableRowCellHead>
+          <PricingComparisonTableRowCell after="1 fleur = 1 abeille heureuse">
             5.000 fleurs plantées
-            <small className="block text-sm text-gray-500">
-              1 fleur = 1 abeille heureuse
-            </small>
-          </td>
-          <td className="px-2 py-3">
-            <span className="font-semibold">Formule Nectar +</span>
-            <br />1 arbre mellifère planté
-            <small className="block text-sm text-gray-500">par an</small>
-          </td>
-          <td className="px-2 py-3">
-            <span className="font-semibold">Formule Nectar +</span>
-            <br />4 arbres mellifères plantés
-            <small className="block text-sm text-gray-500">par an</small>
-          </td>
-        </tr>
-        <tr className="even:bg-gray-100/25">
-          <th
-            className={mergeClasses(
-              stickyColumnClasses,
-              'px-2 py-3 font-medium'
-            )}
-          >
+          </PricingComparisonTableRowCell>
+          <PricingComparisonTableRowCell after="par an">
+            <div className="font-semibold">Formule Nectar +</div>1 arbre
+            mellifère planté
+          </PricingComparisonTableRowCell>
+          <PricingComparisonTableRowCell after="par an">
+            <div className="font-semibold">Formule Nectar +</div>4 arbres
+            mellifères plantés
+          </PricingComparisonTableRowCell>
+        </PricingComparisonTableRow>
+
+        <PricingComparisonTableRow>
+          <PricingComparisonTableRowCellHead className={stickyColumnClasses}>
             Pot de miel
-          </th>
-          <td className="px-2 py-3">
+          </PricingComparisonTableRowCellHead>
+          <PricingComparisonTableRowCell after="par an, étiquette personnalisée">
             1 pot de miel de 500g
-            <small className="block text-sm text-gray-500">
-              par an, étiquette personnalisée
-            </small>
-          </td>
-          <td className="px-2 py-3">
-            <span className="font-semibold">Formule Nectar +</span>
-            <br />4 pots de miel de 250g
-            <small className="block text-sm text-gray-500">
-              1 par trimestre
-            </small>
-          </td>
-          <td className="px-2 py-3">
-            <span className="font-semibold">Formule Nectar & Propolis +</span>
-            <br />4 pots de miel de 250g
-            <small className="block text-sm text-gray-500">par an</small>
-          </td>
-        </tr>
-        <tr className="even:bg-gray-100/25">
-          <th
-            className={mergeClasses(
-              stickyColumnClasses,
-              'px-2 py-3 font-medium'
-            )}
-          >
+          </PricingComparisonTableRowCell>
+          <PricingComparisonTableRowCell after="1 par trimestre">
+            <div className="font-semibold">Formule Nectar +</div>4 pots de miel
+            de 250g
+          </PricingComparisonTableRowCell>
+          <PricingComparisonTableRowCell after="par an">
+            <div className="font-semibold">Formule Nectar & Propolis +</div>4
+            pots de miel de 250g
+          </PricingComparisonTableRowCell>
+        </PricingComparisonTableRow>
+
+        <PricingComparisonTableRow>
+          <PricingComparisonTableRowCellHead className={stickyColumnClasses}>
             Mascotte L'Abeille Viennoise™
-          </th>
-          <td className="px-2 py-3">
+          </PricingComparisonTableRowCellHead>
+          <PricingComparisonTableRowCell after="valeur approximative 20€">
             1
-            <small className="block text-sm text-gray-500">
-              valeur approximative 20€
-            </small>
-          </td>
-          <td className="px-2 py-3">
+          </PricingComparisonTableRowCell>
+          <PricingComparisonTableRowCell after="valeur approximative 40€">
             1
-            <small className="block text-sm text-gray-500">
-              valeur approximative 40€
-            </small>
-          </td>
-          <td className="px-2 py-3">
+          </PricingComparisonTableRowCell>
+          <PricingComparisonTableRowCell after="celles des formules précédentes">
             2
-            <small className="block text-sm text-gray-500">
-              celles des formules précédentes
-            </small>
-          </td>
-        </tr>
-        <tr className="even:bg-gray-100/25">
-          <th
-            className={mergeClasses(
-              stickyColumnClasses,
-              'px-2 py-3 font-medium'
-            )}
-          >
+          </PricingComparisonTableRowCell>
+        </PricingComparisonTableRow>
+
+        <PricingComparisonTableRow>
+          <PricingComparisonTableRowCellHead className={stickyColumnClasses}>
             Des nouvelles des abeilles accompagnées de photos pour suivre
             l'évolution des ruches
-            <small className="block text-sm text-gray-500">par trimestre</small>
-          </th>
-          <td className="px-2 py-3">
-            <IconCheck />
-          </td>
-          <td className="px-2 py-3">
-            <IconCheck />
-          </td>
-          <td className="px-2 py-3">
-            <IconCheck />
-          </td>
-        </tr>
-        <tr className="even:bg-gray-100/25">
-          <th
-            className={mergeClasses(
-              stickyColumnClasses,
-              'px-2 py-3 font-medium'
-            )}
+          </PricingComparisonTableRowCellHead>
+          <PricingComparisonTableRowCellCheck />
+          <PricingComparisonTableRowCellCheck />
+          <PricingComparisonTableRowCellCheck />
+        </PricingComparisonTableRow>
+
+        <PricingComparisonTableRow>
+          <PricingComparisonTableRowCellHead
+            className={stickyColumnClasses}
+            after="par an"
           >
             Coffret gourmand surprise
-            <small className="block text-sm text-gray-500">par an</small>
-          </th>
-          <td className="px-2 py-3 text-red-500 font-black">─</td>
-          <td className="px-2 py-3">
-            <IconCheck />
-          </td>
-          <td className="px-2 py-3">
-            <IconCheck />
-          </td>
-        </tr>
-        <tr className="even:bg-gray-100/25">
-          <th
-            className={mergeClasses(
-              stickyColumnClasses,
-              'px-2 py-3 font-medium'
-            )}
-          >
+          </PricingComparisonTableRowCellHead>
+          <PricingComparisonTableRowCellMinus />
+          <PricingComparisonTableRowCellCheck />
+          <PricingComparisonTableRowCellCheck />
+        </PricingComparisonTableRow>
+
+        <PricingComparisonTableRow>
+          <PricingComparisonTableRowCellHead className={stickyColumnClasses}>
             Plaque nominative sur votre ruche
-          </th>
-          <td className="px-2 py-3 text-red-500 font-black">─</td>
-          <td className="px-2 py-3 text-red-500 font-black">─</td>
-          <td className="px-2 py-3">
-            <IconCheck />
-          </td>
-        </tr>
-      </tbody>
+          </PricingComparisonTableRowCellHead>
+          <PricingComparisonTableRowCellMinus />
+          <PricingComparisonTableRowCellMinus />
+          <PricingComparisonTableRowCellCheck />
+        </PricingComparisonTableRow>
+      </PricingComparisonTableBody>
     </table>
   )
 }
+
+const PricingComparisonTableRowCellCheck = () => (
+  <PricingComparisonTableRowCell>
+    <IconCheck />
+  </PricingComparisonTableRowCell>
+)
+const PricingComparisonTableRowCellMinus = () => (
+  <PricingComparisonTableRowCell className="text-red-500 font-black">
+    ─
+  </PricingComparisonTableRowCell>
+)
