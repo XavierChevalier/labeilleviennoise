@@ -17,7 +17,6 @@ export interface Formulas {
 export default function PricingComparison() {
   const [isToggled, setIsToggled] = useState(false)
   const handleIsToggled = () => setIsToggled((prevState) => !prevState)
-
   const formulas: Formulas = {
     nectar: {
       title: 'Nectar',
@@ -35,6 +34,7 @@ export default function PricingComparison() {
       pricePerYear: 719.99,
     },
   }
+
   return (
     <>
       <div className="flex justify-center mb-5">

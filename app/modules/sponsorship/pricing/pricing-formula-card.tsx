@@ -32,7 +32,7 @@ const PricingFormulaCard: FC<Props> = ({
         {!isVatIncluded && <span className="text-sm">HT</span>}
       </span>
       <span className="text-gray-500 dark:text-gray-400">
-        /<span data-per="month">{isPerYear ? 'an' : 'mois'}</span>
+        /<span>{isPerYear ? 'an' : 'mois'}</span>
       </span>
     </div>
 

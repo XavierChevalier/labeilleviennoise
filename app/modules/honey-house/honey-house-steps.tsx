@@ -4,6 +4,10 @@ import HoneyHouseStep from '@/modules/honey-house/honey-house-step'
 
 const HoneyHouseSteps: FC = () => (
   <>
+    <h2 className="mb-10 md:mb-4 mt-24 text-4xl font-bold tracking-tight leading-none md:text-5xl xl:text-6xl text-center text-primary">
+      Processus de fabrication 🍯
+    </h2>
+
     <HoneyHouseStep
       stepNumber="01"
       title="Récolte du miel"

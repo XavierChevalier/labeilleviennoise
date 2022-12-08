@@ -14,12 +14,17 @@ export default function PricingComparisonTableHead({
   return (
     <thead className="border-b-[1px]">
       <tr className="text-left text-2xl">
-        <th className={mergeClasses('pb-3 font-medium', firstColumnClassName)}>
+        <th
+          className={mergeClasses(
+            'pb-3 font-medium w-[140px] md:w-[226px]',
+            firstColumnClassName
+          )}
+        >
           Formule
         </th>
-        <th className="pb-3 min-w-[226px] font-medium">{nectar.title}</th>
-        <th className="pb-3 min-w-[226px] font-medium">{propolis.title}</th>
-        <th className="pb-3 min-w-[226px] font-medium">{geleeRoyale.title}</th>
+        <th className="pb-3 font-medium">{nectar.title}</th>
+        <th className="pb-3 font-medium">{propolis.title}</th>
+        <th className="pb-3 font-medium">{geleeRoyale.title}</th>
       </tr>
     </thead>
   )

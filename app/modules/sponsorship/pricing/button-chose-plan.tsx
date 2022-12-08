@@ -1,5 +1,5 @@
 import type { HTMLProps } from 'react'
-import { AppLink } from '@/modules/shared/link/app-link'
+import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 import { useURL } from '@/modules/shared/location/use-url'
 
 export interface Props extends HTMLProps<HTMLElement> {
@@ -7,20 +7,15 @@ export interface Props extends HTMLProps<HTMLElement> {
   isToggled: boolean
 }
 
-export default function ButtonChosePlan(props: Props) {
-  const { title, isToggled } = props
+export default function ButtonChosePlan({ title, isToggled }: Props) {
   const { createUrl } = useURL()
   const to = createUrl('/contact-parrainage')
   to.searchParams.set('per', !isToggled ? 'mensuel' : 'annuel')
   to.searchParams.set('title', title)
 
   return (
-    <AppLink
-      to={to}
-      type="fancy"
-      className="inline-flex items-center justify-center px-5 py-3 mt-3 font-medium text-center rounded-lg focus:ring-4 no-underline text-white bg-primary hover:bg-primary-500 focus:ring-primary-300 dark:focus:ring-primary-900"
-    >
+    <AppLinkButton to={to} variant="fancy" className="mt-4">
       Prendre contact
-    </AppLink>
+    </AppLinkButton>
   )
 }

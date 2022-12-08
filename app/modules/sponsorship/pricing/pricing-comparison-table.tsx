@@ -24,7 +24,7 @@ export default function PricingComparisonTable({
   const stickyColumnClasses = 'text-left sticky -left-0.5 bg-white z-10'
 
   return (
-    <table className={mergeClasses('table-fixed mx-auto', className)}>
+    <table className={mergeClasses('table-fixed mx-auto lg:w-full', className)}>
       <PricingComparisonTableHead
         formulas={formulas}
         firstColumnClassName={stickyColumnClasses}
@@ -39,24 +39,27 @@ export default function PricingComparisonTable({
             <PeriodLabel
               pricePerMonth={nectar.pricePerMonth}
               pricePerYear={nectar.pricePerYear}
-              isToggled={isToggled}
+              isPerYear={isToggled}
             />
+            <br />
             <ButtonChosePlan title={nectar.title} isToggled={isToggled} />
           </PricingComparisonTableRowCell>
           <PricingComparisonTableRowCell>
             <PeriodLabel
               pricePerMonth={propolis.pricePerMonth}
               pricePerYear={propolis.pricePerYear}
-              isToggled={isToggled}
+              isPerYear={isToggled}
             />
+            <br />
             <ButtonChosePlan title={propolis.title} isToggled={isToggled} />
           </PricingComparisonTableRowCell>
           <PricingComparisonTableRowCell>
             <PeriodLabel
               pricePerMonth={geleeRoyale.pricePerMonth}
               pricePerYear={geleeRoyale.pricePerYear}
-              isToggled={isToggled}
+              isPerYear={isToggled}
             />
+            <br />
             <ButtonChosePlan title={geleeRoyale.title} isToggled={isToggled} />
           </PricingComparisonTableRowCell>
         </PricingComparisonTableRow>
@@ -74,7 +77,7 @@ export default function PricingComparisonTable({
 
         <PricingComparisonTableRow>
           <PricingComparisonTableRowCellHead className={stickyColumnClasses}>
-            Fleurs/Arbres planté(e)s
+            Fleurs ou arbres plantés
           </PricingComparisonTableRowCellHead>
           <PricingComparisonTableRowCell after="1 fleur = 1 abeille heureuse">
             5.000 fleurs plantées
@@ -90,20 +93,15 @@ export default function PricingComparisonTable({
         </PricingComparisonTableRow>
 
         <PricingComparisonTableRow>
-          <PricingComparisonTableRowCellHead className={stickyColumnClasses}>
-            Pot de miel
+          <PricingComparisonTableRowCellHead
+            className={stickyColumnClasses}
+            after="par an"
+          >
+            Pot de miel de 250g avec étiquette personnalisée
           </PricingComparisonTableRowCellHead>
-          <PricingComparisonTableRowCell after="par an, étiquette personnalisée">
-            1 pot de miel de 500g
-          </PricingComparisonTableRowCell>
-          <PricingComparisonTableRowCell after="1 par trimestre">
-            <div className="font-semibold">Formule Nectar +</div>4 pots de miel
-            de 250g
-          </PricingComparisonTableRowCell>
-          <PricingComparisonTableRowCell after="par an">
-            <div className="font-semibold">Formule Nectar & Propolis +</div>4
-            pots de miel de 250g
-          </PricingComparisonTableRowCell>
+          <PricingComparisonTableRowCell>2</PricingComparisonTableRowCell>
+          <PricingComparisonTableRowCell>6</PricingComparisonTableRowCell>
+          <PricingComparisonTableRowCell>8</PricingComparisonTableRowCell>
         </PricingComparisonTableRow>
 
         <PricingComparisonTableRow>

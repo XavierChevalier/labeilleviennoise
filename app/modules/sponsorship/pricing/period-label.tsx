@@ -3,21 +3,23 @@ import type { HTMLProps } from 'react'
 export interface Props extends HTMLProps<HTMLElement> {
   pricePerMonth: number
   pricePerYear: number
-  isToggled: boolean
+  isPerYear: boolean
 }
 
 export default function PeriodLabel({
   pricePerMonth,
   pricePerYear,
-  isToggled,
+  isPerYear,
 }: Props) {
   return (
     <>
       <span className="mr-2 text-5xl font-bold">
-        <span>{!isToggled ? pricePerMonth : pricePerYear}</span>€
+        {isPerYear ? pricePerYear : pricePerMonth}€
       </span>
       <span className="text-gray-500 dark:text-gray-400">
-        /<span data-per="month">{!isToggled ? 'mois' : 'an'}</span>
+        /<span>{isPerYear ? 'an' : 'mois'}</span>
+        <br />
+        {!isPerYear && <span>pendant 1 an</span>}
       </span>
     </>
   )

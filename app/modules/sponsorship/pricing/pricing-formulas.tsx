@@ -12,9 +12,11 @@ export default function PricingFormulas() {
           Choisissez le plan qui vous correspond
         </h2>
         <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
-          Les avantages sont répartis sur l'année. C'est grâce à votre
-          parrainage que nous ferons un pas de géant pour le respect de la
-          biodiversité.
+          <strong className="font-bold">
+            Les avantages sont répartis sur l'année.
+          </strong>{' '}
+          C'est grâce à votre parrainage que nous ferons un pas de géant pour le
+          respect de la biodiversité.
           <br />
           <AppLink to="/parrainage-entreprise" className="text-sm">
             Vous avez un projet de parrainage pour votre entreprise ?
