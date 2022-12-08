@@ -11,7 +11,7 @@ export default function TeamSection() {
           L'Abeille Viennoise c'est nous, mais c'est aussi eux...
         </p>
       </div>
-      <div className="grid gap-8 lg:gap-16 grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
+      <div className="grid gap-8 lg:gap-16 grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
         <TeamAvatar
           name="Xavier"
           role="Développeur"

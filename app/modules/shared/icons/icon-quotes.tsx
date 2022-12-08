@@ -1,16 +1,19 @@
+import type { HTMLProps } from 'react'
 import { mergeClasses } from '@/modules/shared/html/merge-classes'
 
-interface SvgProps {
+interface SvgProps extends HTMLProps<SVGElement> {
   mirror?: boolean
+  variant?: 'primary'
 }
 
-export default function IconQuotes(props: SvgProps) {
+export default function IconQuotes({ mirror, variant, className }: SvgProps) {
   return (
     <svg
       aria-hidden="true"
       className={mergeClasses(
-        'w-10 h-10 text-gray-400 dark:text-gray-600',
-        props.mirror && 'scale-x-[-1]'
+        mirror && 'scale-[-1]',
+        variant === 'primary' ? 'text-primary' : '',
+        className
       )}
       viewBox="0 0 24 27"
       fill="none"
