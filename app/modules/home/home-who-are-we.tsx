@@ -1,4 +1,5 @@
 import { IKImage } from 'imagekitio-react'
+import { AppLink } from '@/modules/shared/link/app-link'
 
 export default function HeroWhoAreWe() {
   return (
@@ -10,8 +11,9 @@ export default function HeroWhoAreWe() {
 
         <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
           L’abeille Viennoise, c’est une entreprise apicole située à Vienne dans
-          l’Isère, née de la passion d’Anne-Marie et Ludovic pour la nature et
-          la sauvegarde des abeilles.
+          l’Isère, née de la passion d'
+          <AppLink to="/equipe">Anne-Marie et Ludovic</AppLink> pour la nature
+          et la sauvegarde des abeilles.
         </p>
 
         <p className="font-light text-gray-500 md:text-lg dark:text-gray-400">
