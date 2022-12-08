@@ -318,6 +318,7 @@ export default function LeRucher() {
         </ApiarySection>
       </ApiarySections>
 
+      {/* here goes instagram */}
       <SponsorshipCallToAction />
     </div>
   )
