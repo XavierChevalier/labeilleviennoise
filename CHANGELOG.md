@@ -1,3 +1,12 @@
+## [0.13.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.13.0...v0.13.1) (2022-12-11)
+
+
+### Bug Fixes
+
+* cannot use process.env for meta tags ([907468f](https://github.com/XavierChevalier/labeilleviennoise/commit/907468f5f3c585b33e5f25e9df2f375dfdeeee44))
+
+
+
 # [0.13.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.12.0...v0.13.0) (2022-12-11)
 
 
@@ -42,15 +51,6 @@
 ### Features
 
 * **sponsorship:** add company sponsorship contact page ([c648988](https://github.com/XavierChevalier/labeilleviennoise/commit/c648988d35d4fcf22f00a8b5064a2d11eb295973))
-
-
-
-## [0.9.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.9.0...v0.9.1) (2022-11-30)
-
-
-### Bug Fixes
-
-* typo, missing dot ([02b4a01](https://github.com/XavierChevalier/labeilleviennoise/commit/02b4a01bf24e1a42d00a2238c7a58b52bbc66ee9))
 
 
 
