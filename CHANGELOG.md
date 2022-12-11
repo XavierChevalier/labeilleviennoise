@@ -1,3 +1,12 @@
+# [0.13.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.12.0...v0.13.0) (2022-12-11)
+
+
+### Features
+
+* improve SEO with meta tags on each pages ([f020e08](https://github.com/XavierChevalier/labeilleviennoise/commit/f020e085cc16edc59da87abf2ba72d581818e21f))
+
+
+
 # [0.12.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.11.0...v0.12.0) (2022-12-08)
 
 
@@ -42,15 +51,6 @@
 ### Bug Fixes
 
 * typo, missing dot ([02b4a01](https://github.com/XavierChevalier/labeilleviennoise/commit/02b4a01bf24e1a42d00a2238c7a58b52bbc66ee9))
-
-
-
-# [0.9.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.8.0...v0.9.0) (2022-11-29)
-
-
-### Features
-
-* **team:** update team members status ([b94ae56](https://github.com/XavierChevalier/labeilleviennoise/commit/b94ae568e9d6abf99d20dec8aab395553decd0b7))
 
 
 
