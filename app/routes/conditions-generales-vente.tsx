@@ -1,3 +1,15 @@
+import type { MetaFunction } from '@remix-run/node'
+import { generateMeta } from '@/modules/shared/seo/meta'
+
+export const meta: MetaFunction = () =>
+  generateMeta({
+    title: "Conditions Générales de Vente - L'Abeille Viennoise",
+    description:
+      "Conditions Générales de Vente de l'Abeille Viennoise, vente de miels français et tout particulièrement viennois.",
+    url: `${process.env.BASE_URL}/conditions-generales-vente`,
+    noIndex: true,
+  })
+
 export default function ConditionsGeneralesVente() {
   return (
     <article className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 prose lg:prose-xl">
