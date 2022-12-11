@@ -1,6 +1,16 @@
+import type { MetaFunction } from '@remix-run/node'
 import CollaboratorsSection from '@/modules/collaborators/collaborators-section'
+import { generateMeta } from '@/modules/shared/seo/meta'
 import TeamHero from '@/modules/team/team-hero'
 import TeamSection from '@/modules/team/team-section'
+
+export const meta: MetaFunction = () =>
+  generateMeta({
+    title: "L'équipe - L'Abeille Viennoise",
+    description:
+      "L'équipe de l'Abeille Viennoise est composée de passionnés de la nature et de l'apiculture. Découvrez qui nous sommes !",
+    url: `${process.env.BASE_URL}/equipe`,
+  })
 
 export default function Equipe() {
   return (

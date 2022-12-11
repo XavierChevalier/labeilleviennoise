@@ -1,8 +1,18 @@
+import type { MetaFunction } from '@remix-run/node'
 import { IKImage, IKVideo } from 'imagekitio-react'
 import ApiarySection from '@/modules/apiary/ApiarySection'
 import ApiarySections from '@/modules/apiary/ApiarySections'
 import ApiaryStory from '@/modules/apiary/ApiaryStory'
+import { generateMeta } from '@/modules/shared/seo/meta'
 import SponsorshipCallToAction from '@/modules/sponsorship/sponsorship-call-to-action'
+
+export const meta: MetaFunction = () =>
+  generateMeta({
+    title: "Le rucher et créations artisanales - L'Abeille Viennoise",
+    description:
+      "Le rucher et créations artisanales de l'Abeille Viennoise en images.",
+    url: `${process.env.BASE_URL}/le-rucher`,
+  })
 
 export default function LeRucher() {
   return (

@@ -3,11 +3,16 @@ import { useSearchParams } from '@remix-run/react'
 import { contactAction } from '@/modules/contact/contact-action'
 import ContactForm from '@/modules/contact/contact-form'
 import ContactHeader from '@/modules/contact/contact-header'
+import { generateMeta } from '@/modules/shared/seo/meta'
 
-export const meta: MetaFunction = () => ({
-  robots: 'noindex',
-  googlebot: 'noindex',
-})
+export const meta: MetaFunction = () =>
+  generateMeta({
+    title: "Contact parrainage - L'Abeille Viennoise",
+    description:
+      'Contactez-nous pour tout renseignement sur le parrainage. Nous vous répondrons dans les plus brefs délais.',
+    url: `${process.env.BASE_URL}/contact-parrainage`,
+    noIndex: true,
+  })
 
 export const action: ActionFunction = contactAction
 
