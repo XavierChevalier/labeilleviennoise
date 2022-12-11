@@ -1,4 +1,3 @@
-import * as process from 'process'
 import type { MetaFunction } from '@remix-run/node'
 import HomeHero from '@/modules/home/home-hero'
 import HomeOurProducts from '@/modules/home/home-our-products'
@@ -11,7 +10,7 @@ export const meta: MetaFunction = () =>
     title: "L'Abeille Viennoise",
     description:
       'Services autour du miel et des abeilles, de la vente de miels français et tout particulièrement viennois, à la location de ruches pour particuliers ou entreprises.',
-    url: process.env.BASE_URL!,
+    url: 'https://labeilleviennoise.com',
   })
 
 export default function Index() {
