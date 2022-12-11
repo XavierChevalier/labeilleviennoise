@@ -7,7 +7,7 @@ export const meta: MetaFunction = () =>
     title: "La boutique - L'Abeille Viennoise",
     description:
       "Venez découvrir tous les produits de l'Abeille Viennoise, autour du miel, des abeilles et du crochet.",
-    url: `${process.env.BASE_URL}/boutique`,
+    url: `https://labeilleviennoise.com/boutique`,
   })
 
 export default function Boutique() {

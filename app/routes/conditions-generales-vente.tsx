@@ -6,7 +6,7 @@ export const meta: MetaFunction = () =>
     title: "Conditions Générales de Vente - L'Abeille Viennoise",
     description:
       "Conditions Générales de Vente de l'Abeille Viennoise, vente de miels français et tout particulièrement viennois.",
-    url: `${process.env.BASE_URL}/conditions-generales-vente`,
+    url: `https://labeilleviennoise.com/conditions-generales-vente`,
     noIndex: true,
   })
 

@@ -10,7 +10,7 @@ export const meta: MetaFunction = () =>
     title: "Contact parrainage - L'Abeille Viennoise",
     description:
       'Contactez-nous pour tout renseignement sur le parrainage. Nous vous répondrons dans les plus brefs délais.',
-    url: `${process.env.BASE_URL}/contact-parrainage`,
+    url: `https://labeilleviennoise.com/contact-parrainage`,
     noIndex: true,
   })
 

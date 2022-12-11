@@ -9,7 +9,7 @@ export const meta: MetaFunction = () =>
     title: "L'équipe - L'Abeille Viennoise",
     description:
       "L'équipe de l'Abeille Viennoise est composée de passionnés de la nature et de l'apiculture. Découvrez qui nous sommes !",
-    url: `${process.env.BASE_URL}/equipe`,
+    url: `https://labeilleviennoise.com/equipe`,
   })
 
 export default function Equipe() {

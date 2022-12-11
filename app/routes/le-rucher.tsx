@@ -11,7 +11,7 @@ export const meta: MetaFunction = () =>
     title: "Le rucher et créations artisanales - L'Abeille Viennoise",
     description:
       "Le rucher et créations artisanales de l'Abeille Viennoise en images.",
-    url: `${process.env.BASE_URL}/le-rucher`,
+    url: `https://labeilleviennoise.com/le-rucher`,
   })
 
 export default function LeRucher() {

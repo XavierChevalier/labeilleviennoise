@@ -5,7 +5,7 @@ export const meta: MetaFunction = () =>
   generateMeta({
     title: "Mentions légales - L'Abeille Viennoise",
     description: "Mentions légales de l'Abeille Viennoise.",
-    url: `${process.env.BASE_URL}/mentions-legales`,
+    url: `https://labeilleviennoise.com/mentions-legales`,
     noIndex: true,
   })
 

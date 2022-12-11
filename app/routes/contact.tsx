@@ -11,7 +11,7 @@ export const meta: MetaFunction = () =>
     title: "Contact - L'Abeille Viennoise",
     description:
       'Contactez-nous pour toute question. Nous vous répondrons dans les plus brefs délais.',
-    url: `${process.env.BASE_URL}/contact`,
+    url: `https://labeilleviennoise.com/contact`,
   })
 
 export const action: ActionFunction = contactAction

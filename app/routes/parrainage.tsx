@@ -10,7 +10,7 @@ export const meta: MetaFunction = () =>
     title: "Parrainage - L'Abeille Viennoise",
     description:
       "Parrainez une ruche et soutenez l'apiculture urbaine. Vous recevrez des produits et des nouvelles de votre ruche !",
-    url: `${process.env.BASE_URL}/parrainage`,
+    url: `https://labeilleviennoise.com/parrainage`,
   })
 
 export default function Parrainage() {

@@ -8,7 +8,7 @@ export const meta: MetaFunction = () =>
     title: "Foire aux questions - L'Abeille Viennoise",
     description:
       "Vous avez des questions sur l'apiculture, les abeilles, les produits de l'Abeille Viennoise ? Vous trouverez peut-être la réponse dans notre foire aux questions.",
-    url: `${process.env.BASE_URL}/faq`,
+    url: `https://labeilleviennoise.com/faq`,
   })
 
 export default function Faq() {

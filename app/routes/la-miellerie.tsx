@@ -11,7 +11,7 @@ export const meta: MetaFunction = () =>
     title: "La Miellerie - L'Abeille Viennoise",
     description:
       "La miellerie de l'Abeille Viennoise est située à Vienne dans la Drôme. Découvrez comment nous produisons notre miel et nos produits.",
-    url: `${process.env.BASE_URL}/la-miellerie`,
+    url: `https://labeilleviennoise.com/la-miellerie`,
   })
 
 export default function LaMiellerie() {
