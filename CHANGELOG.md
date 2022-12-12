@@ -1,3 +1,13 @@
+## [0.13.2](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.13.1...v0.13.2) (2022-12-12)
+
+
+### Bug Fixes
+
+* favicon width ([e5d653e](https://github.com/XavierChevalier/labeilleviennoise/commit/e5d653e8a682f5412432a38fd839a45d28538edf))
+* process is not allowed in meta function ([bad7642](https://github.com/XavierChevalier/labeilleviennoise/commit/bad76429ddc9ae124d969c71bcc822c9788bde2a))
+
+
+
 ## [0.13.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.13.0...v0.13.1) (2022-12-11)
 
 
@@ -42,15 +52,6 @@
 
 * new comparison layout for formulas ([e235fb5](https://github.com/XavierChevalier/labeilleviennoise/commit/e235fb5bfa47e1dd4a82f10f5b93aaf3d2add5db))
 * use only table view even on mobile ([e0a1a68](https://github.com/XavierChevalier/labeilleviennoise/commit/e0a1a684190a153e3a7b88af273ba75674e3a82b))
-
-
-
-# [0.10.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.9.1...v0.10.0) (2022-12-02)
-
-
-### Features
-
-* **sponsorship:** add company sponsorship contact page ([c648988](https://github.com/XavierChevalier/labeilleviennoise/commit/c648988d35d4fcf22f00a8b5064a2d11eb295973))
 
 
 
