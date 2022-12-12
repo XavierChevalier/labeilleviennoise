@@ -1,3 +1,12 @@
+## [0.14.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.14.0...v0.14.1) (2022-12-12)
+
+
+### Bug Fixes
+
+* environment context provide ([bc36980](https://github.com/XavierChevalier/labeilleviennoise/commit/bc36980cedf8347b6848373d57a89d01ef8cb91c))
+
+
+
 # [0.14.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.13.2...v0.14.0) (2022-12-12)
 
 
@@ -32,17 +41,6 @@
 ### Features
 
 * improve SEO with meta tags on each pages ([f020e08](https://github.com/XavierChevalier/labeilleviennoise/commit/f020e085cc16edc59da87abf2ba72d581818e21f))
-
-
-
-# [0.12.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.11.0...v0.12.0) (2022-12-08)
-
-
-### Features
-
-* **home:** add more content ([0bb314f](https://github.com/XavierChevalier/labeilleviennoise/commit/0bb314f6aa1dc1579297d67db995f33e9b58c6d8))
-* **sponsorship:** rework content of sponsorship pages ([6c116a8](https://github.com/XavierChevalier/labeilleviennoise/commit/6c116a8023167a9fab7308078a622db84d5535a2))
-* **team:** fix style and add new collaborator ([f4028d8](https://github.com/XavierChevalier/labeilleviennoise/commit/f4028d819804b08685511cd30f1f79cc9efe36d3))
 
 
 
