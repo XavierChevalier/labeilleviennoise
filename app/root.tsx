@@ -22,6 +22,7 @@ import NavigationFooter from './modules/navigation/footer/navigation-footer'
 import NavigationBar from './modules/navigation/header/navigation-bar'
 import appStylesheetUrl from '@/assets/styles/app.generated.css'
 import PageNotFound from '@/modules/boundary/404'
+import GoogleAnalyticsScript from '@/modules/tracker/google-analytics-script'
 import HotJarScript from '@/modules/tracker/hot-jar-script'
 
 export const links: LinksFunction = () => [
@@ -81,6 +82,7 @@ const DefaultLayout: FC<HTMLProps<HTMLElement>> = ({ children }) => {
       <head>
         <Meta />
         <Links />
+        <GoogleAnalyticsScript />
       </head>
       <body className="text-neutral-900 bg-white dark:bg-gray-900 dark:text-white min-h-screen scroll-smooth">
         <React.StrictMode>
