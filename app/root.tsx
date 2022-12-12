@@ -25,6 +25,7 @@ import PageNotFound from '@/modules/boundary/404'
 import HotJarScript from '@/modules/tracker/hot-jar-script'
 
 export const links: LinksFunction = () => [
+  { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml', sizes: 'any' },
   { rel: 'stylesheet', href: appStylesheetUrl },
 ]
 
