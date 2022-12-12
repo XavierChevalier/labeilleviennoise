@@ -3,7 +3,7 @@ import { EnvContext } from '@/root'
 
 export default memo(function GoogleAnalyticsScript() {
   const env = useContext(EnvContext)
-  if (env.BASE_URL !== 'https://labeilleviennoise.com') {
+  if (!env.IS_PRODUCTION) {
     console.info('Google Analytics script not loaded because not in production')
 
     return null

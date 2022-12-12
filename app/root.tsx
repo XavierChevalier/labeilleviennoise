@@ -78,15 +78,15 @@ const DefaultLayout: FC<HTMLProps<HTMLElement>> = ({ children }) => {
   const { env } = useLoaderData<RootLoaderData>()
 
   return (
-    <html lang="fr">
-      <head>
-        <Meta />
-        <Links />
-        <GoogleAnalyticsScript />
-      </head>
-      <body className="text-neutral-900 bg-white dark:bg-gray-900 dark:text-white min-h-screen scroll-smooth">
-        <React.StrictMode>
-          <EnvContext.Provider value={env}>
+    <React.StrictMode>
+      <EnvContext.Provider value={env}>
+        <html lang="fr">
+          <head>
+            <Meta />
+            <Links />
+            <GoogleAnalyticsScript />
+          </head>
+          <body className="text-neutral-900 bg-white dark:bg-gray-900 dark:text-white min-h-screen scroll-smooth">
             <Flowbite
               theme={{
                 usePreferences: false,
@@ -109,10 +109,10 @@ const DefaultLayout: FC<HTMLProps<HTMLElement>> = ({ children }) => {
                 <NavigationFooter />
               </IKContext>
             </Flowbite>
-          </EnvContext.Provider>
-        </React.StrictMode>
-        <HotJarScript />
-      </body>
-    </html>
+            <HotJarScript />
+          </body>
+        </html>
+      </EnvContext.Provider>
+    </React.StrictMode>
   )
 }
