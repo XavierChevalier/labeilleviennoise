@@ -15,3 +15,8 @@ linters and types checking (see `.husky/` directory for more details).
 
 All image are stored in https://imagekit.io/ and can be managed in the
 [ImageKit dashboard](https://imagekit.io/dashboard/media-library).
+
+### Google Console for OAuth (login with Google)
+
+The application use Google OAuth to allow users to log in with their Google account to manage the blog.
+Please, follow the [Google Console dashboard](https://console.cloud.google.com/apis/dashboard?authuser=1&project=labeille-viennoise).

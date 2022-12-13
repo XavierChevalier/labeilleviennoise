@@ -1,9 +1,4 @@
-import type {
-  LinksFunction,
-  LoaderFunction,
-  MetaFunction,
-} from '@remix-run/node'
-import { json } from '@remix-run/node'
+import type { LinksFunction, MetaFunction } from '@remix-run/node'
 import {
   Links,
   LiveReload,
@@ -12,11 +7,12 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
-  useLoaderData,
 } from '@remix-run/react'
+import { Flowbite } from 'flowbite-react'
 import { IKContext } from 'imagekitio-react'
 import type { FC, HTMLProps } from 'react'
 import React, { createContext } from 'react'
+import { typedjson, useTypedLoaderData } from 'remix-typedjson'
 import NavigationFooter from './modules/navigation/footer/navigation-footer'
 import NavigationBar from './modules/navigation/header/navigation-bar'
 import appStylesheetUrl from '@/assets/styles/app.generated.css'
@@ -35,12 +31,8 @@ export const meta: MetaFunction = () => ({
   viewport: 'width=device-width,initial-scale=1',
 })
 
-interface RootLoaderData {
-  readonly env: PublicEnv
-}
-
-export const loader: LoaderFunction = () =>
-  json<RootLoaderData>({
+export const loader = () =>
+  typedjson({
     env: {
       BASE_URL: process.env.BASE_URL as string,
       IS_DEV: process.env.NODE_ENV === 'development',
@@ -61,46 +53,67 @@ export const CatchBoundary = () => {
   const caught = useCatch()
 
   return (
-    <DefaultLayout>{caught.status == 404 && <PageNotFound />}</DefaultLayout>
+    <CatchBoundaryLayout>
+      {caught.status == 404 && <PageNotFound />}
+    </CatchBoundaryLayout>
   )
 }
 
 export default function App() {
+  const { env } = useTypedLoaderData<typeof loader>()
+
   return (
-    <DefaultLayout>
-      <Outlet />
-    </DefaultLayout>
+    <EnvContext.Provider value={env}>
+      <IKContext
+        urlEndpoint={env.PUBLIC_IMAGEKIT_URL_ENDPOINT}
+        publicKey={env.PUBLIC_IMAGEKIT_PUBLIC_KEY}
+      >
+        <DefaultLayout>
+          <Outlet />
+        </DefaultLayout>
+      </IKContext>
+    </EnvContext.Provider>
   )
 }
 
-const DefaultLayout: FC<HTMLProps<HTMLElement>> = ({ children }) => {
-  const { env } = useLoaderData<RootLoaderData>()
+const CatchBoundaryLayout: FC<HTMLProps<HTMLElement>> = ({ children }) => (
+  <DefaultLayout>{children}</DefaultLayout>
+)
 
-  return (
-    <React.StrictMode>
-      <EnvContext.Provider value={env}>
-        <html lang="fr">
-          <head>
-            <Meta />
-            <Links />
-            <GoogleAnalyticsScript />
-          </head>
-          <body className="text-neutral-900 bg-white min-h-screen scroll-smooth">
-            <IKContext
-              publicKey={env.PUBLIC_IMAGEKIT_PUBLIC_KEY}
-              urlEndpoint={env.PUBLIC_IMAGEKIT_URL_ENDPOINT}
-            >
-              <NavigationBar />
-              <main>{children}</main>
-              <ScrollRestoration />
-              <Scripts />
-              <LiveReload />
-              <NavigationFooter />
-            </IKContext>
-            <HotJarScript />
-          </body>
-        </html>
-      </EnvContext.Provider>
-    </React.StrictMode>
-  )
-}
+const DefaultLayout: FC<HTMLProps<HTMLElement>> = ({ children }) => (
+  <React.StrictMode>
+    <html lang="fr">
+      <head>
+        <Meta />
+        <Links />
+        <GoogleAnalyticsScript />
+      </head>
+      <body className="text-neutral-900 bg-white min-h-screen scroll-smooth">
+        <FlowbiteTheme>
+          <NavigationBar />
+          <main>{children}</main>
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+          <NavigationFooter />
+        </FlowbiteTheme>
+        <HotJarScript />
+      </body>
+    </html>
+  </React.StrictMode>
+)
+
+const FlowbiteTheme: FC<HTMLProps<HTMLDivElement>> = ({ children }) => (
+  <Flowbite
+    theme={{
+      usePreferences: false,
+      theme: {
+        darkThemeToggle: {
+          base: 'text-gray-500 hover:text-gray-900 dark:hover:text-white',
+        },
+      },
+    }}
+  >
+    {children}
+  </Flowbite>
+)

@@ -1,6 +1,6 @@
 import type { LinkProps } from '@remix-run/react'
 import { Link } from '@remix-run/react'
-import type { FC, HTMLProps } from 'react'
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, FC } from 'react'
 import { mergeClasses } from '@/modules/shared/html/merge-classes'
 
 interface BaseAppLinkButtonProps {
@@ -70,9 +70,27 @@ const AppLinkButton: FC<AppLinkButtonProps> = ({
   </Link>
 )
 
+interface AppButtonProps
+  extends BaseAppLinkButtonProps,
+    ButtonHTMLAttributes<HTMLButtonElement> {}
+const AppButton: FC<AppButtonProps> = ({
+  variant,
+  children,
+  className,
+  ...attributes
+}) => (
+  <button
+    className={buildAppLinkButtonClasses(variant, className)}
+    {...attributes}
+  >
+    {variant === 'fancy' && <FancyHoverEffect />}
+    {children}
+  </button>
+)
+
 interface AppLinkButtonExternalProps
   extends BaseAppLinkButtonProps,
-    HTMLProps<HTMLAnchorElement> {}
+    AnchorHTMLAttributes<HTMLAnchorElement> {}
 const AppLinkButtonExternal: FC<AppLinkButtonExternalProps> = ({
   variant,
   children,
@@ -85,7 +103,7 @@ const AppLinkButtonExternal: FC<AppLinkButtonExternalProps> = ({
   </a>
 )
 
-export { AppLinkButton, AppLinkButtonExternal }
+export { AppLinkButton, AppLinkButtonExternal, AppButton }
 
 const FancyHoverEffect: FC = () => (
   <div

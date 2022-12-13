@@ -25,6 +25,9 @@ export const generateMeta = ({
   ...addIndexing({ noIndex }),
 })
 
+export const preventPageIndexing = (): HtmlMetaDescriptor =>
+  addIndexing({ noIndex: true })
+
 const addOpenGraph = ({
   title,
   description,
