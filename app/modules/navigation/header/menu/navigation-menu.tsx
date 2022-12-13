@@ -1,6 +1,13 @@
+import type { FC } from 'react'
+import { useLocation } from 'react-router'
 import NavigationMenuHamburgerButton from '@/modules/navigation/header/menu/navigation-menu-hamburger-button'
-import NavigationBarLink from '@/modules/navigation/header/navigation-bar-link'
+import NavigationBarLink, {
+  NavigationBarLinkBase,
+} from '@/modules/navigation/header/navigation-bar-link'
+import type { NavigationBarLinkDropdownProps } from '@/modules/navigation/header/navigation-bar-link-dropdown'
+import NavigationBarLinkDropdown from '@/modules/navigation/header/navigation-bar-link-dropdown'
 import { mergeClasses } from '@/modules/shared/html/merge-classes'
+import IconChevronDown from '@/modules/shared/icons/icon-chevron-down'
 import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 import { useToggle } from '@/modules/shared/states/use-toggle'
 
@@ -41,13 +48,11 @@ export default function NavigationMenu() {
             </NavigationBarLink>
           </li>
           <li>
-            <NavigationBarLink to="/le-rucher" onClick={toggleShowMenu}>
-              Le rucher
-            </NavigationBarLink>
+            <ProjectDropdown onClick={toggleShowMenu} />
           </li>
           <li>
-            <NavigationBarLink to="/la-miellerie" onClick={toggleShowMenu}>
-              La miellerie
+            <NavigationBarLink to="/blog" onClick={toggleShowMenu}>
+              Blog
             </NavigationBarLink>
           </li>
           <li>
@@ -58,7 +63,7 @@ export default function NavigationMenu() {
           <li className="hidden md:block">
             <AppLinkButton
               variant="fancy"
-              to="/parrainage#pricing"
+              to="/parrainage"
               className="!py-2"
               onClick={toggleShowMenu}
             >
@@ -68,5 +73,40 @@ export default function NavigationMenu() {
         </ul>
       </div>
     </>
+  )
+}
+
+const ProjectDropdown: FC<
+  Omit<NavigationBarLinkDropdownProps, 'triggerElement'>
+> = ({ ...attributes }) => {
+  const location = useLocation()
+
+  return (
+    <NavigationBarLinkDropdown
+      {...attributes}
+      triggerElement={
+        <NavigationBarLinkBase
+          isActive={['/le-rucher', '/la-miellerie'].includes(location.pathname)}
+        >
+          <span className="flex items-center">
+            Le projet
+            <IconChevronDown />
+          </span>
+        </NavigationBarLinkBase>
+      }
+    >
+      <ul>
+        <li>
+          <NavigationBarLink to="/le-rucher" className="md:p-4">
+            Le rucher
+          </NavigationBarLink>
+        </li>
+        <li>
+          <NavigationBarLink to="/la-miellerie" className="md:p-4">
+            La miellerie
+          </NavigationBarLink>
+        </li>
+      </ul>
+    </NavigationBarLinkDropdown>
   )
 }

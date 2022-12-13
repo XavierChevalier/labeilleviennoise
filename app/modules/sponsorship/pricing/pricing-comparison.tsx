@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useToggle } from '@/modules/shared/states/use-toggle'
 import PricingComparisonTable from '@/modules/sponsorship/pricing/pricing-comparison-table'
 import PricingFormulaPerSwitch from '@/modules/sponsorship/pricing/pricing-formula-per-switch'
 
@@ -15,8 +15,7 @@ export interface Formulas {
 }
 
 export default function PricingComparison() {
-  const [isToggled, setIsToggled] = useState(false)
-  const handleIsToggled = () => setIsToggled((prevState) => !prevState)
+  const [isToggled, toggle] = useToggle(false)
   const formulas: Formulas = {
     nectar: {
       title: 'Nectar',
@@ -38,10 +37,7 @@ export default function PricingComparison() {
   return (
     <>
       <div className="flex justify-center mb-5">
-        <PricingFormulaPerSwitch
-          isToggled={isToggled}
-          onToggle={handleIsToggled}
-        />
+        <PricingFormulaPerSwitch isToggled={isToggled} onToggle={toggle} />
       </div>
       <div className="w-screen sm:w-full overflow-x-auto">
         <PricingComparisonTable
