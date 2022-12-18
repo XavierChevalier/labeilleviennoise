@@ -11,6 +11,6 @@ export const createBlogPost = async (post: CreateBlogPostValidationSchema) => {
 
   await prismaClient.$connect()
   await prismaClient.blog_posts.create({ data: post })
-  prismaClient.$disconnect()
+  await prismaClient.$disconnect()
   console.log(`Blog post with slug ${post.slug} created.`)
 }

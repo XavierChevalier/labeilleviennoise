@@ -31,3 +31,6 @@ app/assets/styles/app.generated.css
 
 # gitkeep
 !**/.gitkeep
+
+# generated Prisma Client
+/app/prisma-client/

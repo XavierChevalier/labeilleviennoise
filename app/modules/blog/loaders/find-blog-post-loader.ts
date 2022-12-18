@@ -6,9 +6,9 @@ import { findBlogPostBySlug } from '@/modules/blog/queries/find-blog-post-by-slu
 export const findBlogPostLoader = async ({ params }: LoaderArgs) => {
   invariant(params.slug, 'Slug is required')
   const blogPost = await findBlogPostBySlug(params.slug)
+  if (!blogPost) {
+    throw typedjson({ message: 'Article introuvable' }, { status: 404 })
+  }
 
-  return typedjson(blogPost!, {
-    status: blogPost ? 200 : 404,
-    headers: { 'Cache-Control': 'max-age=86400' },
-  })
+  return typedjson(blogPost, { headers: { 'Cache-Control': 'max-age=86400' } })
 }

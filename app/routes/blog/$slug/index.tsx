@@ -4,12 +4,22 @@ import { findBlogPostLoader } from '@/modules/blog/loaders/find-blog-post-loader
 import BlogPostContent from '@/modules/blog/ui/posts/blog-post-content'
 import { generateMeta } from '@/modules/shared/seo/meta'
 
-export const meta: MetaFunction<typeof loader> = ({ data: blogPost }) =>
-  generateMeta({
+export const meta: MetaFunction<typeof loader> = ({ data: blogPost }) => {
+  if (!blogPost) {
+    return generateMeta({
+      title: 'Article introuvable',
+      description: "L'article que vous recherchez n'existe pas.",
+      url: `https://labeilleviennoise.com/blog`,
+      noIndex: true,
+    })
+  }
+
+  return generateMeta({
     title: blogPost.title,
     description: blogPost.description,
     url: `/blog/${blogPost.slug}`,
   })
+}
 
 export const loader = findBlogPostLoader
 

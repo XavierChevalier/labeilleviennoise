@@ -1,13 +1,13 @@
 import type { ActionFunction } from '@remix-run/node'
 import { makeDomainFunction } from 'domain-functions'
 import { useParams } from 'react-router'
-import { formAction } from 'remix-forms'
 import { useTypedLoaderData } from 'remix-typedjson'
 import { z } from 'zod'
 import { redirectIfNotAuthenticated } from '@/modules/auth/authentication-guard.server'
 import { findBlogPostLoader } from '@/modules/blog/loaders/find-blog-post-loader'
 import { deleteBlogPostBySlug } from '@/modules/blog/mutations/delete-blog-post/delete-blog-post-by-slug.server'
 import Form from '@/modules/shared/form/form'
+import { formAction } from '@/modules/shared/form/form-action.server'
 import { AppLink } from '@/modules/shared/link/app-link'
 
 export const loader = findBlogPostLoader

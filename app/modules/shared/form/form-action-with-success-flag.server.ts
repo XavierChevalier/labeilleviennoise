@@ -1,4 +1,4 @@
-import { formAction } from 'remix-forms'
+import { formAction } from '@/modules/shared/form/form-action.server'
 
 export const formActionWithSuccessFlag: typeof formAction = (attrs) =>
   formAction({

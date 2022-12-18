@@ -1,4 +1,5 @@
 import type { LinksFunction, MetaFunction } from '@remix-run/node'
+import { json } from '@remix-run/node'
 import {
   Links,
   LiveReload,
@@ -7,18 +8,18 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
+  useLoaderData,
 } from '@remix-run/react'
 import { Flowbite } from 'flowbite-react'
 import { IKContext } from 'imagekitio-react'
 import type { FC, HTMLProps } from 'react'
 import React, { createContext } from 'react'
-import { typedjson, useTypedLoaderData } from 'remix-typedjson'
 import NavigationFooter from './modules/navigation/footer/navigation-footer'
 import NavigationBar from './modules/navigation/header/navigation-bar'
 import appStylesheetUrl from '@/assets/styles/app.generated.css'
-import PageNotFound from '@/modules/boundary/404'
+import PageNotFound from '@/modules/boundary/page-not-found'
+import UnknownError from '@/modules/boundary/unknown-error'
 import GoogleAnalyticsScript from '@/modules/tracker/google-analytics-script'
-import HotJarScript from '@/modules/tracker/hot-jar-script'
 
 export const links: LinksFunction = () => [
   { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml', sizes: 'any' },
@@ -32,7 +33,7 @@ export const meta: MetaFunction = () => ({
 })
 
 export const loader = () =>
-  typedjson({
+  json({
     env: {
       BASE_URL: process.env.BASE_URL as string,
       IS_DEV: process.env.NODE_ENV === 'development',
@@ -54,13 +55,17 @@ export const CatchBoundary = () => {
 
   return (
     <CatchBoundaryLayout>
-      {caught.status == 404 && <PageNotFound />}
+      {caught.status === 404 ? (
+        <PageNotFound title={caught.data.message} />
+      ) : (
+        <UnknownError />
+      )}
     </CatchBoundaryLayout>
   )
 }
 
 export default function App() {
-  const { env } = useTypedLoaderData<typeof loader>()
+  const { env } = useLoaderData<typeof loader>()
 
   return (
     <EnvContext.Provider value={env}>
@@ -97,7 +102,6 @@ const DefaultLayout: FC<HTMLProps<HTMLElement>> = ({ children }) => (
           <LiveReload />
           <NavigationFooter />
         </FlowbiteTheme>
-        <HotJarScript />
       </body>
     </html>
   </React.StrictMode>

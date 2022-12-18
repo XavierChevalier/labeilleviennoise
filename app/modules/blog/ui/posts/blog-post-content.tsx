@@ -7,7 +7,7 @@ interface BlogPostContentProps {
 }
 
 const BlogPostContent: FC<BlogPostContentProps> = ({ title, markdown }) => (
-  <article className="max-w-full prose lg:prose-xl prose-img:rounded-md prose-a:text-primary">
+  <article className="max-w-full prose lg:prose-xl prose-img:rounded-md prose-a:text-primary [&_img]:max-h-[500px]">
     <h1 className="text-primary">{title}</h1>
     <div
       dangerouslySetInnerHTML={{
