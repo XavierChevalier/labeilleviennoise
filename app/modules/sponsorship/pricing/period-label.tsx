@@ -16,7 +16,7 @@ export default function PeriodLabel({
       <span className="mr-2 text-5xl font-bold">
         {isPerYear ? pricePerYear : pricePerMonth}€
       </span>
-      <span className="text-gray-500 dark:text-gray-400">
+      <span className="text-gray-500">
         /<span>{isPerYear ? 'an' : 'mois'}</span>
         <br />
         {!isPerYear && <span>pendant 1 an</span>}

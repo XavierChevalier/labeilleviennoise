@@ -15,18 +15,18 @@ export default function SponsorshipWhy() {
       </div>
 
       <div className="ml-auto place-self-center md:col-span-7">
-        <h2 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+        <h2 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
           Pourquoi parrainer ?
         </h2>
-        <p className="max-w-2xl mb-4 font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
+        <p className="max-w-2xl mb-4 font-light text-gray-500 md:text-lg lg:text-xl">
           En octobre 2021, l'abeille a été élue grande cause 2022.
         </p>
-        <p className="max-w-2xl mb-4 font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
+        <p className="max-w-2xl mb-4 font-light text-gray-500 md:text-lg lg:text-xl">
           En effet, ce précieux insecte est aujourd'hui en danger depuis une
           quarantaine d'années. La population d'abeille d'Europe a diminué de
           plus d'un tiers.
         </p>
-        <p className="max-w-2xl mb-6 lg:mb-8 font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
+        <p className="max-w-2xl mb-6 lg:mb-8 font-light text-gray-500 md:text-lg lg:text-xl">
           De plus, 80% des végétaux au monde sont pollinisés par les insectes
           pollinisateurs dont 90% par les abeilles. Cela représente ⅓ des
           aliments que nous consommons.

@@ -6,7 +6,7 @@ import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 export default function HomeWhyWeDoThis() {
   return (
     <section className="min-h-[400px] grid max-w-screen-xl px-4 py-8 mx-auto md:gap-8 xl:gap-0 md:py-16 md:grid-cols-12">
-      <div className="mx-auto mb-6 md:mb-0 md:mt-0 md:col-span-6 lg:col-span-5 md:flex hidden md:flex">
+      <div className="mx-auto mb-6 md:mb-0 md:mt-0 md:col-span-6 lg:col-span-5 md:flex hidden">
         <IKImage
           path="images/bee-cell-2.webp"
           alt="Illustration d'une abeille"
@@ -16,14 +16,14 @@ export default function HomeWhyWeDoThis() {
       </div>
 
       <div className="mr-auto place-self-center md:col-span-6 lg:col-span-7 sm:py-6 lg:px-8">
-        <h2 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+        <h2 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
           Pourquoi faisons-nous cela ?
         </h2>
-        <p className="max-w-2xl mb-4 font-light text-gray-500 md:mb-6 md:text-md md:text-xl dark:text-gray-400">
+        <p className="max-w-2xl mb-4 font-light text-gray-500 md:mb-6 md:text-md md:text-xl">
           Les abeilles sont reconnues grande cause mondiale, ces ouvrières sont
           menacées, on constate 30 % de perte de colonies par an.
         </p>
-        <p className="max-w-2xl mb-4 font-light text-gray-500 md:mb-6 md:text-md md:text-xl dark:text-gray-400">
+        <p className="max-w-2xl mb-4 font-light text-gray-500 md:mb-6 md:text-md md:text-xl">
           Grâce au <AppLink to="/parrainage">parrainage des abeilles</AppLink>,
           nous agissons concrètement{' '}
           <strong className="font-bold">

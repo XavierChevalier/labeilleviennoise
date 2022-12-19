@@ -39,7 +39,7 @@ const HoneyHouseStep: FC<Props> = ({
             {title}
           </span>
         </h3>
-        <p className="max-w-2xl mb-6 font-light text-gray-500 md:mb-8 md:text-md md:text-xl dark:text-gray-400">
+        <p className="max-w-2xl mb-6 font-light text-gray-500 md:mb-8 md:text-md md:text-xl">
           {description}
         </p>
       </div>

@@ -22,7 +22,7 @@ export default function LaMiellerie() {
           La Miellerie
         </h1>
 
-        <p className="text-center font-light text-gray-500 md:text-md md:text-xl dark:text-gray-400">
+        <p className="text-center font-light text-gray-500 md:text-md md:text-xl">
           Nos produits artisanaux, faits à la main avec 🧡
         </p>
       </div>
@@ -30,7 +30,7 @@ export default function LaMiellerie() {
       <HoneyHouseHero />
 
       <div className="p-4 text-center">
-        <p className="mb-4 text-center font-light text-gray-500 md:text-md md:text-xl dark:text-gray-400">
+        <p className="mb-4 text-center font-light text-gray-500 md:text-md md:text-xl">
           Voir tous nos produits sur la boutique
         </p>
 

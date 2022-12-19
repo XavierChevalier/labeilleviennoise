@@ -4,10 +4,10 @@ export default function TeamSection() {
   return (
     <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
       <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
           Notre équipe
         </h2>
-        <p className="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+        <p className="font-light text-gray-500 sm:text-xl">
           L'Abeille Viennoise c'est nous, mais c'est aussi eux...
         </p>
       </div>

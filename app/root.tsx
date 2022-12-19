@@ -14,7 +14,6 @@ import {
   useCatch,
   useLoaderData,
 } from '@remix-run/react'
-import { Flowbite } from 'flowbite-react'
 import { IKContext } from 'imagekitio-react'
 import type { FC, HTMLProps } from 'react'
 import React, { createContext } from 'react'
@@ -86,29 +85,18 @@ const DefaultLayout: FC<HTMLProps<HTMLElement>> = ({ children }) => {
             <Links />
             <GoogleAnalyticsScript />
           </head>
-          <body className="text-neutral-900 bg-white dark:bg-gray-900 dark:text-white min-h-screen scroll-smooth">
-            <Flowbite
-              theme={{
-                usePreferences: false,
-                theme: {
-                  darkThemeToggle: {
-                    base: 'text-gray-500 hover:text-gray-900 dark:hover:text-white',
-                  },
-                },
-              }}
+          <body className="text-neutral-900 bg-white min-h-screen scroll-smooth">
+            <IKContext
+              publicKey={env.PUBLIC_IMAGEKIT_PUBLIC_KEY}
+              urlEndpoint={env.PUBLIC_IMAGEKIT_URL_ENDPOINT}
             >
-              <IKContext
-                publicKey={env.PUBLIC_IMAGEKIT_PUBLIC_KEY}
-                urlEndpoint={env.PUBLIC_IMAGEKIT_URL_ENDPOINT}
-              >
-                <NavigationBar />
-                <main>{children}</main>
-                <ScrollRestoration />
-                <Scripts />
-                <LiveReload />
-                <NavigationFooter />
-              </IKContext>
-            </Flowbite>
+              <NavigationBar />
+              <main>{children}</main>
+              <ScrollRestoration />
+              <Scripts />
+              <LiveReload />
+              <NavigationFooter />
+            </IKContext>
             <HotJarScript />
           </body>
         </html>

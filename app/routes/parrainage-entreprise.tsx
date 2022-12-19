@@ -32,15 +32,15 @@ export default function ParrainageEntreprise() {
     <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <section className="md:min-h-[400px] flex flex-col gap-8 items-center py-6 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 md:py-16">
         <div>
-          <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+          <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
             Parrainage
           </h1>
-          <p className="max-w-2xl mb-6 font-light text-gray-500 md:mb-8 md:text-md md:text-xl dark:text-gray-400">
+          <p className="max-w-2xl mb-6 font-light text-gray-500 md:mb-8 md:text-md md:text-xl">
             <strong className="font-bold">Vous êtes une entreprise</strong> et
             vous souhaitez vous engager dans la protection des abeilles, mais
             vous n’avez pas d’espace pour installer une ruche ?
           </p>
-          <p className="max-w-2xl mb-6 font-light text-gray-500 md:mb-8 md:text-md md:text-xl dark:text-gray-400">
+          <p className="max-w-2xl mb-6 font-light text-gray-500 md:mb-8 md:text-md md:text-xl">
             L’Abeille Viennoise propose à votre entreprise de parrainer une ou
             plusieurs ruches installées et gérées sur son rucher à Vienne. Nous
             vous offrons la possibilité de{' '}
@@ -72,13 +72,13 @@ export default function ParrainageEntreprise() {
         />
 
         <div>
-          <p className="max-w-2xl mb-6 font-light text-gray-500 md:mb-8 md:text-md md:text-xl dark:text-gray-400">
+          <p className="max-w-2xl mb-6 font-light text-gray-500 md:mb-8 md:text-md md:text-xl">
             C’est un intérêt particulier pour vos salariés, car certaines
             visites de la ruche sont prévues dans la formule, ils peuvent ainsi
             découvrir le monde apicole.
           </p>
 
-          <p className="max-w-2xl mb-6 font-light text-gray-500 md:mb-8 md:text-md md:text-xl dark:text-gray-400">
+          <p className="max-w-2xl mb-6 font-light text-gray-500 md:mb-8 md:text-md md:text-xl">
             Votre entreprise possède quelques mètres carrés, toit, jardin ?
             Prenez contact avec l’Abeille Viennoise et{' '}
             <strong className="font-bold">

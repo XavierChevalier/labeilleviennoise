@@ -5,7 +5,7 @@ import { mergeClasses } from '@/modules/shared/html/merge-classes'
 
 const buildAppLinkClasses = (className?: string) =>
   mergeClasses(
-    'relative font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline',
+    'relative font-medium underline text-primary-600 hover:no-underline',
     className
   )
 

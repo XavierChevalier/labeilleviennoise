@@ -37,13 +37,13 @@ const buildAppLinkButtonClasses = (
     after:opacity-100
     hover:after:opacity-0
    `
-  const primaryRing = 'focus:ring-primary-300 dark:focus:ring-primary-900'
+  const primaryRing = 'focus:ring-primary-300'
 
   return mergeClasses(
     baseClasses,
     {
       default:
-        'text-gray-900 border border-gray-300 hover:bg-gray-100 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800',
+        'text-gray-900 border border-gray-300 hover:bg-gray-100 focus:ring-gray-100',
       fancy: mergeClasses(primaryRing, fancyEffect),
       primary: mergeClasses(
         primaryRing,

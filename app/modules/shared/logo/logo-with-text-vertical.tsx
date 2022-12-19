@@ -7,7 +7,7 @@ const LogoWithTextVertical: FC<HTMLProps<HTMLDivElement>> = (props) => (
     <Logo />
     <img
       src="/images/logo-text-align-center.svg"
-      className="h-[44px] dark:invert"
+      className="h-[44px]"
       alt="Logo"
     />
   </div>

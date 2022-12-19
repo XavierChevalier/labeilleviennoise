@@ -9,7 +9,7 @@ const LogoWithTextHorizontal: FC<HTMLProps<HTMLDivElement>> = ({
     <Logo />
     <img
       src="/images/logo-text-align-left.svg"
-      className="h-[44px] dark:invert"
+      className="h-[44px]"
       alt="Logo"
     />
   </div>

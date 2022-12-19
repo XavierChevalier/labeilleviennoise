@@ -17,9 +17,9 @@ export default function Faq() {
       <h1 className="mb-8 text-4xl tracking-tight font-extrabold text-primary text-center">
         Foire aux questions
       </h1>
-      <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
+      <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 md:grid-cols-2">
         <div>
-          <h2 className="max-w-2xl mb-8 text-2xl font-bold tracking-tight leading-none md:text-3xl xl:text-4xl dark:text-white">
+          <h2 className="max-w-2xl mb-8 text-2xl font-bold tracking-tight leading-none md:text-3xl xl:text-4xl">
             Parrainage
           </h2>
           <QuestionAnswer question="Pourquoi parrainer ?">
@@ -87,7 +87,7 @@ export default function Faq() {
         </div>
 
         <div>
-          <h2 className="max-w-2xl mb-8 text-2xl font-bold tracking-tight leading-none md:text-3xl xl:text-4xl dark:text-white">
+          <h2 className="max-w-2xl mb-8 text-2xl font-bold tracking-tight leading-none md:text-3xl xl:text-4xl">
             Les produits
           </h2>
           <QuestionAnswer question="D'où provient le miel ?">

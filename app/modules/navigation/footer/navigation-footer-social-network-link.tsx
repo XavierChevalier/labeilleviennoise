@@ -7,7 +7,7 @@ const NavigationFooterSocialNetworkLink: FC<HTMLProps<HTMLAnchorElement>> = ({
   <a
     {...attributes}
     target="_blank"
-    className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+    className="text-gray-500 hover:text-gray-900"
   >
     {children}
   </a>
