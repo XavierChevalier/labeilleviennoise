@@ -1,2 +1,4 @@
+import { twMerge } from 'tailwind-merge'
+
 export const mergeClasses = (...args: (string | unknown)[]) =>
-  args.filter(Boolean).join(' ')
+  twMerge(args.filter(Boolean).join(' '))

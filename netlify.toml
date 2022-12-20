@@ -1,6 +1,9 @@
 [build]
   publish = "public"
 
+[functions]
+  included_files = ["./app/prisma-client/**/*"]
+
 [dev]
   command = "remix watch"
   port = 3000

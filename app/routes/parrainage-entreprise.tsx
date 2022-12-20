@@ -1,7 +1,7 @@
 import type { ActionFunction, MetaFunction } from '@remix-run/node'
 import { makeDomainFunction } from 'domain-functions'
 import { IKImage } from 'imagekitio-react'
-import { formActionWithSuccessFlag } from '@/modules/shared/form/form-action-with-success-flag'
+import { formActionWithSuccessFlag } from '@/modules/shared/form/form-action-with-success-flag.server'
 import IconArrowRight from '@/modules/shared/icons/icon-arrow-right'
 import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 import { generateMeta } from '@/modules/shared/seo/meta'

@@ -1,3 +1,4 @@
+import { Dropdown } from 'flowbite-react'
 import NavigationMenuHamburgerButton from '@/modules/navigation/header/menu/navigation-menu-hamburger-button'
 import NavigationBarLink from '@/modules/navigation/header/navigation-bar-link'
 import { mergeClasses } from '@/modules/shared/html/merge-classes'
@@ -41,13 +42,22 @@ export default function NavigationMenu() {
             </NavigationBarLink>
           </li>
           <li>
-            <NavigationBarLink to="/le-rucher" onClick={toggleShowMenu}>
-              Le rucher
-            </NavigationBarLink>
+            <Dropdown label="Le projet" inline={true}>
+              <Dropdown.Item>
+                <NavigationBarLink to="/le-rucher" onClick={toggleShowMenu}>
+                  Le rucher
+                </NavigationBarLink>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <NavigationBarLink to="/la-miellerie" onClick={toggleShowMenu}>
+                  La miellerie
+                </NavigationBarLink>
+              </Dropdown.Item>
+            </Dropdown>
           </li>
           <li>
-            <NavigationBarLink to="/la-miellerie" onClick={toggleShowMenu}>
-              La miellerie
+            <NavigationBarLink to="/blog" onClick={toggleShowMenu}>
+              Blog
             </NavigationBarLink>
           </li>
           <li>
@@ -58,7 +68,7 @@ export default function NavigationMenu() {
           <li className="hidden md:block">
             <AppLinkButton
               variant="fancy"
-              to="/parrainage#pricing"
+              to="/parrainage"
               className="!py-2"
               onClick={toggleShowMenu}
             >
