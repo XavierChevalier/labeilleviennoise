@@ -9,5 +9,3 @@ export const findBlogPostBySlug = async (slug: string) => {
 
   return foundBlogPost
 }
-
-export type FindBlogPostBySlug = Awaited<ReturnType<typeof findBlogPostBySlug>>
