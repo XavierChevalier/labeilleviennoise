@@ -8,10 +8,10 @@ interface Props extends HTMLProps<HTMLElement> {
 export default function ContactHeader({ children, formSuccess }: Props) {
   return (
     <>
-      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-primary dark:text-white">
+      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-primary">
         Contactez-nous
       </h2>
-      <p className="mb-8 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-lg">
+      <p className="mb-8 lg:mb-8 font-light text-center text-gray-500 sm:text-lg">
         {children}
       </p>
       {formSuccess && (

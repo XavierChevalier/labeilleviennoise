@@ -9,7 +9,7 @@ export default function AppLabel({
   return (
     <label
       className={mergeClasses(
-        'block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300',
+        'block mb-2 text-sm font-medium text-gray-900',
         className
       )}
       {...props}

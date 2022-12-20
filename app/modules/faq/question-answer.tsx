@@ -5,9 +5,9 @@ export interface Props extends React.HTMLProps<HTMLElement> {
 export default function QuestionAnswer({ children, question }: Props) {
   return (
     <div className="mb-10">
-      <h3 className="flex items-center mb-2 text-lg font-medium text-gray-900 dark:text-white">
+      <h3 className="flex items-center mb-2 text-lg font-medium text-gray-900">
         <svg
-          className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+          className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ export default function QuestionAnswer({ children, question }: Props) {
         </svg>
         {question}
       </h3>
-      <p className="text-gray-500 dark:text-gray-400">{children}</p>
+      <p className="text-gray-500">{children}</p>
     </div>
   )
 }

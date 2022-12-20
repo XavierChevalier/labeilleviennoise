@@ -20,7 +20,7 @@ const PricingFormulaCard: FC<Props> = ({
 }) => (
   <div
     className={mergeClasses(
-      'flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white',
+      'flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow xl:p-8',
       className
     )}
   >
@@ -31,7 +31,7 @@ const PricingFormulaCard: FC<Props> = ({
         <span>{price}</span>€
         {!isVatIncluded && <span className="text-sm">HT</span>}
       </span>
-      <span className="text-gray-500 dark:text-gray-400">
+      <span className="text-gray-500">
         /<span>{isPerYear ? 'an' : 'mois'}</span>
       </span>
     </div>

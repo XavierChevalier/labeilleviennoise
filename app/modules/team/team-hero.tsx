@@ -8,7 +8,7 @@ import { createTextShadow } from '@/modules/shared/styles/text-shadow'
 
 export default function TeamHero() {
   return (
-    <div className="flex flex-col gap-6 md:flex-row min-h-[448px] items-center text-sm sm:text-base lg:text-xl text-gray-900 dark:text-white">
+    <div className="flex flex-col gap-6 md:flex-row min-h-[448px] items-center text-sm sm:text-base lg:text-xl text-gray-900">
       <TeamHeroAvatarWithQuote
         position="left"
         imageTitle="Anne-Marie"

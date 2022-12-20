@@ -5,7 +5,7 @@ const Logo: FC<HTMLProps<HTMLElement>> = ({ className }) => (
   <img
     src="/images/logo.svg"
     alt="logo"
-    className={mergeClasses('h-[64px] w-[64px] dark:invert', className)}
+    className={mergeClasses('h-[64px] w-[64px]', className)}
   />
 )
 
