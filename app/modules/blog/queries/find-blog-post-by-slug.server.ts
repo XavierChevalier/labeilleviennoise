@@ -5,7 +5,7 @@ export const findBlogPostBySlug = async (slug: string) => {
   const foundBlogPost = await prismaClient.blog_posts.findFirst({
     where: { slug },
   })
-  prismaClient.$disconnect()
+  await prismaClient.$disconnect()
 
   return foundBlogPost
 }
