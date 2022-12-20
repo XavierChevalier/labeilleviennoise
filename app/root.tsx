@@ -94,30 +94,15 @@ const DefaultLayout: FC<HTMLProps<HTMLElement>> = ({ children }) => (
         <GoogleAnalyticsScript />
       </head>
       <body className="text-neutral-900 bg-white min-h-screen scroll-smooth">
-        <FlowbiteTheme>
+        <Flowbite theme={{ usePreferences: false }}>
           <NavigationBar />
           <main>{children}</main>
           <ScrollRestoration />
           <Scripts />
           <LiveReload />
           <NavigationFooter />
-        </FlowbiteTheme>
+        </Flowbite>
       </body>
     </html>
   </React.StrictMode>
-)
-
-const FlowbiteTheme: FC<HTMLProps<HTMLDivElement>> = ({ children }) => (
-  <Flowbite
-    theme={{
-      usePreferences: false,
-      theme: {
-        darkThemeToggle: {
-          base: 'text-gray-500 hover:text-gray-900 dark:hover:text-white',
-        },
-      },
-    }}
-  >
-    {children}
-  </Flowbite>
 )

@@ -59,9 +59,7 @@ const BlogPostsListItem: FC<BlogPostsListItemProps> = ({
     >
       {post.title}
     </AppLink>
-    <p className="text-gray-500 dark:text-gray-400">
-      {post.createdAt.toDateString()}
-    </p>
+    <p className="text-gray-500">{post.createdAt.toDateString()}</p>
     <p>{post.description}</p>
     <AppLink to={`/blog/${post.slug}`}>Lire l'article</AppLink>
 
