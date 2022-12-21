@@ -1,11 +1,6 @@
 import { z } from 'zod'
 import Form from '@/modules/shared/form/form'
-import {
-  from,
-  fullname,
-  message,
-  subject,
-} from '@/modules/shared/form/validations/contact-fields'
+import { from, fullname, message, subject } from '@/modules/shared/form/validations/contact-fields'
 
 interface Props extends React.HTMLProps<HTMLElement> {
   defaultValues?: {

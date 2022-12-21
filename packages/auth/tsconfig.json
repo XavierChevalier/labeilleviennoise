@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",
+    "declaration": true,
+    "declarationMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "commonjs",
+    "noEmit": false,
+    "composite": true
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules", "lib"]
+}

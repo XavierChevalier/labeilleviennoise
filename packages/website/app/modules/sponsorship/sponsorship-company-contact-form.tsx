@@ -1,13 +1,7 @@
 import type { FC, HTMLProps } from 'react'
 import { z } from 'zod'
 import Form from '@/modules/shared/form/form'
-import {
-  company,
-  from,
-  fullname,
-  message,
-  subject,
-} from '@/modules/shared/form/validations/contact-fields'
+import { company, from, fullname, message, subject } from '@/modules/shared/form/validations/contact-fields'
 
 export const sponsorshipCompanyContactSchema = z.object({
   from,

@@ -1,0 +1,36 @@
+{
+  "name": "@labeilleviennoise/eslint-config",
+  "version": "0.15.0",
+  "private": true,
+  "description": "The ESLint config of l'Abeille Viennoise",
+  "homepage": "https://github.com/XavierChevalier/labeilleviennoise#readme",
+  "main": "lib/eslint-config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "lint": "eslint \"**/*.{ts,tsx,js,jsx,mjs,cjs}\"",
+    "lint:fix": "pnpm lint --fix",
+    "lint-staged": "lint-staged"
+  },
+  "devDependencies": {
+    "@labeilleviennoise/prettier-config": "workspace:*",
+    "@remix-run/eslint-config": "^1.8.2",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,mjs,cjs}": "pnpm eslint --cache --fix",
+    "*": "prettier -w -u"
+  }
+}
