@@ -27,7 +27,8 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "lint-staged": "^13.1.0",
-    "prettier": "^2.8.1"
+    "prettier": "^2.8.1",
+    "typescript": "^4.9.4"
   },
   "lint-staged": {
     "*.{ts,tsx,js,mjs,cjs}": "pnpm eslint --cache --fix",
