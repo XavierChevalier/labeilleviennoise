@@ -1,27 +1,30 @@
+import { redirectIfNotAuthenticated } from '@labeilleviennoise/auth/lib/authentication-guard.server'
 import type { ActionFunction } from '@remix-run/node'
 import { makeDomainFunction } from 'domain-functions'
 import { useTypedLoaderData } from 'remix-typedjson'
-import { redirectIfNotAuthenticated } from '@/modules/auth/authentication-guard.server'
+import { authenticator } from '@/modules/auth/authenticator.server'
 import { findBlogPostLoader } from '@/modules/blog/loaders/find-blog-post-loader'
-import {
-  extractTitleAndSlugFromMarkdown,
-} from '@/modules/blog/mutations/create-blog-post/extract-title-and-slug-from-markdown.server'
-import {
-  validateBlogPostMutationInput,
-} from '@/modules/blog/mutations/create-blog-post/validate-blog-post-mutation-input.server'
+import { extractTitleAndSlugFromMarkdown } from '@/modules/blog/mutations/create-blog-post/extract-title-and-slug-from-markdown.server'
+import { validateBlogPostMutationInput } from '@/modules/blog/mutations/create-blog-post/validate-blog-post-mutation-input.server'
 import { editBlogPost } from '@/modules/blog/mutations/edit-blog-post/edit-blog-post.server'
 import BlogEditorTips from '@/modules/blog/ui/posts/editor/blog-editor-tips'
 import Form from '@/modules/shared/form/form'
 import { formAction } from '@/modules/shared/form/form-action.server'
 import { validateBeforeMutation } from '@/modules/shared/form/validate-before-mutation'
-import type { CreateBlogPostFormSchema, CreateBlogPostValidationSchema } from '@/routes/admin/blog/posts/new'
-import { createBlogPostFormSchema, createBlogPostMutationSchema } from '@/routes/admin/blog/posts/new'
+import type {
+  CreateBlogPostFormSchema,
+  CreateBlogPostValidationSchema,
+} from '@/routes/admin/blog/posts/new'
+import {
+  createBlogPostFormSchema,
+  createBlogPostMutationSchema,
+} from '@/routes/admin/blog/posts/new'
 
 export const loader = findBlogPostLoader
 
 export const action: ActionFunction = ({ request, params: { slug } }) =>
   formAction({
-    beforeAction: redirectIfNotAuthenticated,
+    beforeAction: redirectIfNotAuthenticated(authenticator),
     request,
     schema: createBlogPostFormSchema,
     transformValues: (post): CreateBlogPostValidationSchema =>

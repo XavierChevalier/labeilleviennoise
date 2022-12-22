@@ -1,5 +1,8 @@
 import type { StrategyVerifyCallback } from 'remix-auth'
-import type { OAuth2Profile, OAuth2StrategyVerifyParams } from 'remix-auth-oauth2'
+import type {
+  OAuth2Profile,
+  OAuth2StrategyVerifyParams,
+} from 'remix-auth-oauth2'
 import { OAuth2Strategy } from 'remix-auth-oauth2'
 
 export interface GoogleStrategyOptions {

@@ -4,7 +4,7 @@ import type {
   MetaFunction,
 } from '@remix-run/node'
 import { redirect } from '@remix-run/node'
-import authenticator from '@/modules/auth/authenticator.server'
+import { authenticator } from '@/modules/auth/authenticator.server'
 import { preventPageIndexing } from '@/modules/shared/seo/meta'
 
 export const meta: MetaFunction = preventPageIndexing

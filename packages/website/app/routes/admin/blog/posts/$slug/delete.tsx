@@ -1,9 +1,10 @@
+import { redirectIfNotAuthenticated } from '@labeilleviennoise/auth/lib/authentication-guard.server'
 import type { ActionFunction } from '@remix-run/node'
 import { makeDomainFunction } from 'domain-functions'
 import { useParams } from 'react-router'
 import { useTypedLoaderData } from 'remix-typedjson'
 import { z } from 'zod'
-import { redirectIfNotAuthenticated } from '@/modules/auth/authentication-guard.server'
+import { authenticator } from '@/modules/auth/authenticator.server'
 import { findBlogPostLoader } from '@/modules/blog/loaders/find-blog-post-loader'
 import { deleteBlogPostBySlug } from '@/modules/blog/mutations/delete-blog-post/delete-blog-post-by-slug.server'
 import Form from '@/modules/shared/form/form'
@@ -20,7 +21,7 @@ const deleteBlogPostBySlugValidationSchema = z
 
 export const action: ActionFunction = ({ request }) =>
   formAction({
-    beforeAction: redirectIfNotAuthenticated,
+    beforeAction: redirectIfNotAuthenticated(authenticator),
     request,
     schema: deleteBlogPostBySlugValidationSchema,
     mutation: makeDomainFunction(deleteBlogPostBySlugValidationSchema)(

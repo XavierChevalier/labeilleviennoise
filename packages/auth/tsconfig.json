@@ -5,9 +5,16 @@
     "declarationMap": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "module": "commonjs",
+    "esModuleInterop": true,
     "noEmit": false,
-    "composite": true
+    "resolveJsonModule": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ESNext",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "allowJs": false
   },
   "include": ["./src/**/*.ts"],
   "exclude": ["node_modules", "lib"]

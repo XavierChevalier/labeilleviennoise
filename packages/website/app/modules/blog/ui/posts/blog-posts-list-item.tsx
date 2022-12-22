@@ -1,6 +1,6 @@
+import { AuthContext } from '@labeilleviennoise/auth/lib/auth-context'
 import type { FC } from 'react'
 import { useContext } from 'react'
-import { AuthContext } from '@/modules/auth/auth-context'
 import { AppLink } from '@/modules/shared/link/app-link'
 import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 

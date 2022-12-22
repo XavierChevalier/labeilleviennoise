@@ -1,9 +1,9 @@
+import { AuthContext } from '@labeilleviennoise/auth/lib/auth-context'
 import type { LoaderArgs } from '@remix-run/node'
 import { Outlet } from '@remix-run/react'
 import { useLocation } from 'react-router'
 import { typedjson, useTypedLoaderData } from 'remix-typedjson'
-import { AuthContext } from '@/modules/auth/auth-context'
-import authenticator from '@/modules/auth/authenticator.server'
+import { authenticator } from '@/modules/auth/authenticator.server'
 import BlogEditorBar from '@/modules/blog/ui/posts/editor/blog-editor-bar'
 
 export const loader = async ({ request }: LoaderArgs) =>

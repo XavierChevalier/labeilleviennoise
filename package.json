@@ -3,9 +3,6 @@
   "version": "0.15.0",
   "private": true,
   "sideEffects": false,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "prepare": "husky install",
     "build": "lerna run build",
@@ -27,5 +24,10 @@
   },
   "engines": {
     "node": ">=14"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@remix-run/node@1.9.0": "patches/@remix-run__node@1.9.0.patch"
+    }
   }
 }

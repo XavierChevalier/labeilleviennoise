@@ -1,7 +1,8 @@
+import { redirectIfNotAuthenticated } from '@labeilleviennoise/auth/lib/authentication-guard.server'
 import type { ActionFunction } from '@remix-run/node'
 import { makeDomainFunction } from 'domain-functions'
 import { z } from 'zod'
-import { redirectIfNotAuthenticated } from '@/modules/auth/authentication-guard.server'
+import { authenticator } from '@/modules/auth/authenticator.server'
 import { createBlogPost } from '@/modules/blog/mutations/create-blog-post/create-blog-post.server'
 import { extractTitleAndSlugFromMarkdown } from '@/modules/blog/mutations/create-blog-post/extract-title-and-slug-from-markdown.server'
 import { validateBlogPostMutationInput } from '@/modules/blog/mutations/create-blog-post/validate-blog-post-mutation-input.server'
@@ -33,7 +34,7 @@ export type CreateBlogPostValidationSchema = z.infer<
 
 export const action: ActionFunction = ({ request }) =>
   formAction({
-    beforeAction: redirectIfNotAuthenticated,
+    beforeAction: redirectIfNotAuthenticated(authenticator),
     request,
     schema: createBlogPostMutationSchema,
     transformValues: (post): CreateBlogPostValidationSchema =>
