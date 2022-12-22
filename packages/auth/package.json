@@ -21,6 +21,7 @@
     "clean": "rimraf lib"
   },
   "dependencies": {
+    "@remix-run/node": "^1.9.0",
     "remix-auth": "^3.4.0",
     "remix-auth-oauth2": "^1.5.0"
   },
@@ -29,6 +30,7 @@
     "@labeilleviennoise/prettier-config": "workspace:*",
     "@remix-run/react": "^1.9.0",
     "@remix-run/server-runtime": "^1.9.0",
+    "eslint": "^8.30.0",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.1",
     "rimraf": "^3.0.2"

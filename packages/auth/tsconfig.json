@@ -8,7 +8,7 @@
     "esModuleInterop": true,
     "noEmit": false,
     "resolveJsonModule": true,
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "Node",
     "target": "ESNext",
     "strict": true,

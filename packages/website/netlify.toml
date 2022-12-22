@@ -1,5 +1,6 @@
 [build]
   publish = "public"
+  command = "pnpm run -w build"
 
 [functions]
   included_files = ["./app/prisma-client/**/*"]

@@ -1,2 +1,2 @@
 [build]
-  base = "packages/website/"
+  base = "packages/website"
