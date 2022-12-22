@@ -15,6 +15,10 @@
     "test": "lerna run test --parallel",
     "lint-staged": "lerna run lint-staged"
   },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
