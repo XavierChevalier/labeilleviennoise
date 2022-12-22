@@ -27,9 +27,9 @@
   "devDependencies": {
     "@labeilleviennoise/eslint-config": "workspace:*",
     "@labeilleviennoise/prettier-config": "workspace:*",
-    "rimraf": "^3.0.2",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1"
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "rimraf": "^3.0.2"
   },
   "lint-staged": {
     "*.{ts,tsx,js,mjs,cjs}": "pnpm eslint --cache --fix",

@@ -1,5 +1,4 @@
 import type { LinksFunction, MetaFunction } from '@remix-run/node'
-import { json } from '@remix-run/node'
 import {
   Links,
   LiveReload,
@@ -8,12 +7,13 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
-  useLoaderData,
 } from '@remix-run/react'
 import { Flowbite } from 'flowbite-react'
 import { IKContext } from 'imagekitio-react'
 import type { FC, HTMLProps } from 'react'
 import React, { createContext } from 'react'
+import { typedjson, useTypedLoaderData } from 'remix-typedjson'
+import type { UseDataFunctionReturn } from 'remix-typedjson/dist/remix'
 import NavigationFooter from './modules/navigation/footer/navigation-footer'
 import NavigationBar from './modules/navigation/header/navigation-bar'
 import appStylesheetUrl from '@/assets/styles/app.generated.css'
@@ -33,7 +33,7 @@ export const meta: MetaFunction = () => ({
 })
 
 export const loader = () =>
-  json({
+  typedjson({
     env: {
       BASE_URL: process.env.BASE_URL as string,
       IS_DEV: process.env.NODE_ENV === 'development',
@@ -48,6 +48,7 @@ export const loader = () =>
     },
   })
 
+type PublicEnv = UseDataFunctionReturn<typeof loader>['env']
 export const EnvContext = createContext<PublicEnv>({} as PublicEnv)
 
 export const CatchBoundary = () => {
@@ -65,7 +66,7 @@ export const CatchBoundary = () => {
 }
 
 export default function App() {
-  const { env } = useLoaderData<typeof loader>()
+  const { env } = useTypedLoaderData<typeof loader>()
 
   return (
     <EnvContext.Provider value={env}>

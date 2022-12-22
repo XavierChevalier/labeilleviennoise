@@ -23,25 +23,28 @@ export default function Faq() {
             Parrainage
           </h2>
           <QuestionAnswer question="Pourquoi parrainer ?">
-            Devenir parrain est une manière différente de posséder tout ou
-            partie d’une ruche. Par votre action,{' '}
-            <strong className="font-bold">vous préservez des abeilles</strong>{' '}
-            et nous nous chargeons de veiller sur elles.
-            <br />
-            Grâce à votre contribution financière, nous pouvons améliorer notre
-            matériel de production et investir dans de nouvelles ruches, ainsi
-            nous agrandissons ensemble le rucher.
-            <br />
-            Autre avantage, vous pouvez{' '}
-            <strong className="font-bold">
-              découvrir et déguster en avant première le miel
-            </strong>{' '}
-            de vos petites protégées.
+            <p>
+              Devenir parrain est une manière différente de posséder tout ou
+              partie d’une ruche. Par votre action,{' '}
+              <strong className="font-bold">vous préservez des abeilles</strong>{' '}
+              et nous nous chargeons de veiller sur elles.
+              <br />
+              Grâce à votre contribution financière, nous pouvons améliorer
+              notre matériel de production et investir dans de nouvelles ruches,
+              ainsi nous agrandissons ensemble le rucher.
+              <br />
+              Autre avantage, vous pouvez{' '}
+              <strong className="font-bold">
+                découvrir et déguster en avant première le miel
+              </strong>{' '}
+              de vos petites protégées.
+            </p>
           </QuestionAnswer>
           <QuestionAnswer question="Comment fonctionne le parrainage ?">
-            <AppLink to="/parrainage">Grâce à nos 3 formules</AppLink>, vous
-            pouvez choisir en fonction de votre budget.
-            <br />
+            <p>
+              <AppLink to="/parrainage">Grâce à nos 3 formules</AppLink>, vous
+              pouvez choisir en fonction de votre budget.
+            </p>
             <ul className="list-disc list-inside">
               <li className="mt-4">
                 La <strong className="font-bold">formule Nectar</strong> vous
@@ -62,27 +65,31 @@ export default function Faq() {
             </ul>
           </QuestionAnswer>
           <QuestionAnswer question="Quand obtiendrais-je mes avantages de parrainage ?">
-            Les récompenses sont{' '}
-            <strong className="font-bold">uniquement annuelles</strong>. Elles
-            sont envoyées au bout de 12 paiements mensuels ou immédiatement
-            après avoir choisi la formule annuelle.
+            <p>
+              Les récompenses sont{' '}
+              <strong className="font-bold">uniquement annuelles</strong>. Elles
+              sont envoyées au bout de 12 paiements mensuels ou immédiatement
+              après avoir choisi la formule annuelle.
+            </p>
           </QuestionAnswer>
           <QuestionAnswer question="Les avantages du parrainage ?">
-            Vos avantages sont répartis sur l’année entière.
-            <br />
-            Pour les photos, nous vous enverrons des nouvelles de la ruche tous
-            les trimestres.
-            <br />
-            Dès votre inscription, vous recevrez notre petite mascotte.
-            <br />
-            Concernant les plantations de fleurs et d’arbres, nous suivrons bien
-            sûr les saisons mais vous en serez informés.
-            <br />
-            Les pots de miel seront répartis par trimestre pour les formules
-            propolis et gelée royale.
-            <br />
-            Dans la <strong className="font-bold">formule Nectar</strong>, nous
-            l’enverrons dès la première récolte de miel.
+            <p>
+              Vos avantages sont répartis sur l’année entière.
+              <br />
+              Pour les photos, nous vous enverrons des nouvelles de la ruche
+              tous les trimestres.
+              <br />
+              Dès votre inscription, vous recevrez notre petite mascotte.
+              <br />
+              Concernant les plantations de fleurs et d’arbres, nous suivrons
+              bien sûr les saisons mais vous en serez informés.
+              <br />
+              Les pots de miel seront répartis par trimestre pour les formules
+              propolis et gelée royale.
+              <br />
+              Dans la <strong className="font-bold">formule Nectar</strong>,
+              nous l’enverrons dès la première récolte de miel.
+            </p>
           </QuestionAnswer>
         </div>
 
@@ -91,50 +98,62 @@ export default function Faq() {
             Les produits
           </h2>
           <QuestionAnswer question="D'où provient le miel ?">
-            Nos ruches sont principalement installées sur Vienne, en Isère. Nous
-            les déplaçons sur le{' '}
-            <strong className="font-bold">secteur Rhône Alpes</strong>, en
-            fonction des floraisons et des saisons.
+            <p>
+              Nos ruches sont principalement installées sur Vienne, en Isère.
+              Nous les déplaçons sur le{' '}
+              <strong className="font-bold">secteur Rhône Alpes</strong>, en
+              fonction des floraisons et des saisons.
+            </p>
           </QuestionAnswer>
           <QuestionAnswer question="Comment est extrait le miel ?">
-            Nous procédons aujourd'hui à une extraction manuelle du miel. Vous
-            pouvez voir les étapes d’extraction du miel sur la page{' '}
-            <AppLink to="/la-miellerie">La Miellerie</AppLink>.
+            <p>
+              Nous procédons aujourd'hui à une extraction manuelle du miel. Vous
+              pouvez voir les étapes d’extraction du miel sur la page{' '}
+              <AppLink to="/la-miellerie">La Miellerie</AppLink>.
+            </p>
           </QuestionAnswer>
           <QuestionAnswer question="Comment sont réalisées les bougies ?">
-            Pour les bougies, nous utilisons la cire de nos abeilles que nous
-            conservons après récolte, nous la filtrons et la purifions avant de
-            la travailler sous forme de bougies.
+            <p>
+              Pour les bougies, nous utilisons la cire de nos abeilles que nous
+              conservons après récolte, nous la filtrons et la purifions avant
+              de la travailler sous forme de bougies.
+            </p>
           </QuestionAnswer>
           <QuestionAnswer question="Qu’est-ce qu’un Bee-Wrap ?">
-            Il s’agit d’un{' '}
-            <strong className="font-bold">
-              emballage 100% coton réutilisable
-            </strong>{' '}
-            enduit de la cire de nos abeilles. Ce dernier a pour but de{' '}
-            <strong className="font-bold">remplacer le film alimentaire</strong>
-            .
-            <br />
-            L'entretien est simple, un peu d’eau froide savonneuse, rincer,
-            laisser sécher à plat et réutiliser autant de fois que possible. Il
-            est confectionné par nos soins dans la miellerie.
+            <p>
+              Il s’agit d’un{' '}
+              <strong className="font-bold">
+                emballage 100% coton réutilisable
+              </strong>{' '}
+              enduit de la cire de nos abeilles. Ce dernier a pour but de{' '}
+              <strong className="font-bold">
+                remplacer le film alimentaire
+              </strong>
+              .
+              <br />
+              L'entretien est simple, un peu d’eau froide savonneuse, rincer,
+              laisser sécher à plat et réutiliser autant de fois que possible.
+              Il est confectionné par nos soins dans la miellerie.
+            </p>
           </QuestionAnswer>
           <QuestionAnswer question="Les autres créations artisanales">
-            Nous proposons{' '}
-            <strong className="font-bold">
-              des sujets réalisés au crochet
-            </strong>{' '}
-            par nos soins.
-            <br />
-            Principalement confectionnés en fil acrylique rembourrage ouate
-            polyester, ils sont lavables en machine à 30°.
-            <br />
-            Tous les modèles présentés sont{' '}
-            <strong className="font-bold">
-              uniques et personnalisables
-            </strong>{' '}
-            sur commande et peuvent être réalisés en plusieurs exemplaires. Le
-            stock étant limité, il est préférable de commander.
+            <p>
+              Nous proposons{' '}
+              <strong className="font-bold">
+                des sujets réalisés au crochet
+              </strong>{' '}
+              par nos soins.
+              <br />
+              Principalement confectionnés en fil acrylique rembourrage ouate
+              polyester, ils sont lavables en machine à 30°.
+              <br />
+              Tous les modèles présentés sont{' '}
+              <strong className="font-bold">
+                uniques et personnalisables
+              </strong>{' '}
+              sur commande et peuvent être réalisés en plusieurs exemplaires. Le
+              stock étant limité, il est préférable de commander.
+            </p>
           </QuestionAnswer>
         </div>
       </div>

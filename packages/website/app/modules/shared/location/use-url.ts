@@ -1,10 +1,6 @@
-import { useContext } from 'react'
-import { EnvContext } from '@/root'
-
-export const useURL = () => {
-  const { BASE_URL } = useContext(EnvContext)
-
-  return {
-    createUrl: (url: string | URL): URL => new URL(url, BASE_URL),
-  }
-}
+export const useURL = () => ({
+  relativeUrl: (
+    url: string,
+    searchParams: URLSearchParams = new URLSearchParams()
+  ): string => `${url}?${searchParams}`,
+})

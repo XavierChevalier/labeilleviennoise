@@ -8,10 +8,14 @@ export interface Props extends HTMLProps<HTMLElement> {
 }
 
 export default function ButtonChosePlan({ title, isToggled }: Props) {
-  const { createUrl } = useURL()
-  const to = createUrl('/contact-parrainage')
-  to.searchParams.set('per', !isToggled ? 'mensuel' : 'annuel')
-  to.searchParams.set('title', title)
+  const { relativeUrl } = useURL()
+  const to = relativeUrl(
+    '/contact-parrainage',
+    new URLSearchParams({
+      per: !isToggled ? 'mensuel' : 'annuel',
+      title,
+    })
+  )
 
   return (
     <AppLinkButton to={to} variant="fancy" className="mt-4">
