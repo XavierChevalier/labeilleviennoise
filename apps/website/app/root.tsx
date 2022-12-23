@@ -35,7 +35,8 @@ export const meta: MetaFunction = () => ({
 export const loader = () =>
   typedjson({
     env: {
-      BASE_URL: process.env.BASE_URL as string,
+      BASE_URL_AUTH: process.env.BASE_URL_AUTH as string,
+      BASE_URL_WEBSITE: process.env.BASE_URL_WEBSITE as string,
       IS_DEV: process.env.NODE_ENV === 'development',
       IS_PRODUCTION: process.env.NODE_ENV === 'production',
       PUBLIC_INSTAGRAM_URL: process.env.PUBLIC_INSTAGRAM_URL as string,

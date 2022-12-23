@@ -1,7 +1,10 @@
 import type { ActionFunction } from '@remix-run/node'
 import { makeDomainFunction } from 'domain-functions'
 import { useTypedLoaderData } from 'remix-typedjson'
-import { redirectIfNotAuthenticated } from '@/modules/auth/auth.server'
+import {
+  googleAuthenticator,
+  redirectIfNotAuthenticated,
+} from '@/modules/auth/auth.server'
 import { findBlogPostLoader } from '@/modules/blog/loaders/find-blog-post-loader'
 import { extractTitleAndSlugFromMarkdown } from '@/modules/blog/mutations/create-blog-post/extract-title-and-slug-from-markdown.server'
 import { validateBlogPostMutationInput } from '@/modules/blog/mutations/create-blog-post/validate-blog-post-mutation-input.server'
@@ -23,7 +26,7 @@ export const loader = findBlogPostLoader
 
 export const action: ActionFunction = ({ request, params: { slug } }) =>
   formAction({
-    beforeAction: redirectIfNotAuthenticated,
+    beforeAction: redirectIfNotAuthenticated(googleAuthenticator),
     request,
     schema: createBlogPostFormSchema,
     transformValues: (post): CreateBlogPostValidationSchema =>

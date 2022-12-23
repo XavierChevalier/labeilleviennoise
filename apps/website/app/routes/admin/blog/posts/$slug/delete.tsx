@@ -3,7 +3,10 @@ import { makeDomainFunction } from 'domain-functions'
 import { useParams } from 'react-router'
 import { useTypedLoaderData } from 'remix-typedjson'
 import { z } from 'zod'
-import { redirectIfNotAuthenticated } from '@/modules/auth/auth.server'
+import {
+  googleAuthenticator,
+  redirectIfNotAuthenticated,
+} from '@/modules/auth/auth.server'
 import { findBlogPostLoader } from '@/modules/blog/loaders/find-blog-post-loader'
 import { deleteBlogPostBySlug } from '@/modules/blog/mutations/delete-blog-post/delete-blog-post-by-slug.server'
 import Form from '@/modules/shared/form/form'
@@ -20,7 +23,7 @@ const deleteBlogPostBySlugValidationSchema = z
 
 export const action: ActionFunction = ({ request }) =>
   formAction({
-    beforeAction: redirectIfNotAuthenticated,
+    beforeAction: redirectIfNotAuthenticated(googleAuthenticator),
     request,
     schema: deleteBlogPostBySlugValidationSchema,
     mutation: makeDomainFunction(deleteBlogPostBySlugValidationSchema)(
