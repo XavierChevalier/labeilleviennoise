@@ -1,3 +1,12 @@
+## [0.16.4](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.16.3...v0.16.4) (2022-12-23)
+
+
+### Bug Fixes
+
+* **auth:** share session cookie between auth and website ([6d21f7d](https://github.com/XavierChevalier/labeilleviennoise/commit/6d21f7ded6520165b4a810ba4f125c18b96f4d89))
+
+
+
 ## [0.16.3](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.16.2...v0.16.3) (2022-12-23)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * **auth:** redirect to /login on index ([7878339](https://github.com/XavierChevalier/labeilleviennoise/commit/7878339fb6394a84191babe4edbbeaeac829d694))
-
-
-
-## [0.15.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.15.0...v0.15.1) (2022-12-23)
-
-
-### Bug Fixes
-
-* react invalid hook call ([2a37ccf](https://github.com/XavierChevalier/labeilleviennoise/commit/2a37ccff92d419a66f791aefb4654194dcd1fc00)), closes [/github.com/keystonejs/keystone/issues/2898#issuecomment-699130482](https://github.com//github.com/keystonejs/keystone/issues/2898/issues/issuecomment-699130482) [/github.com/vercel/next.js/issues/9022#issuecomment-664023754](https://github.com//github.com/vercel/next.js/issues/9022/issues/issuecomment-664023754)
 
 
 
