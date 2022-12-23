@@ -1,21 +1,9 @@
 {
-  "compilerOptions": {
-    "outDir": "./lib",
-    "declaration": true,
-    "declarationMap": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
-    "noEmit": false,
-    "resolveJsonModule": true,
-    "module": "CommonJS",
-    "moduleResolution": "Node",
-    "target": "ESNext",
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
-    "allowJs": false
-  },
+  "extends": "../../tsconfig.lib.json",
   "include": ["./src/**/*.ts"],
-  "exclude": ["node_modules", "lib"]
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "src",
+    "baseUrl": "."
+  }
 }

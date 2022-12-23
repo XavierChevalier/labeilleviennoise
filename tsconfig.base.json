@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "allowJs": false,
+    "jsx": "react-jsx",
+    "moduleResolution": "Node",
+    "target": "ESNext",
+  }
+}

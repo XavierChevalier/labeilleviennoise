@@ -1,4 +1,4 @@
-import { createAuthenticator } from '@labeilleviennoise/auth/lib/authenticator-factory.server'
+import { createAuthenticator } from '@labeilleviennoise/auth'
 import type { User } from '@/modules/auth/users.server'
 import { findUserByEmail } from '@/modules/auth/users.server'
 

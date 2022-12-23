@@ -5,8 +5,9 @@
   "sideEffects": false,
   "scripts": {
     "prepare": "husky install",
-    "build": "lerna run build",
-    "dev": "lerna run dev",
+    "build": "lerna run build --stream",
+    "clean": "lerna run clean --parallel",
+    "dev": "lerna run dev --parallel --stream",
     "start": "lerna run start",
     "lint": "lerna run lint --parallel",
     "lint:fix": "lerna run lint:fix --parallel",

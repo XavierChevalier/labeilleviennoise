@@ -1,4 +1,4 @@
-import { AuthContext } from '@labeilleviennoise/auth/lib/auth-context'
+import { AuthContext } from '@labeilleviennoise/auth/dist/auth-context'
 import type { LoaderArgs } from '@remix-run/node'
 import { Outlet } from '@remix-run/react'
 import { useLocation } from 'react-router'

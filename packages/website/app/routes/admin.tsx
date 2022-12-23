@@ -1,4 +1,4 @@
-import { redirectIfNotAuthenticatedLoader } from '@labeilleviennoise/auth/lib/authentication-guard.server'
+import { redirectIfNotAuthenticatedLoader } from '@labeilleviennoise/auth'
 import type { MetaFunction } from '@remix-run/node'
 import { Outlet } from '@remix-run/react'
 import { authenticator } from '@/modules/auth/authenticator.server'

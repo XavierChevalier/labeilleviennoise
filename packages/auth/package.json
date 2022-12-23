@@ -4,21 +4,20 @@
   "private": true,
   "description": "This package is used to authenticate user with Google",
   "homepage": "https://github.com/XavierChevalier/labeilleviennoise#readme",
-  "main": "lib/src/auth.js",
-  "typings": "lib/src/auth.d.ts",
+  "main": "dist/auth.js",
+  "typings": "dist/auth.d.ts",
   "directories": {
-    "lib": "lib"
+    "dist": "dist"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
-    "build": "pnpm clean && pnpm build:tsc",
-    "build:tsc": "tsc",
+    "build": "pnpm clean && tsc --build",
     "lint": "eslint \"**/*.{ts,tsx,js,jsx,mjs,cjs}\"",
     "lint:fix": "pnpm lint --fix",
     "lint-staged": "lint-staged",
-    "clean": "rimraf lib"
+    "clean": "rimraf dist"
   },
   "dependencies": {
     "@remix-run/node": "^1.9.0",

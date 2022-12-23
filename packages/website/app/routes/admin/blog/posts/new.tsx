@@ -1,4 +1,4 @@
-import { redirectIfNotAuthenticated } from '@labeilleviennoise/auth/lib/authentication-guard.server'
+import { redirectIfNotAuthenticated } from '@labeilleviennoise/auth'
 import type { ActionFunction } from '@remix-run/node'
 import { makeDomainFunction } from 'domain-functions'
 import { z } from 'zod'
