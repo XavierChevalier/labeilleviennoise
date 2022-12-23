@@ -22,7 +22,7 @@ module.exports = {
     'scope-enum': [
       2,
       'always',
-      ['apiary', 'blog', 'home', 'honey-house', 'faq', 'sponsorship', 'team'],
+      ['apiary', 'auth', 'blog', 'home', 'honey-house', 'faq', 'sponsorship', 'team'],
     ],
     'footer-max-line-length': [0, 'always'], // Make sure there is never a max-line-length by disabling the rule
   },

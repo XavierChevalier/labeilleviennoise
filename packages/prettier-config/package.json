@@ -1,0 +1,25 @@
+{
+  "name": "@labeilleviennoise/prettier-config",
+  "version": "0.15.0",
+  "private": true,
+  "description": "The Prettier config of l'Abeille Viennoise",
+  "homepage": "https://github.com/XavierChevalier/labeilleviennoise#readme",
+  "main": "lib/prettier-config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "lint-staged": "lint-staged"
+  },
+  "devDependencies": {
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "prettier-plugin-tailwindcss": "^0.1.13"
+  },
+  "lint-staged": {
+    "*": "prettier -w -u"
+  }
+}

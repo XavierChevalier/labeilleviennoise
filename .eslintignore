@@ -1,7 +1,0 @@
-.idea
-.husky
-.vscode
-dist
-public
-node_modules
-app/prisma-client/

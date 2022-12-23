@@ -1,0 +1,140 @@
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+index 0000000000000000000000000000000000000000..13566b81b018ad684f3a35fee301741b2734c8f4
+--- /dev/null
++++ b/.idea/.gitignore
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+diff --git a/.idea/e341f14845b4dc4bb98b57917c2faa89.iml b/.idea/e341f14845b4dc4bb98b57917c2faa89.iml
+new file mode 100644
+index 0000000000000000000000000000000000000000..c956989b29ad0767edc6cf3a202545927c3d1e76
+--- /dev/null
++++ b/.idea/e341f14845b4dc4bb98b57917c2faa89.iml
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="WEB_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+index 0000000000000000000000000000000000000000..3225a860371cc761345b2d48fabbf33985d523f0
+--- /dev/null
++++ b/.idea/modules.xml
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/e341f14845b4dc4bb98b57917c2faa89.iml" filepath="$PROJECT_DIR$/.idea/e341f14845b4dc4bb98b57917c2faa89.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/.idea/php.xml b/.idea/php.xml
+new file mode 100644
+index 0000000000000000000000000000000000000000..2c7445e3f9fdafdabd4c57cc490049fd2be5dad0
+--- /dev/null
++++ b/.idea/php.xml
+@@ -0,0 +1,18 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="MessDetectorOptionsConfiguration">
++    <option name="transferred" value="true" />
++  </component>
++  <component name="PHPCSFixerOptionsConfiguration">
++    <option name="transferred" value="true" />
++  </component>
++  <component name="PHPCodeSnifferOptionsConfiguration">
++    <option name="transferred" value="true" />
++  </component>
++  <component name="PhpStanOptionsConfiguration">
++    <option name="transferred" value="true" />
++  </component>
++  <component name="PsalmOptionsConfiguration">
++    <option name="transferred" value="true" />
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+new file mode 100644
+index 0000000000000000000000000000000000000000..67e3c5b4991cddcac66e3c66a3c2f98a3e79a992
+--- /dev/null
++++ b/.idea/workspace.xml
+@@ -0,0 +1,52 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="a39eccbf-2d05-4d41-95f2-b0fb914421dc" name="Changes" comment="" />
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="ComposerSettings">
++    <execution />
++  </component>
++  <component name="MacroExpansionManager">
++    <option name="directoryName" value="yadtdp3u" />
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
++  <component name="ProjectId" id="2JH6Tq2JPSbiCxaabL63OGmSss4" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "nodejs_package_manager_path": "npm",
++    "ts.external.directory.path": "/Users/xavierchevalier/Library/Application Support/JetBrains/Toolbox/apps/PhpStorm/ch-0/223.7571.212/PhpStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
++    "vue.rearranger.settings.migration": "true"
++  }
++}]]></component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="a39eccbf-2d05-4d41-95f2-b0fb914421dc" name="Changes" comment="" />
++      <created>1671722672133</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1671722672133</updated>
++      <workItem from="1671722673189" duration="20000" />
++    </task>
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/dist/upload/fileUploadHandler.d.ts b/dist/upload/fileUploadHandler.d.ts
+index f0e1d1d417c1024b4ba257f4114826981e940758..ee37e5a4466974a69757063cb893178a544d8701 100644
+--- a/dist/upload/fileUploadHandler.d.ts
++++ b/dist/upload/fileUploadHandler.d.ts
+@@ -44,6 +44,7 @@ export declare type FileUploadHandlerOptions = {
+     filter?(args: FileUploadHandlerFilterArgs): boolean | Promise<boolean>;
+ };
+ export declare function createFileUploadHandler({ directory, avoidFileConflicts, file, filter, maxPartSize, }?: FileUploadHandlerOptions): UploadHandler;
++// @ts-ignore
+ export declare class NodeOnDiskFile implements File {
+     private filepath;
+     type: string;

@@ -1,0 +1,41 @@
+{
+  "name": "@labeilleviennoise/auth",
+  "version": "0.15.0",
+  "private": true,
+  "description": "This package is used to authenticate user with Google",
+  "homepage": "https://github.com/XavierChevalier/labeilleviennoise#readme",
+  "main": "dist/auth.js",
+  "typings": "dist/auth.d.ts",
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm clean && tsc --build",
+    "lint": "eslint \"**/*.{ts,tsx,js,jsx,mjs,cjs}\"",
+    "lint:fix": "pnpm lint --fix",
+    "lint-staged": "lint-staged",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@remix-run/node": "^1.9.0",
+    "remix-auth": "^3.4.0",
+    "remix-auth-oauth2": "^1.5.0"
+  },
+  "devDependencies": {
+    "@labeilleviennoise/eslint-config": "workspace:*",
+    "@labeilleviennoise/prettier-config": "workspace:*",
+    "@remix-run/react": "^1.9.0",
+    "@remix-run/server-runtime": "^1.9.0",
+    "eslint": "^8.30.0",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "rimraf": "^3.0.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,mjs,cjs}": "pnpm eslint --cache --fix",
+    "*": "prettier -w -u"
+  }
+}
