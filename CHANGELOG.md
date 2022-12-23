@@ -1,3 +1,12 @@
+## [0.16.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.16.0...v0.16.1) (2022-12-23)
+
+
+### Bug Fixes
+
+* **auth:** process.env must be in apps instead of packages ([910c9f2](https://github.com/XavierChevalier/labeilleviennoise/commit/910c9f21a737d405a728f52056d5a4a890adf7e2))
+
+
+
 # [0.16.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.15.1...v0.16.0) (2022-12-23)
 
 
@@ -39,15 +48,6 @@
 ### Bug Fixes
 
 * environment context provide ([bc36980](https://github.com/XavierChevalier/labeilleviennoise/commit/bc36980cedf8347b6848373d57a89d01ef8cb91c))
-
-
-
-# [0.14.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.13.2...v0.14.0) (2022-12-12)
-
-
-### Features
-
-* add Google Analytics scripts ([cbe9e02](https://github.com/XavierChevalier/labeilleviennoise/commit/cbe9e02fa5955146c354643bbbf5c48219092d01))
 
 
 
