@@ -1,3 +1,12 @@
+# [0.16.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.15.1...v0.16.0) (2022-12-23)
+
+
+### Features
+
+* **auth:** redirect to /login on index ([7878339](https://github.com/XavierChevalier/labeilleviennoise/commit/7878339fb6394a84191babe4edbbeaeac829d694))
+
+
+
 ## [0.15.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.15.0...v0.15.1) (2022-12-23)
 
 
@@ -39,16 +48,6 @@
 ### Features
 
 * add Google Analytics scripts ([cbe9e02](https://github.com/XavierChevalier/labeilleviennoise/commit/cbe9e02fa5955146c354643bbbf5c48219092d01))
-
-
-
-## [0.13.2](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.13.1...v0.13.2) (2022-12-12)
-
-
-### Bug Fixes
-
-* favicon width ([e5d653e](https://github.com/XavierChevalier/labeilleviennoise/commit/e5d653e8a682f5412432a38fd839a45d28538edf))
-* process is not allowed in meta function ([bad7642](https://github.com/XavierChevalier/labeilleviennoise/commit/bad76429ddc9ae124d969c71bcc822c9788bde2a))
 
 
 
