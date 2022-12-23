@@ -1,3 +1,12 @@
+## [0.16.2](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.16.1...v0.16.2) (2022-12-23)
+
+
+### Bug Fixes
+
+* **auth:** need to specify authenticator in guard functions ([642d070](https://github.com/XavierChevalier/labeilleviennoise/commit/642d0707124cbf783a9455636b9fd12e7bc8bf1b))
+
+
+
 ## [0.16.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.16.0...v0.16.1) (2022-12-23)
 
 
@@ -39,15 +48,6 @@
 * **blog:** add blog entry in navigation bar ([8706e27](https://github.com/XavierChevalier/labeilleviennoise/commit/8706e27be39b217e8b5f9d70a07716a3c01284ac))
 * **blog:** add blog with managed articles ([687ca76](https://github.com/XavierChevalier/labeilleviennoise/commit/687ca76fbb8abeb8e60dea61cde57f9a944e349e))
 * **blog:** order blog posts by created at date ([78445cc](https://github.com/XavierChevalier/labeilleviennoise/commit/78445cc26e6931727be51fd9c85aabfcbb74bcbb))
-
-
-
-## [0.14.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.14.0...v0.14.1) (2022-12-12)
-
-
-### Bug Fixes
-
-* environment context provide ([bc36980](https://github.com/XavierChevalier/labeilleviennoise/commit/bc36980cedf8347b6848373d57a89d01ef8cb91c))
 
 
 
