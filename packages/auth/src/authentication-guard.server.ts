@@ -1,18 +1,18 @@
 import type { LoaderArgs } from '@remix-run/node'
-import type { Authenticator } from 'remix-auth'
+import { googleAuthenticator } from './authenticator.server'
 
-export const redirectIfNotAuthenticated =
-  (authenticator: Authenticator) =>
-  async (request: Request): Promise<void> => {
-    await authenticator.isAuthenticated(request, {
-      failureRedirect: '/auth/login',
-    })
-  }
+export const redirectIfNotAuthenticated = async (
+  request: Request
+): Promise<void> => {
+  await googleAuthenticator.isAuthenticated(request, {
+    failureRedirect: '/auth/login',
+  })
+}
 
-export const redirectIfNotAuthenticatedLoader =
-  (authenticator: Authenticator) =>
-  async ({ request }: LoaderArgs): Promise<null> => {
-    await redirectIfNotAuthenticated(authenticator)(request)
+export const redirectIfNotAuthenticatedLoader = async ({
+  request,
+}: LoaderArgs): Promise<null> => {
+  await redirectIfNotAuthenticated(request)
 
-    return null
-  }
+  return null
+}

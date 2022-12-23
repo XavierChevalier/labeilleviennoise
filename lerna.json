@@ -4,6 +4,7 @@
   "version": "0.15.0",
   "npmClient": "pnpm",
   "workspaces": [
+    "apps/*",
     "packages/*"
   ]
 }
