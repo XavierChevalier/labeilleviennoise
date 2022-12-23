@@ -13,6 +13,7 @@ const invariantWithLog: typeof invariant = (condition, message) => {
 }
 
 interface CreateAuthenticatorOptions {
+  sessionDomain: string
   sessionSecret: string
   googleClientId: string
   googleClientSecret: string
@@ -20,6 +21,7 @@ interface CreateAuthenticatorOptions {
 }
 
 export const createAuthenticator = ({
+  sessionDomain,
   sessionSecret,
   googleClientId,
   googleClientSecret,
@@ -29,6 +31,7 @@ export const createAuthenticator = ({
     createCookieSessionStorage({
       cookie: {
         name: 'session',
+        domain: sessionDomain,
         secrets: [sessionSecret],
         path: '/',
         httpOnly: true,
