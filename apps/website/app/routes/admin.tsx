@@ -1,4 +1,4 @@
-import type { MetaFunction } from '@remix-run/node'
+import type { LoaderArgs, MetaFunction } from '@remix-run/node'
 import { Outlet } from '@remix-run/react'
 import {
   googleAuthenticator,
@@ -9,7 +9,8 @@ import { preventPageIndexing } from '@/modules/shared/seo/meta'
 
 export const meta: MetaFunction = preventPageIndexing
 
-export const loader = redirectIfNotAuthenticatedLoader(googleAuthenticator)
+export const loader = (loaderArgs: LoaderArgs) =>
+  redirectIfNotAuthenticatedLoader(googleAuthenticator)(loaderArgs)
 
 export default function Admin() {
   return (
