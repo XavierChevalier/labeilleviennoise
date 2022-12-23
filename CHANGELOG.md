@@ -1,3 +1,12 @@
+## [0.15.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.15.0...v0.15.1) (2022-12-23)
+
+
+### Bug Fixes
+
+* react invalid hook call ([2a37ccf](https://github.com/XavierChevalier/labeilleviennoise/commit/2a37ccff92d419a66f791aefb4654194dcd1fc00)), closes [/github.com/keystonejs/keystone/issues/2898#issuecomment-699130482](https://github.com//github.com/keystonejs/keystone/issues/2898/issues/issuecomment-699130482) [/github.com/vercel/next.js/issues/9022#issuecomment-664023754](https://github.com//github.com/vercel/next.js/issues/9022/issues/issuecomment-664023754)
+
+
+
 # [0.15.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.14.1...v0.15.0) (2022-12-20)
 
 
@@ -40,15 +49,6 @@
 
 * favicon width ([e5d653e](https://github.com/XavierChevalier/labeilleviennoise/commit/e5d653e8a682f5412432a38fd839a45d28538edf))
 * process is not allowed in meta function ([bad7642](https://github.com/XavierChevalier/labeilleviennoise/commit/bad76429ddc9ae124d969c71bcc822c9788bde2a))
-
-
-
-## [0.13.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.13.0...v0.13.1) (2022-12-11)
-
-
-### Bug Fixes
-
-* cannot use process.env for meta tags ([907468f](https://github.com/XavierChevalier/labeilleviennoise/commit/907468f5f3c585b33e5f25e9df2f375dfdeeee44))
 
 
 
