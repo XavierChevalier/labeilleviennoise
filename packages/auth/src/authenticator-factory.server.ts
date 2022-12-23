@@ -2,6 +2,8 @@ import { createCookieSessionStorage } from '@remix-run/node'
 import { Authenticator } from 'remix-auth'
 import invariant from 'tiny-invariant'
 import { GoogleStrategy } from './auth-google-strategy.server'
+import type { User } from './users.server'
+import { findUserByEmail } from './users.server'
 
 const invariantWithLog: typeof invariant = (condition, message) => {
   if (!condition) {
@@ -10,21 +12,19 @@ const invariantWithLog: typeof invariant = (condition, message) => {
   invariant(condition, message)
 }
 
-interface CreateAuthenticatorOptions<User extends Record<string, unknown>> {
-  findUserByEmail: (email: string) => Promise<User | null>
+interface CreateAuthenticatorOptions {
   sessionSecret: string
   googleClientId: string
   googleClientSecret: string
   baseUrl: string
 }
 
-export const createAuthenticator = <User extends Record<string, unknown>>({
-  findUserByEmail,
+export const createAuthenticator = ({
   sessionSecret,
   googleClientId,
   googleClientSecret,
   baseUrl,
-}: CreateAuthenticatorOptions<User>) => {
+}: CreateAuthenticatorOptions) => {
   const authenticator = new Authenticator<User>(
     createCookieSessionStorage({
       cookie: {
@@ -36,23 +36,24 @@ export const createAuthenticator = <User extends Record<string, unknown>>({
       },
     })
   )
-  const googleStrategy = new GoogleStrategy<User>(
-    {
-      clientID: googleClientId,
-      clientSecret: googleClientSecret,
-      callbackURL: `${baseUrl}/auth/google/callback`,
-    },
-    async ({ profile }) => {
-      const email = profile.emails?.[0].value
-      invariantWithLog(email, 'Google profile must have an email')
-      const user = await findUserByEmail(email)
-      invariantWithLog(user, `User with email ${email} not found`)
+  authenticator.use(
+    new GoogleStrategy<User>(
+      {
+        clientID: googleClientId,
+        clientSecret: googleClientSecret,
+        callbackURL: `${baseUrl}/google/callback`,
+      },
+      async ({ profile }) => {
+        console.log('Verifying user with Google profile')
+        const email = profile.emails?.[0].value
+        invariantWithLog(email, 'Google profile must have an email')
+        const user = await findUserByEmail(email)
+        invariantWithLog(user, `User with email ${email} not found`)
 
-      return user
-    }
+        return user
+      }
+    )
   )
-
-  authenticator.use(googleStrategy)
 
   return authenticator
 }
