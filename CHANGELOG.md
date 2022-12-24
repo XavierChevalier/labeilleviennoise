@@ -1,3 +1,12 @@
+## [0.16.5](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.16.4...v0.16.5) (2022-12-24)
+
+
+### Bug Fixes
+
+* **auth:** redirectIfNotAuthenticatedLoader is not a function ([11b0975](https://github.com/XavierChevalier/labeilleviennoise/commit/11b09759a07b13156e4c4c441aafdaea60a991f8))
+
+
+
 ## [0.16.4](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.16.3...v0.16.4) (2022-12-23)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * **auth:** process.env must be in apps instead of packages ([910c9f2](https://github.com/XavierChevalier/labeilleviennoise/commit/910c9f21a737d405a728f52056d5a4a890adf7e2))
-
-
-
-# [0.16.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.15.1...v0.16.0) (2022-12-23)
-
-
-### Features
-
-* **auth:** redirect to /login on index ([7878339](https://github.com/XavierChevalier/labeilleviennoise/commit/7878339fb6394a84191babe4edbbeaeac829d694))
 
 
 
