@@ -1,4 +1,4 @@
-import { AppLink } from '@/modules/shared/link/app-link'
+import { AppLink } from '@labeilleviennoise/ui'
 import PricingComparison from '@/modules/sponsorship/pricing/pricing-comparison'
 
 export default function PricingFormulas() {

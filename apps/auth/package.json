@@ -24,6 +24,11 @@
   },
   "dependencies": {
     "@labeilleviennoise/auth": "workspace:*",
+    "@labeilleviennoise/catch-boundary": "workspace:*",
+    "@labeilleviennoise/layouts": "workspace:*",
+    "@labeilleviennoise/seo": "workspace:*",
+    "@labeilleviennoise/ui": "workspace:*",
+    "@labeilleviennoise/router": "workspace:*",
     "@netlify/functions": "^1.3.0",
     "@prisma/client": "^4.8.0",
     "@remix-run/netlify": "^1.9.0",

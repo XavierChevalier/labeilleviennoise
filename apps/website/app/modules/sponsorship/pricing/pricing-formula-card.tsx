@@ -1,5 +1,5 @@
+import { mergeClasses } from '@labeilleviennoise/merge-classes'
 import type { FC, HTMLProps, ReactNode } from 'react'
-import { mergeClasses } from '@/modules/shared/html/merge-classes'
 
 export interface Props extends HTMLProps<HTMLElement> {
   title: string

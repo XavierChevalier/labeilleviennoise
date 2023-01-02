@@ -1,59 +1,63 @@
-import type { LinksFunction, MetaFunction } from '@remix-run/node'
-import {
-  Links,
-  LiveReload,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-  useCatch,
-} from '@remix-run/react'
-import type { FC, HTMLProps } from 'react'
-import React from 'react'
+import { CatchBoundary as AppCatchBoundary } from '@labeilleviennoise/catch-boundary'
+import { DefaultLayout } from '@labeilleviennoise/layouts'
+import { RouterContext } from '@labeilleviennoise/router'
+import { generateMeta } from '@labeilleviennoise/seo'
+import type {
+  LinksFunction,
+  LoaderFunction,
+  MetaFunction,
+} from '@remix-run/node'
+import { Outlet } from '@remix-run/react'
+import { typedjson, useTypedLoaderData } from 'remix-typedjson'
 import appStylesheetUrl from '@/assets/styles/app.generated.css'
 
 export const links: LinksFunction = () => [
-  { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml', sizes: 'any' },
+  {
+    rel: 'icon',
+    href: 'https://ik.imagekit.io/labeilleviennoise/images/favicon/favicon.svg',
+    type: 'image/svg+xml',
+    sizes: 'any',
+  },
   { rel: 'stylesheet', href: appStylesheetUrl },
 ]
 
-export const meta: MetaFunction = () => ({
-  charset: 'utf-8',
-  title: "Auth - L'Abeille Viennoise",
-  viewport: 'width=device-width,initial-scale=1',
-})
+export const meta: MetaFunction = () =>
+  generateMeta({
+    title: "Auth - L'Abeille Viennoise",
+    description: "Authentification pour l'application L'Abeille Viennoise",
+    url: 'https://auth.labeilleviennoise.com',
+    noIndex: true,
+  })
 
-export const CatchBoundary = () => {
-  const caught = useCatch()
+export const loader = (({ request }) =>
+  typedjson({
+    currentBaseUrl: new URL(request.url).origin,
+    env: {
+      BASE_URL_AUTH: process.env.BASE_URL_AUTH as string,
+      BASE_URL_BLOG: process.env.BASE_URL_BLOG as string,
+      BASE_URL_WEBSITE: process.env.BASE_URL_WEBSITE as string,
+      IS_DEV: process.env.NODE_ENV === 'development',
+      IS_PRODUCTION: process.env.NODE_ENV === 'production',
+    },
+  })) satisfies LoaderFunction
 
-  return <CatchBoundaryLayout>{caught.status}</CatchBoundaryLayout>
-}
+export const CatchBoundary = AppCatchBoundary
 
 export default function App() {
+  const { env, currentBaseUrl } = useTypedLoaderData<typeof loader>()
+
   return (
-    <DefaultLayout>
-      <Outlet />
-    </DefaultLayout>
+    <RouterContext.Provider
+      value={{
+        currentBaseUrl,
+        baseUrlAuth: env.BASE_URL_AUTH,
+        baseUrlWebsite: env.BASE_URL_WEBSITE,
+        baseUrlBlog: env.BASE_URL_BLOG,
+      }}
+    >
+      <DefaultLayout isProduction={env.IS_PRODUCTION}>
+        <Outlet />
+      </DefaultLayout>
+    </RouterContext.Provider>
   )
 }
-
-const CatchBoundaryLayout: FC<HTMLProps<HTMLElement>> = ({ children }) => (
-  <DefaultLayout>{children}</DefaultLayout>
-)
-
-const DefaultLayout: FC<HTMLProps<HTMLElement>> = ({ children }) => (
-  <React.StrictMode>
-    <html lang="fr">
-      <head>
-        <Meta />
-        <Links />
-      </head>
-      <body className="text-neutral-900 bg-white min-h-screen scroll-smooth">
-        <main className="min-h-screen">{children}</main>
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
-      </body>
-    </html>
-  </React.StrictMode>
-)

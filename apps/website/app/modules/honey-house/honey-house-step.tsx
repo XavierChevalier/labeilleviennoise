@@ -1,7 +1,7 @@
+import { mergeClasses } from '@labeilleviennoise/merge-classes'
+import { createTextShadow } from '@labeilleviennoise/ui'
 import { useTheme } from 'flowbite-react'
 import type { FC, PropsWithChildren } from 'react'
-import { mergeClasses } from '@/modules/shared/html/merge-classes'
-import { createTextShadow } from '@/modules/shared/styles/text-shadow'
 
 interface Props extends PropsWithChildren {
   stepNumber: string

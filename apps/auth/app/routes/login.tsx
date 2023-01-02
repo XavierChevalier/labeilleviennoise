@@ -1,7 +1,7 @@
+import { generateMeta } from '@labeilleviennoise/seo'
 import type { LoaderArgs, MetaFunction } from '@remix-run/node'
 import { Form } from '@remix-run/react'
 import { typedjson, useTypedLoaderData } from 'remix-typedjson'
-import { generateMeta } from '@/modules/shared/seo/meta'
 
 export const meta: MetaFunction = () =>
   generateMeta({
@@ -22,10 +22,10 @@ export default function Login() {
   const { authenticationFailed } = useTypedLoaderData<typeof loader>()
 
   return (
-    <div className="flex justify-center items-center h-[100vh]">
+    <div className="flex justify-center items-center text-center h-[60vh]">
       <div>
         {authenticationFailed && (
-          <div className="p-3 bg-red-400 text-white rounded-md">
+          <div className="mb-8 p-3 bg-red-400 text-white rounded-md">
             Impossible de vous authentifier. Veuillez réessayer.
           </div>
         )}

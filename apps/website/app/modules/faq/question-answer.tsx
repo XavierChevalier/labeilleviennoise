@@ -1,4 +1,6 @@
-export interface Props extends React.HTMLProps<HTMLElement> {
+import type { HTMLProps } from 'react'
+
+export interface Props extends HTMLProps<HTMLElement> {
   question: string
 }
 

@@ -1,7 +1,7 @@
+import { mergeClasses } from '@labeilleviennoise/merge-classes'
 import { useSearchParams } from '@remix-run/react'
 import type { FC, HTMLProps } from 'react'
 import ContactHeader from '@/modules/contact/contact-header'
-import { mergeClasses } from '@/modules/shared/html/merge-classes'
 import SponsorshipCompanyContactForm from '@/modules/sponsorship/sponsorship-company-contact-form'
 
 const SponsorshipCompanyContact: FC<HTMLProps<HTMLElement>> = ({

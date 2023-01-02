@@ -1,4 +1,4 @@
-import { sendMailToCompany } from '@/modules/notification/send-mail/send-mail'
+import { sendMailToCompany } from '@/modules/notification/send-mail/send-mail.server'
 
 interface SendContactEmail {
   from: string

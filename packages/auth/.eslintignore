@@ -5,4 +5,4 @@
 **/lib
 **/public
 **/node_modules
-**/app/prisma-client/
+**/prisma-client/

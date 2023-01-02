@@ -1,28 +1,25 @@
-import type { LinksFunction, MetaFunction } from '@remix-run/node'
-import {
-  Links,
-  LiveReload,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-  useCatch,
-} from '@remix-run/react'
-import { Flowbite } from 'flowbite-react'
+import { CatchBoundary as AppCatchBoundary } from '@labeilleviennoise/catch-boundary'
+import { DefaultLayout } from '@labeilleviennoise/layouts'
+import { RouterContext } from '@labeilleviennoise/router'
+import type {
+  LinksFunction,
+  LoaderFunction,
+  MetaFunction,
+} from '@remix-run/node'
+import { Outlet } from '@remix-run/react'
 import { IKContext } from 'imagekitio-react'
-import type { FC, HTMLProps } from 'react'
-import React, { createContext } from 'react'
+import { createContext } from 'react'
 import { typedjson, useTypedLoaderData } from 'remix-typedjson'
 import type { UseDataFunctionReturn } from 'remix-typedjson/dist/remix'
-import NavigationFooter from './modules/navigation/footer/navigation-footer'
-import NavigationBar from './modules/navigation/header/navigation-bar'
 import appStylesheetUrl from '@/assets/styles/app.generated.css'
-import PageNotFound from '@/modules/boundary/page-not-found'
-import UnknownError from '@/modules/boundary/unknown-error'
-import GoogleAnalyticsScript from '@/modules/tracker/google-analytics-script'
 
 export const links: LinksFunction = () => [
-  { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml', sizes: 'any' },
+  {
+    rel: 'icon',
+    href: 'https://ik.imagekit.io/labeilleviennoise/images/favicon/favicon.svg',
+    type: 'image/svg+xml',
+    sizes: 'any',
+  },
   { rel: 'stylesheet', href: appStylesheetUrl },
 ]
 
@@ -32,11 +29,13 @@ export const meta: MetaFunction = () => ({
   viewport: 'width=device-width,initial-scale=1',
 })
 
-export const loader = () =>
+export const loader = (({ request }) =>
   typedjson({
+    currentBaseUrl: new URL(request.url).origin,
     env: {
       BASE_URL_AUTH: process.env.BASE_URL_AUTH as string,
       BASE_URL_WEBSITE: process.env.BASE_URL_WEBSITE as string,
+      BASE_URL_BLOG: process.env.BASE_URL_BLOG as string,
       IS_DEV: process.env.NODE_ENV === 'development',
       IS_PRODUCTION: process.env.NODE_ENV === 'production',
       PUBLIC_INSTAGRAM_URL: process.env.PUBLIC_INSTAGRAM_URL as string,
@@ -47,27 +46,15 @@ export const loader = () =>
       PUBLIC_IMAGEKIT_PUBLIC_KEY: process.env
         .PUBLIC_IMAGEKIT_PUBLIC_KEY as string,
     },
-  })
+  })) satisfies LoaderFunction
 
 type PublicEnv = UseDataFunctionReturn<typeof loader>['env']
 export const EnvContext = createContext<PublicEnv>({} as PublicEnv)
 
-export const CatchBoundary = () => {
-  const caught = useCatch()
-
-  return (
-    <CatchBoundaryLayout>
-      {caught.status === 404 ? (
-        <PageNotFound title={caught.data.message} />
-      ) : (
-        <UnknownError />
-      )}
-    </CatchBoundaryLayout>
-  )
-}
+export const CatchBoundary = AppCatchBoundary
 
 export default function App() {
-  const { env } = useTypedLoaderData<typeof loader>()
+  const { env, currentBaseUrl } = useTypedLoaderData<typeof loader>()
 
   return (
     <EnvContext.Provider value={env}>
@@ -75,36 +62,19 @@ export default function App() {
         urlEndpoint={env.PUBLIC_IMAGEKIT_URL_ENDPOINT}
         publicKey={env.PUBLIC_IMAGEKIT_PUBLIC_KEY}
       >
-        <DefaultLayout>
-          <Outlet />
-        </DefaultLayout>
+        <RouterContext.Provider
+          value={{
+            currentBaseUrl,
+            baseUrlAuth: env.BASE_URL_AUTH,
+            baseUrlWebsite: env.BASE_URL_WEBSITE,
+            baseUrlBlog: env.BASE_URL_BLOG,
+          }}
+        >
+          <DefaultLayout isProduction={env.IS_PRODUCTION}>
+            <Outlet />
+          </DefaultLayout>
+        </RouterContext.Provider>
       </IKContext>
     </EnvContext.Provider>
   )
 }
-
-const CatchBoundaryLayout: FC<HTMLProps<HTMLElement>> = ({ children }) => (
-  <DefaultLayout>{children}</DefaultLayout>
-)
-
-const DefaultLayout: FC<HTMLProps<HTMLElement>> = ({ children }) => (
-  <React.StrictMode>
-    <html lang="fr">
-      <head>
-        <Meta />
-        <Links />
-        <GoogleAnalyticsScript />
-      </head>
-      <body className="text-neutral-900 bg-white min-h-screen scroll-smooth">
-        <Flowbite theme={{ usePreferences: false }}>
-          <NavigationBar />
-          <main>{children}</main>
-          <ScrollRestoration />
-          <Scripts />
-          <LiveReload />
-          <NavigationFooter />
-        </Flowbite>
-      </body>
-    </html>
-  </React.StrictMode>
-)

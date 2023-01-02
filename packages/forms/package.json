@@ -1,0 +1,45 @@
+{
+  "name": "@labeilleviennoise/forms",
+  "description": "Forms components and handlers for l'Abeille Viennoise",
+  "version": "0.15.0",
+  "private": true,
+  "sideEffects": false,
+  "directories": {
+    "lib": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm build:clean && concurrently \"pnpm:build:swc\" \"pnpm:build:tsc\" && tsc-alias",
+    "build:swc": "swc src -d dist",
+    "build:tsc": "tsc",
+    "build:clean": "rimraf dist",
+    "lint": "eslint \"**/*.{ts,tsx,js,jsx,mjs,cjs}\"",
+    "lint:fix": "pnpm lint --fix",
+    "lint-staged": "lint-staged"
+  },
+  "dependencies": {
+    "@labeilleviennoise/merge-classes": "workspace:*",
+    "@remix-run/react": "^1.9.0",
+    "@remix-run/node": "^1.9.0",
+    "remix-forms": "^1.4.0",
+    "zod": "^3.20.2"
+  },
+  "devDependencies": {
+    "@labeilleviennoise/eslint-config": "workspace:*",
+    "@labeilleviennoise/prettier-config": "workspace:*",
+    "@swc/cli": "^0.1.59",
+    "@swc/core": "^1.3.24",
+    "concurrently": "^7.6.0",
+    "eslint": "^8.30.0",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "rimraf": "^3.0.2",
+    "tsc-alias": "^1.8.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,mjs,cjs}": "pnpm eslint --cache --fix",
+    "*": "prettier -w -u"
+  }
+}

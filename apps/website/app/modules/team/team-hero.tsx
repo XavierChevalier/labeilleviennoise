@@ -1,10 +1,10 @@
+import { IconQuotes } from '@labeilleviennoise/icons'
+import { mergeClasses } from '@labeilleviennoise/merge-classes'
+import { createTextShadow } from '@labeilleviennoise/ui'
 import { useTheme } from 'flowbite-react'
 import { IKImage } from 'imagekitio-react'
 import type { FC, HTMLProps } from 'react'
 import ApiaryStory from '@/modules/apiary/ApiaryStory'
-import { mergeClasses } from '@/modules/shared/html/merge-classes'
-import IconQuotes from '@/modules/shared/icons/icon-quotes'
-import { createTextShadow } from '@/modules/shared/styles/text-shadow'
 
 export default function TeamHero() {
   return (

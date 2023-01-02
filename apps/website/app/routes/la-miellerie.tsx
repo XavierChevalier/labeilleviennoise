@@ -1,9 +1,9 @@
+import { IconArrowRight } from '@labeilleviennoise/icons'
+import { generateMeta } from '@labeilleviennoise/seo'
+import { AppLinkButton } from '@labeilleviennoise/ui'
 import type { MetaFunction } from '@remix-run/node'
 import HoneyHouseHero from '@/modules/honey-house/honey-house-hero'
 import HoneyHouseSteps from '@/modules/honey-house/honey-house-steps'
-import IconArrowRight from '@/modules/shared/icons/icon-arrow-right'
-import { AppLinkButton } from '@/modules/shared/link/app-link-button'
-import { generateMeta } from '@/modules/shared/seo/meta'
 import SponsorshipCallToAction from '@/modules/sponsorship/sponsorship-call-to-action'
 
 export const meta: MetaFunction = () =>

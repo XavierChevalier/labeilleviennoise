@@ -1,5 +1,5 @@
+import { generateMeta } from '@labeilleviennoise/seo'
 import type { MetaFunction } from '@remix-run/node'
-import { generateMeta } from '@/modules/shared/seo/meta'
 import PricingFormulas from '@/modules/sponsorship/pricing/pricing-formulas'
 import SponsorshipCallToActionCompany from '@/modules/sponsorship/sponsorship-call-to-action-company'
 import SponsorshipHero from '@/modules/sponsorship/sponsorship-hero'

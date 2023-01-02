@@ -1,5 +1,5 @@
+import { AppLinkButton } from '@labeilleviennoise/ui'
 import type { HTMLProps } from 'react'
-import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 import { useURL } from '@/modules/shared/location/use-url'
 
 export interface Props extends HTMLProps<HTMLElement> {

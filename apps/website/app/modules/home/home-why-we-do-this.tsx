@@ -1,7 +1,6 @@
+import { IconArrowRight } from '@labeilleviennoise/icons'
+import { AppLink, AppLinkButton } from '@labeilleviennoise/ui'
 import { IKImage } from 'imagekitio-react'
-import IconArrowRight from '@/modules/shared/icons/icon-arrow-right'
-import { AppLink } from '@/modules/shared/link/app-link'
-import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 
 export default function HomeWhyWeDoThis() {
   return (

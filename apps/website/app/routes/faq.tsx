@@ -1,7 +1,7 @@
+import { generateMeta } from '@labeilleviennoise/seo'
+import { AppLink } from '@labeilleviennoise/ui'
 import type { MetaFunction } from '@remix-run/node'
 import QuestionAnswer from '@/modules/faq/question-answer'
-import { AppLink } from '@/modules/shared/link/app-link'
-import { generateMeta } from '@/modules/shared/seo/meta'
 
 export const meta: MetaFunction = () =>
   generateMeta({

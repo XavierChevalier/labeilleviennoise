@@ -1,5 +1,5 @@
+import { mergeClasses } from '@labeilleviennoise/merge-classes'
 import type { HTMLProps } from 'react'
-import { mergeClasses } from '@/modules/shared/html/merge-classes'
 
 interface Props extends HTMLProps<HTMLElement> {
   after?: string

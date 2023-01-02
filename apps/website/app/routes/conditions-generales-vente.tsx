@@ -1,5 +1,5 @@
+import { generateMeta } from '@labeilleviennoise/seo'
 import type { MetaFunction } from '@remix-run/node'
-import { generateMeta } from '@/modules/shared/seo/meta'
 
 export const meta: MetaFunction = () =>
   generateMeta({

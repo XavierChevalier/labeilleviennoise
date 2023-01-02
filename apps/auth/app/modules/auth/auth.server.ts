@@ -1,4 +1,4 @@
-import { createAuthenticator } from '@labeilleviennoise/auth'
+import { createAuthenticator } from '@labeilleviennoise/auth/dist/server'
 
 export const googleAuthenticator = createAuthenticator({
   baseUrl: process.env.BASE_URL_AUTH!,

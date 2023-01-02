@@ -1,6 +1,6 @@
+import { generateMeta } from '@labeilleviennoise/seo'
+import { AppLinkButton } from '@labeilleviennoise/ui'
 import type { MetaFunction } from '@remix-run/node'
-import { AppLinkButton } from '@/modules/shared/link/app-link-button'
-import { generateMeta } from '@/modules/shared/seo/meta'
 
 export const meta: MetaFunction = () =>
   generateMeta({

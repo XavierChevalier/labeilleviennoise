@@ -1,6 +1,6 @@
+import { generateMeta } from '@labeilleviennoise/seo'
 import type { MetaFunction } from '@remix-run/node'
 import CollaboratorsSection from '@/modules/collaborators/collaborators-section'
-import { generateMeta } from '@/modules/shared/seo/meta'
 import TeamHero from '@/modules/team/team-hero'
 import TeamSection from '@/modules/team/team-section'
 

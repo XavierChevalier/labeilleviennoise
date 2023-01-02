@@ -1,5 +1,5 @@
+import { IconCheck } from '@labeilleviennoise/icons'
 import type { FC, HTMLProps, ReactNode } from 'react'
-import IconCheck from '../../shared/icons/icon-check'
 
 interface Props extends HTMLProps<HTMLLIElement> {
   after?: ReactNode

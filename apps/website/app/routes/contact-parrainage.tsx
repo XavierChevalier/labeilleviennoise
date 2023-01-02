@@ -1,9 +1,9 @@
+import { generateMeta } from '@labeilleviennoise/seo'
 import type { ActionFunction, MetaFunction } from '@remix-run/node'
 import { useSearchParams } from '@remix-run/react'
 import { contactAction } from '@/modules/contact/contact-action'
 import ContactForm from '@/modules/contact/contact-form'
 import ContactHeader from '@/modules/contact/contact-header'
-import { generateMeta } from '@/modules/shared/seo/meta'
 
 export const meta: MetaFunction = () =>
   generateMeta({

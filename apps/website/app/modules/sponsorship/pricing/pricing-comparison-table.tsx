@@ -1,6 +1,6 @@
+import { IconCheck } from '@labeilleviennoise/icons'
+import { mergeClasses } from '@labeilleviennoise/merge-classes'
 import type { HTMLProps } from 'react'
-import { mergeClasses } from '@/modules/shared/html/merge-classes'
-import IconCheck from '@/modules/shared/icons/icon-check'
 import ButtonChosePlan from '@/modules/sponsorship/pricing/button-chose-plan'
 import PeriodLabel from '@/modules/sponsorship/pricing/period-label'
 import type { Formulas } from '@/modules/sponsorship/pricing/pricing-comparison'
