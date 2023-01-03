@@ -4,15 +4,15 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "concurrently -n husky,build \"husky install\" \"pnpm build\"",
     "build": "lerna run build",
     "clean": "lerna run clean --parallel",
     "dev": "lerna run dev --parallel --stream",
     "start": "lerna run start",
-    "lint": "lerna run lint --parallel",
-    "lint:fix": "lerna run lint:fix --parallel",
     "test": "lerna run test --parallel",
-    "lint-staged": "lerna run lint-staged"
+    "lint": "eslint \"**/*.{ts,tsx,js,jsx,mjs,cjs}\"",
+    "lint:fix": "pnpm lint --fix",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -21,10 +21,16 @@
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
+    "@labeilleviennoise/eslint-config": "workspace:*",
+    "@labeilleviennoise/prettier-config": "workspace:*",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
-    "husky": "^8.0.2",
-    "lerna": "^6.1.0"
+    "concurrently": "^7.6.0",
+    "eslint": "^8.31.0",
+    "husky": "^8.0.3",
+    "lerna": "^6.3.0",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1"
   },
   "engines": {
     "node": ">=14"
@@ -39,5 +45,9 @@
     "patchedDependencies": {
       "@remix-run/node@1.9.0": "patches/@remix-run__node@1.9.0.patch"
     }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,mjs,cjs}": "pnpm eslint --cache --fix",
+    "*": "prettier -w -u"
   }
 }

@@ -1,3 +1,7 @@
+import {
+  googleAuthenticator,
+  redirectIfNotAuthenticated,
+} from '@/modules/auth/auth.server'
 import { Form } from '@labeilleviennoise/forms/dist/client'
 import { formAction } from '@labeilleviennoise/forms/dist/server'
 import { AppLink } from '@labeilleviennoise/ui'
@@ -6,10 +10,6 @@ import { makeDomainFunction } from 'domain-functions'
 import { useParams } from 'react-router'
 import { useTypedLoaderData } from 'remix-typedjson'
 import { z } from 'zod'
-import {
-  googleAuthenticator,
-  redirectIfNotAuthenticated,
-} from '@/modules/auth/auth.server'
 import { findBlogPostLoader } from '@/modules/blog/loaders/find-blog-post-loader'
 import { deleteBlogPostBySlug } from '@/modules/blog/mutations/delete-blog-post/delete-blog-post-by-slug.server'
 

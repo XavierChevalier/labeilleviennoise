@@ -1,3 +1,16 @@
+const fs = require('fs')
+const path = require('path')
+
+const workspaces = require('../../../lerna.json').workspaces.map((workspace) =>
+  workspace.replace('/*', '')
+)
+
+const tsconfigWorkspacesFiles = workspaces.flatMap((workspace) =>
+  fs
+    .readdirSync(path.join(__dirname, '../../../', workspace))
+    .map((directory) => `${workspace}/${directory}/tsconfig.json`)
+)
+
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   root: true,
@@ -17,8 +30,17 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
     'import/resolver': {
-      typescript: {}, // this loads <rootdir>/tsconfig.json to eslint
+      // @see https://github.com/import-js/eslint-plugin-import/issues/2301#issuecomment-974473228
+      typescript: {
+        project: ['tsconfig.json', ...tsconfigWorkspacesFiles],
+      },
+      node: {
+        project: ['tsconfig.json', ...tsconfigWorkspacesFiles],
+      },
     },
   },
   rules: {

@@ -1,3 +1,4 @@
+import appStylesheetUrl from '@/assets/styles/app.generated.css'
 import { CatchBoundary as AppCatchBoundary } from '@labeilleviennoise/catch-boundary'
 import { DefaultLayout } from '@labeilleviennoise/layouts'
 import { RouterContext } from '@labeilleviennoise/router'
@@ -11,7 +12,6 @@ import { IKContext } from 'imagekitio-react'
 import { createContext } from 'react'
 import { typedjson, useTypedLoaderData } from 'remix-typedjson'
 import type { UseDataFunctionReturn } from 'remix-typedjson/dist/remix'
-import appStylesheetUrl from '@/assets/styles/app.generated.css'
 
 export const links: LinksFunction = () => [
   {

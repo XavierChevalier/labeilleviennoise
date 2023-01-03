@@ -1,3 +1,7 @@
+import {
+  googleAuthenticator,
+  redirectIfNotAuthenticated,
+} from '@/modules/auth/auth.server'
 import { Form } from '@labeilleviennoise/forms/dist/client'
 import {
   formAction,
@@ -6,10 +10,6 @@ import {
 import type { ActionFunction } from '@remix-run/node'
 import { makeDomainFunction } from 'domain-functions'
 import { z } from 'zod'
-import {
-  googleAuthenticator,
-  redirectIfNotAuthenticated,
-} from '@/modules/auth/auth.server'
 import { createBlogPost } from '@/modules/blog/mutations/create-blog-post/create-blog-post.server'
 import { extractTitleAndSlugFromMarkdown } from '@/modules/blog/mutations/create-blog-post/extract-title-and-slug-from-markdown.server'
 import { validateBlogPostMutationInput } from '@/modules/blog/mutations/create-blog-post/validate-blog-post-mutation-input.server'

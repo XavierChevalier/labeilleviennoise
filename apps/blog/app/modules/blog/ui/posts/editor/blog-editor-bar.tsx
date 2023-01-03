@@ -1,8 +1,8 @@
+import { EnvContext } from '@/root'
 import { IconArrowLeft } from '@labeilleviennoise/icons'
 import { AppLink, AppLinkExternal, AppLinkButton } from '@labeilleviennoise/ui'
 import type { FC } from 'react'
 import { useContext } from 'react'
-import { EnvContext } from '@/root'
 
 interface BlogEditorBarProps {
   showPreviousLink: boolean
