@@ -5,3 +5,4 @@
 *.json text eol=lf
 *.scss text eol=lf
 *.svg text eol=lf
+*.sh text eol=lf

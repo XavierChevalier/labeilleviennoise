@@ -4,7 +4,8 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "prepare": "concurrently -n husky,build \"husky install\" \"pnpm build\"",
+    "prepare": "husky install",
+    "postinstall": "pnpm build",
     "build": "lerna run build",
     "clean": "lerna run clean --parallel",
     "dev": "lerna run dev --parallel --stream",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
+    "@labeilleviennoise/build": "workspace:*",
     "@labeilleviennoise/eslint-config": "workspace:*",
     "@labeilleviennoise/prettier-config": "workspace:*",
     "@types/react": "^18.0.26",
