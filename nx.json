@@ -1,0 +1,31 @@
+{
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "build:css",
+          "test",
+          "test:unit",
+          "prisma:generate"
+        ]
+      }
+    }
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["{projectRoot}/public/build", "{projectRoot}/dist"]
+    },
+    "build:css": {
+      "outputs": ["{projectRoot}/public/build", "{projectRoot}/dist"]
+    },
+    "prisma:generate": {
+      "outputs": [
+        "{projectRoot}/app/prisma-client",
+        "{projectRoot}/prisma/prisma-client"
+      ]
+    }
+  }
+}
