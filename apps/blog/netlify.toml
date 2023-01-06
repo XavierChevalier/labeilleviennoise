@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "pnpm run -w build --scope=labeilleviennoise.com --include-filtered-dependencies"
+  command = "pnpm run -w build --scope=blog.labeilleviennoise.com --include-filtered-dependencies"
 
 [functions]
   included_files = ["./app/prisma-client/**/*"]
