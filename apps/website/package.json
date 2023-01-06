@@ -25,6 +25,7 @@
     "@labeilleviennoise/icons": "workspace:*",
     "@labeilleviennoise/layouts": "workspace:*",
     "@labeilleviennoise/merge-classes": "workspace:*",
+    "@labeilleviennoise/monitoring": "workspace:*",
     "@labeilleviennoise/router": "workspace:*",
     "@labeilleviennoise/seo": "workspace:*",
     "@labeilleviennoise/ui": "workspace:*",

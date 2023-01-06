@@ -24,6 +24,7 @@
     "@labeilleviennoise/catch-boundary": "workspace:*",
     "@labeilleviennoise/environment-server": "workspace:*",
     "@labeilleviennoise/layouts": "workspace:*",
+    "@labeilleviennoise/monitoring": "workspace:*",
     "@labeilleviennoise/router": "workspace:*",
     "@labeilleviennoise/seo": "workspace:*",
     "@labeilleviennoise/ui": "workspace:*",

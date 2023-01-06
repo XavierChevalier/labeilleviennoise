@@ -1,6 +1,7 @@
 import appStylesheetUrl from '@/assets/styles/app.generated.css'
 import { CatchBoundary as AppCatchBoundary } from '@labeilleviennoise/catch-boundary'
 import { DefaultLayout } from '@labeilleviennoise/layouts'
+import { withMonitoring } from '@labeilleviennoise/monitoring'
 import type { LinksFunction, LoaderFunction } from '@remix-run/node'
 import { Outlet } from '@remix-run/react'
 import { IKContext } from 'imagekitio-react'
@@ -28,7 +29,7 @@ export const loader = (() =>
 
 export const CatchBoundary = AppCatchBoundary
 
-export default function App() {
+const App = () => {
   const { env } = useTypedLoaderData<typeof loader>()
 
   return (
@@ -42,3 +43,4 @@ export default function App() {
     </IKContext>
   )
 }
+export default withMonitoring(App)

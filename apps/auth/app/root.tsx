@@ -1,5 +1,6 @@
 import { CatchBoundary as AppCatchBoundary } from '@labeilleviennoise/catch-boundary'
 import { DefaultLayout } from '@labeilleviennoise/layouts'
+import { withMonitoring } from '@labeilleviennoise/monitoring'
 import { preventPageIndexing } from '@labeilleviennoise/seo'
 import type { LinksFunction } from '@remix-run/node'
 import { Outlet } from '@remix-run/react'
@@ -19,10 +20,9 @@ export const meta = preventPageIndexing
 
 export const CatchBoundary = AppCatchBoundary
 
-export default function App() {
-  return (
-    <DefaultLayout>
-      <Outlet />
-    </DefaultLayout>
-  )
-}
+const App = () => (
+  <DefaultLayout>
+    <Outlet />
+  </DefaultLayout>
+)
+export default withMonitoring(App)
