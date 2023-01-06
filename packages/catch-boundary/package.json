@@ -20,7 +20,6 @@
   },
   "dependencies": {
     "@labeilleviennoise/layouts": "workspace:*",
-    "@labeilleviennoise/seo": "workspace:*",
     "@labeilleviennoise/ui": "workspace:*",
     "@remix-run/react": "^1.9.0",
     "flowbite": "^1.6.0",

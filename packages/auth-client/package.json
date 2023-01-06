@@ -13,8 +13,6 @@
     "dist"
   ],
   "scripts": {
-    "prepare": "pnpm prisma:generate",
-    "prisma:generate": "npx prisma generate",
     "build": "pnpm build-library"
   },
   "dependencies": {

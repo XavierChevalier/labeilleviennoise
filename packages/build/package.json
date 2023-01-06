@@ -8,7 +8,7 @@
     "lib": "src"
   },
   "files": [
-    "src"
+    "dist"
   ],
   "bin": {
     "build-library": "./src/build-library.sh"
