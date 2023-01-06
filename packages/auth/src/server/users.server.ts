@@ -1,5 +1,5 @@
-import type { users } from '../../prisma/prisma-client'
-import { PrismaClient } from '../../prisma/prisma-client'
+import type { users } from 'prisma-client'
+import { PrismaClient } from 'prisma-client'
 
 export interface User extends users {}
 

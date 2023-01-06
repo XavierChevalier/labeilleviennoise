@@ -14,7 +14,8 @@
       "tsx": true
     },
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "prisma-client": ["./prisma/prisma-client"]
     },
     "baseUrl": ".",
     "target": "es2022",
