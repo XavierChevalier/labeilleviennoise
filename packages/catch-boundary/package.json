@@ -25,5 +25,8 @@
     "flowbite": "^1.6.0",
     "flowbite-react": "^0.3.7",
     "imagekitio-react": "^2.0.0"
+  },
+  "devDependencies": {
+    "@labeilleviennoise/build": "workspace:*"
   }
 }

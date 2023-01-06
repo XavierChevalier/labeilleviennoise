@@ -14,5 +14,8 @@
   ],
   "scripts": {
     "build": "pnpm build-library"
+  },
+  "devDependencies": {
+    "@labeilleviennoise/build": "workspace:*"
   }
 }

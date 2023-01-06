@@ -17,5 +17,8 @@
   },
   "dependencies": {
     "tailwind-merge": "^1.8.1"
+  },
+  "devDependencies": {
+    "@labeilleviennoise/build": "workspace:*"
   }
 }
