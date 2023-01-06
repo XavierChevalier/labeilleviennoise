@@ -20,6 +20,7 @@ importers:
       husky: ^8.0.3
       lerna: ^6.3.0
       lint-staged: ^13.1.0
+      nodemon: ^2.0.20
       prettier: ^2.8.1
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -39,12 +40,14 @@ importers:
       husky: 8.0.3
       lerna: 6.3.0
       lint-staged: 13.1.0
+      nodemon: 2.0.20
       prettier: 2.8.1
 
   apps/auth:
     specifiers:
       '@labeilleviennoise/auth': workspace:*
       '@labeilleviennoise/catch-boundary': workspace:*
+      '@labeilleviennoise/environment': workspace:*
       '@labeilleviennoise/layouts': workspace:*
       '@labeilleviennoise/router': workspace:*
       '@labeilleviennoise/seo': workspace:*
@@ -75,6 +78,7 @@ importers:
     dependencies:
       '@labeilleviennoise/auth': link:../../packages/auth
       '@labeilleviennoise/catch-boundary': link:../../packages/catch-boundary
+      '@labeilleviennoise/environment': link:../../packages/environment
       '@labeilleviennoise/layouts': link:../../packages/layouts
       '@labeilleviennoise/router': link:../../packages/router
       '@labeilleviennoise/seo': link:../../packages/seo
@@ -108,6 +112,7 @@ importers:
     specifiers:
       '@labeilleviennoise/auth': workspace:*
       '@labeilleviennoise/catch-boundary': workspace:*
+      '@labeilleviennoise/environment': workspace:*
       '@labeilleviennoise/forms': workspace:*
       '@labeilleviennoise/icons': workspace:*
       '@labeilleviennoise/identifier': workspace:*
@@ -152,6 +157,7 @@ importers:
     dependencies:
       '@labeilleviennoise/auth': link:../../packages/auth
       '@labeilleviennoise/catch-boundary': link:../../packages/catch-boundary
+      '@labeilleviennoise/environment': link:../../packages/environment
       '@labeilleviennoise/forms': link:../../packages/forms
       '@labeilleviennoise/icons': link:../../packages/icons
       '@labeilleviennoise/identifier': link:../../packages/identifier
@@ -199,6 +205,7 @@ importers:
     specifiers:
       '@labeilleviennoise/auth': workspace:*
       '@labeilleviennoise/catch-boundary': workspace:*
+      '@labeilleviennoise/environment': workspace:*
       '@labeilleviennoise/forms': workspace:*
       '@labeilleviennoise/icons': workspace:*
       '@labeilleviennoise/layouts': workspace:*
@@ -242,6 +249,7 @@ importers:
     dependencies:
       '@labeilleviennoise/auth': link:../../packages/auth
       '@labeilleviennoise/catch-boundary': link:../../packages/catch-boundary
+      '@labeilleviennoise/environment': link:../../packages/environment
       '@labeilleviennoise/forms': link:../../packages/forms
       '@labeilleviennoise/icons': link:../../packages/icons
       '@labeilleviennoise/layouts': link:../../packages/layouts
@@ -317,6 +325,7 @@ importers:
 
   packages/catch-boundary:
     specifiers:
+      '@labeilleviennoise/environment': workspace:*
       '@labeilleviennoise/layouts': workspace:*
       '@labeilleviennoise/seo': workspace:*
       '@labeilleviennoise/ui': workspace:*
@@ -325,6 +334,7 @@ importers:
       flowbite-react: ^0.3.7
       imagekitio-react: ^2.0.0
     dependencies:
+      '@labeilleviennoise/environment': link:../environment
       '@labeilleviennoise/layouts': link:../layouts
       '@labeilleviennoise/seo': link:../seo
       '@labeilleviennoise/ui': link:../ui
@@ -332,6 +342,15 @@ importers:
       flowbite: 1.6.0
       flowbite-react: 0.3.7_flowbite@1.6.0
       imagekitio-react: 2.0.0
+
+  packages/environment:
+    specifiers:
+      '@remix-run/server-runtime': ^1.9.0
+      tiny-invariant: ^1.3.1
+    dependencies:
+      tiny-invariant: 1.3.1
+    devDependencies:
+      '@remix-run/server-runtime': 1.9.0
 
   packages/eslint-config:
     specifiers:
@@ -382,6 +401,8 @@ importers:
 
   packages/layouts:
     specifiers:
+      '@labeilleviennoise/environment': workspace:*
+      '@labeilleviennoise/navigation': workspace:*
       '@labeilleviennoise/seo': workspace:*
       '@labeilleviennoise/ui': workspace:*
       '@remix-run/react': ^1.9.0
@@ -389,6 +410,8 @@ importers:
       flowbite-react: ^0.3.7
       imagekitio-react: ^2.0.0
     dependencies:
+      '@labeilleviennoise/environment': link:../environment
+      '@labeilleviennoise/navigation': link:../navigation
       '@labeilleviennoise/seo': link:../seo
       '@labeilleviennoise/ui': link:../ui
       '@remix-run/react': 1.9.0
@@ -396,11 +419,35 @@ importers:
       flowbite-react: 0.3.7_flowbite@1.6.0
       imagekitio-react: 2.0.0
 
+  packages/logo:
+    specifiers:
+      '@labeilleviennoise/merge-classes': workspace:*
+    dependencies:
+      '@labeilleviennoise/merge-classes': link:../merge-classes
+
   packages/merge-classes:
     specifiers:
       tailwind-merge: ^1.8.1
     dependencies:
       tailwind-merge: 1.8.1
+
+  packages/navigation:
+    specifiers:
+      '@labeilleviennoise/environment': workspace:*
+      '@labeilleviennoise/icons': workspace:*
+      '@labeilleviennoise/logo': workspace:*
+      '@labeilleviennoise/merge-classes': workspace:*
+      '@labeilleviennoise/router': workspace:*
+      '@labeilleviennoise/state-hooks': workspace:*
+      '@labeilleviennoise/ui': workspace:*
+    dependencies:
+      '@labeilleviennoise/environment': link:../environment
+      '@labeilleviennoise/icons': link:../icons
+      '@labeilleviennoise/logo': link:../logo
+      '@labeilleviennoise/merge-classes': link:../merge-classes
+      '@labeilleviennoise/router': link:../router
+      '@labeilleviennoise/state-hooks': link:../state-hooks
+      '@labeilleviennoise/ui': link:../ui
 
   packages/prettier-config:
     specifiers:
@@ -412,17 +459,24 @@ importers:
 
   packages/router:
     specifiers:
+      '@labeilleviennoise/environment': workspace:*
       '@remix-run/react': ^1.9.0
       tiny-invariant: ^1.3.1
     dependencies:
+      '@labeilleviennoise/environment': link:../environment
       '@remix-run/react': 1.9.0
       tiny-invariant: 1.3.1
 
   packages/seo:
     specifiers:
+      '@labeilleviennoise/environment': workspace:*
       '@remix-run/react': ^1.9.0
     dependencies:
+      '@labeilleviennoise/environment': link:../environment
       '@remix-run/react': 1.9.0
+
+  packages/state-hooks:
+    specifiers: {}
 
   packages/ui:
     specifiers:
@@ -7967,6 +8021,21 @@ packages:
       ms: 2.1.3
     dev: true
 
+  /debug/3.2.7_supports-color@5.5.0:
+    resolution:
+      {
+        integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==,
+      }
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.3
+      supports-color: 5.5.0
+    dev: true
+
   /debug/4.3.4:
     resolution:
       {
@@ -11141,6 +11210,13 @@ packages:
       {
         integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==,
       }
+
+  /ignore-by-default/1.0.1:
+    resolution:
+      {
+        integrity: sha512-Ius2VYcGNk7T90CppJqcIkS5ooHUZyIQK+ClZfMfMNFEF9VSE73Fq+906u/CWu92x4gzZMWOwfFYckPObzdEbA==,
+      }
+    dev: true
 
   /ignore-walk/5.0.1:
     resolution:
@@ -14632,6 +14708,36 @@ packages:
     engines: { node: '>=6.0.0' }
     dev: false
 
+  /nodemon/2.0.20:
+    resolution:
+      {
+        integrity: sha512-Km2mWHKKY5GzRg6i1j5OxOHQtuvVsgskLfigG25yTtbyfRGn/GNvIbRyOf1PSCKJ2aT/58TiuUsuOU5UToVViw==,
+      }
+    engines: { node: '>=8.10.0' }
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      debug: 3.2.7_supports-color@5.5.0
+      ignore-by-default: 1.0.1
+      minimatch: 3.1.2
+      pstree.remy: 1.1.8
+      semver: 5.7.1
+      simple-update-notifier: 1.1.0
+      supports-color: 5.5.0
+      touch: 3.1.0
+      undefsafe: 2.0.5
+    dev: true
+
+  /nopt/1.0.10:
+    resolution:
+      {
+        integrity: sha512-NWmpvLSqUrgrAC9HCuxEvb+PSloHpqVu+FqcO4eeF2h5qYRhA7ev6KvelyQAKtegUbC6RypJnlEOhd8vloNKYg==,
+      }
+    hasBin: true
+    dependencies:
+      abbrev: 1.1.1
+    dev: true
+
   /nopt/5.0.0:
     resolution:
       {
@@ -16167,6 +16273,13 @@ packages:
       }
     dev: false
 
+  /pstree.remy/1.1.8:
+    resolution:
+      {
+        integrity: sha512-77DZwxQmxKnu3aR542U+X8FypNzbfJ+C5XQDk3uWjWxn6151aIMGthWYRXTqT1E5oJvg+ljaa2OJi+VfvCOQ8w==,
+      }
+    dev: true
+
   /pump/2.0.1:
     resolution:
       {
@@ -17189,6 +17302,14 @@ packages:
     hasBin: true
     dev: true
 
+  /semver/7.0.0:
+    resolution:
+      {
+        integrity: sha512-+GB6zVA9LWh6zovYQLALHwv5rb2PHGlJi3lfiqIHxR0uuwCgefcOJc59v9fv1w8GbStwxuuqqAjI9NMAOOgq1A==,
+      }
+    hasBin: true
+    dev: true
+
   /semver/7.3.4:
     resolution:
       {
@@ -17370,6 +17491,16 @@ packages:
       {
         integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==,
       }
+
+  /simple-update-notifier/1.1.0:
+    resolution:
+      {
+        integrity: sha512-VpsrsJSUcJEseSbMHkrsrAVSdvVS5I96Qo1QAQ4FxQ9wXFcB+pjj7FB7/us9+GcgfW4ziHtYMc1J0PLczb55mg==,
+      }
+    engines: { node: '>=8.10.0' }
+    dependencies:
+      semver: 7.0.0
+    dev: true
 
   /sisteransi/1.0.5:
     resolution:
@@ -18384,6 +18515,16 @@ packages:
       }
     dev: true
 
+  /touch/3.1.0:
+    resolution:
+      {
+        integrity: sha512-WBx8Uy5TLtOSRtIq+M03/sKDrXCLHxwDcquSP2c43Le03/9serjQBIztjRz6FkJez9D/hleyAXTBGLwwZUw9lA==,
+      }
+    hasBin: true
+    dependencies:
+      nopt: 1.0.10
+    dev: true
+
   /tr46/0.0.3:
     resolution:
       {
@@ -18750,6 +18891,13 @@ packages:
       buffer: 5.7.1
       through: 2.3.8
     dev: false
+
+  /undefsafe/2.0.5:
+    resolution:
+      {
+        integrity: sha512-WxONCrssBM8TSPRqN5EmsjVrsv4A8X12J4ArBiiayv3DyyG3ZlIg6yysuuSYdZsVz3TKcTg2fd//Ujd4CHV1iA==,
+      }
+    dev: true
 
   /unicode-canonical-property-names-ecmascript/2.0.0:
     resolution:

@@ -1,18 +1,4 @@
-import { memo } from 'react'
-
-interface GoogleAnalyticsScriptProps {
-  isProduction: boolean
-}
-
-export default memo(function GoogleAnalyticsScript({
-  isProduction,
-}: GoogleAnalyticsScriptProps) {
-  if (!isProduction) {
-    console.info('Google Analytics script not loaded because not in production')
-
-    return null
-  }
-
+export default function GoogleAnalyticsScript() {
   return (
     <>
       <script
@@ -26,4 +12,4 @@ export default memo(function GoogleAnalyticsScript({
       />
     </>
   )
-})
+}

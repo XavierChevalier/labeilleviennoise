@@ -1,6 +1,6 @@
 import { mergeClasses } from '@labeilleviennoise/merge-classes'
 import type { FC, HTMLProps } from 'react'
-import Logo from '@/shared/logo/logo'
+import Logo from './logo'
 
 const LogoWithTextHorizontal: FC<HTMLProps<HTMLDivElement>> = ({
   className,

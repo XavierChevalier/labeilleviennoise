@@ -1,8 +1,8 @@
 import { formActionWithSuccessFlag } from '@labeilleviennoise/forms/dist/server'
 import { IconArrowRight } from '@labeilleviennoise/icons'
-import { generateMeta } from '@labeilleviennoise/seo'
+import { buildMeta } from '@labeilleviennoise/seo'
 import { AppLinkButton } from '@labeilleviennoise/ui'
-import type { ActionFunction, MetaFunction } from '@remix-run/node'
+import type { ActionFunction } from '@remix-run/node'
 import { makeDomainFunction } from 'domain-functions'
 import { IKImage } from 'imagekitio-react'
 import { sendCompanyContactEmail } from '@/modules/sponsorship/send-email/send-company-contact-email'
@@ -10,13 +10,11 @@ import SponsorshipCompanyContact from '@/modules/sponsorship/sponsorship-company
 import { sponsorshipCompanyContactSchema } from '@/modules/sponsorship/sponsorship-company-contact-form'
 import SponsorshipFormulaCard from '@/modules/sponsorship/sponsorship-formula-card'
 
-export const meta: MetaFunction = () =>
-  generateMeta({
-    title: "Parrainage entreprise - L'Abeille Viennoise",
-    description:
-      "Parrainez une ruche pour votre entreprise et soutenez l'apiculture à Vienne.",
-    url: 'https://labeilleviennoise.com/parrainage-entreprise',
-  })
+export const meta = buildMeta({
+  title: "Parrainage entreprise - L'Abeille Viennoise",
+  description:
+    "Parrainez une ruche pour votre entreprise et soutenez l'apiculture à Vienne.",
+})
 
 export const action: ActionFunction = ({ request }) =>
   formActionWithSuccessFlag({

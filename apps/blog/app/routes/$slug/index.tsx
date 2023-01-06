@@ -1,27 +1,23 @@
-import { generateMeta } from '@labeilleviennoise/seo'
+import { buildMeta } from '@labeilleviennoise/seo'
 import type { MetaFunction } from '@remix-run/node'
 import { useTypedLoaderData } from 'remix-typedjson'
 import { findBlogPostLoader } from '@/modules/blog/loaders/find-blog-post-loader'
 import BlogPostContent from '@/modules/blog/ui/posts/blog-post-content'
 
-export const meta: MetaFunction<typeof loader> = ({
-  data: blogPost,
-  params,
-}) => {
+export const meta: MetaFunction<typeof loader> = (metaArgs) => {
+  const blogPost = metaArgs.data
   if (!blogPost) {
-    return generateMeta({
+    return buildMeta({
       title: 'Article introuvable',
       description: "L'article que vous recherchez n'existe pas.",
-      url: `https://labeilleviennoise.com/blog/${params.slug}`,
       noIndex: true,
-    })
+    })(metaArgs)
   }
 
-  return generateMeta({
+  return buildMeta({
     title: blogPost.title,
     description: blogPost.description,
-    url: `/blog/${blogPost.slug}`,
-  })
+  })(metaArgs)
 }
 
 export const loader = findBlogPostLoader

@@ -4,13 +4,13 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "prepare": "husky install",
-    "postinstall": "pnpm build",
+    "prepare": "concurrently -n husky,build \"husky install\" \"pnpm build:packages\"",
     "build": "lerna run build",
-    "clean": "lerna run clean --parallel",
-    "dev": "lerna run dev --parallel --stream",
+    "build:packages": "pnpm build --scope @labeilleviennoise/*",
+    "dev": "nodemon -w packages/ --exec \"pnpm build:packages && pnpm install --ignore-scripts && lerna run dev --stream\"",
     "start": "lerna run start",
-    "test": "lerna run test --parallel",
+    "test": "lerna run test",
+    "clean": "lerna run clean",
     "lint": "eslint \"**/*.{ts,tsx,js,jsx,mjs,cjs}\"",
     "lint:fix": "pnpm lint --fix",
     "lint-staged": "lint-staged"
@@ -30,6 +30,7 @@
     "concurrently": "^7.6.0",
     "eslint": "^8.31.0",
     "husky": "^8.0.3",
+    "nodemon": "^2.0.20",
     "lerna": "^6.3.0",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.1"
@@ -51,5 +52,15 @@
   "lint-staged": {
     "*.{ts,tsx,js,mjs,cjs}": "pnpm eslint --cache --fix",
     "*": "prettier -w -u"
+  },
+  "nodemonConfig": {
+    "ext": "ts,tsx,js,json",
+    "ignore": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/prisma-client/**"
+    ],
+    "delay": 250,
+    "verbose": true
   }
 }

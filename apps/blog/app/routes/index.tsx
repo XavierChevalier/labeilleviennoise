@@ -1,20 +1,18 @@
 import { googleAuthenticator } from '@/modules/auth/auth.server'
 import { AuthContext } from '@labeilleviennoise/auth/dist/client'
-import { generateMeta } from '@labeilleviennoise/seo'
-import type { LoaderFunction, MetaFunction } from '@remix-run/node'
+import { buildMeta } from '@labeilleviennoise/seo'
+import type { LoaderFunction } from '@remix-run/node'
 import { useMatches } from '@remix-run/react'
 import { typedjson, useTypedLoaderData } from 'remix-typedjson'
 import { findAllBlogPosts } from '@/modules/blog/queries/find-all-blog-posts.server'
 import BlogPostsList from '@/modules/blog/ui/posts/blog-posts-list'
 import BlogEditorBar from '@/modules/blog/ui/posts/editor/blog-editor-bar'
 
-export const meta: MetaFunction = () =>
-  generateMeta({
-    title: "Blog - L'Abeille Viennoise",
-    description:
-      "Retrouvez ici tous les articles du blog de L'Abeille Viennoise, sur le miel et les abeilles.",
-    url: `https://labeilleviennoise.com/blog`,
-  })
+export const meta = buildMeta({
+  title: "Blog - L'Abeille Viennoise",
+  description:
+    "Retrouvez ici tous les articles du blog de L'Abeille Viennoise, sur le miel et les abeilles.",
+})
 
 export const loader = (async ({ request }) =>
   typedjson({

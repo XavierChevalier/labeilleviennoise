@@ -1,5 +1,5 @@
-import NavigationMenu from '@/navigation/header/menu/navigation-menu'
-import NavigationBarLogo from '@/navigation/header/navigation-bar-logo'
+import NavigationMenu from './menu/navigation-menu'
+import NavigationBarLogo from './navigation-bar-logo'
 
 export default function NavigationBar() {
   return (

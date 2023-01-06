@@ -1,10 +1,10 @@
 import { preventPageIndexing } from '@labeilleviennoise/seo'
-import type { LoaderArgs, MetaFunction } from '@remix-run/node'
+import type { LoaderFunction } from '@remix-run/node'
 import { googleAuthenticator } from '@/modules/auth/auth.server'
 
-export const meta: MetaFunction = preventPageIndexing
+export const meta = preventPageIndexing
 
-export const loader = ({ request }: LoaderArgs) =>
+export const loader = (({ request }) =>
   googleAuthenticator.logout(request, {
-    redirectTo: `${process.env.BASE_URL_WEBSITE}/blog`,
-  })
+    redirectTo: process.env.BASE_URL_BLOG!,
+  })) satisfies LoaderFunction

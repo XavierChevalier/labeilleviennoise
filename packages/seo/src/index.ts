@@ -1,4 +1,4 @@
-import { generateMeta, preventPageIndexing } from './meta'
+import { buildMeta, preventPageIndexing } from './meta'
 import GoogleAnalyticsScript from './tracker/google-analytics-script'
 
-export { GoogleAnalyticsScript, generateMeta, preventPageIndexing }
+export { GoogleAnalyticsScript, buildMeta, preventPageIndexing }

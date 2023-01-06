@@ -1,3 +1,4 @@
+import { storeMandatoryClientEnvFromServerRequest } from '@labeilleviennoise/environment/dist/server'
 import type { EntryContext } from '@remix-run/node'
 import { RemixServer } from '@remix-run/react'
 import { renderToString } from 'react-dom/server'
@@ -8,6 +9,7 @@ export default function handleRequest(
   responseHeaders: Headers,
   remixContext: EntryContext
 ) {
+  storeMandatoryClientEnvFromServerRequest(request)
   const markup = renderToString(
     <RemixServer context={remixContext} url={request.url} />
   )

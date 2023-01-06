@@ -1,6 +1,6 @@
 import { mergeClasses } from '@labeilleviennoise/merge-classes'
-import type { LinkProps } from '@remix-run/react'
-import { Link } from '@remix-run/react'
+import type { LinkProps } from '@labeilleviennoise/router'
+import { Link } from '@labeilleviennoise/router'
 import type { FC, HTMLProps } from 'react'
 
 const buildAppLinkClasses = (className?: string) =>

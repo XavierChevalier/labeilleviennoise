@@ -1,18 +1,15 @@
 import { IconArrowRight } from '@labeilleviennoise/icons'
-import { generateMeta } from '@labeilleviennoise/seo'
+import { buildMeta } from '@labeilleviennoise/seo'
 import { AppLinkButton } from '@labeilleviennoise/ui'
-import type { MetaFunction } from '@remix-run/node'
 import HoneyHouseHero from '@/modules/honey-house/honey-house-hero'
 import HoneyHouseSteps from '@/modules/honey-house/honey-house-steps'
 import SponsorshipCallToAction from '@/modules/sponsorship/sponsorship-call-to-action'
 
-export const meta: MetaFunction = () =>
-  generateMeta({
-    title: "La Miellerie - L'Abeille Viennoise",
-    description:
-      "La miellerie de l'Abeille Viennoise est située à Vienne dans la Drôme. Découvrez comment nous produisons notre miel et nos produits.",
-    url: `https://labeilleviennoise.com/la-miellerie`,
-  })
+export const meta = buildMeta({
+  title: "La Miellerie - L'Abeille Viennoise",
+  description:
+    "La miellerie de l'Abeille Viennoise est située à Vienne dans la Drôme. Découvrez comment nous produisons notre miel et nos produits.",
+})
 
 export default function LaMiellerie() {
   return (

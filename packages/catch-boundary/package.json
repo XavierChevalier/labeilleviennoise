@@ -19,6 +19,7 @@
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {
+    "@labeilleviennoise/environment": "workspace:*",
     "@labeilleviennoise/layouts": "workspace:*",
     "@labeilleviennoise/seo": "workspace:*",
     "@labeilleviennoise/ui": "workspace:*",

@@ -1,17 +1,13 @@
 import { preventPageIndexing } from '@labeilleviennoise/seo'
-import type {
-  ActionFunction,
-  LoaderFunction,
-  MetaFunction,
-} from '@remix-run/node'
-import { redirect } from '@remix-run/node'
+import type { ActionFunction } from '@remix-run/node'
 import { googleAuthenticator } from '@/modules/auth/auth.server'
+import { redirectToLogin } from '@/modules/auth/redirect-auth.server'
 
-export const meta: MetaFunction = preventPageIndexing
+export const meta = preventPageIndexing
 
-export const loader: LoaderFunction = () => redirect('/login')
+export const loader = redirectToLogin
 
-export const action: ActionFunction = ({ request }) =>
+export const action = (({ request }) =>
   googleAuthenticator.authenticate('google', request, {
-    successRedirect: `${process.env.BASE_URL_WEBSITE}/blog`,
-  })
+    successRedirect: process.env.BASE_URL_BLOG,
+  })) satisfies ActionFunction

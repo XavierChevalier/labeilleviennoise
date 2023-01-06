@@ -1,33 +1,43 @@
+import { getClientEnv } from '@labeilleviennoise/environment/dist/client'
 import type { HtmlMetaDescriptor } from '@remix-run/react'
+import type { MetaFunction } from '@remix-run/react/dist/routeModules'
 
-interface MetaProps extends IndexingProps {
+interface BuildMetaProps {
   title: string
   description: string
-  url: string
-}
-
-interface IndexingProps {
   noIndex?: boolean
 }
 
-export const generateMeta = ({
-  title,
-  description,
-  url,
-  noIndex = false,
-}: MetaProps): HtmlMetaDescriptor =>
-  [addOpenGraph, addTwitter, addIndexing].reduce(
-    (meta, fn) => ({ ...meta, ...fn({ title, description, url, noIndex }) }),
-    {
-      charset: 'utf-8',
-      viewport: 'width=device-width,initial-scale=1',
-      title,
-      description,
-    }
-  )
+interface MetaProps extends BuildMetaProps {
+  url: string
+}
 
-export const preventPageIndexing = (): HtmlMetaDescriptor =>
-  addIndexing({ noIndex: true })
+export const buildMeta =
+  ({ title, description, noIndex = false }: BuildMetaProps): MetaFunction =>
+  ({ location }) =>
+    [addOpenGraph, addTwitter, addIndexing].reduce(
+      (meta, fn) => ({
+        ...meta,
+        ...fn({
+          title,
+          description,
+          url: `${getClientEnv().CURRENT_BASE_URL}${location.pathname}`,
+          noIndex,
+        }),
+      }),
+      {
+        charset: 'utf-8',
+        viewport: 'width=device-width,initial-scale=1',
+        title,
+        description,
+      }
+    )
+
+export const preventPageIndexing = buildMeta({
+  noIndex: true,
+  title: "L'Abeille Viennoise",
+  description: "Le site de l'Abeille Viennoise.",
+})
 
 const addOpenGraph = ({
   title,
@@ -56,7 +66,7 @@ const addTwitter = ({
   'twitter:card': 'summary_large_image',
 })
 
-const addIndexing = ({ noIndex }: IndexingProps): HtmlMetaDescriptor =>
+const addIndexing = ({ noIndex }: MetaProps): HtmlMetaDescriptor =>
   noIndex
     ? {
         robots: 'noindex',

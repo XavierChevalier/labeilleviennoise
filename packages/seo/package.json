@@ -16,6 +16,7 @@
     "build": "pnpm build-library"
   },
   "dependencies": {
+    "@labeilleviennoise/environment": "workspace:*",
     "@remix-run/react": "^1.9.0"
   }
 }

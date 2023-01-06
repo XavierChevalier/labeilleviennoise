@@ -1,3 +1,3 @@
-import { CatchBoundaryLayout, DefaultLayout } from './layouts'
+import { DefaultLayout } from './layouts'
 
-export { CatchBoundaryLayout, DefaultLayout }
+export { DefaultLayout }

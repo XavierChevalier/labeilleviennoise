@@ -1,6 +1,6 @@
 import { mergeClasses } from '@labeilleviennoise/merge-classes'
 import type { FC, HTMLProps } from 'react'
-import Logo from '@/shared/logo/logo'
+import Logo from './logo'
 
 const LogoWithTextVertical: FC<HTMLProps<HTMLDivElement>> = (props) => (
   <div className={mergeClasses('flex flex-col items-center', props.className)}>

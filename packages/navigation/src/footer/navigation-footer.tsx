@@ -1,9 +1,11 @@
 import { IconFacebook, IconInstagram } from '@labeilleviennoise/icons'
-import { Link } from '@remix-run/react'
-import FooterLink from '@/navigation/footer/footer-link'
-import NavigationFooterSocialNetworkLink from '@/navigation/footer/navigation-footer-social-network-link'
-import LogoWithTextHorizontal from '@/shared/logo/logo-with-text-horizontal'
-import LogoWithTextVertical from '@/shared/logo/logo-with-text-vertical'
+import {
+  LogoWithTextHorizontal,
+  LogoWithTextVertical,
+} from '@labeilleviennoise/logo'
+import { Link } from '@labeilleviennoise/router'
+import FooterLink from './footer-link'
+import NavigationFooterSocialNetworkLink from './navigation-footer-social-network-link'
 
 const NavigationFooter = () => (
   <footer className="p-4 bg-white sm:p-6">

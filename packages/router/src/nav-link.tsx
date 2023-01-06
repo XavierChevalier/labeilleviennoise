@@ -1,26 +1,24 @@
 import type { NavLinkProps as RemixNavLinkProps } from '@remix-run/react'
 import { NavLink as RemixNavLink } from '@remix-run/react'
 import type { FC } from 'react'
-import { useRouterContext } from './router-context'
+import type { Tenant } from './multi-tenant'
+import {
+  getFullUrlFromPathname,
+  isSameDestinationAsCurrentWebsite,
+} from './multi-tenant'
 
 export interface NavLinkProps extends RemixNavLinkProps {
-  website?: 'website' | 'blog' | 'auth'
+  destination?: Tenant
 }
 
 export const NavLink: FC<NavLinkProps> = ({
   className,
   children,
   to,
-  website = 'website',
+  destination = 'website',
   ...attributes
 }) => {
-  const { currentBaseUrl, baseUrlWebsite, baseUrlBlog, baseUrlAuth } =
-    useRouterContext()
-  if (
-    (currentBaseUrl === baseUrlWebsite && website === 'website') ||
-    (currentBaseUrl === baseUrlBlog && website === 'blog') ||
-    (currentBaseUrl === baseUrlAuth && website === 'auth')
-  ) {
+  if (isSameDestinationAsCurrentWebsite(destination)) {
     return (
       <RemixNavLink {...attributes} to={to}>
         {children}
@@ -28,20 +26,9 @@ export const NavLink: FC<NavLinkProps> = ({
     )
   }
 
-  const href = (to: string) => {
-    switch (website) {
-      case 'website':
-        return `${baseUrlWebsite}${to}`
-      case 'blog':
-        return `${baseUrlBlog}${to}`
-      case 'auth':
-        return `${baseUrlAuth}${to}`
-    }
-  }
-
   return (
     <a
-      href={href(to.toString())}
+      href={getFullUrlFromPathname(to.toString(), destination)}
       className={
         typeof className === 'function'
           ? className({ isActive: false, isPending: false })

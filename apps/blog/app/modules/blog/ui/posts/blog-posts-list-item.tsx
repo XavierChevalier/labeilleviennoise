@@ -53,14 +53,17 @@ const BlogPostsListItem: FC<BlogPostsListItemProps> = ({
     {...attributes}
   >
     <AppLink
-      to={`/blog/${post.slug}`}
+      to={`/${post.slug}`}
+      destination="blog"
       className="text-4xl no-underline font-bold"
     >
       {post.title}
     </AppLink>
     <p className="text-gray-500">{post.createdAt.toDateString()}</p>
     <p>{post.description}</p>
-    <AppLink to={`/blog/${post.slug}`}>Lire l'article</AppLink>
+    <AppLink to={`/${post.slug}`} destination="blog">
+      Lire l'article
+    </AppLink>
 
     <BlogPostsListItemButtonsManager post={post} />
   </li>
@@ -76,10 +79,16 @@ const BlogPostsListItemButtonsManager: FC<BlogPostsListItemProps> = ({
 
   return (
     <div className="flex justify-end">
-      <AppLinkButton to={`/admin/blog/posts/${post.slug}/edit`}>
+      <AppLinkButton
+        to={`/admin/blog/posts/${post.slug}/edit`}
+        destination="blog"
+      >
         Modifier
       </AppLinkButton>
-      <AppLinkButton to={`/admin/blog/posts/${post.slug}/delete`}>
+      <AppLinkButton
+        to={`/admin/blog/posts/${post.slug}/delete`}
+        destination="blog"
+      >
         Supprimer
       </AppLinkButton>
     </div>

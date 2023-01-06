@@ -1,14 +1,29 @@
 import { mergeClasses } from '@labeilleviennoise/merge-classes'
-import type { LinkProps } from '@remix-run/react'
-import { Link } from '@remix-run/react'
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes, FC } from 'react'
+import type { LinkProps } from '@labeilleviennoise/router'
+import { Link } from '@labeilleviennoise/router'
+import type { FC } from 'react'
 
-interface BaseAppLinkButtonProps {
+interface AppLinkButtonProps extends LinkProps {
   variant?: 'primary' | 'fancy'
 }
 
+export const AppLinkButton: FC<AppLinkButtonProps> = ({
+  variant,
+  children,
+  className,
+  ...attributes
+}) => (
+  <Link
+    className={buildAppLinkButtonClasses(variant, className)}
+    {...attributes}
+  >
+    {variant === 'fancy' && <FancyHoverEffect />}
+    {children}
+  </Link>
+)
+
 const buildAppLinkButtonClasses = (
-  variant: BaseAppLinkButtonProps['variant'],
+  variant: AppLinkButtonProps['variant'],
   className?: string
 ) => {
   const baseClasses =
@@ -53,57 +68,6 @@ const buildAppLinkButtonClasses = (
     className
   )
 }
-
-interface AppLinkButtonProps extends BaseAppLinkButtonProps, LinkProps {}
-const AppLinkButton: FC<AppLinkButtonProps> = ({
-  variant,
-  children,
-  className,
-  ...attributes
-}) => (
-  <Link
-    className={buildAppLinkButtonClasses(variant, className)}
-    {...attributes}
-  >
-    {variant === 'fancy' && <FancyHoverEffect />}
-    {children}
-  </Link>
-)
-
-interface AppButtonProps
-  extends BaseAppLinkButtonProps,
-    ButtonHTMLAttributes<HTMLButtonElement> {}
-const AppButton: FC<AppButtonProps> = ({
-  variant,
-  children,
-  className,
-  ...attributes
-}) => (
-  <button
-    className={buildAppLinkButtonClasses(variant, className)}
-    {...attributes}
-  >
-    {variant === 'fancy' && <FancyHoverEffect />}
-    {children}
-  </button>
-)
-
-interface AppLinkButtonExternalProps
-  extends BaseAppLinkButtonProps,
-    AnchorHTMLAttributes<HTMLAnchorElement> {}
-const AppLinkButtonExternal: FC<AppLinkButtonExternalProps> = ({
-  variant,
-  children,
-  className,
-  ...attributes
-}) => (
-  <a className={buildAppLinkButtonClasses(variant, className)} {...attributes}>
-    {variant === 'fancy' && <FancyHoverEffect />}
-    {children}
-  </a>
-)
-
-export { AppLinkButton, AppLinkButtonExternal, AppButton }
 
 const FancyHoverEffect: FC = () => (
   <div

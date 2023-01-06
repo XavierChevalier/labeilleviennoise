@@ -1,22 +1,16 @@
-import { generateMeta } from '@labeilleviennoise/seo'
-import type { LoaderArgs, MetaFunction } from '@remix-run/node'
+import { preventPageIndexing } from '@labeilleviennoise/seo'
+import type { LoaderFunction } from '@remix-run/node'
 import { Form } from '@remix-run/react'
 import { typedjson, useTypedLoaderData } from 'remix-typedjson'
 
-export const meta: MetaFunction = () =>
-  generateMeta({
-    title: "Login - L'Abeille Viennoise",
-    description: 'Page de connexion',
-    url: 'https://auth.labeilleviennoise.com/login',
-    noIndex: true,
-  })
+export const meta = preventPageIndexing
 
-export const loader = ({ request }: LoaderArgs) =>
+export const loader = (({ request }) =>
   typedjson({
     authenticationFailed: !!new URL(request.url).searchParams.get(
       'authentication_failed'
     ),
-  })
+  })) satisfies LoaderFunction
 
 export default function Login() {
   const { authenticationFailed } = useTypedLoaderData<typeof loader>()

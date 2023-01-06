@@ -1,6 +1,6 @@
 import { mergeClasses } from '@labeilleviennoise/merge-classes'
+import { Link } from '@labeilleviennoise/router'
 import type { LinkProps } from '@remix-run/react'
-import { Link } from '@remix-run/react'
 
 export default function FooterLink({
   children,

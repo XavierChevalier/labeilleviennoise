@@ -1,9 +1,9 @@
 import { mergeClasses } from '@labeilleviennoise/merge-classes'
+import { useToggle } from '@labeilleviennoise/state-hooks'
+import { AppLinkButton } from '@labeilleviennoise/ui'
 import { Dropdown } from 'flowbite-react'
-import NavigationMenuHamburgerButton from '@/navigation/header/menu/navigation-menu-hamburger-button'
-import NavigationBarLink from '@/navigation/header/navigation-bar-link'
-import { AppLinkButton } from '@/shared/link/app-link-button'
-import { useToggle } from '@/shared/states/use-toggle'
+import NavigationBarLink from '../navigation-bar-link'
+import NavigationMenuHamburgerButton from './navigation-menu-hamburger-button'
 
 export default function NavigationMenu() {
   const [showMenu, toggleShowMenu] = useToggle(false)
@@ -56,7 +56,11 @@ export default function NavigationMenu() {
             </Dropdown>
           </li>
           <li>
-            <NavigationBarLink to="/" website="blog" onClick={toggleShowMenu}>
+            <NavigationBarLink
+              to="/"
+              destination="blog"
+              onClick={toggleShowMenu}
+            >
               Blog
             </NavigationBarLink>
           </li>

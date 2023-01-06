@@ -1,14 +1,11 @@
-import { generateMeta } from '@labeilleviennoise/seo'
+import { buildMeta } from '@labeilleviennoise/seo'
 import { AppLinkButton } from '@labeilleviennoise/ui'
-import type { MetaFunction } from '@remix-run/node'
 
-export const meta: MetaFunction = () =>
-  generateMeta({
-    title: "La boutique - L'Abeille Viennoise",
-    description:
-      "Venez découvrir tous les produits de l'Abeille Viennoise, autour du miel, des abeilles et du crochet.",
-    url: `https://labeilleviennoise.com/boutique`,
-  })
+export const meta = buildMeta({
+  title: "La boutique - L'Abeille Viennoise",
+  description:
+    "Venez découvrir tous les produits de l'Abeille Viennoise, autour du miel, des abeilles et du crochet.",
+})
 
 export default function Boutique() {
   return (

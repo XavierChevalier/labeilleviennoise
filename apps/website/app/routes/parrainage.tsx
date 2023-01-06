@@ -1,17 +1,14 @@
-import { generateMeta } from '@labeilleviennoise/seo'
-import type { MetaFunction } from '@remix-run/node'
+import { buildMeta } from '@labeilleviennoise/seo'
 import PricingFormulas from '@/modules/sponsorship/pricing/pricing-formulas'
 import SponsorshipCallToActionCompany from '@/modules/sponsorship/sponsorship-call-to-action-company'
 import SponsorshipHero from '@/modules/sponsorship/sponsorship-hero'
 import SponsorshipWhy from '@/modules/sponsorship/sponsorship-why'
 
-export const meta: MetaFunction = () =>
-  generateMeta({
-    title: "Parrainage - L'Abeille Viennoise",
-    description:
-      "Parrainez une ruche et soutenez l'apiculture urbaine. Vous recevrez des produits et des nouvelles de votre ruche !",
-    url: `https://labeilleviennoise.com/parrainage`,
-  })
+export const meta = buildMeta({
+  title: "Parrainage - L'Abeille Viennoise",
+  description:
+    "Parrainez une ruche et soutenez l'apiculture urbaine. Vous recevrez des produits et des nouvelles de votre ruche !",
+})
 
 export default function Parrainage() {
   return (

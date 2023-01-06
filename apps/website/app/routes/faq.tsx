@@ -1,15 +1,12 @@
-import { generateMeta } from '@labeilleviennoise/seo'
+import { buildMeta } from '@labeilleviennoise/seo'
 import { AppLink } from '@labeilleviennoise/ui'
-import type { MetaFunction } from '@remix-run/node'
 import QuestionAnswer from '@/modules/faq/question-answer'
 
-export const meta: MetaFunction = () =>
-  generateMeta({
-    title: "Foire aux questions - L'Abeille Viennoise",
-    description:
-      "Vous avez des questions sur l'apiculture, les abeilles, les produits de l'Abeille Viennoise ? Vous trouverez peut-être la réponse dans notre foire aux questions.",
-    url: `https://labeilleviennoise.com/faq`,
-  })
+export const meta = buildMeta({
+  title: "Foire aux questions - L'Abeille Viennoise",
+  description:
+    "Vous avez des questions sur l'apiculture, les abeilles, les produits de l'Abeille Viennoise ? Vous trouverez peut-être la réponse dans notre foire aux questions.",
+})
 
 export default function Faq() {
   return (

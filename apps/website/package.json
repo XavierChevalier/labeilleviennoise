@@ -19,6 +19,7 @@
   "dependencies": {
     "@labeilleviennoise/auth": "workspace:*",
     "@labeilleviennoise/catch-boundary": "workspace:*",
+    "@labeilleviennoise/environment": "workspace:*",
     "@labeilleviennoise/forms": "workspace:*",
     "@labeilleviennoise/icons": "workspace:*",
     "@labeilleviennoise/layouts": "workspace:*",
