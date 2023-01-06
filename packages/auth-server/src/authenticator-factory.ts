@@ -1,9 +1,9 @@
 import { createCookieSessionStorage } from '@remix-run/node'
 import { Authenticator } from 'remix-auth'
 import invariant from 'tiny-invariant'
-import { GoogleStrategy } from './auth-google-strategy.server'
-import type { User } from './users.server'
-import { findUserByEmail } from './users.server'
+import { GoogleStrategy } from './auth-google-strategy'
+import type { User } from './users'
+import { findUserByEmail } from './users'
 
 const invariantWithLog: typeof invariant = (condition, message) => {
   if (!condition) {

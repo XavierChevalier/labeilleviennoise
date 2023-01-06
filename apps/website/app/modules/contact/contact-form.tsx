@@ -1,4 +1,4 @@
-import { Form } from '@labeilleviennoise/forms/dist/client'
+import { Form } from '@labeilleviennoise/forms-client'
 import type { HTMLProps } from 'react'
 import { z } from 'zod'
 import {

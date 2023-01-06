@@ -6,12 +6,12 @@ import {
 } from '@remix-run/react'
 import { createForm } from 'remix-forms'
 import type { FormProps, FormSchema } from 'remix-forms'
-import Error from '@/client/errors/error'
-import Errors from '@/client/errors/errors'
-import AppInput from '@/client/input/app-input'
-import AppLabel from '@/client/label/app-label'
-import AppSubmitButton from '@/client/submit/app-submit-button'
-import AppTextarea from '@/client/textarea/app-textarea'
+import Error from '@/errors/error'
+import Errors from '@/errors/errors'
+import AppInput from '@/input/app-input'
+import AppLabel from '@/label/app-label'
+import AppSubmitButton from '@/submit/app-submit-button'
+import AppTextarea from '@/textarea/app-textarea'
 
 const RemixForm = createForm({
   component: FrameworkForm,

@@ -2,11 +2,11 @@ import {
   googleAuthenticator,
   redirectIfNotAuthenticated,
 } from '@/modules/auth/auth.server'
-import { Form } from '@labeilleviennoise/forms/dist/client'
+import { Form } from '@labeilleviennoise/forms-client'
 import {
   formAction,
   validateBeforeMutation,
-} from '@labeilleviennoise/forms/dist/server'
+} from '@labeilleviennoise/forms-server'
 import type { ActionFunction } from '@remix-run/node'
 import { makeDomainFunction } from 'domain-functions'
 import { useTypedLoaderData } from 'remix-typedjson'

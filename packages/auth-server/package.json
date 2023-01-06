@@ -1,9 +1,11 @@
 {
-  "name": "@labeilleviennoise/auth",
+  "name": "@labeilleviennoise/auth-server",
   "description": "This package is used to authenticate user with Google",
   "version": "0.0.0",
   "private": true,
   "sideEffects": false,
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "directories": {
     "lib": "dist"
   },

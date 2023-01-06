@@ -10,7 +10,7 @@
     "dev": "nodemon -w packages/ --exec \"pnpm build:packages && pnpm install --ignore-scripts && lerna run dev --stream\"",
     "start": "lerna run start",
     "test": "lerna run test",
-    "clean": "lerna run clean",
+    "clean": "lerna clean",
     "lint": "eslint \"**/*.{ts,tsx,js,jsx,mjs,cjs}\"",
     "lint:fix": "pnpm lint --fix",
     "lint-staged": "lint-staged"

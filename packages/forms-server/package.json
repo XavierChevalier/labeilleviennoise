@@ -1,9 +1,11 @@
 {
-  "name": "@labeilleviennoise/forms",
-  "description": "Forms components and handlers for l'Abeille Viennoise",
+  "name": "@labeilleviennoise/forms-server",
+  "description": "Forms server handlers for l'Abeille Viennoise",
   "version": "0.0.0",
   "private": true,
   "sideEffects": false,
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "directories": {
     "lib": "dist"
   },
@@ -14,8 +16,6 @@
     "build": "pnpm build-library"
   },
   "dependencies": {
-    "@labeilleviennoise/merge-classes": "workspace:*",
-    "@remix-run/react": "^1.9.0",
     "@remix-run/node": "^1.9.0",
     "remix-forms": "^1.4.0",
     "zod": "^3.20.2"

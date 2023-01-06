@@ -1,4 +1,4 @@
-import { getClientEnv } from '@/client/index'
+import { getClientEnv } from '@/index'
 
 export const InjectClientEnv = () => (
   <script

@@ -2,8 +2,8 @@ import {
   googleAuthenticator,
   redirectIfNotAuthenticated,
 } from '@/modules/auth/auth.server'
-import { Form } from '@labeilleviennoise/forms/dist/client'
-import { formAction } from '@labeilleviennoise/forms/dist/server'
+import { Form } from '@labeilleviennoise/forms-client'
+import { formAction } from '@labeilleviennoise/forms-server'
 import { AppLink } from '@labeilleviennoise/ui'
 import type { ActionFunction } from '@remix-run/node'
 import { makeDomainFunction } from 'domain-functions'

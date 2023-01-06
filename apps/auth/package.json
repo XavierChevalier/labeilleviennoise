@@ -20,9 +20,9 @@
     "test:unit": "jest"
   },
   "dependencies": {
-    "@labeilleviennoise/auth": "workspace:*",
+    "@labeilleviennoise/auth-server": "workspace:*",
     "@labeilleviennoise/catch-boundary": "workspace:*",
-    "@labeilleviennoise/environment": "workspace:*",
+    "@labeilleviennoise/environment-server": "workspace:*",
     "@labeilleviennoise/layouts": "workspace:*",
     "@labeilleviennoise/router": "workspace:*",
     "@labeilleviennoise/seo": "workspace:*",

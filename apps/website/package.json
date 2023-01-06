@@ -17,10 +17,11 @@
     "test:unit": "jest"
   },
   "dependencies": {
-    "@labeilleviennoise/auth": "workspace:*",
+    "@labeilleviennoise/auth-server": "workspace:*",
     "@labeilleviennoise/catch-boundary": "workspace:*",
-    "@labeilleviennoise/environment": "workspace:*",
-    "@labeilleviennoise/forms": "workspace:*",
+    "@labeilleviennoise/environment-server": "workspace:*",
+    "@labeilleviennoise/forms-client": "workspace:*",
+    "@labeilleviennoise/forms-server": "workspace:*",
     "@labeilleviennoise/icons": "workspace:*",
     "@labeilleviennoise/layouts": "workspace:*",
     "@labeilleviennoise/merge-classes": "workspace:*",

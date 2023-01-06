@@ -1,5 +1,5 @@
 import { googleAuthenticator } from '@/modules/auth/auth.server'
-import { AuthContext } from '@labeilleviennoise/auth/dist/client'
+import { AuthContext } from '@labeilleviennoise/auth-client'
 import { buildMeta } from '@labeilleviennoise/seo'
 import type { LoaderFunction } from '@remix-run/node'
 import { useMatches } from '@remix-run/react'

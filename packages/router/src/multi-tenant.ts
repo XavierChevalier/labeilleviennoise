@@ -1,4 +1,4 @@
-import { getClientEnv } from '@labeilleviennoise/environment/dist/client'
+import { getClientEnv } from '@labeilleviennoise/environment-client'
 
 export type Tenant = 'website' | 'blog' | 'auth'
 

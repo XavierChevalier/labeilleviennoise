@@ -1,4 +1,4 @@
-import { getClientEnv } from '@labeilleviennoise/environment/dist/client'
+import { getClientEnv } from '@labeilleviennoise/environment-client'
 import type { HtmlMetaDescriptor } from '@remix-run/react'
 import type { MetaFunction } from '@remix-run/react/dist/routeModules'
 

@@ -1,4 +1,4 @@
-import { AppSwitch } from '@labeilleviennoise/forms/dist/client'
+import { AppSwitch } from '@labeilleviennoise/forms-client'
 
 export interface Props {
   isToggled: boolean

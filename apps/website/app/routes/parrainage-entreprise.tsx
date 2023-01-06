@@ -1,4 +1,4 @@
-import { formActionWithSuccessFlag } from '@labeilleviennoise/forms/dist/server'
+import { formActionWithSuccessFlag } from '@labeilleviennoise/forms-server'
 import { IconArrowRight } from '@labeilleviennoise/icons'
 import { buildMeta } from '@labeilleviennoise/seo'
 import { AppLinkButton } from '@labeilleviennoise/ui'

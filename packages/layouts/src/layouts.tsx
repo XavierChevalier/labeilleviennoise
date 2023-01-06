@@ -1,7 +1,7 @@
 import {
   getClientEnv,
   InjectClientEnv,
-} from '@labeilleviennoise/environment/dist/client'
+} from '@labeilleviennoise/environment-client'
 import { NavigationBar, NavigationFooter } from '@labeilleviennoise/navigation'
 import { GoogleAnalyticsScript } from '@labeilleviennoise/seo'
 import {

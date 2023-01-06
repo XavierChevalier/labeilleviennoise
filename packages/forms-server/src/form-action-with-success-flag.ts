@@ -1,4 +1,4 @@
-import { formAction } from '@/server/form-action.server'
+import { formAction } from '@/form-action'
 
 export const formActionWithSuccessFlag: typeof formAction = (attrs) =>
   formAction({

@@ -1,4 +1,4 @@
-import { formActionWithSuccessFlag } from '@labeilleviennoise/forms/dist/server'
+import { formActionWithSuccessFlag } from '@labeilleviennoise/forms-server'
 import type { ActionFunction } from '@remix-run/node'
 import { makeDomainFunction } from 'domain-functions'
 import { contactSchema } from '@/modules/contact/contact-form'

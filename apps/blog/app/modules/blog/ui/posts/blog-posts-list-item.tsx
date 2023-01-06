@@ -1,4 +1,4 @@
-import { AuthContext } from '@labeilleviennoise/auth/dist/client'
+import { AuthContext } from '@labeilleviennoise/auth-client'
 import { AppLink, AppLinkButton } from '@labeilleviennoise/ui'
 import type { FC } from 'react'
 import { useContext } from 'react'
