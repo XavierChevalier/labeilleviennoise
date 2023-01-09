@@ -16,7 +16,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "baseUrl": ".",
+    "baseUrl": "./",
     "target": "es2022",
     "keepClassNames": true
   }

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 if [ "$CI" == "true" ]
 then
     echo "CI environment detected, skipping root-prepare.sh"

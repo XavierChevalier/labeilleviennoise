@@ -17,7 +17,7 @@
       "@/*": ["./src/*"],
       "prisma-client": ["./prisma/prisma-client"]
     },
-    "baseUrl": ".",
+    "baseUrl": "./",
     "target": "es2022",
     "keepClassNames": true
   }

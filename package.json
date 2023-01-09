@@ -4,7 +4,7 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "prepare": "root-prepare",
+    "prepare": "pnpm root-prepare",
     "build": "lerna run build",
     "build:packages": "pnpm build --scope @labeilleviennoise/*",
     "dev": "nodemon -w packages/ --exec \"pnpm build:packages && pnpm install --ignore-scripts && lerna run dev --stream\"",
