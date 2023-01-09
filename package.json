@@ -7,7 +7,7 @@
     "prepare": "pnpm root-prepare",
     "build": "lerna run build",
     "build:packages": "pnpm build --scope @labeilleviennoise/*",
-    "dev": "nodemon -w packages/ --exec \"pnpm build:packages && pnpm install --ignore-scripts && lerna run dev --stream\"",
+    "dev": "nodemon -w packages/ --exec \"pnpm build:packages && lerna run dev --stream\"",
     "start": "lerna run start",
     "test": "lerna run test",
     "clean": "lerna clean",
