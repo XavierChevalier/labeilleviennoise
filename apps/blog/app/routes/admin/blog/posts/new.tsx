@@ -46,7 +46,7 @@ export const action: ActionFunction = ({ request }) =>
     mutation: makeDomainFunction(createBlogPostMutationSchema)(
       validateBeforeMutation(validateBlogPostMutationInput)(createBlogPost)
     ),
-    successPath: '/blog',
+    successPath: process.env.BASE_URL_BLOG,
   })
 
 export default function PostSlug() {
