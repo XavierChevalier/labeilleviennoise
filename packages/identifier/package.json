@@ -16,6 +16,6 @@
     "build": "pnpm build-library"
   },
   "devDependencies": {
-    "@labeilleviennoise/build": "^0.0.0"
+    "@labeilleviennoise/build": "workspace:*"
   }
 }

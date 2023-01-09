@@ -20,9 +20,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0",
-    "@labeilleviennoise/build": "^0.0.0",
+    "@commitlint/cli": "^17.4.1",
+    "@commitlint/config-conventional": "^17.4.0",
+    "@labeilleviennoise/build": "workspace:*",
     "@labeilleviennoise/eslint-config": "workspace:*",
     "@labeilleviennoise/prettier-config": "workspace:*",
     "@types/jest": "^29.2.5",
@@ -32,10 +32,10 @@
     "concurrently": "^7.6.0",
     "eslint": "^8.31.0",
     "husky": "^8.0.3",
-    "lerna": "^6.3.0",
+    "lerna": "^6.4.0",
     "lint-staged": "^13.1.0",
     "nodemon": "^2.0.20",
-    "prettier": "^2.8.1"
+    "prettier": "^2.8.2"
   },
   "engines": {
     "node": ">=14"
