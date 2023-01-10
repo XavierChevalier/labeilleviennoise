@@ -3,5 +3,5 @@
   "useWorkspaces": true,
   "version": "0.0.0",
   "npmClient": "pnpm",
-  "workspaces": ["apps/*", "cli/*", "config/*", "packages/*"]
+  "workspaces": ["apps/*", "cli/*", "config/*", "packages/*", "tests/*"]
 }

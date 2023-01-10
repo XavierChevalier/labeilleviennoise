@@ -35,3 +35,6 @@ lerna-debug.log
 # generated Prisma Client
 **/app/prisma-client/
 **/prisma/prisma-client/
+
+# Cypress
+**/videos/
