@@ -1,0 +1,24 @@
+{
+  "name": "@labeilleviennoise/logo",
+  "description": "Logo components for l'Abeille Viennoise",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "directories": {
+    "lib": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm build-library"
+  },
+  "dependencies": {
+    "@labeilleviennoise/merge-classes": "workspace:*"
+  },
+  "devDependencies": {
+    "@labeilleviennoise/build": "workspace:*"
+  }
+}

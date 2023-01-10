@@ -1,6 +1,6 @@
+import { mergeClasses } from '@labeilleviennoise/merge-classes'
 import { IKImage } from 'imagekitio-react'
 import type { FC, PropsWithChildren } from 'react'
-import { mergeClasses } from '@/modules/shared/html/merge-classes'
 
 export default function HoneyHouseHero() {
   return (

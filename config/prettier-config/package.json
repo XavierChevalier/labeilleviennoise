@@ -1,0 +1,17 @@
+{
+  "name": "@labeilleviennoise/prettier-config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "The Prettier config of l'Abeille Viennoise",
+  "main": "src/prettier-config.js",
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "prettier": "^2.8.1",
+    "prettier-plugin-tailwindcss": "^0.1.13"
+  }
+}

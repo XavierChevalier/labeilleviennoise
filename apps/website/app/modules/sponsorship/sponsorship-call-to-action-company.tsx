@@ -1,4 +1,4 @@
-import { AppLinkButton } from '@/modules/shared/link/app-link-button'
+import { AppLinkButton } from '@labeilleviennoise/ui'
 
 export default function SponsorshipCallToActionCompany() {
   return (

@@ -1,0 +1,29 @@
+{
+  "name": "@labeilleviennoise/auth-client",
+  "description": "This package is used to authenticate user with Google",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "directories": {
+    "lib": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm build-library"
+  },
+  "dependencies": {
+    "@remix-run/node": "^1.9.0",
+    "remix-auth": "^3.4.0",
+    "remix-auth-oauth2": "^1.5.0",
+    "tiny-invariant": "^1.3.1"
+  },
+  "devDependencies": {
+    "@labeilleviennoise/build": "workspace:*",
+    "@remix-run/react": "^1.9.0",
+    "@remix-run/server-runtime": "^1.9.0"
+  }
+}

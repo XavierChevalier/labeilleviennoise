@@ -1,5 +1,5 @@
+import { AppLinkButton } from '@labeilleviennoise/ui'
 import { IKImage } from 'imagekitio-react'
-import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 
 export default function SponsorshipWhy() {
   return (

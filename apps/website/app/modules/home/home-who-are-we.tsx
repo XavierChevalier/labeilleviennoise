@@ -1,5 +1,5 @@
+import { AppLink } from '@labeilleviennoise/ui'
 import { IKImage } from 'imagekitio-react'
-import { AppLink } from '@/modules/shared/link/app-link'
 
 export default function HeroWhoAreWe() {
   return (

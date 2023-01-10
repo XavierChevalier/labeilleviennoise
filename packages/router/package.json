@@ -1,0 +1,26 @@
+{
+  "name": "@labeilleviennoise/router",
+  "description": "Router utils for l'Abeille Viennoise",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "directories": {
+    "lib": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm build-library"
+  },
+  "dependencies": {
+    "@labeilleviennoise/environment-client": "workspace:*",
+    "@remix-run/react": "^1.9.0",
+    "tiny-invariant": "^1.3.1"
+  },
+  "devDependencies": {
+    "@labeilleviennoise/build": "workspace:*"
+  }
+}

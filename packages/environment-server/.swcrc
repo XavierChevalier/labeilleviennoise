@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/swcrc",
+  "module": {
+    "type": "commonjs"
+  },
+  "jsc": {
+    "transform": {
+      "react": {
+        "runtime": "automatic"
+      }
+    },
+    "parser": {
+      "syntax": "typescript",
+      "tsx": true
+    },
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "baseUrl": "./",
+    "target": "es2022",
+    "keepClassNames": true
+  }
+}

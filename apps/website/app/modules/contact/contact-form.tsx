@@ -1,5 +1,6 @@
+import { Form } from '@labeilleviennoise/forms-client'
+import type { HTMLProps } from 'react'
 import { z } from 'zod'
-import Form from '@/modules/shared/form/form'
 import {
   from,
   fullname,
@@ -7,7 +8,7 @@ import {
   subject,
 } from '@/modules/shared/form/validations/contact-fields'
 
-interface Props extends React.HTMLProps<HTMLElement> {
+interface Props extends HTMLProps<HTMLElement> {
   defaultValues?: {
     fullname?: string
     from?: string

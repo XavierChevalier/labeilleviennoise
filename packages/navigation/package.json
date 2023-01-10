@@ -1,0 +1,31 @@
+{
+  "name": "@labeilleviennoise/navigation",
+  "description": "Navigation components for l'Abeille Viennoise",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "directories": {
+    "lib": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm build-library"
+  },
+  "dependencies": {
+    "@labeilleviennoise/icons": "workspace:*",
+    "@labeilleviennoise/logo": "workspace:*",
+    "@labeilleviennoise/merge-classes": "workspace:*",
+    "@labeilleviennoise/router": "workspace:*",
+    "@labeilleviennoise/state-hooks": "workspace:*",
+    "@labeilleviennoise/ui": "workspace:*",
+    "flowbite-react": "^0.3.7"
+  },
+  "devDependencies": {
+    "@labeilleviennoise/build": "workspace:*",
+    "@remix-run/react": "^1.9.0"
+  }
+}

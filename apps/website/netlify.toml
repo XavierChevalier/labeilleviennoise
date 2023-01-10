@@ -1,9 +1,10 @@
 [build]
   publish = "public"
-  command = "pnpm run -w build --scope=labeilleviennoise.com --include-filtered-dependencies"
+  command = "pnpm run -w build --scope=labeilleviennoise.com --include-dependencies && du -h .netlify/functions-internal/server.js && du -h node_modules"
 
 [functions]
-  included_files = ["./app/prisma-client/**/*"]
+  node_bundler = "esbuild"
+  included_files = ["./app/prisma-client/**/*", "!**/node_modules/.pnpm/@swc*/**/*", "!**/node_modules/.pnpm/typescript*/**/*"]
 
 [dev]
   command = "remix watch"

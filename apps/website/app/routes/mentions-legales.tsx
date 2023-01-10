@@ -1,13 +1,10 @@
-import type { MetaFunction } from '@remix-run/node'
-import { generateMeta } from '@/modules/shared/seo/meta'
+import { buildMeta } from '@labeilleviennoise/seo'
 
-export const meta: MetaFunction = () =>
-  generateMeta({
-    title: "Mentions légales - L'Abeille Viennoise",
-    description: "Mentions légales de l'Abeille Viennoise.",
-    url: `https://labeilleviennoise.com/mentions-legales`,
-    noIndex: true,
-  })
+export const meta = buildMeta({
+  title: "Mentions légales - L'Abeille Viennoise",
+  description: "Mentions légales de l'Abeille Viennoise.",
+  noIndex: true,
+})
 
 export default function MentionsLegales() {
   const email = 'labeilleviennoise@gmail.com'

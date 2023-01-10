@@ -1,6 +1,6 @@
+import { IconArrowRight } from '@labeilleviennoise/icons'
+import { AppLinkButton } from '@labeilleviennoise/ui'
 import { IKImage } from 'imagekitio-react'
-import IconArrowRight from '../shared/icons/icon-arrow-right'
-import { AppLinkButton } from '@/modules/shared/link/app-link-button'
 
 export default function SponsorshipHero() {
   return (

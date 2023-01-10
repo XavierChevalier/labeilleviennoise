@@ -1,0 +1,32 @@
+{
+  "name": "@labeilleviennoise/layouts",
+  "description": "Layout components of l'Abeille Viennoise",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "directories": {
+    "lib": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm build-library"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "@labeilleviennoise/environment-client": "workspace:*",
+    "@labeilleviennoise/navigation": "workspace:*",
+    "@labeilleviennoise/seo": "workspace:*",
+    "@remix-run/react": "^1.9.0",
+    "flowbite": "^1.6.0",
+    "flowbite-react": "^0.3.7"
+  },
+  "devDependencies": {
+    "@labeilleviennoise/build": "workspace:*"
+  }
+}

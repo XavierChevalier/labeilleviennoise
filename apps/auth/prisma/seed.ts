@@ -1,5 +1,5 @@
-import type { CreateUserOptions } from '@labeilleviennoise/auth'
-import { createOrUpdateUser } from '@labeilleviennoise/auth'
+import type { CreateUserOptions } from '@labeilleviennoise/auth-server'
+import { createOrUpdateUser } from '@labeilleviennoise/auth-server'
 
 const createUser = (user: CreateUserOptions) =>
   createOrUpdateUser(user).then(() =>

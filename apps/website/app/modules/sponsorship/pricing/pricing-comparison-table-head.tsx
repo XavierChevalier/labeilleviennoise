@@ -1,5 +1,5 @@
+import { mergeClasses } from '@labeilleviennoise/merge-classes'
 import type { HTMLProps } from 'react'
-import { mergeClasses } from '@/modules/shared/html/merge-classes'
 import type { Formulas } from '@/modules/sponsorship/pricing/pricing-comparison'
 
 export interface Props extends HTMLProps<HTMLElement> {

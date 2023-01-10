@@ -1,0 +1,29 @@
+{
+  "name": "@labeilleviennoise/ui",
+  "description": "Shared UI components of l'Abeille Viennoise",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "directories": {
+    "lib": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm build-library"
+  },
+  "dependencies": {
+    "@labeilleviennoise/merge-classes": "workspace:*",
+    "@labeilleviennoise/router": "workspace:*",
+    "@remix-run/react": "^1.9.0",
+    "flowbite": "^1.6.0",
+    "flowbite-react": "^0.3.7",
+    "imagekitio-react": "^2.0.0"
+  },
+  "devDependencies": {
+    "@labeilleviennoise/build": "workspace:*"
+  }
+}

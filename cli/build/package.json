@@ -1,0 +1,25 @@
+{
+  "name": "@labeilleviennoise/build",
+  "description": "Build scripts and dependencies of l'Abeille Viennoise",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "build-library": "./src/build-library.sh",
+    "root-prepare": "./src/root-prepare.sh"
+  },
+  "dependencies": {
+    "@swc/cli": "^0.1.59",
+    "@swc/core": "^1.3.24",
+    "concurrently": "^7.6.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.9.4",
+    "tsc-alias": "^1.8.2"
+  }
+}

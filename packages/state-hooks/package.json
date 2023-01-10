@@ -1,0 +1,21 @@
+{
+  "name": "@labeilleviennoise/state-hooks",
+  "description": "Hooks to manage state",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "directories": {
+    "lib": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm build-library"
+  },
+  "devDependencies": {
+    "@labeilleviennoise/build": "workspace:*"
+  }
+}

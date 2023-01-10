@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.base.json",
+  "exclude": ["**/node_modules"],
+  "compilerOptions": {
+    "isolatedModules": true,
+    "module": "ESNext",
+    "noEmit": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2019"]
+  }
+}
