@@ -3,3 +3,4 @@ packages:
   - 'cli/*'
   - 'config/*'
   - 'packages/*'
+  - 'tests/*'

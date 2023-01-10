@@ -1,0 +1,63 @@
+name: Cypress tests
+on: [push]
+jobs:
+  cypress-run:
+    name: Run E2E tests 🧪
+    runs-on: ubuntu-latest
+    environment: development
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.23.0
+
+      - name: Cache node modules
+        id: cache-pnpm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ['**/node_modules', '**/.cache']
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - if: ${{ steps.cache-pnpm.outputs.cache-hit != 'true' }}
+        name: List the state of node modules
+        continue-on-error: true
+        run: pnpm list --color
+
+      - name: Install dependencies
+        run: pnpm install --color
+
+      - name: Build packages
+        run: pnpm build:packages
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+          install: false
+          start: lerna run dev --stream --concurrency 3
+          wait-on: 'http://localhost:3000, http://localhost:3001, http://localhost:3002'
+          working-directory: ./tests/e2e
+          browser: chrome
+          record: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_URL_AUTH: ${{ secrets.BASE_URL_AUTH }}
+          BASE_URL_BLOG: ${{ secrets.BASE_URL_BLOG }}
+          BASE_URL_WEBSITE: ${{ secrets.BASE_URL_WEBSITE }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          MAIL_TEST: ${{ secrets.MAIL_TEST }}
+          MAIL_USER: ${{ secrets.MAIL_USER }}
+          PUBLIC_IMAGEKIT_PUBLIC_KEY: ${{ secrets.PUBLIC_IMAGEKIT_PUBLIC_KEY }}
+          PUBLIC_IMAGEKIT_URL_ENDPOINT: ${{ secrets.PUBLIC_IMAGEKIT_URL_ENDPOINT }}
+          SESSION_DOMAIN: ${{ secrets.SESSION_DOMAIN }}
+          SESSION_SECRET: ${{ secrets.SESSION_SECRET }}

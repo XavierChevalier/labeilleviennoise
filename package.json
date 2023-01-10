@@ -10,6 +10,8 @@
     "dev": "nodemon -w packages/ --exec \"pnpm build:packages && lerna run dev --stream\"",
     "start": "lerna run start",
     "test": "lerna run test",
+    "test:e2e:open": "concurrently -c auto -n dev,cypress \"pnpm dev\" \"lerna run cypress:open\" --kill-others-on-fail",
+    "test:e2e:run": "concurrently -c auto -n dev,cypress \"pnpm dev\" \"lerna run cypress:run\" --kill-others-on-fail",
     "clean": "lerna clean",
     "lint": "eslint \"**/*.{ts,tsx,js,jsx,mjs,cjs}\"",
     "lint:fix": "pnpm lint --fix",
