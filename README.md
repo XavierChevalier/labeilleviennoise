@@ -1,6 +1,9 @@
 # L'Abeille Viennoise
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c6c2a8c9-6270-4c1d-8aef-de809f2c966e/deploy-status)](https://app.netlify.com/sites/labeilleviennoise/deploys)
+[![Netlify Status](https://img.shields.io/netlify/c6c2a8c9-6270-4c1d-8aef-de809f2c966e?label=Netlify%20Website&logo=netlify)](https://app.netlify.com/sites/labeilleviennoise/deploys)
+[![Netlify Status](https://img.shields.io/netlify/76fc38f8-5187-4d37-a400-eea0c35ef261?label=Netlify%20Auth&logo=netlify)](https://app.netlify.com/sites/auth-labeilleviennoise/deploys)
+[![Netlify Status](https://img.shields.io/netlify/630cae83-ef6e-4389-aac4-d96890077acc?label=Netlify%20Blog&logo=netlify)](https://app.netlify.com/sites/blog-labeilleviennoise/deploys)
+
 [![Cypress Status](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/simple/6ps5vm&style=flat&logo=cypress)](https://cloud.cypress.io/projects/6ps5vm/runs)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
