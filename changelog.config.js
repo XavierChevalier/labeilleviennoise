@@ -1,4 +1,6 @@
 'use strict'
+// Automatically installed in conventional-changelog.yml GitHub Workflow
+// noinspection NpmUsedModulesInstalled
 const config = require('conventional-changelog-conventionalcommits')
 
 module.exports = config({

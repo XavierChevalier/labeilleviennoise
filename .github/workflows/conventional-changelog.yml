@@ -8,8 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: TriPSs/conventional-changelog-action@v3
+
+      - name: 'Install package required in changelog.config.js'
+        shell: bash
+        run: pnpm i -w conventional-changelog-conventionalcommits
+
+      - name: 'Generate changelog'
+        uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ secrets.github_token }}
           release-count: 0
+          preset: conventionalcommits
           config-file-path: changelog.config.js
