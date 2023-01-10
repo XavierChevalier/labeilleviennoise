@@ -9,9 +9,33 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.23.0
+
+      - name: Cache node modules
+        id: cache-pnpm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: |
+            **/node_modules
+            **/.cache
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - if: ${{ steps.cache-pnpm.outputs.cache-hit != 'true' }}
+        name: List the state of node modules
+        continue-on-error: true
+        run: pnpm list --color
+
       - name: 'Install package required in changelog.config.js'
         shell: bash
-        run: pnpm i -w conventional-changelog-conventionalcommits
+        run: pnpm i --color -w conventional-changelog-conventionalcommits
 
       - name: 'Generate changelog'
         uses: TriPSs/conventional-changelog-action@v3
