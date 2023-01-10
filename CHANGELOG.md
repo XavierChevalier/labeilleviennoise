@@ -1,3 +1,12 @@
+# [0.18.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.17.0...v0.18.0) (2023-01-10)
+
+
+### Features
+
+* add color for concurrently scripts ([9447782](https://github.com/XavierChevalier/labeilleviennoise/commit/9447782ac7945233ffedc77e16587881f0da867a))
+
+
+
 # [0.17.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.16.5...v0.17.0) (2023-01-10)
 
 
@@ -47,15 +56,6 @@
 ### Bug Fixes
 
 * **auth:** wrong base url for Google authenticator ([e4fa23b](https://github.com/XavierChevalier/labeilleviennoise/commit/e4fa23bf30bf51d18ac45c8d4ef978bd5dae3bc6))
-
-
-
-## [0.16.2](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.16.1...v0.16.2) (2022-12-23)
-
-
-### Bug Fixes
-
-* **auth:** need to specify authenticator in guard functions ([642d070](https://github.com/XavierChevalier/labeilleviennoise/commit/642d0707124cbf783a9455636b9fd12e7bc8bf1b))
 
 
 
