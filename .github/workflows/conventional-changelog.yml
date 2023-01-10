@@ -12,3 +12,4 @@ jobs:
         with:
           github-token: ${{ secrets.github_token }}
           release-count: 0
+          config-file-path: changelog.config.js
