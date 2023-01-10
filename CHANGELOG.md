@@ -1,3 +1,10 @@
+## [0.18.2](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.18.1...v0.18.2) (2023-01-10)
+
+
+### 📚 Documentation Changes
+
+* add all Netlify deployment badges ([1790656](https://github.com/XavierChevalier/labeilleviennoise/commit/17906564046cf971f0bf192e0eeb9616dd738f39))
+
 ## [0.18.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.18.0...v0.18.1) (2023-01-10)
 
 
@@ -19,6 +26,11 @@
 * add missing pnpm dependency in conventional-changelog workflow ([6c0b8fd](https://github.com/XavierChevalier/labeilleviennoise/commit/6c0b8fd3b837750e91f66d03f29e7719fd127e55))
 * change number of releases to preserve in changelog (regenerate all) ([2223c4f](https://github.com/XavierChevalier/labeilleviennoise/commit/2223c4f650edab800188a7d2b63de0eb6ebe5911))
 * fix "a sequence was not expected" ([6b59cf6](https://github.com/XavierChevalier/labeilleviennoise/commit/6b59cf6e052b838d422267f7a892e8def7245d9d))
+
+
+### 🧹 Chores
+
+* **release:** v0.18.1 [skip ci] ([e747efa](https://github.com/XavierChevalier/labeilleviennoise/commit/e747efa53ec4ad3932b913908646ed4549921882))
 
 ## [0.18.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.17.0...v0.18.0) (2023-01-10)
 
