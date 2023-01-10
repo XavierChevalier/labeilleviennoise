@@ -9,7 +9,7 @@
     "build": "pnpm build:css && remix build",
     "build:css": "pnpm build:css:prepare -m",
     "build:css:prepare": "tailwindcss -i ./app/assets/styles/app.css -o app/assets/styles/app.generated.css",
-    "dev": "concurrently \"pnpm:dev:css\" \"pnpm:dev:remix\"",
+    "dev": "concurrently -c auto \"pnpm:dev:css\" \"pnpm:dev:remix\"",
     "dev:css": "pnpm build:css:prepare -w",
     "dev:remix": "cross-env PORT=3002 remix dev",
     "start": "cross-env NODE_ENV=production netlify dev",
