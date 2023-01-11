@@ -1,6 +1,8 @@
 import * as process from 'process'
 import invariant from 'tiny-invariant'
 
+process.env.NODE_ENV = process.env.NODE_ENV || 'production'
+
 interface ServerEnv {
   CURRENT_BASE_URL: string
 }
