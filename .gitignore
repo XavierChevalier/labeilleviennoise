@@ -37,4 +37,5 @@ lerna-debug.log
 **/prisma/prisma-client/
 
 # Cypress
+**/screeshots/
 **/videos/

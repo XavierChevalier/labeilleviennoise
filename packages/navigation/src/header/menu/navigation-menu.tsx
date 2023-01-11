@@ -29,7 +29,8 @@ export default function NavigationMenu() {
           </li>
           <li>
             <NavigationBarLink
-              to="/boutique"
+              to="/"
+              destination="shop"
               title="Bientôt disponible"
               onClick={toggleShowMenu}
             >
