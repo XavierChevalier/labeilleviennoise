@@ -22,6 +22,7 @@ jobs:
           path: |
             **/node_modules
             **/.cache
+            ~/**/.cache
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
@@ -43,8 +44,8 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           install: false
-          start: lerna run dev --stream --concurrency 3
-          wait-on: 'http://localhost:3000, http://localhost:3001, http://localhost:3002'
+          start: lerna run dev --stream --concurrency 4
+          wait-on: 'http://localhost:3000, http://localhost:3001, http://localhost:3002, http://localhost:3003'
           working-directory: ./tests/e2e
           browser: chrome
           record: true
@@ -53,6 +54,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BASE_URL_AUTH: ${{ secrets.BASE_URL_AUTH }}
           BASE_URL_BLOG: ${{ secrets.BASE_URL_BLOG }}
+          BASE_URL_SHOP: ${{ secrets.BASE_URL_SHOP }}
           BASE_URL_WEBSITE: ${{ secrets.BASE_URL_WEBSITE }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}

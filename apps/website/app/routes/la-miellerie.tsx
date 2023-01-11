@@ -31,7 +31,7 @@ export default function LaMiellerie() {
           Voir tous nos produits sur la boutique
         </p>
 
-        <AppLinkButton variant="primary" to="/boutique">
+        <AppLinkButton variant="primary" to="/" destination="shop">
           Visiter la boutique
           <IconArrowRight />
         </AppLinkButton>

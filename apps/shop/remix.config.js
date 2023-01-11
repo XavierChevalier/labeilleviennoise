@@ -1,6 +1,6 @@
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
-  devServerPort: 8000,
+  devServerPort: 8003,
   serverBuildTarget: 'netlify',
   server:
     process.env.NETLIFY || process.env.NETLIFY_LOCAL

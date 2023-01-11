@@ -9,6 +9,7 @@ describe('Navigation', () => {
 
     goToUsingNavLink('Boutique')
     titleShouldBe("La boutique - L'Abeille Viennoise")
+    cy.url().should('eq', `${Cypress.env('BASE_URL_SHOP')}/`)
 
     goToUsingNavLink('Parrainage')
     titleShouldBe("Parrainage - L'Abeille Viennoise")

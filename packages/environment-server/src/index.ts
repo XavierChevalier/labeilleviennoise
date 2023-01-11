@@ -1,16 +1,29 @@
+import * as process from 'process'
+import invariant from 'tiny-invariant'
+
 interface ServerEnv {
   CURRENT_BASE_URL: string
 }
 
-const getMandatoryClientEnvFromServer = (serverEnv: ServerEnv) =>
-  ({
+const assertExistingEnv = (envName: string): string => {
+  invariant(envName in process.env, `Missing environment variable "${envName}"`)
+
+  return process.env[envName] as string
+}
+
+const getMandatoryClientEnvFromServer = (serverEnv: ServerEnv) => {
+  const IS_PRODUCTION = assertExistingEnv('NODE_ENV') === 'production'
+
+  return {
     ...serverEnv,
-    IS_DEV: process.env.NODE_ENV === 'development',
-    IS_PRODUCTION: process.env.NODE_ENV === 'production',
-    BASE_URL_AUTH: process.env.BASE_URL_AUTH as string,
-    BASE_URL_BLOG: process.env.BASE_URL_BLOG as string,
-    BASE_URL_WEBSITE: process.env.BASE_URL_WEBSITE as string,
-  } as const)
+    IS_PRODUCTION,
+    IS_DEV: !IS_PRODUCTION,
+    BASE_URL_AUTH: assertExistingEnv('BASE_URL_AUTH'),
+    BASE_URL_BLOG: assertExistingEnv('BASE_URL_BLOG'),
+    BASE_URL_WEBSITE: assertExistingEnv('BASE_URL_WEBSITE'),
+    BASE_URL_SHOP: assertExistingEnv('BASE_URL_SHOP'),
+  } as const
+}
 
 export type MandatoryClientEnv = ReturnType<
   typeof getMandatoryClientEnvFromServer
