@@ -1,9 +1,26 @@
+## [0.19.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.18.2...v0.19.0) (2023-01-11)
+
+
+### 🎉 New Features
+
+* **shop:** add boutique.labeilleviennoise.com website ([4c69f11](https://github.com/XavierChevalier/labeilleviennoise/commit/4c69f11c18715495d175b13e51cabea6a2e8d358))
+
+
+### 🛠 Build System
+
+* properly caching the binary Cypress ([c47bc4a](https://github.com/XavierChevalier/labeilleviennoise/commit/c47bc4a921813882e12fd16b1db5fff4697f4363))
+
 ## [0.18.2](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.18.1...v0.18.2) (2023-01-10)
 
 
 ### 📚 Documentation Changes
 
 * add all Netlify deployment badges ([1790656](https://github.com/XavierChevalier/labeilleviennoise/commit/17906564046cf971f0bf192e0eeb9616dd738f39))
+
+
+### 🧹 Chores
+
+* **release:** v0.18.2 [skip ci] ([2059f48](https://github.com/XavierChevalier/labeilleviennoise/commit/2059f48cfca80a92b2e585a4ca203ccc4e57c725))
 
 ## [0.18.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.18.0...v0.18.1) (2023-01-10)
 
