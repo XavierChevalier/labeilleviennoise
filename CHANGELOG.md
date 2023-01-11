@@ -1,3 +1,10 @@
+## [0.19.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.19.0...v0.19.1) (2023-01-11)
+
+
+### 🐛 Bugfixes
+
+* prevent undefined NODE_ENV and fallback 'production' value ([3754dca](https://github.com/XavierChevalier/labeilleviennoise/commit/3754dca7b6bd244234a552e1688e28020fb06e5f))
+
 ## [0.19.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.18.2...v0.19.0) (2023-01-11)
 
 
@@ -9,6 +16,11 @@
 ### 🛠 Build System
 
 * properly caching the binary Cypress ([c47bc4a](https://github.com/XavierChevalier/labeilleviennoise/commit/c47bc4a921813882e12fd16b1db5fff4697f4363))
+
+
+### 🧹 Chores
+
+* **release:** v0.19.0 [skip ci] ([9c188c4](https://github.com/XavierChevalier/labeilleviennoise/commit/9c188c4f76618dd3e617bb7b05c70ac7ccd4b83f))
 
 ## [0.18.2](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.18.1...v0.18.2) (2023-01-10)
 
