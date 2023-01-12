@@ -1,9 +1,21 @@
+## [0.19.3](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.19.2...v0.19.3) (2023-01-12)
+
+
+### 🐛 Bugfixes
+
+* **navigation:** add missing destination on Links ([d72df70](https://github.com/XavierChevalier/labeilleviennoise/commit/d72df706b6c6092708c0466172c6706ed6bac3dc))
+
 ## [0.19.2](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.19.1...v0.19.2) (2023-01-12)
 
 
 ### 🪚 Refactors
 
 * make destination prop of Link required ([ceedbee](https://github.com/XavierChevalier/labeilleviennoise/commit/ceedbeea51d1689067f505d69948befb24bb616f))
+
+
+### 🧹 Chores
+
+* **release:** v0.19.2 [skip ci] ([7f983a0](https://github.com/XavierChevalier/labeilleviennoise/commit/7f983a086776ed56986325759b00ec72dc93712f))
 
 ## [0.19.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.19.0...v0.19.1) (2023-01-11)
 
