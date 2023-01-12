@@ -12,7 +12,7 @@ const NavigationFooter = () => (
     <div className="mx-auto max-w-screen-xl">
       <div className="sm:flex justify-between items-center">
         <div className="mb-6 sm:mb-0">
-          <Link prefetch="none" to="/">
+          <Link prefetch="none" to="/" destination="website">
             <LogoWithTextVertical className="hidden sm:flex" />
             <LogoWithTextHorizontal className="sm:hidden justify-center" />
           </Link>
@@ -25,13 +25,19 @@ const NavigationFooter = () => (
             </div>
             <ul className="text-gray-600">
               <li className="mb-4">
-                <FooterLink to="/">Accueil</FooterLink>
+                <FooterLink to="/" destination="website">
+                  Accueil
+                </FooterLink>
               </li>
               <li className="mb-4">
-                <FooterLink to="/faq">Foire aux questions</FooterLink>
+                <FooterLink to="/faq" destination="website">
+                  Foire aux questions
+                </FooterLink>
               </li>
               <li>
-                <FooterLink to="/contact">Contactez-nous</FooterLink>
+                <FooterLink to="/contact" destination="website">
+                  Contactez-nous
+                </FooterLink>
               </li>
             </ul>
           </section>
@@ -41,14 +47,19 @@ const NavigationFooter = () => (
             </div>
             <ul className="text-gray-600">
               <li className="mb-4">
-                <FooterLink to="/equipe">Notre équipe</FooterLink>
+                <FooterLink to="/equipe" destination="website">
+                  Notre équipe
+                </FooterLink>
               </li>
               <li className="mb-4">
-                <FooterLink to="/mentions-legales">Mentions légales</FooterLink>
+                <FooterLink to="/mentions-legales" destination="website">
+                  Mentions légales
+                </FooterLink>
               </li>
               <li>
                 <FooterLink
                   to="/conditions-generales-vente"
+                  destination="website"
                   title="Conditions Générales de Vente"
                 >
                   C. G. V.
@@ -64,8 +75,10 @@ const NavigationFooter = () => (
       <div className="flex flex-col gap-4 sm:flex-row items-center justify-between">
         <span className="text-sm text-gray-500">
           © {new Date().getFullYear()}{' '}
-          <FooterLink to="/">L'Abeille Viennoise</FooterLink>. Tous droits
-          réservés.
+          <FooterLink to="/" destination="website">
+            L'Abeille Viennoise
+          </FooterLink>
+          . Tous droits réservés.
         </span>
         <div className="flex space-x-6 justify-center">
           <NavigationFooterSocialNetworkLink href="https://www.facebook.com/profile.php?id=100083012750809">

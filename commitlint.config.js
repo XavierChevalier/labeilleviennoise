@@ -29,6 +29,7 @@ module.exports = {
         'home',
         'honey-house',
         'faq',
+        'navigation',
         'shop',
         'sponsorship',
         'team',
