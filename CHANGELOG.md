@@ -1,9 +1,21 @@
+## [0.19.2](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.19.1...v0.19.2) (2023-01-12)
+
+
+### 🪚 Refactors
+
+* make destination prop of Link required ([ceedbee](https://github.com/XavierChevalier/labeilleviennoise/commit/ceedbeea51d1689067f505d69948befb24bb616f))
+
 ## [0.19.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.19.0...v0.19.1) (2023-01-11)
 
 
 ### 🐛 Bugfixes
 
 * prevent undefined NODE_ENV and fallback 'production' value ([3754dca](https://github.com/XavierChevalier/labeilleviennoise/commit/3754dca7b6bd244234a552e1688e28020fb06e5f))
+
+
+### 🧹 Chores
+
+* **release:** v0.19.1 [skip ci] ([b3d2293](https://github.com/XavierChevalier/labeilleviennoise/commit/b3d2293b2ce200300966beb0a9cbb51d078cfa67))
 
 ## [0.19.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.18.2...v0.19.0) (2023-01-11)
 
