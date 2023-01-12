@@ -14,7 +14,7 @@ module.exports = config({
     { type: 'docs', section: '📚 Documentation Changes' },
     { type: 'test', section: '🧪 Tests' },
     { type: 'style', section: '💎 Code Style Changes' },
-    { type: 'deps', section: '🧹 Chores' },
+    { type: 'deps', section: '📦 Dependencies' },
     { type: 'chore', section: '🧹 Chores' },
     { type: 'revert', section: '🗑 Reverts' },
     { type: '*!', section: '⚠️ BREAKING CHANGES' },
