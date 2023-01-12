@@ -23,8 +23,11 @@ export default function HomeWhyWeDoThis() {
           menacées, on constate 30 % de perte de colonies par an.
         </p>
         <p className="max-w-2xl mb-4 font-light text-gray-500 md:mb-6 md:text-md md:text-xl">
-          Grâce au <AppLink to="/parrainage">parrainage des abeilles</AppLink>,
-          nous agissons concrètement{' '}
+          Grâce au{' '}
+          <AppLink to="/parrainage" destination="website">
+            parrainage des abeilles
+          </AppLink>
+          , nous agissons concrètement{' '}
           <strong className="font-bold">
             en faveur de leur avenir et favorisons ainsi leur développement dans
             le respect de la biodiversité
@@ -35,7 +38,11 @@ export default function HomeWhyWeDoThis() {
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row">
-          <AppLinkButton to="/parrainage" variant="primary">
+          <AppLinkButton
+            variant="primary"
+            to="/parrainage"
+            destination="website"
+          >
             En savoir plus
             <IconArrowRight />
           </AppLinkButton>

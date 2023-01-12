@@ -18,7 +18,11 @@ export default function PricingFormulas() {
           C'est grâce à votre parrainage que nous ferons un pas de géant pour le
           respect de la biodiversité.
           <br />
-          <AppLink to="/parrainage-entreprise" className="text-sm">
+          <AppLink
+            to="/parrainage-entreprise"
+            destination="website"
+            className="text-sm"
+          >
             Vous avez un projet de parrainage pour votre entreprise ?
           </AppLink>
         </p>

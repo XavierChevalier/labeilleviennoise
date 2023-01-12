@@ -39,8 +39,10 @@ export default function Faq() {
           </QuestionAnswer>
           <QuestionAnswer question="Comment fonctionne le parrainage ?">
             <p>
-              <AppLink to="/parrainage">Grâce à nos 3 formules</AppLink>, vous
-              pouvez choisir en fonction de votre budget.
+              <AppLink to="/parrainage" destination="website">
+                Grâce à nos 3 formules
+              </AppLink>
+              , vous pouvez choisir en fonction de votre budget.
             </p>
             <ul className="list-disc list-inside">
               <li className="mt-4">
@@ -106,7 +108,10 @@ export default function Faq() {
             <p>
               Nous procédons aujourd'hui à une extraction manuelle du miel. Vous
               pouvez voir les étapes d’extraction du miel sur la page{' '}
-              <AppLink to="/la-miellerie">La Miellerie</AppLink>.
+              <AppLink to="/la-miellerie" destination="website">
+                La Miellerie
+              </AppLink>
+              .
             </p>
           </QuestionAnswer>
           <QuestionAnswer question="Comment sont réalisées les bougies ?">
@@ -157,7 +162,9 @@ export default function Faq() {
 
       <p className="text-center">
         Vous avez toujours une question ?{' '}
-        <AppLink to="/contact">Par ici !</AppLink>
+        <AppLink to="/contact" destination="website">
+          Par ici !
+        </AppLink>
         <br />
         Nous vous répondrons dans les plus brefs délais.
       </p>

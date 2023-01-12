@@ -15,6 +15,7 @@ export default function SponsorshipCallToActionCompany() {
         <AppLinkButton
           variant="primary"
           to="/parrainage-entreprise"
+          destination="website"
           className="mx-auto"
         >
           Prendre contact

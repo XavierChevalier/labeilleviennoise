@@ -18,7 +18,7 @@ export default function Boutique() {
           La boutique n'est pas encore prête, mais elle le sera bientôt !
         </p>
         <p className="mb-8 text-lg font-light text-gray-500">C'est promis :)</p>
-        <AppLinkButton variant="primary" to="/">
+        <AppLinkButton variant="primary" to="/" destination="website">
           Retour à l'accueil
         </AppLinkButton>
       </div>

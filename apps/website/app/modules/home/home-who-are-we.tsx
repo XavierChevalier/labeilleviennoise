@@ -12,8 +12,10 @@ export default function HeroWhoAreWe() {
         <p className="mb-6 font-light text-gray-500 md:text-lg">
           L’abeille Viennoise, c’est une entreprise apicole située à Vienne dans
           l’Isère, née de la passion d'
-          <AppLink to="/equipe">Anne-Marie et Ludovic</AppLink> pour la nature
-          et la sauvegarde des abeilles.
+          <AppLink to="/equipe" destination="website">
+            Anne-Marie et Ludovic
+          </AppLink>{' '}
+          pour la nature et la sauvegarde des abeilles.
         </p>
 
         <p className="font-light text-gray-500 md:text-lg">

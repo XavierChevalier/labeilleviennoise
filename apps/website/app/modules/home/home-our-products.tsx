@@ -12,13 +12,15 @@ export default function HomeOurProducts() {
         <ul className="list-disc list-inside font-light text-gray-500 md:text-lg">
           <li>Miel liquide ou crémeux 100 % artisanal</li>
           <li>
-            <AppLink to="/la-miellerie">
+            <AppLink to="/la-miellerie" destination="website">
               Fabriqué à Vienne (Isère) par nos petites abeilles
             </AppLink>
           </li>
           <li>Production dans le respect de nos abeilles</li>
           <li>
-            <AppLink to="/la-miellerie">Mise en pot maison</AppLink>
+            <AppLink to="/la-miellerie" destination="website">
+              Mise en pot maison
+            </AppLink>
           </li>
           <li>Projet et goodies réalisés en famille</li>
         </ul>

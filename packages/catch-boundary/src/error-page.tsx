@@ -15,7 +15,9 @@ const ErrorPage: FC<ErrorPageProps> = ({ title, children }) => (
         <div className="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl">
           {children}
         </div>
-        <AppLink to="/">Retour à l'accueil</AppLink>
+        <AppLink to="/" destination="website">
+          Retour à l'accueil
+        </AppLink>
       </div>
     </div>
   </section>

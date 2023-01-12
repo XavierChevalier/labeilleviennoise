@@ -41,7 +41,7 @@ export default function DeleteBlogPost() {
       <h1 className="text-2xl font-bold mb-4">Supprimer l'article</h1>
       <p className="mb-4">
         Êtes-vous sûr de vouloir supprimer l'article «{' '}
-        <AppLink to={`/blog/${post.slug}`} className="font-bold">
+        <AppLink to={`/${post.slug}`} destination="blog" className="font-bold">
           {post.title}
         </AppLink>{' '}
         » ?

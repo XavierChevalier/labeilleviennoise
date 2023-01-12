@@ -20,7 +20,11 @@ export default function HomeHero() {
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row">
-          <AppLinkButton to="/parrainage" variant="primary">
+          <AppLinkButton
+            variant="primary"
+            to="/parrainage"
+            destination="website"
+          >
             Comment ça marche ?
             <IconArrowRight />
           </AppLinkButton>

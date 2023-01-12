@@ -14,12 +14,14 @@ export default function SponsorshipHero() {
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row">
-          <AppLinkButton variant="primary" to="#pricing">
+          <AppLinkButton variant="primary" to="#pricing" destination="website">
             Choisir une formule
             <IconArrowRight />
           </AppLinkButton>
 
-          <AppLinkButton to="/contact">Contactez-nous</AppLinkButton>
+          <AppLinkButton to="/contact" destination="website">
+            Contactez-nous
+          </AppLinkButton>
         </div>
       </div>
 

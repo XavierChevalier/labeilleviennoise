@@ -7,14 +7,16 @@ import {
   isSameDestinationAsCurrentWebsite,
 } from './multi-tenant'
 
-export interface LinkProps extends RemixLinkProps {
-  destination?: Tenant
+export interface OnlyAdditionalLinkProps {
+  destination: Tenant
 }
+
+export interface LinkProps extends OnlyAdditionalLinkProps, RemixLinkProps {}
 
 export const Link: FC<LinkProps> = ({
   children,
   to,
-  destination = 'website',
+  destination,
   ...attributes
 }) => {
   if (isSameDestinationAsCurrentWebsite(destination)) {

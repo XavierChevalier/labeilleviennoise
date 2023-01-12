@@ -23,7 +23,11 @@ export default function NavigationMenu() {
       >
         <ul className="flex flex-col items-center mt-4 font-medium md:flex-row md:space-x-6 lg:space-x-8 md:mt-0">
           <li>
-            <NavigationBarLink to="/" onClick={toggleShowMenu}>
+            <NavigationBarLink
+              to="/"
+              destination="website"
+              onClick={toggleShowMenu}
+            >
               Accueil
             </NavigationBarLink>
           </li>
@@ -38,19 +42,31 @@ export default function NavigationMenu() {
             </NavigationBarLink>
           </li>
           <li>
-            <NavigationBarLink to="/parrainage" onClick={toggleShowMenu}>
+            <NavigationBarLink
+              to="/parrainage"
+              destination="website"
+              onClick={toggleShowMenu}
+            >
               Parrainage
             </NavigationBarLink>
           </li>
           <li>
             <Dropdown label="Le projet" inline={true}>
               <Dropdown.Item>
-                <NavigationBarLink to="/le-rucher" onClick={toggleShowMenu}>
+                <NavigationBarLink
+                  to="/le-rucher"
+                  destination="website"
+                  onClick={toggleShowMenu}
+                >
                   Le rucher
                 </NavigationBarLink>
               </Dropdown.Item>
               <Dropdown.Item>
-                <NavigationBarLink to="/la-miellerie" onClick={toggleShowMenu}>
+                <NavigationBarLink
+                  to="/la-miellerie"
+                  destination="website"
+                  onClick={toggleShowMenu}
+                >
                   La miellerie
                 </NavigationBarLink>
               </Dropdown.Item>
@@ -66,7 +82,11 @@ export default function NavigationMenu() {
             </NavigationBarLink>
           </li>
           <li>
-            <NavigationBarLink to="/contact" onClick={toggleShowMenu}>
+            <NavigationBarLink
+              to="/contact"
+              destination="website"
+              onClick={toggleShowMenu}
+            >
               Contact
             </NavigationBarLink>
           </li>
@@ -74,6 +94,7 @@ export default function NavigationMenu() {
             <AppLinkButton
               variant="fancy"
               to="/parrainage"
+              destination="website"
               className="!py-2"
               onClick={toggleShowMenu}
             >

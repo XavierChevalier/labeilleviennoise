@@ -1,4 +1,5 @@
 {
+  "exclude": ["**/node_modules", "**/dist"],
   "compilerOptions": {
     "strict": true,
     "strictNullChecks": true,
@@ -12,6 +13,6 @@
     "allowJs": false,
     "jsx": "react-jsx",
     "moduleResolution": "Node",
-    "target": "ESNext",
+    "target": "ESNext"
   }
 }

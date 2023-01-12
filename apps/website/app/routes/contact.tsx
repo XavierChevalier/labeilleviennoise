@@ -21,8 +21,10 @@ export default function Contact() {
     <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
       <ContactHeader formSuccess={searchParams.has('success')}>
         Des questions sans réponses dans notre{' '}
-        <AppLink to="/faq">foire aux questions</AppLink> ? Une proposition ?
-        N'hésitez pas à nous contacter.
+        <AppLink to="/faq" destination="website">
+          foire aux questions
+        </AppLink>{' '}
+        ? Une proposition ? N'hésitez pas à nous contacter.
       </ContactHeader>
       <ContactForm />
     </div>

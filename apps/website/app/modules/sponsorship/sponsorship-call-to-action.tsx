@@ -12,7 +12,11 @@ export default function SponsorshipCallToAction() {
         </h3>
 
         <div className="flex flex-col gap-4 sm:flex-row">
-          <AppLinkButton variant="primary" to="/parrainage">
+          <AppLinkButton
+            variant="primary"
+            to="/parrainage"
+            destination="website"
+          >
             Comment ça marche ?
             <IconArrowRight />
           </AppLinkButton>

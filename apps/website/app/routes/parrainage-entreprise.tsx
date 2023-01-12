@@ -89,6 +89,7 @@ export default function ParrainageEntreprise() {
             <AppLinkButton
               variant="primary"
               to="/parrainage-entreprise#contact"
+              destination="website"
             >
               Prendre contact
               <IconArrowRight />

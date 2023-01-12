@@ -18,7 +18,12 @@ export default function ButtonChosePlan({ title, isToggled }: Props) {
   )
 
   return (
-    <AppLinkButton to={to} variant="fancy" className="mt-4">
+    <AppLinkButton
+      to={to}
+      destination="website"
+      variant="fancy"
+      className="mt-4"
+    >
       Prendre contact
     </AppLinkButton>
   )

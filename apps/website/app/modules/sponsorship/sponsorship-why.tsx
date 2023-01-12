@@ -32,7 +32,7 @@ export default function SponsorshipWhy() {
           aliments que nous consommons.
         </p>
 
-        <AppLinkButton variant="primary" to="#pricing">
+        <AppLinkButton variant="primary" to="#pricing" destination="website">
           Je me lance !
         </AppLinkButton>
       </div>
