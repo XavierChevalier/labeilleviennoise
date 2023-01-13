@@ -1,6 +1,8 @@
 [build]
   publish = "public"
   command = "pnpm run -w build --scope=blog.labeilleviennoise.com --include-dependencies"
+  # https://answers.netlify.com/t/support-guide-how-to-use-the-ignore-command/37517
+  ignore = "git diff --quiet $COMMIT_REF $CACHED_COMMIT_REF -- . ../../packages/"
 
 [functions]
   node_bundler = "esbuild"
