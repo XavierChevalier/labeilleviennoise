@@ -1,9 +1,21 @@
+## [0.19.4](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.19.3...v0.19.4) (2023-01-13)
+
+
+### 🛠 Build System
+
+* check changes in packages too instead of just current root directory ([55cdbd0](https://github.com/XavierChevalier/labeilleviennoise/commit/55cdbd0480db9ee90e82a679d264b107a5523823))
+
 ## [0.19.3](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.19.2...v0.19.3) (2023-01-12)
 
 
 ### 🐛 Bugfixes
 
 * **navigation:** add missing destination on Links ([d72df70](https://github.com/XavierChevalier/labeilleviennoise/commit/d72df706b6c6092708c0466172c6706ed6bac3dc))
+
+
+### 🧹 Chores
+
+* **release:** v0.19.3 [skip ci] ([449f686](https://github.com/XavierChevalier/labeilleviennoise/commit/449f686b39dc53d2565db5b6056a3912f1f60f3c))
 
 ## [0.19.2](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.19.1...v0.19.2) (2023-01-12)
 
