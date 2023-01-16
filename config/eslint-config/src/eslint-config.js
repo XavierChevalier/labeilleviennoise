@@ -65,5 +65,11 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': ['off'],
       },
     },
+    {
+      files: ['**/apps/shop/assets/*.js'],
+      rules: {
+        'no-undef': ['off'],
+      },
+    },
   ],
 }

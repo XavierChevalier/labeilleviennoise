@@ -6,6 +6,7 @@
   "sideEffects": false,
   "scripts": {
     "dev": "shopify theme dev",
+    "lint": "shopify theme check",
     "push": "shopify theme push",
     "publish": "shopify theme publish"
   }

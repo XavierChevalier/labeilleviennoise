@@ -13,12 +13,11 @@
     "test:e2e:open": "concurrently -c auto -n dev,cypress \"pnpm dev\" \"lerna run cypress:open\" --kill-others-on-fail",
     "test:e2e:run": "concurrently -c auto -n dev,cypress \"pnpm dev\" \"lerna run cypress:run\" --kill-others-on-fail",
     "clean": "lerna clean",
-    "lint": "eslint \"**/*.{ts,tsx,js,jsx,mjs,cjs}\"",
-    "lint:fix": "pnpm lint --fix",
+    "lint": "concurrently -c auto -n eslint,lerna 'eslint \"**/*.{ts,tsx,js,jsx,mjs,cjs}\"' 'lerna run lint'",
+    "lint:fix": "concurrently -c auto -n eslint,lerna 'eslint \"**/*.{ts,tsx,js,jsx,mjs,cjs}\" --fix' 'lerna run lint:fix'",
     "lint-staged": "lint-staged"
   },
   "dependencies": {
-    "conventional-changelog-conventionalcommits": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -33,6 +32,7 @@
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
     "concurrently": "^7.6.0",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
     "eslint": "^8.31.0",
     "husky": "^8.0.3",
     "lerna": "^6.4.0",
