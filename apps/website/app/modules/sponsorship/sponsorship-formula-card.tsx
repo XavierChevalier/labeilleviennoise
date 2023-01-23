@@ -7,7 +7,7 @@ const SponsorshipFormulaCard: FC<HTMLProps<HTMLElement>> = ({ className }) => (
   <PricingFormulaCard
     title="Formule entreprise"
     price={1499}
-    isVatIncluded={false}
+    isVatIncluded={true}
     isPerYear={true}
     className={className}
   >
