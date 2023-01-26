@@ -1,9 +1,21 @@
+## [0.20.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.19.5...v0.20.0) (2023-01-26)
+
+
+### 🎉 New Features
+
+* **website:** changes few images ([e6b2535](https://github.com/XavierChevalier/labeilleviennoise/commit/e6b25359376c6948050ca9b3477b5c9e513e8b7b))
+
 ## [0.19.5](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.19.4...v0.19.5) (2023-01-23)
 
 
 ### 🐛 Bugfixes
 
 * vat pricing for pro sponsorship ([fa168db](https://github.com/XavierChevalier/labeilleviennoise/commit/fa168db3fbe11cb9ab74f6e98159c97e6b92fd93))
+
+
+### 🧹 Chores
+
+* **release:** v0.19.5 [skip ci] ([7c3bdfc](https://github.com/XavierChevalier/labeilleviennoise/commit/7c3bdfc85510629a93a4dcf693e4ad7b3e39355d))
 
 ## [0.19.4](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.19.3...v0.19.4) (2023-01-13)
 
