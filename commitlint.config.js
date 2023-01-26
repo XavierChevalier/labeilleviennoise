@@ -33,6 +33,7 @@ module.exports = {
         'shop',
         'sponsorship',
         'team',
+        'website',
       ],
     ],
     'footer-max-line-length': [0, 'always'], // Make sure there is never a max-line-length by disabling the rule

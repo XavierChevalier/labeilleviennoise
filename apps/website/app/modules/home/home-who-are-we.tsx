@@ -27,8 +27,8 @@ export default function HeroWhoAreWe() {
       </div>
 
       <IKImage
-        path="images/ludovic-et-anne-marie.jpg"
-        alt="Préparation du miel par Ludovic et Anne-Marie"
+        path="images/real-bee-cell.jpeg"
+        alt="Abeilles et cellules de miel"
         className="rounded-lg md:order-1"
         lqip={{ active: true, quality: 10 }}
         transformation={[

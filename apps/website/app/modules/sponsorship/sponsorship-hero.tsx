@@ -27,7 +27,7 @@ export default function SponsorshipHero() {
 
       <div className="hidden md:mt-0 md:col-span-5 md:flex">
         <IKImage
-          path="images/ludovic-apiculteur.jpeg"
+          path="images/ludovic-apiculteur.jpg"
           alt="Ludovic apiculteur"
           className="rounded-md"
           lqip={{ active: true, quality: 10 }}
