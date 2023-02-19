@@ -1,9 +1,27 @@
+## [0.20.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.20.0...v0.20.1) (2023-02-19)
+
+
+### 🪚 Refactors
+
+* **website:** la miellerie page ([e5a5a32](https://github.com/XavierChevalier/labeilleviennoise/commit/e5a5a32b5b99677afa3bbf13c672e79b9eb27b3e))
+
+
+### 🐛 Bugfixes
+
+* **auth:** add missing base url on redirect if not authenticated ([da5a451](https://github.com/XavierChevalier/labeilleviennoise/commit/da5a451fcfeef9d4e68bc8d973e388d6afbbc4aa))
+* **blog:** add permanent redirect to blog to prevent 404 page indexing ([8f87936](https://github.com/XavierChevalier/labeilleviennoise/commit/8f879362bf6309b5a71bf579ea4cc82898c84da2))
+
 ## [0.20.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.19.5...v0.20.0) (2023-01-26)
 
 
 ### 🎉 New Features
 
 * **website:** changes few images ([e6b2535](https://github.com/XavierChevalier/labeilleviennoise/commit/e6b25359376c6948050ca9b3477b5c9e513e8b7b))
+
+
+### 🧹 Chores
+
+* **release:** v0.20.0 [skip ci] ([25afed5](https://github.com/XavierChevalier/labeilleviennoise/commit/25afed5dc875241f63974c0637b1b8aaad322087))
 
 ## [0.19.5](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.19.4...v0.19.5) (2023-01-23)
 
