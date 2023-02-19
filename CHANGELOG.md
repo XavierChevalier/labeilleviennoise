@@ -1,3 +1,10 @@
+## [0.20.2](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.20.1...v0.20.2) (2023-02-19)
+
+
+### 🐛 Bugfixes
+
+* **blog:** update url of redirect to blog ([c5aa620](https://github.com/XavierChevalier/labeilleviennoise/commit/c5aa620c054ffc1b20f2efd1c2c7d001033ef65b))
+
 ## [0.20.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.20.0...v0.20.1) (2023-02-19)
 
 
@@ -10,6 +17,11 @@
 
 * **auth:** add missing base url on redirect if not authenticated ([da5a451](https://github.com/XavierChevalier/labeilleviennoise/commit/da5a451fcfeef9d4e68bc8d973e388d6afbbc4aa))
 * **blog:** add permanent redirect to blog to prevent 404 page indexing ([8f87936](https://github.com/XavierChevalier/labeilleviennoise/commit/8f879362bf6309b5a71bf579ea4cc82898c84da2))
+
+
+### 🧹 Chores
+
+* **release:** v0.20.1 [skip ci] ([ae167fc](https://github.com/XavierChevalier/labeilleviennoise/commit/ae167fc1a453984b8b8a8f14e18fb8e9120e7c15))
 
 ## [0.20.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.19.5...v0.20.0) (2023-01-26)
 
