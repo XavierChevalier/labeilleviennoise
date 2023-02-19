@@ -5,7 +5,7 @@ export const redirectIfNotAuthenticated =
   (authenticator: Authenticator) =>
   async (request: Request): Promise<void> => {
     await authenticator.isAuthenticated(request, {
-      failureRedirect: '/auth/login',
+      failureRedirect: `${process.env.BASE_URL_AUTH}/auth/login`,
     })
   }
 
