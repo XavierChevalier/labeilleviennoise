@@ -8,7 +8,7 @@ module.exports = defineConfig({
     BASE_URL_WEBSITE,
     BASE_URL_AUTH: 'http://localhost:3001',
     BASE_URL_BLOG: 'http://localhost:3002',
-    BASE_URL_SHOP: 'http://localhost:3003',
+    BASE_URL_SHOP: 'https://boutique.labeilleviennoise.com',
   },
   e2e: {
     baseUrl: BASE_URL_WEBSITE,
