@@ -21,7 +21,7 @@ export default function NavigationMenu() {
           !showMenu && 'hidden'
         )}
       >
-        <ul className="flex flex-col items-center mt-4 font-medium md:flex-row md:space-x-6 lg:space-x-8 md:mt-0">
+        <ul className="flex flex-col items-stretch md:items-center mt-4 font-medium md:flex-row md:space-x-6 lg:space-x-8 md:mt-0">
           <li>
             <NavigationBarLink
               to="/"
@@ -50,8 +50,8 @@ export default function NavigationMenu() {
               Parrainage
             </NavigationBarLink>
           </li>
-          <li>
-            <Dropdown label="Le projet" inline={true}>
+          <li className="flex items-center justify-center h-14 border-b md:border-none border-amber-100 text-gray-700">
+            <Dropdown label="Le projet" inline>
               <Dropdown.Item>
                 <NavigationBarLink
                   to="/le-rucher"

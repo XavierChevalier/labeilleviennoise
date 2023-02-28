@@ -39,7 +39,7 @@ const NavigationBarLinkBase: FC<NavigationBarLinkBaseProps> = ({
   ...attributes
 }) => {
   const defaultClasses =
-    'cursor-pointer text-center md:text-left block py-2 pr-4 pl-3 border-b border-amber-100 hover:bg-amber-50 md:hover:bg-transparent md:border-0 md:hover:text-amber-600 md:p-0'
+    'cursor-pointer text-center md:text-left block p-4 border-b border-amber-100 hover:bg-amber-50 md:hover:bg-transparent md:border-0 md:hover:text-amber-600 md:p-0'
   const activeClasses = 'text-amber-600'
   const passiveClasses = 'text-gray-700'
 
