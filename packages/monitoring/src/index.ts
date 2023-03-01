@@ -6,11 +6,15 @@ import { useEffect } from 'react'
 
 export const withMonitoring = withSentry
 
-export const registerMonitoring = (): void =>
+export const registerMonitoring = (): void => {
+  if (safeIsDev()) {
+    return
+  }
+
   Sentry.init({
     dsn: 'https://75850afd13554264983775f3d254f933:efe0696569484c5aa4c6f7c035560fcb@o4504442582925312.ingest.sentry.io/4504442586005504',
     tracesSampleRate: 1,
-    environment: safeIsDev() ? 'development' : 'production',
+    environment: 'production',
     integrations: [
       new Sentry.BrowserTracing({
         routingInstrumentation: Sentry.remixRouterInstrumentation(
@@ -21,6 +25,7 @@ export const registerMonitoring = (): void =>
       }),
     ],
   })
+}
 
 const safeIsDev = (): boolean => {
   try {
