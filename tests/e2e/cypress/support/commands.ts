@@ -29,6 +29,15 @@ Cypress.Commands.add('checkIfLinkIsDead', ({ link, linksCache }) => {
     return
   }
 
+  const ignoreLinks = [
+    // Instagram link are not working in Cypress sometimes, but they work in the browser
+    'https://www.instagram.com/',
+  ]
+  if (ignoreLinks.some((ignoreLink) => link.startsWith(ignoreLink))) {
+    cy.log(`Ignoring link: ${link}`)
+    return
+  }
+
   cy.request({
     url: link,
     retryOnNetworkFailure: true,
