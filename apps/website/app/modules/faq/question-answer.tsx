@@ -1,7 +1,7 @@
-import type { HTMLProps } from 'react'
+import type { HTMLProps, ReactElement } from 'react'
 
 export interface Props extends HTMLProps<HTMLElement> {
-  question: string
+  question: ReactElement | string
 }
 
 export default function QuestionAnswer({ children, question }: Props) {

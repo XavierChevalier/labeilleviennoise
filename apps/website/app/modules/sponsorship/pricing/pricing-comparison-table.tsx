@@ -42,7 +42,7 @@ export default function PricingComparisonTable({
               isPerYear={isToggled}
             />
             <br />
-            <ButtonChosePlan title={nectar.title} isToggled={isToggled} />
+            <ButtonChosePlan formula="nectar" />
           </PricingComparisonTableRowCell>
           <PricingComparisonTableRowCell>
             <PeriodLabel
@@ -51,7 +51,7 @@ export default function PricingComparisonTable({
               isPerYear={isToggled}
             />
             <br />
-            <ButtonChosePlan title={propolis.title} isToggled={isToggled} />
+            <ButtonChosePlan formula="propolis" />
           </PricingComparisonTableRowCell>
           <PricingComparisonTableRowCell>
             <PeriodLabel
@@ -60,7 +60,7 @@ export default function PricingComparisonTable({
               isPerYear={isToggled}
             />
             <br />
-            <ButtonChosePlan title={geleeRoyale.title} isToggled={isToggled} />
+            <ButtonChosePlan formula="geleeRoyale" />
           </PricingComparisonTableRowCell>
         </PricingComparisonTableRow>
 

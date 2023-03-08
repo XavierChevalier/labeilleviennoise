@@ -20,17 +20,17 @@ export default function PricingComparison() {
     nectar: {
       title: 'Nectar',
       pricePerMonth: 9.99,
-      pricePerYear: 119.99,
+      pricePerYear: 8.99,
     },
     propolis: {
       title: 'Propolis',
       pricePerMonth: 29.99,
-      pricePerYear: 359.99,
+      pricePerYear: 26.99,
     },
     geleeRoyale: {
       title: 'Gelée Royale',
       pricePerMonth: 59.99,
-      pricePerYear: 719.99,
+      pricePerYear: 53.99,
     },
   }
 

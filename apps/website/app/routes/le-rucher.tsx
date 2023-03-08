@@ -73,9 +73,9 @@ export default function LeRucher() {
           <ApiaryStory description="Visite au rucher">
             <IKVideo
               path="images/rucher/ludovic-ruche6.mov"
-              autoPlay={true}
-              muted={true}
-              loop={true}
+              autoPlay
+              muted
+              loop
               transformation={[{ width: '400', height: '560' }]}
             />
           </ApiaryStory>
@@ -125,9 +125,9 @@ export default function LeRucher() {
           <ApiaryStory description="La ruche Marie en activité">
             <IKVideo
               path="images/rucher/abeilles-entrant-ruche.mp4"
-              autoPlay={true}
-              muted={true}
-              loop={true}
+              autoPlay
+              muted
+              loop
               transformation={[{ width: '400', height: '560' }]}
             />
           </ApiaryStory>
@@ -149,9 +149,9 @@ export default function LeRucher() {
           <ApiaryStory description="Ajout de la cire">
             <IKVideo
               path="images/rucher/cirage-barrette1.mov"
-              autoPlay={true}
-              muted={true}
-              loop={true}
+              autoPlay
+              muted
+              loop
               transformation={[{ width: '400', height: '560' }]}
             />
           </ApiaryStory>
@@ -159,9 +159,9 @@ export default function LeRucher() {
           <ApiaryStory description="Répartition de la cire">
             <IKVideo
               path="images/rucher/cirage-barrette2.mov"
-              autoPlay={true}
-              muted={true}
-              loop={true}
+              autoPlay
+              muted
+              loop
               transformation={[{ width: '400', height: '560' }]}
             />
           </ApiaryStory>
@@ -201,9 +201,9 @@ export default function LeRucher() {
           <ApiaryStory description="Banane de miel 🍌">
             <IKVideo
               path="images/rucher/ludovic-ruche4.MOV"
-              autoPlay={true}
-              muted={true}
-              loop={true}
+              autoPlay
+              muted
+              loop
               transformation={[{ width: '400', height: '560' }]}
             />
           </ApiaryStory>
@@ -235,9 +235,9 @@ export default function LeRucher() {
           <ApiaryStory description="Abreuvoir naturel">
             <IKVideo
               path="images/rucher/abreuvoir1.mp4"
-              autoPlay={true}
-              muted={true}
-              loop={true}
+              autoPlay
+              muted
+              loop
               transformation={[{ width: '400', height: '560' }]}
             />
           </ApiaryStory>
@@ -245,9 +245,9 @@ export default function LeRucher() {
           <ApiaryStory description="Contrôle du débit d'eau">
             <IKVideo
               path="images/rucher/abreuvoir4.mp4"
-              autoPlay={true}
-              muted={true}
-              loop={true}
+              autoPlay
+              muted
+              loop
               transformation={[{ width: '400', height: '560' }]}
             />
           </ApiaryStory>
@@ -265,9 +265,9 @@ export default function LeRucher() {
           <ApiaryStory description="Bac d'eau">
             <IKVideo
               path="images/rucher/abreuvoir2.mp4"
-              autoPlay={true}
-              muted={true}
-              loop={true}
+              autoPlay
+              muted
+              loop
               transformation={[{ width: '400', height: '560' }]}
             />
           </ApiaryStory>
@@ -316,9 +316,9 @@ export default function LeRucher() {
           <ApiaryStory description="Sergine">
             <IKVideo
               path="images/rucher/formation4.MOV"
-              autoPlay={true}
-              muted={true}
-              loop={true}
+              autoPlay
+              muted
+              loop
               transformation={[{ width: '400', height: '560' }]}
             />
           </ApiaryStory>

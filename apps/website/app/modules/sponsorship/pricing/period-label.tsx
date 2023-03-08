@@ -13,13 +13,20 @@ export default function PeriodLabel({
 }: Props) {
   return (
     <>
-      <span className="mr-2 text-5xl font-bold">
-        {isPerYear ? pricePerYear : pricePerMonth}€
+      <span className="mr-2 text-5xl">
+        <span className="font-bold">
+          {isPerYear ? pricePerYear : pricePerMonth}€
+        </span>
+        {isPerYear && (
+          <u className="pl-3 line-through text-sm text-gray-500">
+            {pricePerMonth}€
+          </u>
+        )}
       </span>
       <span className="text-gray-500">
-        /<span>{isPerYear ? 'an' : 'mois'}</span>
+        /mois
         <br />
-        {!isPerYear && <span>pendant 1 an</span>}
+        {isPerYear && <span>pendant 1 an</span>}
       </span>
     </>
   )

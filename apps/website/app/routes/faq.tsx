@@ -39,29 +39,14 @@ export default function Faq() {
           </QuestionAnswer>
           <QuestionAnswer question="Comment fonctionne le parrainage ?">
             <p>
-              <AppLink to="/parrainage" destination="website">
+              <AppLink to="/products/parrainage" destination="shop">
                 Grâce à nos 3 formules
               </AppLink>
-              , vous pouvez choisir en fonction de votre budget.
+              , vous pouvez choisir en fonction de votre budget.{' '}
+              <AppLink destination="website" to="/parrainage">
+                Toutes les informations sont disponible ici.
+              </AppLink>
             </p>
-            <ul className="list-disc list-inside">
-              <li className="mt-4">
-                La <strong className="font-bold">formule Nectar</strong> vous
-                permet de préserver 5.000 abeilles, soit l’équivalent d’un
-                essaim. Nous sèmerons 5.000 fleurs dans notre espace dédié.
-              </li>
-              <li className="mt-4">
-                La <strong className="font-bold">formule Propolis</strong> quant
-                à elle propose de préserver une colonie entière d’abeilles. Vous
-                devenez ainsi parrain d’une partie de la ruche ainsi que d’un
-                arbre mellifère planté à cette occasion.
-              </li>
-              <li className="mt-4">
-                La <strong className="font-bold">formule Gelée Royale</strong>{' '}
-                vous offre tous les avantages des autres formules et la
-                possibilité de sauvegarder la totalité d’une ruche.
-              </li>
-            </ul>
           </QuestionAnswer>
           <QuestionAnswer question="Quand obtiendrais-je mes avantages de parrainage ?">
             <p>
@@ -114,14 +99,35 @@ export default function Faq() {
               .
             </p>
           </QuestionAnswer>
-          <QuestionAnswer question="Comment sont réalisées les bougies ?">
+          <QuestionAnswer
+            question={
+              <p>
+                Comment sont réalisées{' '}
+                <AppLink destination="shop" to="/collections/bougies">
+                  les bougies
+                </AppLink>{' '}
+                ?
+              </p>
+            }
+          >
             <p>
               Pour les bougies, nous utilisons la cire de nos abeilles que nous
               conservons après récolte, nous la filtrons et la purifions avant
               de la travailler sous forme de bougies.
             </p>
           </QuestionAnswer>
-          <QuestionAnswer question="Qu’est-ce qu’un Bee-Wrap ?">
+          <QuestionAnswer
+            question={
+              <p>
+                Qu’est-ce qu’
+                {/* TODO: change the URL to the Bee-Wrap product */}
+                <AppLink destination="shop" to="/">
+                  un Bee-Wrap
+                </AppLink>{' '}
+                ?
+              </p>
+            }
+          >
             <p>
               Il s’agit d’un{' '}
               <strong className="font-bold">
@@ -138,7 +144,13 @@ export default function Faq() {
               Il est confectionné par nos soins dans la miellerie.
             </p>
           </QuestionAnswer>
-          <QuestionAnswer question="Les autres créations artisanales">
+          <QuestionAnswer
+            question={
+              <AppLink destination="shop" to="/">
+                Les autres créations artisanales
+              </AppLink>
+            }
+          >
             <p>
               Nous proposons{' '}
               <strong className="font-bold">

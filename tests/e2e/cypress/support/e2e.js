@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import './commands'
+import './commands.ts'
 
 Cypress.on('uncaught:exception', (err) => {
   // Cypress and React Hydrating the document don't get along

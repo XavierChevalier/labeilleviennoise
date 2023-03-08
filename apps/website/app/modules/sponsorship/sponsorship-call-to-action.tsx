@@ -1,6 +1,7 @@
 import { IconArrowRight } from '@labeilleviennoise/icons'
 import { AppLinkButton } from '@labeilleviennoise/ui'
 import { IKImage } from 'imagekitio-react'
+import CenteredImageContainer from '@/modules/shared/images/centered-image-container'
 
 export default function SponsorshipCallToAction() {
   return (
@@ -24,12 +25,14 @@ export default function SponsorshipCallToAction() {
       </div>
 
       <div className="hidden mx-auto mb-6 md:mb-0 order-1 md:order-2 md:mt-0 md:col-span-6 lg:col-span-5 md:flex">
-        <IKImage
-          path="images/bee-large.png"
-          alt="Illustration d'une abeille"
-          className="min-w-[400px] max-h-[293px]"
-          transformation={[{ width: '400' }]}
-        />
+        <CenteredImageContainer>
+          <IKImage
+            path="images/bee-large.png"
+            alt="Illustration d'une abeille"
+            className="min-w-[400px] max-h-[293px]"
+            transformation={[{ width: '400' }]}
+          />
+        </CenteredImageContainer>
       </div>
     </section>
   )
