@@ -23,3 +23,26 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('checkIfLinkIsDead', ({ link, linksCache }) => {
+  if (linksCache.has(link)) {
+    return
+  }
+
+  cy.request({
+    url: link,
+    retryOnNetworkFailure: true,
+  })
+  cy.then(() => linksCache.add(link))
+})
+
+Cypress.Commands.add('checkIfLinksAreDead', ({ linksCache }) => {
+  cy.get('a').each((link) => {
+    cy.checkIfLinkIsDead({ link: link.prop('href'), linksCache })
+  })
+})
+
+Cypress.Commands.add('checkIfLinksAreDeadOnPage', ({ page, linksCache }) => {
+  cy.visit(page)
+  cy.checkIfLinksAreDead({ linksCache })
+})

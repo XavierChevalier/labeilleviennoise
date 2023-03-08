@@ -120,7 +120,8 @@ export default function Faq() {
             question={
               <p>
                 Qu’est-ce qu’
-                <AppLink destination="shop" to="/products/bee-wrap">
+                {/* TODO: change the URL to the Bee-Wrap product */}
+                <AppLink destination="shop" to="/">
                   un Bee-Wrap
                 </AppLink>{' '}
                 ?

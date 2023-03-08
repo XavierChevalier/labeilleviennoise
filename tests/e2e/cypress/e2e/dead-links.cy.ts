@@ -1,28 +1,33 @@
-type CheckDeadLinksPages = { url: string }[]
-describe('Check dead links', () => {
-  it('links should not be dead', () => {
-    const linksCache = new Set<string>()
-    cy.fixture<CheckDeadLinksPages>('check-dead-links-pages.json').then(
-      (pages) => {
-        pages.forEach(({ url: page }) => {
-          cy.visit(page)
-          cy.get('a').each((link) => {
-            const href = link.prop('href')
-            if (linksCache.has(href)) {
-              cy.log(`Already checked ${href}, bypassing`)
-              return
-            }
+interface Entrypoint {
+  url: string
+  origin?: string
+}
 
-            cy.log(href)
-            linksCache.add(href)
-            cy.request({
-              url: href,
-              failOnStatusCode: false,
-              retryOnNetworkFailure: true,
-            })
-          })
-        })
+describe('Check dead links', () => {
+  const linksCache = new Set<string>()
+
+  it('links should not be dead on website', () => {
+    cy.fixture<Entrypoint[]>('check-dead-links-website-entrypoint.json').then(
+      (entries) => {
+        entries.forEach(({ url: page }) =>
+          cy.checkIfLinksAreDeadOnPage({ page, linksCache })
+        )
       }
+    )
+
+    cy.then(() => cy.log(`Checked ${linksCache.size} links`))
+  })
+
+  it('links should not be dead on blog posts', () => {
+    cy.visit(Cypress.env('BASE_URL_BLOG'))
+
+    cy.get('.card__inner a[href^="/blogs/news/"]').as('blogPosts')
+    cy.get('@blogPosts').then((links) =>
+      cy.log(`Found ${links.length} blog posts`, links.toArray().join('\n'))
+    )
+
+    cy.get('@blogPosts').each((link) =>
+      cy.checkIfLinksAreDeadOnPage({ page: link.prop('href'), linksCache })
     )
 
     cy.then(() => cy.log(`Checked ${linksCache.size} links`))

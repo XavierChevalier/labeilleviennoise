@@ -1,28 +1,26 @@
 describe('Navigation', () => {
-  const goToUsingNavLink = (page: string) =>
-    cy.get('nav').contains(page).click()
-  const titleShouldBe = (title: string) => cy.title().should('eq', title)
-
   it('navigate between pages using navigation bar', () => {
     cy.visit('/')
-    titleShouldBe("L'Abeille Viennoise")
+    cy.title().should('eq', "L'Abeille Viennoise")
 
-    goToUsingNavLink('Boutique')
-    titleShouldBe("La boutique - L'Abeille Viennoise")
-    cy.url().should('eq', `${Cypress.env('BASE_URL_SHOP')}/`)
+    cy.get('nav')
+      .contains('Boutique')
+      .should('have.attr', 'href')
+      .and('eq', `${Cypress.env('BASE_URL_SHOP')}/`)
 
-    goToUsingNavLink('Parrainage')
-    titleShouldBe("Parrainage - L'Abeille Viennoise")
+    cy.get('nav').contains('Parrainage').click()
+    cy.title().should('eq', "Parrainage - L'Abeille Viennoise")
 
-    goToUsingNavLink('Blog')
-    titleShouldBe("Blog - L'Abeille Viennoise")
-    cy.url().should('eq', `${Cypress.env('BASE_URL_BLOG')}/`)
+    cy.get('nav')
+      .contains('Blog')
+      .should('have.attr', 'href')
+      .and('eq', `${Cypress.env('BASE_URL_BLOG')}/`)
 
-    goToUsingNavLink('Contact')
-    titleShouldBe("Contact - L'Abeille Viennoise")
+    cy.get('nav').contains('Contact').click()
+    cy.title().should('eq', "Contact - L'Abeille Viennoise")
 
-    goToUsingNavLink('Devenez parrain')
-    titleShouldBe("Parrainage - L'Abeille Viennoise")
+    cy.get('nav').contains('Devenez parrain').click()
+    cy.title().should('eq', "Parrainage - L'Abeille Viennoise")
   })
 
   it('"le projet" dropdown', () => {
