@@ -7,7 +7,7 @@ import HomeWhyWeDoThis from '@/modules/home/home-why-we-do-this'
 export const meta = buildMeta({
   title: "L'Abeille Viennoise",
   description:
-    'Services autour du miel et des abeilles, de la vente de miels français et tout particulièrement viennois, à la location de ruches pour particuliers ou entreprises.',
+    'Services autour du miel et des abeilles, de la vente de miels français et tout particulièrement viennois, aux parrainages de ruches pour particuliers ou entreprises.',
 })
 
 export default function Index() {
