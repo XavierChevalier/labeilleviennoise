@@ -1,9 +1,41 @@
+## [0.21.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.20.2...v0.21.0) (2023-03-08)
+
+
+### 🪚 Refactors
+
+* **website:** remove useless sponsorship contact page ([381290b](https://github.com/XavierChevalier/labeilleviennoise/commit/381290b7ddc6771bb76c63b9f657ca019eb5f09e))
+
+
+### 🐛 Bugfixes
+
+* **website:** don't register Sentry on development ([956c78f](https://github.com/XavierChevalier/labeilleviennoise/commit/956c78ffff4b8cacdc6a4fa142cef4593254ac44))
+* **website:** make mobile navigation bar more usable UX friendly ([c81f6f3](https://github.com/XavierChevalier/labeilleviennoise/commit/c81f6f3f73447ad9218e7138b205a52351c6ad0e))
+* **website:** use short props syntax instead ([6111ab8](https://github.com/XavierChevalier/labeilleviennoise/commit/6111ab896bc4e507a32c1733d7539694cf7a17dd))
+
+
+### 🎉 New Features
+
+* **website:** update the meta description of the home ([a18bee1](https://github.com/XavierChevalier/labeilleviennoise/commit/a18bee1314c723d8720d42e37e4bb8304041b43e))
+* **website:** update website content and improve display of images ([7fa13f6](https://github.com/XavierChevalier/labeilleviennoise/commit/7fa13f6e3c99ca76fec259b26d6774e3f7c0d0a1))
+
+
+### 🧪 Tests
+
+* ignore Instagram link because it fail sometimes ([fa5c24e](https://github.com/XavierChevalier/labeilleviennoise/commit/fa5c24ece4392e990f4a1d25642e6663d9274898))
+* update tests and prevent dead links on the blog and the website ([714952e](https://github.com/XavierChevalier/labeilleviennoise/commit/714952ee59a1e80130d1ae92f0315e19d88f98ce))
+* **website:** prevent dead links ([f030d19](https://github.com/XavierChevalier/labeilleviennoise/commit/f030d194e03d4aa2471bb52c17eac153dde168ab))
+
 ## [0.20.2](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.20.1...v0.20.2) (2023-02-19)
 
 
 ### 🐛 Bugfixes
 
 * **blog:** update url of redirect to blog ([c5aa620](https://github.com/XavierChevalier/labeilleviennoise/commit/c5aa620c054ffc1b20f2efd1c2c7d001033ef65b))
+
+
+### 🧹 Chores
+
+* **release:** v0.20.2 [skip ci] ([cbafd00](https://github.com/XavierChevalier/labeilleviennoise/commit/cbafd00227abb174c5767c69cdd3346385b4e565))
 
 ## [0.20.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.20.0...v0.20.1) (2023-02-19)
 
