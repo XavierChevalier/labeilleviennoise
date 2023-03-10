@@ -1,3 +1,10 @@
+## [0.22.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.21.0...v0.22.0) (2023-03-10)
+
+
+### 🎉 New Features
+
+* **website:** use the contact page of Shopify instead ([3b05246](https://github.com/XavierChevalier/labeilleviennoise/commit/3b0524646eaca23bfee2d34dcdcc9ee877684d73))
+
 ## [0.21.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.20.2...v0.21.0) (2023-03-08)
 
 
@@ -24,6 +31,11 @@
 * ignore Instagram link because it fail sometimes ([fa5c24e](https://github.com/XavierChevalier/labeilleviennoise/commit/fa5c24ece4392e990f4a1d25642e6663d9274898))
 * update tests and prevent dead links on the blog and the website ([714952e](https://github.com/XavierChevalier/labeilleviennoise/commit/714952ee59a1e80130d1ae92f0315e19d88f98ce))
 * **website:** prevent dead links ([f030d19](https://github.com/XavierChevalier/labeilleviennoise/commit/f030d194e03d4aa2471bb52c17eac153dde168ab))
+
+
+### 🧹 Chores
+
+* **release:** v0.21.0 [skip ci] ([cc005ae](https://github.com/XavierChevalier/labeilleviennoise/commit/cc005ae7e8a3228999748f771a8642202fb61744))
 
 ## [0.20.2](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.20.1...v0.20.2) (2023-02-19)
 
