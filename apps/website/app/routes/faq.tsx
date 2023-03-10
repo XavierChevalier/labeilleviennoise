@@ -174,7 +174,7 @@ export default function Faq() {
 
       <p className="text-center">
         Vous avez toujours une question ?{' '}
-        <AppLink to="/contact" destination="website">
+        <AppLink to="/pages/contact" destination="shop">
           Par ici !
         </AppLink>
         <br />

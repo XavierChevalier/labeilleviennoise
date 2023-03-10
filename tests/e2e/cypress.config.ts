@@ -12,5 +12,7 @@ export default defineConfig({
   },
   e2e: {
     baseUrl: BASE_URL_WEBSITE,
+    // @see https://github.com/testing-library/cypress-testing-library/issues/221#issuecomment-1400501843
+    experimentalOriginDependencies: true,
   },
 })

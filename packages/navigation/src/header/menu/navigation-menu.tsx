@@ -83,8 +83,8 @@ export default function NavigationMenu() {
           </li>
           <li>
             <NavigationBarLink
-              to="/contact"
-              destination="website"
+              to="/pages/contact"
+              destination="shop"
               onClick={toggleShowMenu}
             >
               Contact

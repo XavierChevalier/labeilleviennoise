@@ -16,8 +16,10 @@ describe('Navigation', () => {
       .should('have.attr', 'href')
       .and('eq', `${Cypress.env('BASE_URL_BLOG')}/`)
 
-    cy.get('nav').contains('Contact').click()
-    cy.title().should('eq', "Contact - L'Abeille Viennoise")
+    cy.get('nav')
+      .contains('Contact')
+      .should('have.attr', 'href')
+      .and('eq', `${Cypress.env('BASE_URL_SHOP')}/pages/contact`)
 
     cy.get('nav').contains('Devenez parrain').click()
     cy.title().should('eq', "Parrainage - L'Abeille Viennoise")

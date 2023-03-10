@@ -37,7 +37,7 @@ export default function SponsorshipHero() {
             <IconArrowRight />
           </AppLinkButton>
 
-          <AppLinkButton to="/contact" destination="website">
+          <AppLinkButton to="/pages/contact" destination="shop">
             Contactez-nous
           </AppLinkButton>
         </div>
