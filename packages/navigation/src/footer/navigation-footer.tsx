@@ -35,6 +35,11 @@ const NavigationFooter = () => (
                 </FooterLink>
               </li>
               <li className="mb-4">
+                <FooterLink to="/" destination="blog">
+                  Blog
+                </FooterLink>
+              </li>
+              <li className="mb-4">
                 <FooterLink to="/faq" destination="website">
                   Foire aux questions
                 </FooterLink>
