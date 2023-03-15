@@ -1,9 +1,26 @@
+## [0.23.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.22.0...v0.23.0) (2023-03-15)
+
+
+### 🐛 Bugfixes
+
+* **website:** change the Facebook page URL ([97f8578](https://github.com/XavierChevalier/labeilleviennoise/commit/97f85788d2dd65d03180f5b7c693dae9ef6eada4))
+
+
+### 🎉 New Features
+
+* **website:** add blog link into footer ([844dac8](https://github.com/XavierChevalier/labeilleviennoise/commit/844dac8df537014eb2426440671f837aadcd63a1))
+
 ## [0.22.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.21.0...v0.22.0) (2023-03-10)
 
 
 ### 🎉 New Features
 
 * **website:** use the contact page of Shopify instead ([3b05246](https://github.com/XavierChevalier/labeilleviennoise/commit/3b0524646eaca23bfee2d34dcdcc9ee877684d73))
+
+
+### 🧹 Chores
+
+* **release:** v0.22.0 [skip ci] ([d7cd060](https://github.com/XavierChevalier/labeilleviennoise/commit/d7cd060d25d177d5fd3c150ded774be0de66ce73))
 
 ## [0.21.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.20.2...v0.21.0) (2023-03-08)
 
