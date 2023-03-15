@@ -86,7 +86,7 @@ const NavigationFooter = () => (
           . Tous droits réservés.
         </span>
         <div className="flex space-x-6 justify-center">
-          <NavigationFooterSocialNetworkLink href="https://www.facebook.com/profile.php?id=100083012750809">
+          <NavigationFooterSocialNetworkLink href="https://www.facebook.com/profile.php?id=100090982112033">
             <IconFacebook />
           </NavigationFooterSocialNetworkLink>
           <NavigationFooterSocialNetworkLink href="https://www.instagram.com/labeilleviennoise/">
