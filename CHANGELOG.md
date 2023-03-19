@@ -1,3 +1,10 @@
+## [0.24.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.23.0...v0.24.0) (2023-03-19)
+
+
+### 🎉 New Features
+
+* **website:** add Miimosa banner on top of all pages ([9fef910](https://github.com/XavierChevalier/labeilleviennoise/commit/9fef910780bb578e07cb64e7440d414f25074ccb))
+
 ## [0.23.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.22.0...v0.23.0) (2023-03-15)
 
 
@@ -9,6 +16,11 @@
 ### 🎉 New Features
 
 * **website:** add blog link into footer ([844dac8](https://github.com/XavierChevalier/labeilleviennoise/commit/844dac8df537014eb2426440671f837aadcd63a1))
+
+
+### 🧹 Chores
+
+* **release:** v0.23.0 [skip ci] ([ef1af88](https://github.com/XavierChevalier/labeilleviennoise/commit/ef1af889a94426ea485468b07e211d69d86a8ece))
 
 ## [0.22.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.21.0...v0.22.0) (2023-03-10)
 
