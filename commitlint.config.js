@@ -17,6 +17,9 @@ module.exports = {
         'deps',
         'ci',
         'perf',
+        'build',
+        '*!',
+        'other',
       ],
     ],
     'scope-enum': [
