@@ -1,9 +1,26 @@
+## [0.24.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.24.0...v0.24.1) (2023-04-06)
+
+
+### 🐛 Bugfixes
+
+* add missing commit types ([4f37d14](https://github.com/XavierChevalier/labeilleviennoise/commit/4f37d14ffb0a54cdfb2a9b69cd6de02b474f784f))
+
+
+### 💚 Other Changes
+
+* remove Miimosa banner ([b51b533](https://github.com/XavierChevalier/labeilleviennoise/commit/b51b533f7b9fb004a29dcce64716eca6d62305ee))
+
 ## [0.24.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.23.0...v0.24.0) (2023-03-19)
 
 
 ### 🎉 New Features
 
 * **website:** add Miimosa banner on top of all pages ([9fef910](https://github.com/XavierChevalier/labeilleviennoise/commit/9fef910780bb578e07cb64e7440d414f25074ccb))
+
+
+### 🧹 Chores
+
+* **release:** v0.24.0 [skip ci] ([5998bfa](https://github.com/XavierChevalier/labeilleviennoise/commit/5998bfad8401f871992b958feacb21a335722783))
 
 ## [0.23.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.22.0...v0.23.0) (2023-03-15)
 
@@ -617,6 +634,11 @@
 ## [0.5.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.4.1...v0.5.0) (2022-11-07)
 
 
+### 📦 Deps
+
+* update flowbite-react version ([30eb84b](https://github.com/XavierChevalier/labeilleviennoise/commit/30eb84bc9d07a7c746afd5d4278880b85b3b4f28))
+
+
 ### 🎉 New Features
 
 * **apiary:** add page "Le Rucher" ([279a3a8](https://github.com/XavierChevalier/labeilleviennoise/commit/279a3a8fa0f6c4bb27d320d89dcabba899302413))
@@ -625,7 +647,6 @@
 ### 🧹 Chores
 
 * **release:** v0.5.0 [skip ci] ([d9e952a](https://github.com/XavierChevalier/labeilleviennoise/commit/d9e952afe06cb3caba9b5c71795aaebd52113a75))
-* update flowbite-react version ([30eb84b](https://github.com/XavierChevalier/labeilleviennoise/commit/30eb84bc9d07a7c746afd5d4278880b85b3b4f28))
 
 ## [0.4.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.4.0...v0.4.1) (2022-11-02)
 
@@ -700,6 +721,13 @@
 * **sponsorship:** remove useless attribute ([faa934f](https://github.com/XavierChevalier/labeilleviennoise/commit/faa934f09258d8a1cf395955428ef4cc89002abf))
 
 
+### 📦 Deps
+
+* add astrojs/image integration ([eabc7c0](https://github.com/XavierChevalier/labeilleviennoise/commit/eabc7c03ac37efabae974b639e7c989d9551234c))
+* add css deps ([55eb62e](https://github.com/XavierChevalier/labeilleviennoise/commit/55eb62ee384af9267d0e4dcee74adba1c3c1eea7))
+* add tailwindcss/typography ([43990cc](https://github.com/XavierChevalier/labeilleviennoise/commit/43990cc74cfc61bb716636746e04af358eb52003))
+
+
 ### 🐛 Bugfixes
 
 * add inverted color for logo ([b46db73](https://github.com/XavierChevalier/labeilleviennoise/commit/b46db73158b8bda73e8afc86d5afa13a1cbbd058))
@@ -757,12 +785,9 @@
 * add .env files ([df785d1](https://github.com/XavierChevalier/labeilleviennoise/commit/df785d1db860a680243fe53c7e2273bcd90d6f31))
 * add 'deps' type for commit ([01f61f1](https://github.com/XavierChevalier/labeilleviennoise/commit/01f61f1660a09f641b4c2b9ecd483ccad3074711))
 * add 'home' scope ([7e0c0ec](https://github.com/XavierChevalier/labeilleviennoise/commit/7e0c0ec1f26ad01fbeb199c1ebba8c0a448901bf))
-* add astrojs/image integration ([eabc7c0](https://github.com/XavierChevalier/labeilleviennoise/commit/eabc7c03ac37efabae974b639e7c989d9551234c))
-* add css deps ([55eb62e](https://github.com/XavierChevalier/labeilleviennoise/commit/55eb62ee384af9267d0e4dcee74adba1c3c1eea7))
 * add ESLint and Jest ([129b29c](https://github.com/XavierChevalier/labeilleviennoise/commit/129b29c5677dab1850deb5e029990afb9f5ddb08))
 * add ESLint plugin for Astro components ([fedeac3](https://github.com/XavierChevalier/labeilleviennoise/commit/fedeac363ce552668f5bf781337d8eed8971c23b))
 * add flowbite ([80938e9](https://github.com/XavierChevalier/labeilleviennoise/commit/80938e9514d3ce6ca2304275f5941b2a14b2f32b))
-* add tailwindcss/typography ([43990cc](https://github.com/XavierChevalier/labeilleviennoise/commit/43990cc74cfc61bb716636746e04af358eb52003))
 * add tasks file ([3255d5c](https://github.com/XavierChevalier/labeilleviennoise/commit/3255d5c298d3b4a1b83fa6192af8b019b0eef52d))
 * fix build for netlify ([14c169a](https://github.com/XavierChevalier/labeilleviennoise/commit/14c169aa597d5a37ff72d7aaea85723de0464c8f))
 * gitignore generated css ([d1e1571](https://github.com/XavierChevalier/labeilleviennoise/commit/d1e157192f15e2ff127937fe56abc7b5a2486ed3))
