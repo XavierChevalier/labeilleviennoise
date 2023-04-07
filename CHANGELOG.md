@@ -1,3 +1,10 @@
+## [0.25.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.24.1...v0.25.0) (2023-04-07)
+
+
+### 🎉 New Features
+
+* add apis and love presentation page ([aad7e92](https://github.com/XavierChevalier/labeilleviennoise/commit/aad7e92d8017a3db6bce6e37e2523cc5d7897bcc))
+
 ## [0.24.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.24.0...v0.24.1) (2023-04-06)
 
 
@@ -9,6 +16,11 @@
 ### 💚 Other Changes
 
 * remove Miimosa banner ([b51b533](https://github.com/XavierChevalier/labeilleviennoise/commit/b51b533f7b9fb004a29dcce64716eca6d62305ee))
+
+
+### 🧹 Chores
+
+* **release:** v0.24.1 [skip ci] ([4045539](https://github.com/XavierChevalier/labeilleviennoise/commit/404553934984ff05f2b7c776fc2dcba721340801))
 
 ## [0.24.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.23.0...v0.24.0) (2023-03-19)
 
