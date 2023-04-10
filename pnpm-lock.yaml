@@ -33,6 +33,9 @@ importers:
       '@labeilleviennoise/prettier-config':
         specifier: workspace:*
         version: link:config/prettier-config
+      '@remix-run/node':
+        specifier: 1.9.0
+        version: 1.9.0(patch_hash=wnbishugce2gytxf4y4kvotrbe)(react-dom@18.2.0)(react@18.2.0)
       '@types/jest':
         specifier: ^29.2.5
         version: 29.2.5
