@@ -134,7 +134,7 @@ index f0e1d1d417c1024b4ba257f4114826981e940758..ee37e5a4466974a69757063cb893178a
      filter?(args: FileUploadHandlerFilterArgs): boolean | Promise<boolean>;
  };
  export declare function createFileUploadHandler({ directory, avoidFileConflicts, file, filter, maxPartSize, }?: FileUploadHandlerOptions): UploadHandler;
-+// @ts-ignore
++ /* @ts-expect-error Temporary workaround for https://github.com/remix-run/remix/issues/4371 */
  export declare class NodeOnDiskFile implements File {
      private filepath;
      type: string;
