@@ -1,9 +1,23 @@
+## [0.25.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.25.0...v0.25.1) (2023-04-10)
+
+
+### 🐛 Bugfixes
+
+* change remix patch fix ([b60731f](https://github.com/XavierChevalier/labeilleviennoise/commit/b60731f073ea15412cbf08f327984d42da83fd1c))
+* patch is not applied in CI. fix node version ([b3af60e](https://github.com/XavierChevalier/labeilleviennoise/commit/b3af60e2d10350f52feb326c1e071d98d30ea95f))
+* update lock file to try and fix CI ([89bb21d](https://github.com/XavierChevalier/labeilleviennoise/commit/89bb21d588e908e73fff11b175e03b3122fed833))
+
 ## [0.25.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.24.1...v0.25.0) (2023-04-07)
 
 
 ### 🎉 New Features
 
 * add apis and love presentation page ([aad7e92](https://github.com/XavierChevalier/labeilleviennoise/commit/aad7e92d8017a3db6bce6e37e2523cc5d7897bcc))
+
+
+### 🧹 Chores
+
+* **release:** v0.25.0 [skip ci] ([cfb966c](https://github.com/XavierChevalier/labeilleviennoise/commit/cfb966c2693c2f96b8d2558246a4db065eb57df8))
 
 ## [0.24.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.24.0...v0.24.1) (2023-04-06)
 
