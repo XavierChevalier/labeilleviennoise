@@ -1,3 +1,10 @@
+## [0.25.2](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.25.1...v0.25.2) (2023-04-21)
+
+
+### 🛠 Build System
+
+* update lock file and package to fix CI ([2cc806d](https://github.com/XavierChevalier/labeilleviennoise/commit/2cc806d92756abb7dc3e62c62fa0ae6f2e87f4ff))
+
 ## [0.25.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.25.0...v0.25.1) (2023-04-10)
 
 
@@ -6,6 +13,11 @@
 * change remix patch fix ([b60731f](https://github.com/XavierChevalier/labeilleviennoise/commit/b60731f073ea15412cbf08f327984d42da83fd1c))
 * patch is not applied in CI. fix node version ([b3af60e](https://github.com/XavierChevalier/labeilleviennoise/commit/b3af60e2d10350f52feb326c1e071d98d30ea95f))
 * update lock file to try and fix CI ([89bb21d](https://github.com/XavierChevalier/labeilleviennoise/commit/89bb21d588e908e73fff11b175e03b3122fed833))
+
+
+### 🧹 Chores
+
+* **release:** v0.25.1 [skip ci] ([8023064](https://github.com/XavierChevalier/labeilleviennoise/commit/80230647705b3c5eb7e7376100d73310575aadc4))
 
 ## [0.25.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.24.1...v0.25.0) (2023-04-07)
 
