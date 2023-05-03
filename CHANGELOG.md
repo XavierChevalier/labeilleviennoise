@@ -1,9 +1,21 @@
+## [0.26.0](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.25.2...v0.26.0) (2023-05-03)
+
+
+### 🎉 New Features
+
+* add apis and love partnership ([a566e0a](https://github.com/XavierChevalier/labeilleviennoise/commit/a566e0a7b9871bd8fe6da8c6df9894553b232b6b))
+
 ## [0.25.2](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.25.1...v0.25.2) (2023-04-21)
 
 
 ### 🛠 Build System
 
 * update lock file and package to fix CI ([2cc806d](https://github.com/XavierChevalier/labeilleviennoise/commit/2cc806d92756abb7dc3e62c62fa0ae6f2e87f4ff))
+
+
+### 🧹 Chores
+
+* **release:** v0.25.2 [skip ci] ([2b46e22](https://github.com/XavierChevalier/labeilleviennoise/commit/2b46e22062abf2db57d36007dc13f2df0bc3d807))
 
 ## [0.25.1](https://github.com/XavierChevalier/labeilleviennoise/compare/v0.25.0...v0.25.1) (2023-04-10)
 
