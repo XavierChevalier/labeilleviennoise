@@ -14,13 +14,12 @@ export enum FormulaVariant {
 }
 
 export default function ButtonChosePlan({ isToggled, formula }: Props) {
-  const { relativeUrl } = useURL()
-  const to = relativeUrl(
-    '/contact-parrainage',
-    new URLSearchParams({
-      title: formula,
-      per: !isToggled ? 'mensuel' : 'annuel',
-    })
+  const { mailto } = useURL()
+  const to = mailto(
+    'labeilleviennoise@gmail.com',
+    `Bonjour, je souhaite devenir parrain ${
+      !isToggled ? 'mensuel' : 'annuel'
+    } grâce à la formule ${formula}.`
   )
 
   return (
