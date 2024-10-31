@@ -26,7 +26,7 @@ export default function ButtonChosePlan({ isToggled, formula }: Props) {
   return (
     <AppLinkButton
       to={to}
-      destination="shop"
+      destination="website"
       variant="fancy"
       className="mt-4 whitespace-nowrap"
     >
