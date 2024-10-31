@@ -13,26 +13,30 @@ export interface OnlyAdditionalLinkProps {
 
 export interface LinkProps extends OnlyAdditionalLinkProps, RemixLinkProps {}
 
+const isEmailLink = (to: LinkProps['to']) => to.toString().startsWith('mailto:')
+const isExternalLink = (to: LinkProps['to'], destination: Tenant) =>
+  isEmailLink(to) || !isSameDestinationAsCurrentWebsite(destination)
+
 export const Link: FC<LinkProps> = ({
   children,
   to,
   destination,
   ...attributes
 }) => {
-  if (isSameDestinationAsCurrentWebsite(destination)) {
+  if (isExternalLink(to, destination)) {
     return (
-      <RemixLink {...attributes} to={to}>
+      <a
+        {...attributes}
+        href={getFullUrlFromPathname(to.toString(), destination)}
+      >
         {children}
-      </RemixLink>
+      </a>
     )
   }
 
   return (
-    <a
-      {...attributes}
-      href={getFullUrlFromPathname(to.toString(), destination)}
-    >
+    <RemixLink {...attributes} to={to}>
       {children}
-    </a>
+    </RemixLink>
   )
 }
