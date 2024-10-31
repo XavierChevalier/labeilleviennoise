@@ -26,7 +26,13 @@ export const isSameDestinationAsCurrentWebsite = (
 export const getFullUrlFromPathname = (
   pathname: string,
   destination: Tenant
-): string => `${getBaseUrlFromDestination(destination)}${pathname}`
+): string => {
+  if (pathname.startsWith('mailto:')) {
+    return pathname
+  }
+
+  return `${getBaseUrlFromDestination(destination)}${pathname}`
+}
 
 const getBaseUrlFromDestination = (destination: Tenant): string => {
   const { BASE_URL_AUTH, BASE_URL_WEBSITE, BASE_URL_BLOG, BASE_URL_SHOP } =
