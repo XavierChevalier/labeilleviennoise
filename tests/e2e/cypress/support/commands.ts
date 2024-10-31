@@ -46,9 +46,9 @@ Cypress.Commands.add('checkIfLinkIsDead', ({ link, linksCache }) => {
 })
 
 Cypress.Commands.add('checkIfLinksAreDead', ({ linksCache }) => {
-  cy.get('a').each((link) =>
+  cy.get('a').each((link) => {
     cy.checkIfLinkIsDead({ link: link.prop('href'), linksCache })
-  )
+  })
 })
 
 Cypress.Commands.add('checkIfLinksAreDeadOnPage', ({ page, linksCache }) => {

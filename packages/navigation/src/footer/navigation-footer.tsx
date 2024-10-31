@@ -30,22 +30,12 @@ const NavigationFooter = () => (
                 </FooterLink>
               </li>
               <li className="mb-4">
-                <FooterLink to="/" destination="shop">
-                  Boutique
-                </FooterLink>
-              </li>
-              <li className="mb-4">
-                <FooterLink to="/" destination="blog">
-                  Blog
-                </FooterLink>
-              </li>
-              <li className="mb-4">
                 <FooterLink to="/faq" destination="website">
                   Foire aux questions
                 </FooterLink>
               </li>
               <li>
-                <FooterLink to="/pages/contact" destination="shop">
+                <FooterLink to="/contact" destination="website">
                   Contactez-nous
                 </FooterLink>
               </li>

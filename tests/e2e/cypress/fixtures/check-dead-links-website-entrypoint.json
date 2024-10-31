@@ -1,6 +1,7 @@
 [
   { "url": "/" },
   { "url": "/conditions-generales-vente" },
+  { "url": "/contact" },
   { "url": "/equipe" },
   { "url": "/faq" },
   { "url": "/la-miellerie" },

@@ -14,7 +14,7 @@ export default function PricingFormulas() {
 
         <p className="mb-5 font-light text-gray-500 sm:text-xl">
           Vous ne savez pas quel plan de parrainage choisir ?{' '}
-          <AppLink destination="shop" to="/pages/contact">
+          <AppLink destination="website" to="/contact">
             Pas de panique, on est là pour vous aider à trouver celui qui vous
             correspond le mieux !
           </AppLink>
