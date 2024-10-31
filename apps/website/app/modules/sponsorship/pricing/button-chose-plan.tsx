@@ -3,20 +3,24 @@ import type { HTMLProps } from 'react'
 import { useURL } from '@/modules/shared/location/use-url'
 
 export interface Props extends HTMLProps<HTMLElement> {
-  formula: keyof typeof FormulaShopVariant
+  isToggled: boolean
+  formula: FormulaVariant
 }
 
-enum FormulaShopVariant {
-  nectar = '44074998038796',
-  propolis = '44074998071564',
-  geleeRoyale = '44074998104332',
+export enum FormulaVariant {
+  Nectar = 'Nectar',
+  Propolis = 'Propolis',
+  GeleeRoyale = 'Gelée Royale',
 }
 
-export default function ButtonChosePlan({ formula }: Props) {
+export default function ButtonChosePlan({ isToggled, formula }: Props) {
   const { relativeUrl } = useURL()
   const to = relativeUrl(
-    '/products/parrainage',
-    new URLSearchParams({ variant: FormulaShopVariant[formula] })
+    '/contact-parrainage',
+    new URLSearchParams({
+      title: formula,
+      per: !isToggled ? 'mensuel' : 'annuel',
+    })
   )
 
   return (

@@ -33,16 +33,6 @@ export default function NavigationMenu() {
           </li>
           <li>
             <NavigationBarLink
-              to="/"
-              destination="shop"
-              title="Bientôt disponible"
-              onClick={toggleShowMenu}
-            >
-              Boutique
-            </NavigationBarLink>
-          </li>
-          <li>
-            <NavigationBarLink
               to="/parrainage"
               destination="website"
               onClick={toggleShowMenu}

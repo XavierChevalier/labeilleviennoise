@@ -1,7 +1,9 @@
 import { IconCheck } from '@labeilleviennoise/icons'
 import { mergeClasses } from '@labeilleviennoise/merge-classes'
 import type { HTMLProps } from 'react'
-import ButtonChosePlan from '@/modules/sponsorship/pricing/button-chose-plan'
+import ButtonChosePlan, {
+  FormulaVariant,
+} from '@/modules/sponsorship/pricing/button-chose-plan'
 import PeriodLabel from '@/modules/sponsorship/pricing/period-label'
 import type { Formulas } from '@/modules/sponsorship/pricing/pricing-comparison'
 import PricingComparisonTableBody from '@/modules/sponsorship/pricing/pricing-comparison-table-body'
@@ -42,7 +44,10 @@ export default function PricingComparisonTable({
               isPerYear={isToggled}
             />
             <br />
-            <ButtonChosePlan formula="nectar" />
+            <ButtonChosePlan
+              isToggled={isToggled}
+              formula={FormulaVariant.Nectar}
+            />
           </PricingComparisonTableRowCell>
           <PricingComparisonTableRowCell>
             <PeriodLabel
@@ -51,7 +56,10 @@ export default function PricingComparisonTable({
               isPerYear={isToggled}
             />
             <br />
-            <ButtonChosePlan formula="propolis" />
+            <ButtonChosePlan
+              isToggled={isToggled}
+              formula={FormulaVariant.Propolis}
+            />
           </PricingComparisonTableRowCell>
           <PricingComparisonTableRowCell>
             <PeriodLabel
@@ -60,7 +68,10 @@ export default function PricingComparisonTable({
               isPerYear={isToggled}
             />
             <br />
-            <ButtonChosePlan formula="geleeRoyale" />
+            <ButtonChosePlan
+              isToggled={isToggled}
+              formula={FormulaVariant.GeleeRoyale}
+            />
           </PricingComparisonTableRowCell>
         </PricingComparisonTableRow>
 
