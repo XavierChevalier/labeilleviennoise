@@ -64,15 +64,6 @@ export default function NavigationMenu() {
           </li>
           <li>
             <NavigationBarLink
-              to="/"
-              destination="blog"
-              onClick={toggleShowMenu}
-            >
-              Blog
-            </NavigationBarLink>
-          </li>
-          <li>
-            <NavigationBarLink
               to="/contact"
               destination="website"
               onClick={toggleShowMenu}
