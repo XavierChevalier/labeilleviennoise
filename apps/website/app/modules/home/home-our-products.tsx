@@ -23,6 +23,11 @@ export default function HomeOurProducts() {
             </AppLink>
           </li>
           <li>Projet et goodies réalisés en famille</li>
+          <li>
+            Ateliers apicoles et visite du rucher à partir de 6 ans sur
+            réservation
+          </li>
+          <li>Cadeaux d’invités pour Mariage, Baptême, Baby shower...</li>
         </ul>
       </div>
 

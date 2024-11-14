@@ -16,71 +16,6 @@ export default function Faq() {
       </h1>
       <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 md:grid-cols-2">
         <div>
-          <h2 className="max-w-2xl mb-8 text-2xl font-bold tracking-tight leading-none md:text-3xl xl:text-4xl">
-            Parrainage
-          </h2>
-          <QuestionAnswer question="Pourquoi parrainer ?">
-            <p>
-              Devenir parrain est une manière différente de posséder tout ou
-              partie d’une ruche. Par votre action,{' '}
-              <strong className="font-bold">vous préservez des abeilles</strong>{' '}
-              et nous nous chargeons de veiller sur elles.
-              <br />
-              Grâce à votre contribution financière, nous pouvons améliorer
-              notre matériel de production et investir dans de nouvelles ruches,
-              ainsi nous agrandissons ensemble le rucher.
-              <br />
-              Autre avantage, vous pouvez{' '}
-              <strong className="font-bold">
-                découvrir et déguster en avant première le miel
-              </strong>{' '}
-              de vos petites protégées.
-            </p>
-          </QuestionAnswer>
-          <QuestionAnswer question="Comment fonctionne le parrainage ?">
-            <p>
-              <AppLink to="/products/parrainage" destination="shop">
-                Grâce à nos 3 formules
-              </AppLink>
-              , vous pouvez choisir en fonction de votre budget.{' '}
-              <AppLink destination="website" to="/parrainage">
-                Toutes les informations sont disponible ici.
-              </AppLink>
-            </p>
-          </QuestionAnswer>
-          <QuestionAnswer question="Quand obtiendrais-je mes avantages de parrainage ?">
-            <p>
-              Les récompenses sont{' '}
-              <strong className="font-bold">uniquement annuelles</strong>. Elles
-              sont envoyées au bout de 12 paiements mensuels ou immédiatement
-              après avoir choisi la formule annuelle.
-            </p>
-          </QuestionAnswer>
-          <QuestionAnswer question="Les avantages du parrainage ?">
-            <p>
-              Vos avantages sont répartis sur l’année entière.
-              <br />
-              Pour les photos, nous vous enverrons des nouvelles de la ruche
-              tous les trimestres.
-              <br />
-              Dès votre inscription, vous recevrez notre petite mascotte.
-              <br />
-              Concernant les plantations de fleurs et d’arbres, nous suivrons
-              bien sûr les saisons mais vous en serez informés.
-              <br />
-              Les pots de miel seront répartis par trimestre pour les formules
-              propolis et gelée royale.
-              <br />
-              Dans la <strong className="font-bold">formule Nectar</strong>,
-              nous l’enverrons dès la première récolte de miel.
-            </p>
-          </QuestionAnswer>
-        </div>
-
-        <div>
-          <h2 className="max-w-2xl mb-8 text-2xl font-bold tracking-tight leading-none md:text-3xl xl:text-4xl">
-            Les produits
-          </h2>
           <QuestionAnswer question="D'où provient le miel ?">
             <p>
               Nos ruches sont principalement installées sur Vienne, en Isère.
@@ -100,15 +35,7 @@ export default function Faq() {
             </p>
           </QuestionAnswer>
           <QuestionAnswer
-            question={
-              <p>
-                Comment sont réalisées{' '}
-                <AppLink destination="shop" to="/collections/bougies">
-                  les bougies
-                </AppLink>{' '}
-                ?
-              </p>
-            }
+            question={<p>Comment sont réalisées les bougies ?</p>}
           >
             <p>
               Pour les bougies, nous utilisons la cire de nos abeilles que nous
@@ -116,18 +43,9 @@ export default function Faq() {
               de la travailler sous forme de bougies.
             </p>
           </QuestionAnswer>
-          <QuestionAnswer
-            question={
-              <p>
-                Qu’est-ce qu’
-                {/* TODO: change the URL to the Bee-Wrap product */}
-                <AppLink destination="shop" to="/">
-                  un Bee-Wrap
-                </AppLink>{' '}
-                ?
-              </p>
-            }
-          >
+        </div>
+        <div>
+          <QuestionAnswer question={<p>Qu’est-ce qu’ un Bee-Wrap ?</p>}>
             <p>
               Il s’agit d’un{' '}
               <strong className="font-bold">
@@ -144,13 +62,7 @@ export default function Faq() {
               Il est confectionné par nos soins dans la miellerie.
             </p>
           </QuestionAnswer>
-          <QuestionAnswer
-            question={
-              <AppLink destination="shop" to="/">
-                Les autres créations artisanales
-              </AppLink>
-            }
-          >
+          <QuestionAnswer question={<p>Les autres créations artisanales</p>}>
             <p>
               Nous proposons{' '}
               <strong className="font-bold">

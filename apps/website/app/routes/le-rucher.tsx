@@ -3,7 +3,6 @@ import { IKImage, IKVideo } from 'imagekitio-react'
 import ApiarySection from '@/modules/apiary/ApiarySection'
 import ApiarySections from '@/modules/apiary/ApiarySections'
 import ApiaryStory from '@/modules/apiary/ApiaryStory'
-import SponsorshipCallToAction from '@/modules/sponsorship/sponsorship-call-to-action'
 
 export const meta = buildMeta({
   title: "Le rucher et créations artisanales - L'Abeille Viennoise",
@@ -324,8 +323,6 @@ export default function LeRucher() {
           </ApiaryStory>
         </ApiarySection>
       </ApiarySections>
-
-      <SponsorshipCallToAction />
     </div>
   )
 }

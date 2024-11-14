@@ -1,4 +1,8 @@
-import { IconFacebook, IconInstagram } from '@labeilleviennoise/icons'
+import {
+  IconFacebook,
+  IconInstagram,
+  IconTiktok,
+} from '@labeilleviennoise/icons'
 import {
   LogoWithTextHorizontal,
   LogoWithTextVertical,
@@ -74,15 +78,18 @@ const NavigationFooter = () => (
 
       <div className="flex flex-col gap-4 sm:flex-row items-center justify-between">
         <span className="text-sm text-gray-500">
-          © {new Date().getFullYear()}{' '}
+          © 2022{' '}
           <FooterLink to="/" destination="website">
             L'Abeille Viennoise
           </FooterLink>
           . Tous droits réservés.
         </span>
-        <div className="flex space-x-6 justify-center">
+        <div className="flex space-x-6 justify-center items-center">
           <NavigationFooterSocialNetworkLink href="https://www.facebook.com/profile.php?id=100090982112033">
             <IconFacebook />
+          </NavigationFooterSocialNetworkLink>
+          <NavigationFooterSocialNetworkLink href="https://www.tiktok.com/@labeilleviennoise">
+            <IconTiktok />
           </NavigationFooterSocialNetworkLink>
           <NavigationFooterSocialNetworkLink href="https://www.instagram.com/labeilleviennoise/">
             <IconInstagram />

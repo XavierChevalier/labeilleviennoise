@@ -1,9 +1,6 @@
-import { IconArrowRight } from '@labeilleviennoise/icons'
 import { buildMeta } from '@labeilleviennoise/seo'
-import { AppLinkButton } from '@labeilleviennoise/ui'
 import HoneyHouseHero from '@/modules/honey-house/honey-house-hero'
 import HoneyHouseSteps from '@/modules/honey-house/honey-house-steps'
-import SponsorshipCallToAction from '@/modules/sponsorship/sponsorship-call-to-action'
 
 export const meta = buildMeta({
   title: "La Miellerie - L'Abeille Viennoise",
@@ -16,11 +13,10 @@ export default function LaMiellerie() {
     <div className="max-w-screen-xl mx-auto">
       <HoneyHouseHeader />
       <HoneyHouseHero />
-      <HoneyHouseCallToActionShop />
 
       <div className="px-4">
         <HoneyHouseSteps />
-        <SponsorshipCallToAction />
+        <TheHoneyHouse />
       </div>
     </div>
   )
@@ -40,17 +36,68 @@ function HoneyHouseHeader() {
   )
 }
 
-function HoneyHouseCallToActionShop() {
+export function TheHoneyHouse() {
   return (
-    <div className="p-4 text-center">
-      <p className="mb-4 text-center font-light text-gray-500 md:text-md md:text-xl">
-        Voir tous nos produits sur la boutique
-      </p>
+    <div className="p-4">
+      <h2 className="mb-10 md:mb-4 mt-24 text-4xl font-bold tracking-tight leading-none md:text-5xl xl:text-6xl text-center text-primary">
+        La boutique
+      </h2>
 
-      <AppLinkButton variant="primary" to="/" destination="shop">
-        Visiter la boutique
-        <IconArrowRight />
-      </AppLinkButton>
+      <section className="min-h-[560px] flex flex-col gap-8 items-center py-4 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-8 lg:px-6">
+        <div className="md:order-2">
+          <p className="mb-6 font-light text-gray-500 md:text-lg">
+            Profitez d'une visite à la boutique pour déguster nos{' '}
+            <strong className="font-bold">miels urbains</strong> produits et
+            récoltés en agglomération,{' '}
+            <strong className="font-bold">
+              Vienne, Chasse-sur-Rhône, Seyssuel ou encore Bourg-en-Bresse
+            </strong>
+            .
+          </p>
+
+          <p className="mb-6 font-light text-gray-500 md:text-lg">
+            Trouvez chez nous des{' '}
+            <strong className="font-bold">cadeaux personnalisés</strong>,{' '}
+            <strong className="font-bold">
+              pots de miel, bougies et sujets en cire d'abeille
+            </strong>
+            , réalisons ensemble un produit qui vous ressemble.
+          </p>
+
+          <p className="mb-6 font-light text-gray-500 md:text-lg">
+            Découvrez également notre{' '}
+            <strong className="font-bold">gamme cosmétique</strong> élaborée
+            spécialement pour l'Abeille Viennoise par la{' '}
+            <strong className="font-bold">Savonnerie de l'Ozon</strong>, à
+            partir de notre production de miel et de cire :{' '}
+            <strong className="font-bold">
+              savon liquide, savon de rasage et le fameux déodorant solide
+            </strong>{' '}
+            à la cire d'abeille.
+          </p>
+        </div>
+
+        <div className="md:order-1">
+          <iframe
+            title="L'Abeille Viennoise - La Miellerie"
+            width="520"
+            height="400"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=18%20RUE%20TESTE%20DU%20BAILLER%20VIENNE+(L'Abeille%20Viennoise)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          />
+          <p className="mt-4 font-light text-gray-500 md:text-lg">
+            Retrouvez-nous à{' '}
+            <strong className="font-bold">
+              La Miellerie de l'Abeille Viennoise
+            </strong>{' '}
+            au{' '}
+            <strong className="font-bold">
+              18 rue Testé du Bailler, 38200 Vienne
+            </strong>
+            .
+          </p>
+        </div>
+      </section>
     </div>
   )
 }

@@ -1,5 +1,3 @@
-import { IconArrowRight } from '@labeilleviennoise/icons'
-import { AppLink, AppLinkButton } from '@labeilleviennoise/ui'
 import { IKImage } from 'imagekitio-react'
 import CenteredImageContainer from '@/modules/shared/images/centered-image-container'
 
@@ -22,41 +20,36 @@ export default function HomeWhyWeDoThis() {
           Pourquoi faisons-nous cela ?
         </h2>
         <p className="max-w-2xl mb-4 font-light text-gray-500 md:mb-6 md:text-md md:text-xl">
-          Nos amies les abeilles traversent actuellement une période critique.
-          En effet, ces ouvrières acharnées font face à une perte importante de
-          leurs colonies chaque année !
-        </p>
-        <p className="max-w-2xl mb-4 font-light text-gray-500 md:mb-6 md:text-md md:text-xl">
+          <strong className="font-bold">Prise de conscience et constat</strong>{' '}
+          nous ont menés à ce projet utopique. Redonner une place aux{' '}
           <strong className="font-bold">
-            Heureusement, nous pouvons faire face à ce défi ensemble.
+            abeilles dans notre environnement quotidien
           </strong>
+          .
         </p>
         <p className="max-w-2xl mb-4 font-light text-gray-500 md:mb-6 md:text-md md:text-xl">
-          L'Abeille Viennoise est déterminée à agir concrètement pour la
-          protection des abeilles et de leur environnement, et si vous aussi,
-          vous souhaitez contribuer à leur sauvegarde,{' '}
-          <AppLink destination="website" to="/parrainage">
-            le parrainage des abeilles est une façon concrète d'y parvenir
-          </AppLink>
-          , ainsi qu'une aide pour installer de nouvelles colonies dans le
-          respect de la biodiversité.
+          Nos amies les abeilles traversent actuellement une{' '}
+          <strong className="font-bold">période critique</strong>. En effet, ces{' '}
+          <strong className="font-bold">ouvrières acharnées</strong> font face à
+          une{' '}
+          <strong className="font-bold">
+            perte importante de leurs colonies chaque année
+          </strong>{' '}
+          !
+        </p>
+        <p className="max-w-2xl mb-4 font-light text-gray-500 md:mb-6 md:text-md md:text-xl">
+          <strong className="font-bold">L'Abeille Viennoise</strong> est
+          déterminée à <strong className="font-bold">agir concrètement</strong>{' '}
+          pour la{' '}
+          <strong className="font-bold">
+            protection des abeilles et de leur environnement
+          </strong>
+          .
         </p>
         <p className="max-w-2xl mb-4 font-light text-gray-500 md:mb-6 md:text-md md:text-xl">
           <strong className="font-bold">Avec votre soutien</strong>, nous
           pouvons œuvrer ensemble pour protéger ces merveilleuses créatures.
-          Êtes-vous prêt à vous joindre à nous dans cette mission vitale ?
         </p>
-
-        <div className="flex flex-col gap-4 sm:flex-row">
-          <AppLinkButton
-            variant="primary"
-            to="/parrainage"
-            destination="website"
-          >
-            Devenez parrain
-            <IconArrowRight />
-          </AppLinkButton>
-        </div>
       </div>
     </section>
   )

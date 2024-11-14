@@ -1,7 +1,6 @@
 import { mergeClasses } from '@labeilleviennoise/merge-classes'
 import { useToggle } from '@labeilleviennoise/state-hooks'
 import { AppLinkButton } from '@labeilleviennoise/ui'
-import { Dropdown } from 'flowbite-react'
 import NavigationBarLink from '../navigation-bar-link'
 import NavigationMenuHamburgerButton from './navigation-menu-hamburger-button'
 
@@ -33,53 +32,40 @@ export default function NavigationMenu() {
           </li>
           <li>
             <NavigationBarLink
-              to="/parrainage"
+              to="/le-rucher"
               destination="website"
               onClick={toggleShowMenu}
             >
-              Parrainage
+              Le rucher
             </NavigationBarLink>
-          </li>
-          <li className="flex items-center justify-center h-14 border-b md:border-none border-amber-100 text-gray-700">
-            <Dropdown label="Le projet" inline>
-              <Dropdown.Item>
-                <NavigationBarLink
-                  to="/le-rucher"
-                  destination="website"
-                  onClick={toggleShowMenu}
-                >
-                  Le rucher
-                </NavigationBarLink>
-              </Dropdown.Item>
-              <Dropdown.Item>
-                <NavigationBarLink
-                  to="/la-miellerie"
-                  destination="website"
-                  onClick={toggleShowMenu}
-                >
-                  La miellerie
-                </NavigationBarLink>
-              </Dropdown.Item>
-            </Dropdown>
           </li>
           <li>
             <NavigationBarLink
-              to="/contact"
+              to="/la-miellerie"
               destination="website"
               onClick={toggleShowMenu}
             >
-              Contact
+              La miellerie
             </NavigationBarLink>
           </li>
-          <li className="hidden md:block">
+          <li>
+            <NavigationBarLink
+              to="/equipe"
+              destination="website"
+              onClick={toggleShowMenu}
+            >
+              Notre équipe
+            </NavigationBarLink>
+          </li>
+          <li>
             <AppLinkButton
               variant="fancy"
-              to="/parrainage"
+              to="/contact"
               destination="website"
               className="!py-2"
               onClick={toggleShowMenu}
             >
-              Devenez parrain
+              Contactez-nous
             </AppLinkButton>
           </li>
         </ul>

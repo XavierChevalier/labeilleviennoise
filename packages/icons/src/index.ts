@@ -4,6 +4,7 @@ import IconCheck from '@/icon-check'
 import IconFacebook from '@/icon-facebook'
 import IconInstagram from '@/icon-instagram'
 import IconQuotes from '@/icon-quotes'
+import IconTiktok from '@/icon-tiktok'
 
 export {
   IconArrowLeft,
@@ -12,4 +13,5 @@ export {
   IconFacebook,
   IconInstagram,
   IconQuotes,
+  IconTiktok,
 }

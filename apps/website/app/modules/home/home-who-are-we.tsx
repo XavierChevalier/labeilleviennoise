@@ -32,12 +32,10 @@ export default function HeroWhoAreWe() {
         </p>
 
         <p className="mb-6 font-light text-gray-500 md:text-lg">
-          <AppLink destination="website" to="/parrainage">
-            Rejoignez-nous dans cette aventure passionnante
-          </AppLink>{' '}
-          et pleine de sens, où chaque journée est une nouvelle occasion de
-          travailler avec ces merveilleuses créatures et de contribuer à leur
-          sauvegarde. Avec nous, découvrez une{' '}
+          Rejoignez-nous dans cette aventure passionnante et pleine de sens, où
+          chaque journée est une nouvelle occasion de travailler avec ces
+          merveilleuses créatures et de contribuer à leur sauvegarde. Avec nous,
+          découvrez une{' '}
           <strong className="font-bold">
             apiculture responsable et respectueuse
           </strong>
