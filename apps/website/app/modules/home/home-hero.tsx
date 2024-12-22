@@ -5,7 +5,7 @@ export default function HomeHero() {
   return (
     <section className="min-h-[400px] grid max-w-screen-xl px-4 py-8 mx-auto md:gap-8 xl:gap-0 md:py-16 md:grid-cols-12">
       <div className="mr-auto order-2 md:order-1 place-self-center md:col-span-6 lg:col-span-7">
-        <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
+        <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none text-primary md:text-5xl xl:text-6xl">
           L'Abeille Viennoise
         </h1>
         <p className="max-w-2xl mb-4 font-light text-gray-500 md:mb-6 md:text-md md:text-xl">
