@@ -41,7 +41,8 @@
     "prettier": "^2.8.2"
   },
   "engines": {
-    "node": ">=14"
+    "node": "18.x",
+    "pnpm": ">=8"
   },
   "pnpm": {
     "peerDependencyRules": {
