@@ -2,8 +2,9 @@ import {
   IconFacebook,
   IconInstagram,
   IconTiktok,
+  IconMicrophone,
 } from '@labeilleviennoise/icons'
-import { AppLinkExternal } from '@labeilleviennoise/ui'
+import { AppLink, AppLinkExternal } from '@labeilleviennoise/ui'
 import CenteredImageContainer from '@/modules/shared/images/centered-image-container'
 
 export default function HomeSocials() {
@@ -11,7 +12,10 @@ export default function HomeSocials() {
     <section className="min-h-[400px] grid max-w-screen-xl px-4 py-8 mx-auto md:gap-8 xl:gap-0 md:py-16 md:grid-cols-12">
       <div className="mr-auto place-self-center md:col-span-6 lg:col-span-7 sm:py-6 lg:px-8">
         <h2 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
-          Retrouvez-nous sur les réseaux sociaux
+          Retrouvez-nous sur les réseaux sociaux...
+          <span className="block text-2xl md:text-3xl xl:text-4xl font-light text-gray-500">
+            et ailleurs !
+          </span>
         </h2>
         <p className="max-w-2xl py-4 mb-4 font-light text-gray-500 md:mb-6 md:text-md md:text-xl">
           <ul className="space-y-2">
@@ -47,6 +51,16 @@ export default function HomeSocials() {
                 <IconTiktok />
                 <strong className="font-bold">TikTok</strong>
               </AppLinkExternal>
+            </li>
+            <li>
+              <AppLink
+                to="/interview"
+                destination="website"
+                className="flex items-center gap-2"
+              >
+                <IconMicrophone />
+                <strong className="font-bold">Interview Radio</strong>
+              </AppLink>
             </li>
           </ul>
         </p>
