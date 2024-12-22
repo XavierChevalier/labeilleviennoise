@@ -52,8 +52,10 @@ jobs:
           start: pnpm dev
           wait-on: 'http://localhost:3000, http://localhost:3001, http://localhost:3002, http://localhost:3003'
           working-directory: ./tests/e2e
+          project: ../../
           browser: chrome
           record: true
+          node-version: '18'
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
