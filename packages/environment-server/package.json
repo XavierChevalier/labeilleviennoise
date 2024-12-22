@@ -20,6 +20,7 @@
     "scheduler": "^0.23.0"
   },
   "devDependencies": {
-    "@labeilleviennoise/build": "workspace:*"
+    "@labeilleviennoise/build": "workspace:*",
+    "@types/scheduler": "^0.16.3"
   }
 }
