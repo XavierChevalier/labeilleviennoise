@@ -1,3 +1,4 @@
+import { mergeClasses } from '@labeilleviennoise/merge-classes'
 import type { FC, HTMLProps, ReactElement } from 'react'
 
 interface BaseProps extends HTMLProps<HTMLElement> {
@@ -24,7 +25,10 @@ const CollaboratorCard: FC<Props> = (props) => (
         <img
           src={props.imageSrc}
           alt={props.imgAlt}
-          className="rounded-lg w-full pt-4 px-4"
+          className={mergeClasses(
+            'rounded-lg w-full pt-4 px-4',
+            props.className
+          )}
         />
       ) : (
         <div className="rounded-lg w-full pt-4 px-4 flex items-center justify-center">

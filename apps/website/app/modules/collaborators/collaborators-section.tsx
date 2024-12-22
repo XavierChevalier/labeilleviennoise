@@ -248,6 +248,31 @@ export default function CollaboratorsSection() {
             En savoir plus
           </a>
         </CollaboratorCard>
+
+        <CollaboratorCard
+          type="image"
+          className="invert"
+          imageSrc="https://i0.wp.com/gateauxetcbynath.fr/wp-content/uploads/elementor/thumbs/GATEAUXETC-gateauxdesign-blanc-q7nx7av57f1swv2ssau6pyvgmcztmg1ja701zdpbco.png?ssl=1"
+          imgAlt="Logo de Gateaux etc by Nath"
+          description={
+            <div>
+              Un gâteau vitrine pour décorer notre boutique offert par Nathalie
+              de chez <b>'Gâteaux etc.'</b>.
+              <br />
+              Quand la pâtisserie s'allie à l'apiculture pour la sauvegarde des
+              abeilles.
+            </div>
+          }
+        >
+          <a
+            href="https://gateauxetcbynath.fr"
+            target="_blank"
+            rel="noreferrer"
+            className="text-white bg-primary hover:bg-primary-500 focus:ring-primary-300 relative inline-flex items-center justify-center px-5 py-3 mr-3 font-medium text-center rounded-lg focus:ring-4"
+          >
+            En savoir plus
+          </a>
+        </CollaboratorCard>
       </section>
     </div>
   )
