@@ -49,7 +49,7 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           install: false
-          start: lerna run dev --stream --concurrency 4
+          start: pnpm dev
           wait-on: 'http://localhost:3000, http://localhost:3001, http://localhost:3002, http://localhost:3003'
           working-directory: ./tests/e2e
           browser: chrome
