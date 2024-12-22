@@ -5,6 +5,7 @@ import { useSearchParams } from '@remix-run/react'
 import { contactAction } from '@/modules/contact/contact-action'
 import ContactForm from '@/modules/contact/contact-form'
 import ContactHeader from '@/modules/contact/contact-header'
+import { TheHoneyHouse } from '@/routes/la-miellerie'
 
 export const meta = buildMeta({
   title: "Contact - L'Abeille Viennoise",
@@ -18,15 +19,18 @@ export default function Contact() {
   const [searchParams] = useSearchParams()
 
   return (
-    <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-      <ContactHeader formSuccess={searchParams.has('success')}>
-        Des questions sans réponses dans notre{' '}
-        <AppLink to="/faq" destination="website">
-          foire aux questions
-        </AppLink>{' '}
-        ? Une proposition ? N'hésitez pas à nous contacter.
-      </ContactHeader>
-      <ContactForm />
+    <div>
+      <TheHoneyHouse />
+      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+        <ContactHeader formSuccess={searchParams.has('success')}>
+          Des questions sans réponses dans notre{' '}
+          <AppLink to="/faq" destination="website">
+            foire aux questions
+          </AppLink>{' '}
+          ? Une proposition ? N'hésitez pas à nous contacter.
+        </ContactHeader>
+        <ContactForm />
+      </div>
     </div>
   )
 }
