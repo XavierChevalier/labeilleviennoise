@@ -1,22 +1,10 @@
-import fs from 'fs'
-import path from 'path'
-import type { LoaderFunction } from '@remix-run/node'
 import { useRef, useState } from 'react'
-import { typedjson, useTypedLoaderData } from 'remix-typedjson'
+import { renderToString } from 'react-dom/server'
 import { AudioPlayer, type AudioPlayerRef } from '../components/AudioPlayer'
 import { AudioTranscript } from '../components/AudioTranscript'
-
-export const loader = (async () => {
-  const transcriptPath = path.join(
-    process.cwd(),
-    'app/content/interviews/le-crock-show-18-12-24.html'
-  )
-  const transcript = fs.readFileSync(transcriptPath, 'utf-8')
-  return typedjson({ transcript })
-}) satisfies LoaderFunction
+import { Interview } from '@/content/interviews/le-crock-show-18-12-24'
 
 export default function InterviewRoute() {
-  const { transcript } = useTypedLoaderData<typeof loader>()
   const audioPlayerRef = useRef<AudioPlayerRef>(null)
   const [currentTime, setCurrentTime] = useState<number>()
 
@@ -44,7 +32,7 @@ export default function InterviewRoute() {
         />
 
         <AudioTranscript
-          content={transcript}
+          content={renderToString(<Interview />)}
           onTimeClick={(seconds) => audioPlayerRef.current?.seekTo(seconds)}
           currentTime={currentTime}
         />
