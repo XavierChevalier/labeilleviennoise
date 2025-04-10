@@ -27,8 +27,15 @@ export default function Contact() {
           <AppLink to="/faq" destination="website">
             foire aux questions
           </AppLink>{' '}
-          ?<br/>
-          Une proposition ? N'hésitez pas à nous contacter à l'adresse <AppLink to="mailto:labeilleviennoise@gmail.com" destination="website">labeilleviennoise@gmail.com</AppLink>.
+          ?<br />
+          Une proposition ? N'hésitez pas à nous contacter à l'adresse{' '}
+          <AppLink
+            to="mailto:labeilleviennoise@gmail.com"
+            destination="website"
+          >
+            labeilleviennoise@gmail.com
+          </AppLink>
+          .
         </ContactHeader>
         <ContactForm />
       </div>
