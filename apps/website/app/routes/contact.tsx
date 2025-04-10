@@ -3,7 +3,6 @@ import { AppLink } from '@labeilleviennoise/ui'
 import type { ActionFunction } from '@remix-run/node'
 import { useSearchParams } from '@remix-run/react'
 import { contactAction } from '@/modules/contact/contact-action'
-import ContactForm from '@/modules/contact/contact-form'
 import ContactHeader from '@/modules/contact/contact-header'
 import { TheHoneyHouse } from '@/routes/la-miellerie'
 
@@ -37,7 +36,6 @@ export default function Contact() {
           </AppLink>
           .
         </ContactHeader>
-        <ContactForm />
       </div>
     </div>
   )
