@@ -12,7 +12,7 @@ import FooterLink from './footer-link'
 import NavigationFooterSocialNetworkLink from './navigation-footer-social-network-link'
 
 const NavigationFooter = () => (
-  <footer className="p-4 bg-white sm:p-6">
+  <footer className="mt-8 p-4 bg-white sm:p-6">
     <div className="mx-auto max-w-screen-xl">
       <div className="sm:flex justify-between items-center">
         <div className="mb-6 sm:mb-0">

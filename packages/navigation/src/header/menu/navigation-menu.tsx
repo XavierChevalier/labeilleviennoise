@@ -57,7 +57,16 @@ export default function NavigationMenu() {
               Notre équipe
             </NavigationBarLink>
           </li>
-          <li>
+          <li className="md:hidden">
+            <NavigationBarLink
+              to="/contact"
+              destination="website"
+              onClick={toggleShowMenu}
+            >
+              Contactez-nous
+            </NavigationBarLink>
+          </li>
+          <li className="hidden md:block">
             <AppLinkButton
               variant="fancy"
               to="/contact"

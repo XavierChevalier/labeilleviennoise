@@ -1,4 +1,5 @@
 import { buildMeta } from '@labeilleviennoise/seo'
+import { AppLinkExternal } from '@labeilleviennoise/ui'
 import HoneyHouseHero from '@/modules/honey-house/honey-house-hero'
 import HoneyHouseSteps from '@/modules/honey-house/honey-house-steps'
 
@@ -13,11 +14,8 @@ export default function LaMiellerie() {
     <div className="max-w-screen-xl mx-auto">
       <HoneyHouseHeader />
       <HoneyHouseHero />
-
-      <div className="px-4">
-        <HoneyHouseSteps />
-        <TheHoneyHouse />
-      </div>
+      <HoneyHouseSteps />
+      <TheHoneyHouse />
     </div>
   )
 }
@@ -39,7 +37,7 @@ function HoneyHouseHeader() {
 export function TheHoneyHouse() {
   return (
     <div className="p-4">
-      <h2 className="mb-10 md:mb-4 mt-24 text-4xl font-bold tracking-tight leading-none md:text-5xl xl:text-6xl text-center text-primary">
+      <h2 className="mb-10 md:mb-4 mt-8 md:mt-24 text-4xl font-bold tracking-tight leading-none md:text-5xl xl:text-6xl text-center text-primary">
         La boutique
       </h2>
 
@@ -79,6 +77,7 @@ export function TheHoneyHouse() {
 
         <div className="md:order-1">
           <iframe
+            className="w-full bg-gray-50 rounded-lg"
             title="L'Abeille Viennoise - La Miellerie"
             width="520"
             height="400"
@@ -91,9 +90,12 @@ export function TheHoneyHouse() {
               La Miellerie de l'Abeille Viennoise
             </strong>{' '}
             au{' '}
-            <strong className="font-bold">
+            <AppLinkExternal
+              href="https://maps.app.goo.gl/j5UxkbQ5otHN4dYg8"
+              target="_blank"
+            >
               18 rue Testé du Bailler, 38200 Vienne
-            </strong>
+            </AppLinkExternal>
             .
           </p>
         </div>
