@@ -276,9 +276,7 @@ export default function LeRucher() {
           title="Des formations et visites du rucher"
           description={
             <p className="text-gray-700">
-              Nous proposerons <strong className="font-bold">bientôt</strong>{' '}
-              des visites et formations du rucher de l'Abeille Viennoise. Pour
-              le moment, nous formons l'équipe !
+              Nous proposons des visites du rucher de l'Abeille Viennoise. Intéressés ? Contactez-nous !
             </p>
           }
         >
