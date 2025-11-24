@@ -7,7 +7,7 @@ interface Props extends PropsWithChildren {
 
 const ApiarySection: FC<Props> = (props) => (
   <section className="min-h-[410px]">
-    <h2 className="max-w-xl mb-4 text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl">
+    <h2 className="max-w-2xl mb-4 text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl">
       {props.title}
     </h2>
 
