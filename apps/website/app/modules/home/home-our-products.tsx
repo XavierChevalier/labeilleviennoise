@@ -32,9 +32,9 @@ export default function HomeOurProducts() {
       </div>
 
       <IKImage
-        path="images/pot-de-miel.webp"
-        alt="Pot de miel"
-        className="mx-auto"
+        path="images/amphore.jpg"
+        alt="Amphore de miel"
+        className="mx-auto rounded-lg"
         lqip={{ active: true, quality: 10 }}
         loading="lazy"
         transformation={[
