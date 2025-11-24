@@ -46,11 +46,7 @@ export function TheHoneyHouse() {
           <p className="mb-6 font-light text-gray-500 md:text-lg">
             Profitez d'une visite à la boutique pour déguster nos{' '}
             <strong className="font-bold">miels urbains</strong> produits et
-            récoltés en agglomération,{' '}
-            <strong className="font-bold">
-              Vienne, Chasse-sur-Rhône, Seyssuel ou encore Bourg-en-Bresse
-            </strong>
-            .
+            récoltés à <strong className="font-bold">Vienne</strong>.
           </p>
 
           <p className="mb-6 font-light text-gray-500 md:text-lg">

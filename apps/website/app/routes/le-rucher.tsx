@@ -1,3 +1,4 @@
+import { Link } from '@labeilleviennoise/router'
 import { buildMeta } from '@labeilleviennoise/seo'
 import { IKImage, IKVideo } from 'imagekitio-react'
 import ApiarySection from '@/modules/apiary/ApiarySection'
@@ -18,6 +19,73 @@ export default function LeRucher() {
       </h1>
 
       <ApiarySections>
+        <ApiarySection
+          title="Des visites du rucher"
+          description={
+            <p className="text-gray-700">
+              Nous proposons des visites du rucher de l'Abeille Viennoise.
+              Intéressés ?{' '}
+              <Link
+                to="/contact"
+                destination="website"
+                className="hover:underline font-bold text-primary-600"
+              >
+                Contactez-nous !
+              </Link>
+            </p>
+          }
+        >
+          <ApiaryStory>
+            <IKImage
+              path="images/rucher/formation.jpg"
+              alt="Visite du rucher"
+              lqip={{ active: true, quality: 10 }}
+              loading="lazy"
+              transformation={[{ width: '400', height: '560' }]}
+            />
+          </ApiaryStory>
+
+          <ApiaryStory>
+            <IKImage
+              path="images/rucher/formation3.jpg"
+              alt="Visite du rucher"
+              lqip={{ active: true, quality: 10 }}
+              loading="lazy"
+              transformation={[{ width: '400', height: '560' }]}
+            />
+          </ApiaryStory>
+
+          <ApiaryStory>
+            <IKImage
+              path="images/rucher/formation2.jpg"
+              alt="Visite du rucher"
+              lqip={{ active: true, quality: 10 }}
+              loading="lazy"
+              transformation={[{ width: '400', height: '560' }]}
+            />
+          </ApiaryStory>
+
+          <ApiaryStory>
+            <IKVideo
+              path="images/rucher/formation4.MOV"
+              autoPlay
+              muted
+              loop
+              transformation={[{ width: '400', height: '560' }]}
+            />
+          </ApiaryStory>
+
+          <ApiaryStory>
+            <IKImage
+              path="images/rucher/rucher-3.jpg"
+              alt="Visite du rucher"
+              lqip={{ active: true, quality: 10 }}
+              loading="lazy"
+              transformation={[{ width: '400', height: '560' }]}
+            />
+          </ApiaryStory>
+        </ApiarySection>
+
         <ApiarySection
           title="Création artisanale d'une ruche Kenyane"
           description={
@@ -80,58 +148,6 @@ export default function LeRucher() {
           </ApiaryStory>
         </ApiarySection>
 
-        <ApiarySection title="Création artisanale de ruches personnalisées">
-          <ApiaryStory description="Xavier">
-            <IKImage
-              path="images/rucher/ruche-personnalisee1.jpg"
-              alt="Ruche personnalisée avec le prénom Xavier"
-              lqip={{ active: true, quality: 10 }}
-              loading="lazy"
-              transformation={[{ width: '400', height: '560' }]}
-            />
-          </ApiaryStory>
-
-          <ApiaryStory description="Marie">
-            <IKImage
-              path="images/rucher/ruche-personnalisee2.jpg"
-              alt="Ruche personnalisée avec le prénom Marie"
-              lqip={{ active: true, quality: 10 }}
-              loading="lazy"
-              transformation={[{ width: '400', height: '560' }]}
-            />
-          </ApiaryStory>
-
-          <ApiaryStory description="Perrine">
-            <IKImage
-              path="images/rucher/ruche-personnalisee3.jpg"
-              alt="Ruche personnalisée avec le prénom Perrine"
-              lqip={{ active: true, quality: 10 }}
-              loading="lazy"
-              transformation={[{ width: '400', height: '560' }]}
-            />
-          </ApiaryStory>
-
-          <ApiaryStory description="Nicolas">
-            <IKImage
-              path="images/rucher/ruche-personnalisee4.jpg"
-              alt="Ruche personnalisée avec le prénom Nicolas"
-              lqip={{ active: true, quality: 10 }}
-              loading="lazy"
-              transformation={[{ width: '400', height: '560' }]}
-            />
-          </ApiaryStory>
-
-          <ApiaryStory description="La ruche Marie en activité">
-            <IKVideo
-              path="images/rucher/abeilles-entrant-ruche.mp4"
-              autoPlay
-              muted
-              loop
-              transformation={[{ width: '400', height: '560' }]}
-            />
-          </ApiaryStory>
-        </ApiarySection>
-
         <ApiarySection
           title="Montage et cirage des barrettes"
           description={
@@ -140,6 +156,7 @@ export default function LeRucher() {
               <strong className="font-bold">
                 construire leurs rayons de façon précise le long des barrettes.
               </strong>{' '}
+              <br />
               Ceci permet de ne pas casser l’intégralité de la structure en
               retirant chaque barrette lors de l’ouverture de la ruche.
             </p>
@@ -216,6 +233,36 @@ export default function LeRucher() {
               transformation={[{ width: '400', height: '560' }]}
             />
           </ApiaryStory>
+
+          <ApiaryStory description="Le rucher">
+            <IKImage
+              path="images/rucher/rucher.jpg"
+              alt="Rucher"
+              lqip={{ active: true, quality: 10 }}
+              loading="lazy"
+              transformation={[{ width: '400', height: '560' }]}
+            />
+          </ApiaryStory>
+
+          <ApiaryStory description="Filtrage du miel">
+            <IKImage
+              path="images/rucher/filtre-miel.jpg"
+              alt="Filtrage du miel"
+              lqip={{ active: true, quality: 10 }}
+              loading="lazy"
+              transformation={[{ width: '400', height: '560' }]}
+            />
+          </ApiaryStory>
+
+          <ApiaryStory description="Filtrage du miel">
+            <IKImage
+              path="images/rucher/filtre-miel-2.jpg"
+              alt="Filtrage du miel"
+              lqip={{ active: true, quality: 10 }}
+              loading="lazy"
+              transformation={[{ width: '400', height: '560' }]}
+            />
+          </ApiaryStory>
         </ApiarySection>
 
         <ApiarySection
@@ -226,6 +273,7 @@ export default function LeRucher() {
                 Un accessoire indispensable au rucher pendant les fortes
                 chaleurs.
               </strong>{' '}
+              <br />
               Cela permet aux abeilles de parcourir moins de distance pour se
               désaltérer.
             </p>
@@ -264,55 +312,6 @@ export default function LeRucher() {
           <ApiaryStory description="Bac d'eau">
             <IKVideo
               path="images/rucher/abreuvoir2.mp4"
-              autoPlay
-              muted
-              loop
-              transformation={[{ width: '400', height: '560' }]}
-            />
-          </ApiaryStory>
-        </ApiarySection>
-
-        <ApiarySection
-          title="Des formations et visites du rucher"
-          description={
-            <p className="text-gray-700">
-              Nous proposons des visites du rucher de l'Abeille Viennoise. Intéressés ? Contactez-nous !
-            </p>
-          }
-        >
-          <ApiaryStory description="Steffie et Xavier">
-            <IKImage
-              path="images/rucher/formation.jpg"
-              alt="Formation"
-              lqip={{ active: true, quality: 10 }}
-              loading="lazy"
-              transformation={[{ width: '400', height: '560' }]}
-            />
-          </ApiaryStory>
-
-          <ApiaryStory description="Steffie et Xavier">
-            <IKImage
-              path="images/rucher/formation3.jpg"
-              alt="Formation"
-              lqip={{ active: true, quality: 10 }}
-              loading="lazy"
-              transformation={[{ width: '400', height: '560' }]}
-            />
-          </ApiaryStory>
-
-          <ApiaryStory description="Yohann et Perrine">
-            <IKImage
-              path="images/rucher/formation2.jpg"
-              alt="Formation"
-              lqip={{ active: true, quality: 10 }}
-              loading="lazy"
-              transformation={[{ width: '400', height: '560' }]}
-            />
-          </ApiaryStory>
-
-          <ApiaryStory description="Sergine">
-            <IKVideo
-              path="images/rucher/formation4.MOV"
               autoPlay
               muted
               loop
