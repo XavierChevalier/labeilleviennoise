@@ -11,187 +11,96 @@ export default function HoneyHouseHero() {
           className="-ml-[33.3%]"
         >
           <SlideImage
-            path="images/miellerie/6.2-pot.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '500',
-              },
-            ]}
+            path="images/miellerie/crochet-bougie.jpg"
+            transformation={[{ width: '400', height: '500' }]}
           />
           <SlideImage
             path="images/creations-artisanales/wrap-cadeau.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '300',
-              },
-            ]}
+            transformation={[{ width: '400', height: '300' }]}
           />
           <SlideImage
-            path="images/miellerie/6.4-pot.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '300',
-              },
-            ]}
+            path="images/miellerie/3pots.jpg"
+            transformation={[{ width: '400', height: '300' }]}
           />
           <SlideImage
             path="images/creations-artisanales/gnome2.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '700',
-              },
-            ]}
+            transformation={[{ width: '400', height: '700' }]}
           />
         </SlideColumn>
 
         <SlideColumn animation="animate-infiniteUp">
           <SlideImage
             path="images/creations-artisanales/gnome1.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '700',
-              },
-            ]}
+            transformation={[{ width: '400', height: '700' }]}
           />
           <SlideImage
             path="images/creations-artisanales/ensemble-doudoux.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '300',
-              },
-            ]}
+            transformation={[{ width: '400', height: '300' }]}
           />
           <SlideImage
             path="images/creations-artisanales/bougies.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '350',
-              },
-            ]}
+            transformation={[{ width: '400', height: '350' }]}
           />
           <SlideImage
             path="images/creations-artisanales/stand.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '450',
-              },
-            ]}
+            transformation={[{ width: '400', height: '450' }]}
           />
         </SlideColumn>
 
         <SlideColumn animation="animate-infiniteDown">
           <SlideImage
             path="images/creations-artisanales/une-bougie.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '800',
-              },
-            ]}
+            transformation={[{ width: '400', height: '800' }]}
           />
           <SlideImage
             path="images/creations-artisanales/peluche-avec-alveoles.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '500',
-              },
-            ]}
+            transformation={[{ width: '400', height: '500' }]}
           />
           <SlideImage
-            path="images/miellerie/6.3-pot.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '500',
-              },
-            ]}
+            path="images/amphore.jpg"
+            transformation={[{ width: '400', height: '500' }]}
+          />
+          <SlideImage
+            path="images/miellerie/bougie-crochet.jpg"
+            transformation={[{ width: '400', height: '500' }]}
           />
         </SlideColumn>
 
         <SlideColumn animation="animate-infiniteUpSlow">
           <SlideImage
-            path="images/miellerie/6.2-pot.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '500',
-              },
-            ]}
+            path="images/miellerie/amphores.jpg"
+            transformation={[{ width: '400', height: '500' }]}
           />
           <SlideImage
             path="images/creations-artisanales/wrap-cadeau.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '300',
-              },
-            ]}
+            transformation={[{ width: '400', height: '300' }]}
           />
           <SlideImage
-            path="images/miellerie/6.4-pot.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '300',
-              },
-            ]}
+            path="images/miellerie/3pots.jpg"
+            transformation={[{ width: '400', height: '300' }]}
           />
           <SlideImage
-            path="images/creations-artisanales/gnome2.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '700',
-              },
-            ]}
+            path="images/miellerie/crochet-bougie.jpg"
+            transformation={[{ width: '400', height: '700' }]}
           />
         </SlideColumn>
 
         <SlideColumn animation="animate-infiniteDownSlow">
           <SlideImage
-            path="images/creations-artisanales/gnome1.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '700',
-              },
-            ]}
-          />
-          <SlideImage
             path="images/creations-artisanales/ensemble-doudoux.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '300',
-              },
-            ]}
+            transformation={[{ width: '400', height: '300' }]}
           />
           <SlideImage
             path="images/creations-artisanales/bougies.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '350',
-              },
-            ]}
+            transformation={[{ width: '400', height: '350' }]}
+          />
+          <SlideImage
+            path="images/creations-artisanales/crochet-bougie.jpg"
+            transformation={[{ width: '400', height: '700' }]}
           />
           <SlideImage
             path="images/creations-artisanales/stand.jpg"
-            transformation={[
-              {
-                width: '400',
-                height: '450',
-              },
-            ]}
+            transformation={[{ width: '400', height: '450' }]}
           />
         </SlideColumn>
       </div>
