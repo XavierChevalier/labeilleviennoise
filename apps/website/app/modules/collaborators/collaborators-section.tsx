@@ -3,7 +3,7 @@ import { Link } from '@labeilleviennoise/router'
 export default function CollaboratorsSection() {
   return (
     <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
-      <h2 className="mb-8 text-4xl tracking-tight font-extrabold">
+      <h2 className="my-8 text-4xl tracking-tight font-extrabold">
         Nos collaborateurs
       </h2>
 
