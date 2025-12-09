@@ -72,7 +72,7 @@ const HoneyHouseSteps: FC = () => (
       direction="right"
     >
       <IKVideo
-        path="images/miellerie/4-filtrage.MOV"
+        path="images/miellerie/4-filtrage-2.mp4"
         loop={true}
         muted={true}
         autoPlay={true}
@@ -88,7 +88,7 @@ const HoneyHouseSteps: FC = () => (
       direction="left"
     >
       <IKVideo
-        path="images/miellerie/5-mise-en-pots.mp4"
+        path="images/miellerie/5-mise-en-pots-et-etiquetage.mp4"
         loop={true}
         muted={true}
         autoPlay={true}

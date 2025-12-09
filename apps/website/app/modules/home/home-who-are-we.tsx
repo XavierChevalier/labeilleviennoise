@@ -44,7 +44,7 @@ export default function HeroWhoAreWe() {
       </div>
 
       <IKImage
-        path="images/ludovic-et-anne-marie.jpeg"
+        path="images/ludovic-et-anne-marie-2.jpeg"
         alt="Ludovic et Anne-Marie, les fondateurs de L'Abeille Viennoise"
         className="rounded-lg md:order-1"
         lqip={{ active: true, quality: 10 }}
