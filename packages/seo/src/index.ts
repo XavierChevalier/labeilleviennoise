@@ -1,4 +1,4 @@
 import { buildMeta, preventPageIndexing } from './meta'
-import GoogleAnalyticsScript from './tracker/google-analytics-script'
+import UmamiScript from './tracker/umami-script'
 
-export { GoogleAnalyticsScript, buildMeta, preventPageIndexing }
+export { buildMeta, preventPageIndexing, UmamiScript }

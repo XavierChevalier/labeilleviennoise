@@ -3,7 +3,7 @@ import {
   InjectClientEnv,
 } from '@labeilleviennoise/environment-client'
 import { NavigationBar, NavigationFooter } from '@labeilleviennoise/navigation'
-import { GoogleAnalyticsScript } from '@labeilleviennoise/seo'
+import { UmamiScript } from '@labeilleviennoise/seo'
 import {
   Links,
   LiveReload,
@@ -23,7 +23,7 @@ export const DefaultLayout: FC<HTMLProps<HTMLElement>> = ({ children }) => {
         <Meta />
         <Links />
         <InjectClientEnv />
-        {env.IS_PRODUCTION && <GoogleAnalyticsScript />}
+        {env.IS_PRODUCTION && <UmamiScript />}
       </head>
       <body className="text-neutral-900 bg-white min-h-screen scroll-smooth">
         <Flowbite theme={{ usePreferences: false }}>
