@@ -14,7 +14,11 @@ export default function PricingFormulas() {
 
         <p className="mb-5 font-light text-gray-500 sm:text-xl">
           Vous ne savez pas quel plan de parrainage choisir ?{' '}
-          <AppLink destination="website" to="/contact">
+          <AppLink
+            destination="website"
+            to="/contact"
+            data-umami-event="parrainage:click:link:contact"
+          >
             Pas de panique, on est là pour vous aider à trouver celui qui vous
             correspond le mieux !
           </AppLink>
@@ -34,6 +38,7 @@ export default function PricingFormulas() {
             to="/parrainage-entreprise"
             destination="website"
             className="text-sm"
+            data-umami-event="parrainage:click:link:entreprise"
           >
             Vous avez un projet de parrainage pour votre entreprise ?
           </AppLink>

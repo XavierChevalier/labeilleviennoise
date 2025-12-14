@@ -90,6 +90,7 @@ export default function ParrainageEntreprise() {
               variant="primary"
               to="/parrainage-entreprise#contact"
               destination="website"
+              data-umami-event="parrainage-entreprise:cta:contact"
             >
               Prendre contact
               <IconArrowRight />

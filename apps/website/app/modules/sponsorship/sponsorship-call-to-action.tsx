@@ -17,6 +17,7 @@ export default function SponsorshipCallToAction() {
             variant="primary"
             to="/parrainage"
             destination="website"
+            data-umami-event="home:cta:parrainage"
           >
             Comment ça marche ?
             <IconArrowRight />

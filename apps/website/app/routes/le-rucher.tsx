@@ -29,6 +29,7 @@ export default function LeRucher() {
                 to="/contact"
                 destination="website"
                 className="hover:underline font-bold text-primary-600"
+                data-umami-event="rucher:click:link:contact"
               >
                 Contactez-nous !
               </Link>

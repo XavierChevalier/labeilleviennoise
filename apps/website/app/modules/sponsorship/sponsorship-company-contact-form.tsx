@@ -46,7 +46,9 @@ const SponsorshipCompanyContactForm: FC<HTMLProps<HTMLElement>> = () => (
         <Field name="subject" />
         <Field name="message" />
         <Errors />
-        <Button>Envoyer mon message</Button>
+        <Button data-umami-event="parrainage-entreprise:submit:form">
+          Envoyer mon message
+        </Button>
       </>
     )}
   </Form>

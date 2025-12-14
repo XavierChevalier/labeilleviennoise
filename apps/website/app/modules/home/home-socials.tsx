@@ -1,8 +1,8 @@
 import {
   IconFacebook,
   IconInstagram,
-  IconTiktok,
   IconMicrophone,
+  IconTiktok,
 } from '@labeilleviennoise/icons'
 import { AppLink, AppLinkExternal } from '@labeilleviennoise/ui'
 import CenteredImageContainer from '@/modules/shared/images/centered-image-container'
@@ -25,6 +25,7 @@ export default function HomeSocials() {
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2"
+                data-umami-event="home:click:social:instagram"
               >
                 <IconInstagram />
                 <strong className="font-bold">Instagram</strong>
@@ -36,6 +37,7 @@ export default function HomeSocials() {
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2"
+                data-umami-event="home:click:social:facebook"
               >
                 <IconFacebook />
                 <strong className="font-bold">Facebook</strong>
@@ -47,6 +49,7 @@ export default function HomeSocials() {
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2"
+                data-umami-event="home:click:social:tiktok"
               >
                 <IconTiktok />
                 <strong className="font-bold">TikTok</strong>
@@ -57,6 +60,7 @@ export default function HomeSocials() {
                 to="/interview"
                 destination="website"
                 className="flex items-center gap-2"
+                data-umami-event="home:click:link:interview"
               >
                 <IconMicrophone />
                 <strong className="font-bold">Interview Radio</strong>

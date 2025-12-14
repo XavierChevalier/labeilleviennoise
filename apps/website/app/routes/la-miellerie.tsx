@@ -89,6 +89,7 @@ export function TheHoneyHouse() {
             <AppLinkExternal
               href="https://maps.app.goo.gl/j5UxkbQ5otHN4dYg8"
               target="_blank"
+              data-umami-event="miellerie:click:map"
             >
               18 rue Testé du Bailler, 38200 Vienne
             </AppLinkExternal>

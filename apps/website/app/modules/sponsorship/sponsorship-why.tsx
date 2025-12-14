@@ -35,7 +35,11 @@ export default function SponsorshipWhy() {
         </p>
         <p className="max-w-2xl mb-6 lg:mb-8 font-light text-gray-500 md:text-lg lg:text-xl">
           Chez L'Abeille Viennoise, nous avons décidé d'
-          <AppLink destination="website" to="/le-rucher">
+          <AppLink
+            destination="website"
+            to="/le-rucher"
+            data-umami-event="parrainage:click:link:rucher"
+          >
             agir concrètement pour protéger ces merveilleuses créatures
           </AppLink>
           . En parrainant des abeilles avec nous, vous contribuez à
@@ -49,7 +53,11 @@ export default function SponsorshipWhy() {
         </p>
         <p className="max-w-2xl mb-6 lg:mb-8 font-light text-gray-500 md:text-lg lg:text-xl">
           Et si vous avez un projet de{' '}
-          <AppLink destination="website" to="/parrainage-entreprise">
+          <AppLink
+            destination="website"
+            to="/parrainage-entreprise"
+            data-umami-event="parrainage:click:link:entreprise"
+          >
             parrainage pour votre entreprise
           </AppLink>
           , n'hésitez pas à prendre contact avec nous. Nous pouvons répondre à
@@ -62,6 +70,7 @@ export default function SponsorshipWhy() {
           to="#pricing"
           destination="website"
           className="w-full sm:w-auto"
+          data-umami-event="parrainage:cta:je-me-lance"
         >
           Je me lance !
         </AppLinkButton>

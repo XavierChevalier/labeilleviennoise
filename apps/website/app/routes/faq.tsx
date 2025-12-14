@@ -28,7 +28,11 @@ export default function Faq() {
             <p>
               Nous procédons aujourd'hui à une extraction manuelle du miel. Vous
               pouvez voir les étapes d’extraction du miel sur la page{' '}
-              <AppLink to="/la-miellerie" destination="website">
+              <AppLink
+                to="/la-miellerie"
+                destination="website"
+                data-umami-event="faq:click:link:miellerie"
+              >
                 La Miellerie
               </AppLink>
               .
@@ -86,7 +90,11 @@ export default function Faq() {
 
       <p className="text-center">
         Vous avez toujours une question ?{' '}
-        <AppLink to="/contact" destination="website">
+        <AppLink
+          to="/contact"
+          destination="website"
+          data-umami-event="faq:cta:contact"
+        >
           Par ici !
         </AppLink>
         <br />

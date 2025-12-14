@@ -11,7 +11,12 @@ export default function ApisAndLove() {
   return (
     <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
       <h1 className="mb-4">
-        <a href="https://apisandlove.com" target="_blank" rel="noreferrer">
+        <a
+          href="https://apisandlove.com"
+          target="_blank"
+          rel="noreferrer"
+          data-umami-event="apis-and-love:click:link:homepage"
+        >
           <IKImage
             path="images/partenariat/apis-and-love/apis-and-love_logo.svg"
             alt="Apis & Love logo"
@@ -148,6 +153,7 @@ export default function ApisAndLove() {
           target="_blank"
           className="relative font-medium underline text-primary-600 hover:no-underline"
           rel="noreferrer"
+          data-umami-event="apis-and-love:click:link:qui-sommes-nous"
         >
           On vous en dit plus juste ici !
         </a>

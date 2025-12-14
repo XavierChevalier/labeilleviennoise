@@ -23,7 +23,11 @@ export default function Contact() {
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <ContactHeader formSuccess={searchParams.has('success')}>
           Des questions sans réponses dans notre{' '}
-          <AppLink to="/faq" destination="website">
+          <AppLink
+            to="/faq"
+            destination="website"
+            data-umami-event="contact:click:link:faq"
+          >
             foire aux questions
           </AppLink>{' '}
           ?<br />
@@ -31,6 +35,7 @@ export default function Contact() {
           <AppLink
             to="mailto:labeilleviennoise@gmail.com"
             destination="website"
+            data-umami-event="contact:click:email"
           >
             labeilleviennoise@gmail.com
           </AppLink>

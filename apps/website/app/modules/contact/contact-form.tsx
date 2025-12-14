@@ -47,7 +47,9 @@ export default function ContactForm(props: Props) {
           <Field name="subject" value={props?.defaultValues?.subject} />
           <Field name="message" value={props?.defaultValues?.message} />
           <Errors />
-          <Button>Envoyer mon message</Button>
+          <Button data-umami-event="contact:submit:form">
+            Envoyer mon message
+          </Button>
         </>
       )}
     </Form>

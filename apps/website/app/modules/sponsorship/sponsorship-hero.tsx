@@ -14,7 +14,11 @@ export default function SponsorshipHero() {
           Avec L'Abeille Viennoise, vous pouvez aider à faire éclore de
           nouvelles colonies d'abeilles et les protéger pour qu'elles continuent
           à butiner joyeusement. En plus, vous vous{' '}
-          <AppLink destination="shop" to="/">
+          <AppLink
+            destination="shop"
+            to="/"
+            data-umami-event="parrainage:click:link:boutique"
+          >
             régalerez avec les saveurs sucrées de nos miels de qualité
             supérieure
           </AppLink>
@@ -22,7 +26,11 @@ export default function SponsorshipHero() {
         </p>
         <p className="max-w-2xl mb-6 font-light text-gray-500 md:mb-8 md:text-md md:text-xl">
           Rejoignez-nous pour une{' '}
-          <AppLink destination="website" to="/la-miellerie">
+          <AppLink
+            destination="website"
+            to="/la-miellerie"
+            data-umami-event="parrainage:click:link:miellerie"
+          >
             expérience passionnante et ludique
           </AppLink>{' '}
           dans le monde des abeilles.
@@ -32,12 +40,21 @@ export default function SponsorshipHero() {
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row">
-          <AppLinkButton variant="primary" to="#pricing" destination="website">
+          <AppLinkButton
+            variant="primary"
+            to="#pricing"
+            destination="website"
+            data-umami-event="parrainage:cta:choisir-formule"
+          >
             Choisir une formule
             <IconArrowRight />
           </AppLinkButton>
 
-          <AppLinkButton to="/contact" destination="website">
+          <AppLinkButton
+            to="/contact"
+            destination="website"
+            data-umami-event="parrainage:cta:contact"
+          >
             Contactez-nous
           </AppLinkButton>
         </div>

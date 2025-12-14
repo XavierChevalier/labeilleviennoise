@@ -15,7 +15,11 @@ export default function SponsorshipCallToActionCompany() {
         </p>
 
         <p className="mb-6 font-light text-gray-500 md:mb-8 md:text-md md:text-xl">
-          <AppLink destination="website" to="/parrainage-entreprise">
+          <AppLink
+            destination="website"
+            to="/parrainage-entreprise"
+            data-umami-event="parrainage:click:link:entreprise-details"
+          >
             N'hésitez pas à nous contacter
           </AppLink>{' '}
           pour en discuter et mettre en place une collaboration en faveur de nos
@@ -33,6 +37,7 @@ export default function SponsorshipCallToActionCompany() {
             variant="primary"
             to="/parrainage-entreprise"
             destination="website"
+            data-umami-event="parrainage:cta:entreprise"
           >
             Lancez-vous !
           </AppLinkButton>

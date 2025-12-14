@@ -10,7 +10,10 @@ export default function NavigationMenu() {
   return (
     <>
       <div className="flex items-center">
-        <NavigationMenuHamburgerButton onClick={toggleShowMenu} />
+        <NavigationMenuHamburgerButton
+          onClick={toggleShowMenu}
+          data-umami-event="nav:toggle:menu"
+        />
       </div>
 
       <div
@@ -26,6 +29,7 @@ export default function NavigationMenu() {
               to="/"
               destination="website"
               onClick={toggleShowMenu}
+              data-umami-event="nav:click:home"
             >
               Accueil
             </NavigationBarLink>
@@ -35,6 +39,7 @@ export default function NavigationMenu() {
               to="/le-rucher"
               destination="website"
               onClick={toggleShowMenu}
+              data-umami-event="nav:click:rucher"
             >
               Le rucher
             </NavigationBarLink>
@@ -44,6 +49,7 @@ export default function NavigationMenu() {
               to="/la-miellerie"
               destination="website"
               onClick={toggleShowMenu}
+              data-umami-event="nav:click:miellerie"
             >
               La miellerie
             </NavigationBarLink>
@@ -53,6 +59,7 @@ export default function NavigationMenu() {
               to="/equipe"
               destination="website"
               onClick={toggleShowMenu}
+              data-umami-event="nav:click:equipe"
             >
               Notre équipe
             </NavigationBarLink>
@@ -62,6 +69,7 @@ export default function NavigationMenu() {
               to="/contact"
               destination="website"
               onClick={toggleShowMenu}
+              data-umami-event="nav:click:contact"
             >
               Contactez-nous
             </NavigationBarLink>
@@ -73,6 +81,7 @@ export default function NavigationMenu() {
               destination="website"
               className="!py-2"
               onClick={toggleShowMenu}
+              data-umami-event="nav:cta:contact"
             >
               Contactez-nous
             </AppLinkButton>

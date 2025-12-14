@@ -13,6 +13,7 @@ export default function CollaboratorsSection() {
           target="_blank"
           rel="noreferrer"
           className="flex items-center justify-center"
+          data-umami-event="equipe:click:partner:vienne"
         >
           <img
             src="https://vienne.fr/wp-content/uploads/2020/08/logo_vienne.png"
@@ -26,6 +27,7 @@ export default function CollaboratorsSection() {
           destination="website"
           rel="noreferrer"
           className="flex items-center justify-center"
+          data-umami-event="equipe:click:partner:apis-and-love"
         >
           <img
             src="https://apisandlove.com/wp-content/uploads/2023/06/ApisandLove-RVB-300x105.webp"
@@ -39,6 +41,7 @@ export default function CollaboratorsSection() {
           target="_blank"
           rel="noreferrer"
           className="flex items-center justify-center"
+          data-umami-event="equipe:click:partner:advivo"
         >
           <img
             src="https://www.advivo.fr/wp-content/themes/advivo/dist/images/Advivo_logo_a94eee12.svg"
@@ -52,6 +55,7 @@ export default function CollaboratorsSection() {
           target="_blank"
           rel="noreferrer"
           className="flex items-center justify-center"
+          data-umami-event="equipe:click:partner:vienne-condrieu"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -90,6 +94,7 @@ export default function CollaboratorsSection() {
           target="_blank"
           rel="noreferrer"
           className="flex items-center justify-center"
+          data-umami-event="equipe:click:partner:zoelie-fabrik"
         >
           <img
             src="https://static.wixstatic.com/media/13c7c7_d6303f88527b4dec95b3391b768b9998~mv2.png"
@@ -103,6 +108,7 @@ export default function CollaboratorsSection() {
           target="_blank"
           rel="noreferrer"
           className="flex items-center justify-center"
+          data-umami-event="equipe:click:partner:savon-ozon"
         >
           <img
             src="https://www.savondelozon.fr/wp-content/uploads/logo-savon-ozon.png"
@@ -116,6 +122,7 @@ export default function CollaboratorsSection() {
           target="_blank"
           rel="noreferrer"
           className="flex items-center justify-center"
+          data-umami-event="equipe:click:partner:pepinieres-mainaud"
         >
           <img
             src="https://pepinieres-mainaud.fr/wd/images/logo-de-pepiniere-mainaud.svg?1694532474"
@@ -129,6 +136,7 @@ export default function CollaboratorsSection() {
           target="_blank"
           rel="noreferrer"
           className="flex items-center justify-center"
+          data-umami-event="equipe:click:partner:arbres-and-co"
         >
           <img
             src="https://arbres-and-co.fr/wd/images/image-du-logo-arbre-and-co.svg?1684138089"
@@ -142,6 +150,7 @@ export default function CollaboratorsSection() {
           target="_blank"
           rel="noreferrer"
           className="flex items-center justify-center"
+          data-umami-event="equipe:click:partner:gateaux-etc"
         >
           <img
             src="https://i0.wp.com/gateauxetcbynath.fr/wp-content/uploads/elementor/thumbs/GATEAUXETC-gateauxdesign-blanc-q7nx7av57f1swv2ssau6pyvgmcztmg1ja701zdpbco.png?ssl=1"

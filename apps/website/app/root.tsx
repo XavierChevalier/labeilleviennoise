@@ -14,6 +14,12 @@ export const links: LinksFunction = () => [
     type: 'image/svg+xml',
     sizes: 'any',
   },
+  {
+    rel: 'script',
+    href: 'https://umami-production-6320.up.railway.app/script.js',
+    defer: true,
+    'data-website-id': 'c52b307a-7ec2-4311-85e2-0d179d844d35',
+  },
   { rel: 'stylesheet', href: appStylesheetUrl },
 ]
 

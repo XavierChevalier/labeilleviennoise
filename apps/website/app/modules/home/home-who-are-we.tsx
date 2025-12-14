@@ -10,7 +10,11 @@ export default function HeroWhoAreWe() {
         </h2>
 
         <p className="mb-6 font-light text-gray-500 md:text-lg">
-          <AppLink to="/equipe" destination="website">
+          <AppLink
+            to="/equipe"
+            destination="website"
+            data-umami-event="home:click:link:equipe"
+          >
             Anne-Marie et Ludovic
           </AppLink>
           , deux amoureux de la nature et des abeilles dont l'aventure apicole a

@@ -28,6 +28,9 @@ export default function ButtonChosePlan({ isToggled, formula }: Props) {
       destination="website"
       variant="fancy"
       className="mt-4 whitespace-nowrap"
+      data-umami-event={`parrainage:cta:choisir-formule:${formula
+        .toLowerCase()
+        .replace(/\s+/g, '-')}`}
     >
       Choisir cette formule
     </AppLinkButton>
