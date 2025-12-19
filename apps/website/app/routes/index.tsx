@@ -1,4 +1,5 @@
 import { buildMeta } from '@labeilleviennoise/seo'
+import HomeClosureAnnouncement from '@/modules/home/home-closure-announcement'
 import HomeHero from '@/modules/home/home-hero'
 import HomeOurProducts from '@/modules/home/home-our-products'
 import HomeSocials from '@/modules/home/home-socials'
@@ -15,6 +16,7 @@ export default function Index() {
   return (
     <div className="bg-white">
       <HomeHero />
+      <HomeClosureAnnouncement />
       <HomeWhoAreWe />
       <HomeOurProducts />
       <HomeWhyWeDoThis />
