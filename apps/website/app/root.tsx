@@ -6,6 +6,7 @@ import type { LinksFunction, LoaderFunction } from '@remix-run/node'
 import { Outlet } from '@remix-run/react'
 import { IKContext } from 'imagekitio-react'
 import { typedjson, useTypedLoaderData } from 'remix-typedjson'
+import ClosureAnnouncement from '@/components/closure-announcement'
 
 export const links: LinksFunction = () => [
   {
@@ -38,6 +39,7 @@ const App = () => {
       publicKey={env.PUBLIC_IMAGEKIT_PUBLIC_KEY}
     >
       <DefaultLayout>
+        <ClosureAnnouncement />
         <Outlet />
       </DefaultLayout>
     </IKContext>
